@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.11)  7 NOV 2025 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.11)  7 NOV 2025 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -11,8 +11,8 @@ Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/leqno.clo
 File: leqno.clo 2016/12/29 v1.2b Standard LaTeX option (left equation numbers)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/bk11.clo
-File: bk11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
 \c@chapter=\count276
@@ -494,14 +494,18 @@ e 177.
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 177.
+(Font)              scaled to size 10.0pt on input line 177.
 
-No file aii.aux.
+(./aii.aux
+Package babel Info: 'brazil' activates 'portuges' shorthands.
+(babel)             Reported on input line 5.
+)
 \openout1 = `aii.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 177.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
  177.
+
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
@@ -559,15 +563,15 @@ LaTeX Info: Command `\ddddot' is already robust on input line 177.
 * \textheight=483.69687pt
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
-* \topmargin=-47.23828pt
+* \topmargin=-45.43198pt
 * \headheight=12.0pt
-* \headsep=19.8738pt
-* \topskip=11.0pt
-* \footskip=27.46295pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
 * \marginparwidth=51.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -593,8 +597,6 @@ LaTeX Info: Command `\ddddot' is already robust on input line 177.
 )
 \c@mv@tabular=\count335
 \c@mv@boldtabular=\count336
-Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 177.
 LaTeX Info: Redefining \microtypecontext on input line 177.
 Package microtype Info: Applying patch `item' on input line 177.
 Package microtype Info: Applying patch `toc' on input line 177.
@@ -617,9 +619,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 [1{/home/papabundus/.texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 {/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.en
 c}
@@ -629,9 +629,9 @@ Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 80.0pt on input line 181.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 Package microtype Info: Character `013' is missing
-(microtype)             in font `OT1/ntxtlf/m/sc/10.95'.
+(microtype)             in font `OT1/ntxtlf/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
 e 181.
@@ -639,33 +639,33 @@ e 181.
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minntx' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 181
 .
 
@@ -690,18 +690,21 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 181.
+
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
 181.
-
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
 181.
 
@@ -709,11 +712,11 @@ LaTeX Font Info:    Trying to load font information for U+ntxsym on input line
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
 181.
 
@@ -721,17 +724,17 @@ LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 181.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.1pt on input line 181.
+(Font)              scaled to size 5.5pt on input line 181.
 
 
 [2
@@ -747,9 +750,9 @@ Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/ntxtlf/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 188.
+(Font)              scaled to size 10.0pt on input line 188.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/sl' will be
-(Font)              scaled to size 10.95pt on input line 190.
+(Font)              scaled to size 10.0pt on input line 190.
 
 
 [3
@@ -757,28 +760,16 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/sl' will be
 {/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-th-tlf
 .enc}]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
-(Font)              scaled to size 10.95pt on input line 225.
+(Font)              scaled to size 10.0pt on input line 225.
 
 
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 248.
+(babel)             Reported on input line 256.
 [4]
 
 [5]
 
 [6]
-Overfull \hbox (10.35591pt too wide) detected at line 360
-[]\LMS/ntxsy/m/n/10.95 8\OML/ntxmi/m/it/10.95 y[]y \LMS/ntxsy/m/n/10.95 2 \OML/
-ntxmi/m/it/10.95 x \LMS/ntxsy/m/n/10.95 \ ;  []! \OML/ntxmi/m/it/10.95 &\LMS/nt
-xsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 y\LMS/ntxsy/m/n/10.95 º ^ ¹\OML/ntxmi/m/it
-/10.95 y \LMS/ntxsy/m/n/10.95 2 \OML/ntxmi/m/it/10.95 x  \LMS/ntxsy/m/n/10.95 ^
-  \OML/ntxmi/m/it/10.95 y \LMS/ntxsy/m/n/10.95 2 ;º  []! \OML/ntxmi/m/it/10.95 
-&\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 y\LMS/ntxsy/m/n/10.95 º  ^  \OML/n
-txmi/m/it/10.95 y \LMS/ntxsy/m/n/10.95 2 ;  []! \OML/ntxmi/m/it/10.95 y \LMS/nt
-xsy/m/n/10.95 2 ;[]
- []
-
-
 
 [7]
 
@@ -800,13 +791,13 @@ xsy/m/n/10.95 2 ;[]
 
 [16]
 
-[17]
-
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 875.
 
 
+
+[17]
 
 [18]
 
@@ -857,6 +848,11 @@ Package amsmath Warning: Foreign command \over;
 [41]
 
 [42]
+Overfull \hbox (5.76463pt too wide) detected at line 2093
+[]
+ []
+
+
 
 [43]
 
@@ -869,11 +865,6 @@ Package amsmath Warning: Foreign command \over;
 [47]
 
 [48]
-Overfull \hbox (35.13295pt too wide) detected at line 2093
-[]
- []
-
-
 
 [49]
 
@@ -882,15 +873,44 @@ Overfull \hbox (35.13295pt too wide) detected at line 2093
 [51]
 
 [52]
-Overfull \hbox (5.90034pt too wide) in paragraph at lines 2174--2176
-\OT1/ntxtlf/m/n/10.95 (-20) Ent[]ao $\OML/ntxmi/m/it/10.95 f$ []\OT1/ntxtlf/m/n
-/10.95 (-20) e uma fun[][]ao. De fato, su-po-nha-mos que $\LMS/ntxsy/m/n/10.95 
-¹¹\OML/ntxmi/m/it/10.95 m; n\LMS/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 ; a\LMS
-/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 ; \LMS/ntxsy/m/n/10.95 ¹¹\OML/ntxmi/m/i
-t/10.95 m; n\LMS/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 ; b\LMS/ntxsy/m/n/10.95
- º 2
- []
-
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 2396.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2396.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2396.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2396.
 
 
 [53]
@@ -906,80 +926,28 @@ t/10.95 m; n\LMS/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 ; b\LMS/ntxsy/m/n/10.95
 [58]
 
 [59]
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2396.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 2396.
-
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 2396.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 2396.
-
 
 [60]
+Overfull \hbox (0.49622pt too wide) detected at line 2663
+\LMS/ntxsy/m/n/10 8\OML/ntxmi/m/it/10 g[]g \LMS/ntxsy/m/n/10 2 \OML/ntxmi/m/it/
+10 R[] \LMS/ntxsy/m/n/10 ^ 9 [] \OML/ntxmi/m/it/10 fg [][]\LMS/ntxsy/m/n/10 ! 9
+ [] \OML/ntxmi/m/it/10 g[] \LMS/ntxsy/m/n/10  []! ¹9 [] \OML/ntxmi/m/it/10 f \L
+MS/ntxsy/m/n/10 ^ [] \OML/ntxmi/m/it/10 f \U/ntxmia/m/it/10 < \OT1/minntx/m/n/1
+0 0\LMS/ntxsy/m/n/10 º  _  [] j\OML/ntxmi/m/it/10 f\LMS/ntxsy/m/n/10 j \U/ntxmi
+a/m/it/10 = \LMS/ntxsy/m/n/10 1\OML/ntxmi/m/it/10 :
+ []
+
+
 
 [61]
-Overfull \hbox (2.30637pt too wide) detected at line 2418
-\LMS/ntxsy/m/n/10.95 8\OML/ntxmi/m/it/10.95 V\LMS/ntxsy/m/n/10.95 9\OML/ntxmi/m
-/it/10.95 U[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 U; V\LMS/ntxsy/m/n/10.
-95 º 2 B[] ^^B B[] ^ ¹\OML/ntxmi/m/it/10.95 a; l\LMS/ntxsy/m/n/10.95 º 2 \OML/n
-txmi/m/it/10.95 U \LMS/ntxsy/m/n/10.95 ^^B \OML/ntxmi/m/it/10.95 V \LMS/ntxsy/m
-/n/10.95 ^ ¹\OML/ntxmi/m/it/10.95 x \LMS/ntxsy/m/n/10.95 2 \OML/ntxmi/m/it/10.9
-5 U \LMS/ntxsy/m/n/10.95 n f\OML/ntxmi/m/it/10.95 a\LMS/ntxsy/m/n/10.95 g [][]!
- \OML/ntxmi/m/it/10.95 f\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 x\LMS/ntxsy
-/m/n/10.95 º 2 \OML/ntxmi/m/it/10.95 V\LMS/ntxsy/m/n/10.95 º[]\OML/ntxmi/m/it/1
-0.95 :
+Overfull \hbox (20.17421pt too wide) detected at line 2680
+\OML/ntxmi/m/it/10 x \LMS/ntxsy/m/n/10 2 \OML/ntxmi/m/it/10 X \LMS/ntxsy/m/n/10
+ \ ¹\OML/ntxmi/m/it/10 a \LMS/ntxsy/m/n/10 ^^@ \OML/ntxmi/m/it/10 ^^N; a \LMS/n
+txsy/m/n/10 Ï \OML/ntxmi/m/it/10 ^^N\LMS/ntxsy/m/n/10 º [][]! j\OML/ntxmi/m/it/
+10 g\LMS/ntxsy/m/n/10 ¹\OML/ntxmi/m/it/10 x\LMS/ntxsy/m/n/10 ºj \U/ntxmia/m/it/
+10 = []\OML/ntxmi/m/it/10 g\LMS/ntxsy/m/n/10 ¹\OML/ntxmi/m/it/10 x\LMS/ntxsy/m/
+n/10 º ^^@ [] Ï [][] ^^T []\OML/ntxmi/m/it/10 g\LMS/ntxsy/m/n/10 ¹\OML/ntxmi/m/
+it/10 x\LMS/ntxsy/m/n/10 º ^^@ [][] Ï [][][] \OML/ntxmi/m/it/10 < ";
  []
 
 
@@ -988,24 +956,7 @@ txmi/m/it/10.95 U \LMS/ntxsy/m/n/10.95 ^^B \OML/ntxmi/m/it/10.95 V \LMS/ntxsy/m
 
 [63]
 
-LaTeX Warning: Reference `pri' on page 64 undefined on input line 2483.
-
-
-
 [64]
-
-LaTeX Warning: Reference `cadeia' on page 65 undefined on input line 2501.
-
-
-LaTeX Warning: Reference `ls' on page 65 undefined on input line 2501.
-
-
-LaTeX Warning: Reference `seg' on page 65 undefined on input line 2511.
-
-
-LaTeX Warning: Reference `query_sum' on page 65 undefined on input line 2521.
-
-
 
 [65]
 
@@ -1016,101 +967,26 @@ LaTeX Warning: Reference `query_sum' on page 65 undefined on input line 2521.
 [68]
 
 [69]
-Overfull \hbox (29.69345pt too wide) detected at line 2663
-\LMS/ntxsy/m/n/10.95 8\OML/ntxmi/m/it/10.95 g[]g \LMS/ntxsy/m/n/10.95 2 \OML/nt
-xmi/m/it/10.95 R[] \LMS/ntxsy/m/n/10.95 ^ 9 [] \OML/ntxmi/m/it/10.95 fg [][]\LM
-S/ntxsy/m/n/10.95 ! 9 [] \OML/ntxmi/m/it/10.95 g[] \LMS/ntxsy/m/n/10.95  []! ¹9
- [] \OML/ntxmi/m/it/10.95 f \LMS/ntxsy/m/n/10.95 ^ [] \OML/ntxmi/m/it/10.95 f \
-U/ntxmia/m/it/10.95 < \OT1/minntx/m/n/10.95 0\LMS/ntxsy/m/n/10.95 º  _  [] j\OM
-L/ntxmi/m/it/10.95 f\LMS/ntxsy/m/n/10.95 j \U/ntxmia/m/it/10.95 = \LMS/ntxsy/m/
-n/10.95 1\OML/ntxmi/m/it/10.95 :
- []
-
-
-Overfull \hbox (50.3715pt too wide) detected at line 2680
-\OML/ntxmi/m/it/10.95 x \LMS/ntxsy/m/n/10.95 2 \OML/ntxmi/m/it/10.95 X \LMS/ntx
-sy/m/n/10.95 \ ¹\OML/ntxmi/m/it/10.95 a \LMS/ntxsy/m/n/10.95 ^^@ \OML/ntxmi/m/i
-t/10.95 ^^N; a \LMS/ntxsy/m/n/10.95 Ï \OML/ntxmi/m/it/10.95 ^^N\LMS/ntxsy/m/n/1
-0.95 º [][]! j\OML/ntxmi/m/it/10.95 g\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.9
-5 x\LMS/ntxsy/m/n/10.95 ºj \U/ntxmia/m/it/10.95 = []\OML/ntxmi/m/it/10.95 g\LMS
-/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 x\LMS/ntxsy/m/n/10.95 º ^^@ [] Ï [][] ^
-^T []\OML/ntxmi/m/it/10.95 g\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 x\LMS/n
-txsy/m/n/10.95 º ^^@ [][] Ï [][][] \OML/ntxmi/m/it/10.95 < ";
- []
-
-
 
 [70]
 
 [71]
 
 [72]
-Overfull \hbox (7.71227pt too wide) in paragraph at lines 2744--2746
-\OML/ntxmi/m/it/10.95 K$\OT1/ntxtlf/m/n/10.95 (-20) , tais que $\OML/ntxmi/m/it
-/10.95 h\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 x[]\LMS/ntxsy/m/n/10.95 º \
-U/ntxmia/m/it/10.95 = [] \OML/ntxmi/m/it/10.95 h\LMS/ntxsy/m/n/10.95 ¹\OML/ntxm
-i/m/it/10.95 K\LMS/ntxsy/m/n/10.95 º$ \OT1/ntxtlf/m/n/10.95 (-20) e $\OML/ntxmi
-/m/it/10.95 h\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 x[]\LMS/ntxsy/m/n/10.9
-5 º \U/ntxmia/m/it/10.95 = [] \OML/ntxmi/m/it/10.95 h\LMS/ntxsy/m/n/10.95 ¹\OML
-/ntxmi/m/it/10.95 K\LMS/ntxsy/m/n/10.95 º$\OT1/ntxtlf/m/n/10.95 (-20) . Se $\LM
-S/ntxsy/m/n/10.95 f\OML/ntxmi/m/it/10.95 x[]; x[]\LMS/ntxsy/m/n/10.95 g \U/ntxm
-ia/m/it/10.95 =
- []
+Cap\'{\i }tulo 3.
 
 
+[73
 
-[73]
+]
 
 [74]
 
 [75]
-
-[76]
-
-[77]
-Overfull \hbox (6.63686pt too wide) in paragraph at lines 2900--2901
-[]\OT1/ntxtlf/m/n/10.95 (-20) Doravante ex-pli-ci-ta-re-mos os axi-o-mas ne-ces
-s[]arios e al-gu-mas defini[][]oes
- []
-
-
-
-[78]
-
-[79]
-Overfull \hbox (23.8655pt too wide) detected at line 2980
-\LMS/ntxsy/m/n/10.95 ¹Eº []¹\OML/ntxmi/m/it/10.95 A \U/ntxmia/m/it/10.95 = \OML
-/ntxmi/m/it/10.95 C \LMS/ntxsy/m/n/10.95  []! \OML/ntxmi/m/it/10.95 B \U/ntxmia
-/m/it/10.95 = \OML/ntxmi/m/it/10.95 D\LMS/ntxsy/m/n/10.95 º _ \OML/ntxmi/m/it/1
-0.95 AC [] BD[] \LMS/ntxsy/m/n/10.95 ^ []¹\OML/ntxmi/m/it/10.95 A \U/ntxmia/m/i
-t/10.95 = \OML/ntxmi/m/it/10.95 B \LMS/ntxsy/m/n/10.95  []! \OML/ntxmi/m/it/10.
-95 C \U/ntxmia/m/it/10.95 = \OML/ntxmi/m/it/10.95 D\LMS/ntxsy/m/n/10.95 º _ \OM
-L/ntxmi/m/it/10.95 AB [] CD[]
- []
-
-
-
-[80]
-
-[81]
-
-[82]
-
-[83]
-Cap\'{\i }tulo 3.
-
-
-[84
-
-]
-
-[85]
-
-[86]
 Cap\'{\i }tulo 4.
 
 
-[87
+[76
 
 ] (./aii.aux)
  ***********
@@ -1122,21 +998,15 @@ L3 programming layer <2020/03/25>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 11863 strings out of 467748
- 183503 string characters out of 5423317
- 628564 words of memory out of 5000000
- 39860 multiletter control sequences out of 15000+600000
- 710364 words of font info for 488 fonts, out of 8000000 for 9000
+ 11848 strings out of 467748
+ 183013 string characters out of 5423317
+ 630804 words of memory out of 5000000
+ 39835 multiletter control sequences out of 15000+600000
+ 705122 words of font info for 487 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,19n,77p,1240b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,19n,77p,1237b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.p
 fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI5
 .pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXM
@@ -1148,10 +1018,10 @@ X.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txsys
 fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmbi.pf
 b></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
 </home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on aii.pdf (87 pages, 481246 bytes).
+Output written on aii.pdf (76 pages, 471679 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
+ 315 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 67585 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 60929 words of extra memory for PDF output out of 61914 (max. 10000000)
 
