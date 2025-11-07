@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.11)  7 NOV 2025 17:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.11)  7 NOV 2025 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -173,6 +173,133 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layoutvoffset=\dimen166
 \Gm@dimlist=\toks32
 )
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekey
+s.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.st
+y
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitles
+tring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count301
+) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count302
+)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen167
+\Hy@linkcounter=\count303
+\Hy@pagecounter=\count304
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count305
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count306
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen168
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.st
+y
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count307
+\Field@Width=\dimen169
+\Fld@charsize=\dimen170
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count308
+\c@Item=\count309
+\c@Hfootnote=\count310
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count311
+\c@bookmark@seq@number=\count312
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilech
+eck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecoun
+ter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip72
+)
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
@@ -190,16 +317,13 @@ Package: expl3 2025-09-02 L3 programming layer (loader)
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex
 .def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count301
+\l__color_backend_stack_int=\count313
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.s
 ty
 Package: xparse 2024-08-16 L3 Experimental document command parser
-) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count302
 )) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
@@ -230,7 +354,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count303
+\XKV@depth=\count314
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
@@ -238,8 +362,8 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
 (/home/papabundus/.texlive/2025/texmf-dist/tex/generic/xstring/xstring.sty
 (/home/papabundus/.texlive/2025/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count304
-\xs_countb=\count305
+\xs_counta=\count315
+\xs_countb=\count316
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
@@ -253,8 +377,8 @@ LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
-\ntx@tmpcnta=\count306
-\ntx@cnt=\count307
+\ntx@tmpcnta=\count317
+\ntx@cnt=\count318
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2025-05-24 v2.0.1 Font selection axes (deprecated)
@@ -263,20 +387,20 @@ Package: fontaxes 2025-05-24 v2.0.1 Font selection axes (deprecated)
 ons.sty
 Package: figureversions 2025-04-29 v1.0.1 Figure versions
 ))
-\tx@sixem=\dimen167
-\tx@y=\dimen168
-\tx@x=\dimen169
-\tx@tmpdima=\dimen170
-\tx@tmpdimb=\dimen171
-\tx@tmpdimc=\dimen172
-\tx@tmpdimd=\dimen173
-\tx@tmpdime=\dimen174
-\tx@tmpdimf=\dimen175
-\tx@dimA=\dimen176
-\tx@dimAA=\dimen177
-\tx@dimB=\dimen178
-\tx@dimBB=\dimen179
-\tx@dimC=\dimen180
+\tx@sixem=\dimen171
+\tx@y=\dimen172
+\tx@x=\dimen173
+\tx@tmpdima=\dimen174
+\tx@tmpdimb=\dimen175
+\tx@tmpdimc=\dimen176
+\tx@tmpdimd=\dimen177
+\tx@tmpdime=\dimen178
+\tx@tmpdimf=\dimen179
+\tx@dimA=\dimen180
+\tx@dimAA=\dimen181
+\tx@dimB=\dimen182
+\tx@dimBB=\dimen183
+\tx@dimC=\dimen184
 LaTeX Info: Redefining \oldstylenums on input line 902.
 )
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/newtxmath.sty
@@ -286,11 +410,11 @@ Package: newtxmath 2024/09/22 v1.754
 ) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
-\tx@cntz=\count308
+\tx@cntz=\count319
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
-\tx@Isdigit=\count309
-\tx@IsAlNum=\count310
+\tx@Isdigit=\count320
+\tx@IsAlNum=\count321
 \tx@tA=\toks35
 \tx@tB=\toks36
 \tx@su=\read2
@@ -402,19 +526,19 @@ Package: setspace 2022/12/04 v6.7b set line spacing
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box56
-\beforetitleunit=\skip72
-\aftertitleunit=\skip73
-\ttl@plus=\dimen181
-\ttl@minus=\dimen182
+\beforetitleunit=\skip73
+\aftertitleunit=\skip74
+\ttl@plus=\dimen185
+\ttl@minus=\dimen186
 \ttl@toksa=\toks38
-\titlewidth=\dimen183
-\titlewidthlast=\dimen184
-\titlewidthfirst=\dimen185
+\titlewidth=\dimen187
+\titlewidthlast=\dimen188
+\titlewidthfirst=\dimen189
 )
 (/home/papabundus/.texlive/2025/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2025/10/01 v25.13 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
-\babel@savecnt=\count311
+\babel@savecnt=\count322
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
 ne 2045.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
@@ -429,12 +553,12 @@ LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?)
 on input line 2053.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
 on input line 2078.
-\U@D=\dimen186
+\U@D=\dimen190
 \l@unhyphenated=\language90
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count312
+\bbl@dirlevel=\count323
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/generic/babel-portuges/brazil.ld
 f
@@ -447,16 +571,16 @@ Package babel Info: Making " an active character on input line 143.
 Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
 \MT@toks=\toks39
 \MT@tempbox=\box57
-\MT@count=\count313
+\MT@count=\count324
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
 LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks40
 LaTeX Info: Redefining \rightprotrusion on input line 1107.
 LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen187
+\MT@outer@kern=\dimen191
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count314
+\MT@listname@count=\count325
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex
 .def
@@ -464,7 +588,7 @@ File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
-\MT@outer@space=\skip74
+\MT@outer@space=\skip75
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -473,79 +597,83 @@ File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 )
-\axiomcounter=\count315
-\corollarycounter=\count316
-\theoremcounter=\count317
-\definitioncounter=\count318
-\lemmacounter=\count319
-\examplecounter=\count320
-\c@axi=\count321
-\c@cor=\count322
-\c@Def=\count323
-\c@exe=\count324
-\c@lem=\count325
-\c@obs=\count326
-\c@pro=\count327
-\c@teo=\count328
+\axiomcounter=\count326
+\corollarycounter=\count327
+\theoremcounter=\count328
+\definitioncounter=\count329
+\lemmacounter=\count330
+\examplecounter=\count331
+\c@axi=\count332
+\c@cor=\count333
+\c@Def=\count334
+\c@exe=\count335
+\c@lem=\count336
+\c@obs=\count337
+\c@pro=\count338
+\c@teo=\count339
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
-e 176.
+e 177.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 176.
+(Font)              scaled to size 10.0pt on input line 177.
 
 (./aii.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 5.
+(babel)             Reported on input line 8.
 )
 \openout1 = `aii.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 176.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 177.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 176.
+ 177.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 177.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-176.
+177.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 177.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 176.
+ 177.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 177.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 176.
+e 177.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Info: Command `\dddot' is already robust on input line 176.
-LaTeX Info: Command `\ddddot' is already robust on input line 176.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Info: Command `\dddot' is already robust on input line 177.
+LaTeX Info: Command `\ddddot' is already robust on input line 177.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -581,29 +709,38 @@ LaTeX Info: Command `\ddddot' is already robust on input line 176.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package hyperref Info: Link coloring OFF on input line 177.
+(./aii.out) (./aii.out)
+\@outlinefile=\write3
+\openout3 = `aii.out'.
+
+
 (/home/papabundus/.texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
-\scratchdimen=\dimen188
+\scratchcounter=\count340
+\scratchdimen=\dimen192
 \scratchbox=\box58
-\nofMPsegments=\count330
-\nofMParguments=\count331
+\nofMPsegments=\count341
+\nofMParguments=\count342
 \everyMPshowfont=\toks41
-\MPscratchCnt=\count332
-\MPscratchDim=\dimen189
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
+\MPscratchCnt=\count343
+\MPscratchDim=\dimen193
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
 \everyMPtoPDFconversion=\toks42
 )
-\c@mv@tabular=\count335
-\c@mv@boldtabular=\count336
-LaTeX Info: Redefining \microtypecontext on input line 176.
-Package microtype Info: Applying patch `item' on input line 176.
-Package microtype Info: Applying patch `toc' on input line 176.
-Package microtype Info: Applying patch `eqnum' on input line 176.
-Package microtype Info: Applying patch `footnote' on input line 176.
-Package microtype Info: Applying patch `verbatim' on input line 176.
-LaTeX Info: Redefining \microtypesetup on input line 176.
+\c@mv@tabular=\count346
+\c@mv@boldtabular=\count347
+LaTeX Info: Redefining \microtypecontext on input line 177.
+Package microtype Info: Applying patch `item' on input line 177.
+Package microtype Info: Applying patch `toc' on input line 177.
+Package microtype Info: Applying patch `eqnum' on input line 177.
+
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 177.
+
+Package microtype Info: Applying patch `verbatim' on input line 177.
+LaTeX Info: Redefining \microtypesetup on input line 177.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -614,59 +751,49 @@ Package microtype Info: Patching command `\showhyphens'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
-[1{/home/papabundus/.texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-{/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.en
-c}
-
-]
-Cap\'{\i }tulo 1.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 80.0pt on input line 180.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/ntxtlf/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
-e 180.
+e 181.
+
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minntx' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 180.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 180.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 180.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 180.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 180
+(Font)              scaled to size 5.5pt on input line 181.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 181
 .
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -675,7 +802,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 180
+LaTeX Font Info:    Trying to load font information for U+msb on input line 181
 .
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -685,86 +812,95 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18
-0.
+1.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 180.
+(Font)              size <5> substituted on input line 181.
 
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-180.
+181.
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 180.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-180.
+181.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 180.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-180.
+181.
 
 (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 180.
+(Font)              scaled to size 5.5pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 180.
+(Font)              scaled to size 7.3pt on input line 181.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 180.
+(Font)              scaled to size 5.5pt on input line 181.
 
 
-[2
+[1
 
-{/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf-pc
+
+{/home/papabundus/.texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/
+home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf-pc.e
+nc}{/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf
 .enc}]
-Cap\'{\i }tulo 2.
+Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 185.
+(Font)              scaled to size 80.0pt on input line 184.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 186.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 185.
+(Font)              scaled to size 12.0pt on input line 186.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/ntxtlf/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 187.
+(Font)              scaled to size 10.0pt on input line 188.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/sl' will be
-(Font)              scaled to size 10.0pt on input line 189.
+(Font)              scaled to size 10.0pt on input line 190.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 190.
 
 
-[3
+[2
 
 {/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-th-tlf
 .enc}]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
-(Font)              scaled to size 10.0pt on input line 224.
+(Font)              scaled to size 10.0pt on input line 225.
 
 
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 255.
+(babel)             Reported on input line 256.
+[3]
+
 [4]
 
 [5]
@@ -789,13 +925,13 @@ Package babel Info: 'brazil' activates 'portuges' shorthands.
 
 [15]
 
-[16]
-
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 874.
+(amsmath)                 on input line 875.
 
 
+
+[16]
 
 [17]
 
@@ -812,6 +948,11 @@ Package amsmath Warning: Foreign command \over;
 [23]
 
 [24]
+
+LaTeX Warning: Reference `{def_int_K}' on page 25 undefined on input line 1252.
+
+
+
 
 [25]
 
@@ -830,6 +971,51 @@ Package amsmath Warning: Foreign command \over;
 [32]
 
 [33]
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 1700.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 7.3pt on input line 1700.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 6.0pt on input line 1700.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 8.0pt on input line 1700.
+
 
 [34]
 
@@ -848,7 +1034,7 @@ Package amsmath Warning: Foreign command \over;
 [41]
 
 [42]
-Overfull \hbox (5.76463pt too wide) detected at line 2092
+Overfull \hbox (5.76463pt too wide) detected at line 2100
 []
  []
 
@@ -873,45 +1059,6 @@ Overfull \hbox (5.76463pt too wide) detected at line 2092
 [51]
 
 [52]
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 2395.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2395.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2395.
-
 
 [53]
 
@@ -928,7 +1075,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 [59]
 
 [60]
-Overfull \hbox (0.49622pt too wide) detected at line 2662
+Overfull \hbox (0.49622pt too wide) detected at line 2670
 \LMS/ntxsy/m/n/10 8\OML/ntxmi/m/it/10 g[]g \LMS/ntxsy/m/n/10 2 \OML/ntxmi/m/it/
 10 R[] \LMS/ntxsy/m/n/10 ^ 9 [] \OML/ntxmi/m/it/10 fg [][]\LMS/ntxsy/m/n/10 ! 9
  [] \OML/ntxmi/m/it/10 g[] \LMS/ntxsy/m/n/10  []! ¹9 [] \OML/ntxmi/m/it/10 f \L
@@ -940,7 +1087,7 @@ a/m/it/10 = \LMS/ntxsy/m/n/10 1\OML/ntxmi/m/it/10 :
 
 
 [61]
-Overfull \hbox (20.17421pt too wide) detected at line 2679
+Overfull \hbox (20.17421pt too wide) detected at line 2687
 \OML/ntxmi/m/it/10 x \LMS/ntxsy/m/n/10 2 \OML/ntxmi/m/it/10 X \LMS/ntxsy/m/n/10
  \ ¹\OML/ntxmi/m/it/10 a \LMS/ntxsy/m/n/10 ^^@ \OML/ntxmi/m/it/10 ^^N; a \LMS/n
 txsy/m/n/10 Ï \OML/ntxmi/m/it/10 ^^N\LMS/ntxsy/m/n/10 º [][]! j\OML/ntxmi/m/it/
@@ -973,20 +1120,22 @@ it/10 x\LMS/ntxsy/m/n/10 º ^^@ [][] Ï [][][] \OML/ntxmi/m/it/10 < ";
 [71]
 
 [72]
-Cap\'{\i }tulo 3.
+
+[73]
+Cap\'{\i }tulo 2.
 
 
-[73
+[74
 
 ]
 
-[74]
-
 [75]
-Cap\'{\i }tulo 4.
+
+[76]
+Cap\'{\i }tulo 3.
 
 
-[76
+[77
 
 ] (./aii.aux)
  ***********
@@ -998,30 +1147,67 @@ L3 programming layer <2020/03/25>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `aii.out' has not changed.
+(rerunfilecheck)             Checksum: 67ADA2996F6DBE937BA08CB9166E04D0;1380.
  ) 
 Here is how much of TeX's memory you used:
- 11848 strings out of 467748
- 183013 string characters out of 5423317
- 630804 words of memory out of 5000000
- 39835 multiletter control sequences out of 15000+600000
- 705122 words of font info for 487 fonts, out of 8000000 for 9000
+ 18645 strings out of 467748
+ 288343 string characters out of 5423317
+ 734027 words of memory out of 5000000
+ 46317 multiletter control sequences out of 15000+600000
+ 710076 words of font info for 502 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,19n,77p,1237b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.p
-fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI5
-.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXM
-I7.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/stxs
-cr.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txex
-s.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txmia
-X.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txsys
-.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmb.p
-fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmbi.pf
-b></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-</home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on aii.pdf (76 pages, 471679 bytes).
+ 75i,19n,79p,1237b,681s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+</home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
+></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI5.p
+fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI7
+.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/stxscr
+.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txexs.
+pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txmiaX.
+pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txsys.p
+fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmb.pfb
+></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb>
+</home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></
+home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on aii.pdf (77 pages, 476447 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
- 0 named destinations out of 1000 (max. 500000)
- 60929 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 605 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 203 named destinations out of 1000 (max. 500000)
+ 75329 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -8,6 +8,7 @@
   enumitem, 
   fancyhdr,
   geometry,
+  hyperref,
   mathrsfs,
   newtxtext,
   newtxmath,
@@ -46,9 +47,8 @@
   \fancyhead[CE]{\fontface\sc\leftmark}
   \fancyhead[CO]{\fontface\sc\rightmark}
   \fancyhead[LE,RO]{\fontface\thepage}
-  \setlength{\headheight}{13.6pt}.
-  \addtolength{\topmargin}{-1.6pt}.
-
+  \setlength{\headheight}{13.6pt}
+  \addtolength{\topmargin}{-1.6pt}
 }
 
 % Numeração dos capítulos em algarismos romanos
@@ -60,6 +60,9 @@
 
 % Geometria da página
 \geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+% Modificar o estilo da numeração das notas de rodapé
+\renewcommand{\thefootnote}{\bfseries\arabic{footnote}}
 
 \newcount\axiomcounter
 \newcount\corollarycounter
@@ -117,38 +120,36 @@
   \noindent{\bf Exemplo \uppercase\expandafter{\romannumeral\the\examplecounter}#1.\ }
 }
 
-\def\qed{\hfill\rule{.5em}{1em}\medskip}
 
 \def\Qed{
   \hfill$\heartsuit$\bigskip
 }
 
 
-\def\a{\;\wedge\;}
-%\def\cp{\lower.15em\hbox{$\complement$}}
-\def\cp{\mathbin{\neg}}
-\def\o{\;\vee\,}
-\def\parallel{\mathbin{/\kern-3pt/}}
-\def\rge{\rangle}
-\def\lge{\langle}
-\def\llra{\longleftrightarrow}
-\def\lra{\longrightarrow}
-\def\lla{\longleftarrow}
-\def\la{\leftarrow}
-\def\ra{\rightarrow}
+
 \def\AEx{{\bf AEx}\ }
 \def\af{{\it a fortiori}}
-\def\tvm{{\bf TVM}}
-\def\sen{{\rm sen}}
-\def\U{{\cal U}}
-\def\pma{{\bfseries PMA}}
-\def\fr#1#2{\frac{#1}{#2}}
-\def\res{\noindent{\itshape\bfseries Resolu\c c\~ao.\/}\ }
-\def\prova{\noindent{\itshape\bfseries Prova.\/}\ \ }
+\def\a{\;\wedge\;}
 \def\[{\begin{equation}}
+\def\cp{\mathbin{\neg}}
 \def\]{\end{equation}}
-
-\pagestyle{headings}
+\def\fr#1#2{\frac{#1}{#2}}
+\def\la{\leftarrow}
+\def\lge{\langle}
+\def\lla{\longleftarrow}
+\def\llra{\longleftrightarrow}
+\def\lra{\longrightarrow}
+\def\o{\;\vee\,}
+\def\parallel{\mathbin{/\kern-3pt/}}
+\def\pma{{\bfseries PMA}}
+\def\prova{\noindent{\itshape\bfseries Prova.\/}\ \ }
+\def\qed{\nopagebreak\par\hfill\rule{.5em}{1em}\medskip}
+\def\ra{\rightarrow}
+\def\res{\noindent{\itshape\bfseries Resolu\c c\~ao.\/}\ }
+\def\rge{\rangle}
+\def\sen{{\rm sen}}
+\def\tvm{{\bf TVM}}
+\def\U{{\cal U}}
 
 % Define um estilo de teorema
 \newtheoremstyle{slanted}
@@ -177,7 +178,7 @@
 
 \pagestyle{est}
 
-\chapter{Prel\'udio}
+\chapter*{Prel\'udio}
   O texto que segue trata-se de um comp\^endio de resultados que acho relevantes, portanto, o texto reflete, e muito, minha subjetividade. N\~ao obstante, este texto estar\'a em constru\c c\~ao cont\'inua, de maneira que n\~ao haver\'a vers\~ao final enquanto as circunst\^ancias da vida sobrepujarem o meu \'impeto de colecionar tais e tais resultados. Alguns, resultados s\~ao de minha autoria, mas certamente est\~ao enviesados por uma ou outra obra, de maneira que n\~ao descobri a roda, mas me sustentei sobre o trabalho de v\'arios indiv\'iduos perspicazes que pela primeira vez se depararam com o problema, e talvez, eles pr\'oprios tenham o resolvido. Saliento tamb\'em que, muitos---a maioria---dos resultados n\~ao s\~ao meus, de forma que talvez eu j\'a os tenha visto em determinado momento de minha vida, e simplesmente os reproduzi aqui. Al\'em disso, \'e imposs\'ivel colecionar todos os resultados interessantes, portanto, me ative aos que ao menos tive alguma ideia de demonstra\c c\~ao, talvez inspirada por outros. 
 
 \chapter{Ci\^encias formais}
@@ -1107,10 +1108,9 @@ Por outro lado, se $r<s$ ent\~ao $r^*\subset s^*$ e $r\in s^*\setminus r^*$.\qed
 
 O teorema anterior nos diz que o conjunto $Q^*=\{q^*\in R:q\in Q\}$ \'e isomorfo a $Q$, desta forma podemos dizer que precipuamente $Q\subset R$.
 
-\section{Unicidade dos reais a menos de isomorfismo}
+\section{Unicidade dos reais}
 
-Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $R$ com a propriedade da menor cota superior, existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Adianto que o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. Antes, precisamos de uma no\c c\~ao fundamental para nossa constru\c c\~ao, a saber, a caracter\'istica de um corpo.
-
+Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $R$ com a propriedade da menor cota superior, existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Adianto que o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. 
 
 \medskip
 \noindent{\bf Defini\c c\~ao.}{ Seja $K$ um corpo com zero $0_K$, unidade $1_K$ e $x\in K$ definamos indutivamente
@@ -1212,7 +1212,7 @@ $$
 $$
 \qed
 
-\definition{}{\sl%
+\begin{Def}
   Definamos $\sigma:Z\rightarrow K$, por
   $$
     \sigma(m)=
@@ -1232,7 +1232,8 @@ $$
   $$
     m*x=m^*\cdot x\qquad\hbox{Def.}
   $$
-}
+  \label{def_int_K}
+\end{Def}
 
 \subsection{Caracter\'istica de corpos}
 
@@ -1241,18 +1242,27 @@ $$
   \[
     X(K)=\min\{n:n\in\omega\a n^*=0_k\}.
   \]
+  \label{def_X}
 \end{Def}
 
 \begin{teo}
   Seja $K$ um corpo tal que $X(K)=0$. Ent\~ao existe um $Z^*\subset K$, tal que $Z$ \'e isomorfo a $Z$.
 \end{teo}
 
-\prova Provar usando os resultados ulteriores e mesclar.\qed
+\prova De posse da defini\c c\~ao {\bf \ref{{def_int_K}}}, podemos definir uma fun\c c\~ao $\zeta:Z\lra K$ dado por
+\[
+  \zeta(m)=m^*.
+\]
+Doravante, nosso objetvo limitar-se-a \`a prova de que $\zeta$ \'e um isomorfismo.
+
+\qed
 
 \begin{cor}
   Se $K$ \'e um corpo tal que $X(K)=0$, ent\~ao existe $Q^*\subset K$ isomorfo ao conjunto dos n\'umeros racionais $Q$.
 \end{cor}
-\prova Idem.\qed
+\prova 
+
+.\qed
 
 \lemma{}{\sl%
   Sejam $m,n\in Z$. Ent\~ao vale
@@ -1686,10 +1696,8 @@ Em seguida observemos que se $\varrho,\varsigma:R\rightarrow K$, s\~ao dois isom
 Seja agora um isomorfismo arbitr\'ario $\tau:K\rightarrow L$ e,  $\varphi:R\rightarrow K$ e $\psi:R\rightarrow L$ os \'unicos isomorfismos ent\~ao $\psi^{-1}\tau\varphi=\iota$, logo $\tau=\psi\varphi^{-1}$, desta forma $\tau$ \'e \'unico.
 \qed
 
-\subsection{Caracter\'istica de corpos}
-
 \begin{cor}
-  Seja $K$ um corpo arbitr\'ario com caracter\'istica zero. Ent\~ao $K$ cont\'em uma c\'opia dos racionais.
+  Seja $K$ um corpo arbitr\'ario com $X(R)=0$[\footnote{Confira defini\c c\~ao {\bf\ref{def_X}}.}. Ent\~ao $K$ cont\'em uma c\'opia dos racionais.
 \end{cor}
 
 
