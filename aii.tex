@@ -13,7 +13,8 @@
   newtxtext,
   newtxmath,
   setspace,
-  titlesec
+  titlesec,
+  xcolor,
 }
 
 \usepackage[brazil]{babel}
@@ -37,7 +38,7 @@
 \titleformat{\subsection}{\centering\scshape}{\thesubsection}{1em}{}[]
 
 % Estilo dos cabeçalhos
-\def\sc{}
+\def\sc{\MakeUppercase}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \renewcommand{\headrulewidth}{0ex}
@@ -47,8 +48,8 @@
   \fancyhead[CE]{\fontface\sc\leftmark}
   \fancyhead[CO]{\fontface\sc\rightmark}
   \fancyhead[LE,RO]{\fontface\thepage}
-  \setlength{\headheight}{15pt}
-  \addtolength{\topmargin}{-3pt}
+  \setlength{\headheight}{16pt}
+  \addtolength{\topmargin}{-0.1pt}
 }
 
 % Numeração dos capítulos em algarismos romanos
@@ -1109,7 +1110,7 @@ Por outro lado, se $r<s$ ent\~ao $r^*\subset s^*$ e $r\in s^*\setminus r^*$.\qed
 O teorema anterior nos diz que o conjunto $Q^*=\{q^*\in R:q\in Q\}$ \'e isomorfo a $Q$, desta forma podemos dizer que precipuamente $Q\subset R$.
 
 \section{Unicidade dos reais}
-Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $R$ com a propriedade da menor cota superior, existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Adianto que o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. 
+Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $R$ com a propriedade da menor cota superior. Existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Em verdade, o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade somas parciais de s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso das s\'eries deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. 
 
 \begin{Def}
   Seja $K$ um corpo com zero $0_K$, unidade $1_K$ e $x\in K$ definamos
@@ -1316,12 +1317,13 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     \]
   }
   \item{%
-    Sejam $m,n\in\omega$, note que \'e suficiente notar que
+    Sejam $m,n\in\omega$. \'E suficiente notar que
     \[
       \begin{split}
-        \sigma(mn)&=\sigma\bigl((-m)(-n)\bigr)\cr
-                  &=-\sigma(-mn)\cr
-                  &=-\sigma\bigl((-m)n\bigr)\cr
+        \sigma(m)\sigma(n) &=\sigma(mn)\cr
+                           &=\sigma\bigl((-m)(-n)\bigr)\cr
+                           &=-\sigma(-mn)\cr
+                           &=-\sigma\bigl((-m)n\bigr)\cr
       \end{split}
     \]
   }
@@ -1331,15 +1333,12 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 \subsection{Caracter\'istica de corpos}
 
 \begin{Def}
-  Sejam $K$ um corpo com unidade $1_K$ e zero $0_K$ e
+  Seja $K$ um corpo com unidade $1_K$ e zero $0_K$. Definimos a caracter\'istica de $K$ por 
   \[
-    E=\{n:n\in\omega\cp\{0\}\a n^*=0_K\}.
+    X(K)=\bigcap\{n:n\in\omega\cp\{0\}\a n^*=0_K\}.
+    \label{corpo_carac}
   \]
-  Definimos a caracter\'istica de $K$ por 
-  \[
-    X(K)=\bigcap E.
-  \]
-  Observe que $X(K)$ \'e sempre um n\'umero natural, e $E=\emptyset$ se, e somente se, $X(K)=0$.
+  Observe que $X(K)$ \'e sempre um n\'umero natural, podendo inclusive ser $0=\emptyset$.
   \label{def_X}
 \end{Def}
 
@@ -1347,7 +1346,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
   Seja $K$ um corpo tal que $X(K)=0$. Ent\~ao existe um $Z^*\subset K$ isomorfo a $Z$.
 \end{teo}
 
-\prova De posse da defini\c c\~ao {\bf \ref{def_int_K}}, podemos definir uma fun\c c\~ao $\zeta:Z\lra K$ dado por
+\prova De posse da defini\c c\~ao {\bf \ref{def_int_K}}, podemos definir uma fun\c c\~ao $\zeta:Z\lra K$ dada por
 \[
   \zeta(m)=m^*.
 \]
@@ -1359,7 +1358,7 @@ Para todo $n\in Z$, temos
     \zeta(n)+\zeta(-n)&=|n|*\sigma(n)+|n|*\sigma(-n)\cr
     &=|n|*(\sigma(n)+\sigma(-n))\cr
     &=|n|*(\sigma(n)-\sigma(n))\cr
-    &=0,
+    &=0_K,
   \end{split}
 \]
 i.e., 
@@ -1367,19 +1366,29 @@ i.e.,
   \forall n\bigr(n\in Z\lra\zeta(-n)=-\zeta(n)\bigr)
 \]
 
-Sejam $m,n\in Z$. Se $m,n\geq 0$ evidentemente
+Sejam $m,n\in Z$. Se $m+n=0$, ent\~ao \'e imediato que
 \[
-  \zeta(m+n)=|m+n|*\sigma(m+n)=m*\sigma(m)+n*\sigma(n)=\zeta(m)+\zeta(n),
+  \zeta(m+n)=\zeta(m)+\zeta(n).
+\]
+Com efeito, se $m+n=0$, ent\~ao vimos que $-\zeta(m)=\zeta(-m)=\zeta(n)$, da\'i vem
+\[
+  \zeta(m+n)=0_K=\zeta(m)-\zeta(m)=\zeta(m)+\zeta(-m)=\zeta(m)+\zeta(n)
+\]
+
+Agora suponhamos que $m+n\neq0$. Se $m$ e $n$ t\^em o mesmo sinal, ent\~ao
+\[
+  \zeta(m+n)=|m+n|*\sigma(m+n)=|m|*\sigma(m)+|n|*\sigma(n)=\zeta(m)+\zeta(n),
 \]
 porquanto, $\sigma(m)=\sigma(n)=\sigma(m+n)$.
 
-Agora, suponha sem perda de generalidade que $m<0$, temos que $-m\in\omega$, donde
+Suponhamos que $m$ e $n$, n\~ao tenham o mesmo sinal. Ent\~ao $m+n$ tem o mesmo sinal de $-m$ ou $-n$. Pois se, $m+n$ tem um sinal e este difere dos de $-m$ e $-n$, ent\~ao estes, por sua vez, ter\~ao o mesmo sinal e consequentemente $m$ e $n$ tamb\'em. Em conformidade, e sem perda de generalidade suponhamos que $m+n$ e $-m$ tenham o mesmo sinal, conforme vimos
+
 \[
-  \zeta(m+n)+\zeta(-m)=\zeta(n),
+  \zeta(m+n)+\zeta(-m)=\zeta\bigl((m+n)-m\bigr)=\zeta(n)
 \]
-logo,
+o que por sua vez acarreta
 \[
-  \zeta(m+n)=\zeta(n)-\zeta(-m)=\zeta(m)+\zeta(n).
+  \zeta(m+n)=\zeta(m)+\zeta(n).
 \]
 
 Em seguida, observemos que para quaisquer $m,n\in Z$, vale
@@ -1394,7 +1403,7 @@ Em seguida, observemos que para quaisquer $m,n\in Z$, vale
   \end{split}
 \]
 
-Por fim, seja $n\in\ker\zeta$, temos que $\zeta(n)=n^*=0_K$. Se $n\neq 0$, podemos sempre supor que $n>0$, bastando para isso considerar $-n$. Conformemente, ter\'iamos que existe $n\in\omega\cp\{0\}$ tal que $n^*=0_K$, a fortiori $X(K)\neq0$, o que \'e uma contradi\c c\~ao. Isto implica por sua vez que $\ker\zeta=\{0\}$, confirmando que $\zeta$ \'e um isomorfismo.
+Por fim, seja $n\in\ker\zeta$, temos que $\zeta(n)=n^*=0_K$. Se $n\neq 0$, podemos sempre supor que $n>0$, bastando para isso considerar $-n$. Conformemente incorrer\'iamos na exist\^encia de um $n\in\omega\cp\{0\}$ tal que $n^*=0_K$, a fortiori $X(K)\neq0$, o que \'e uma contradi\c c\~ao. Isto implica por sua vez que $\ker\zeta=\{0\}$, confirmando que $\zeta$ \'e um isomorfismo. Assim, para concluirmos basta tomar $Z^*=\zeta(Z)$.
 \qed
 
 Sob as condi\c c\~oes do teorema anterior temos a
@@ -1402,168 +1411,19 @@ Sob as condi\c c\~oes do teorema anterior temos a
   Seja $K$ um corpo e $X(K)=0$. Ent\~ao definimos $Z^*=\zeta(Z)$.
 \end{Def}
 
-\begin{cor}
+\begin{teo}
   Se $K$ \'e um corpo tal que $X(K)=0$, ent\~ao existe $Q^*\subset K$ isomorfo ao conjunto dos n\'umeros racionais $Q$.
-\end{cor}
-\prova 
+\end{teo}
+\prova Consideremos $Z^*$ definido anteriormente. Em $Z^*\times Z^*$ definimos a seguinte rela\c c\~ao
+\[
+  (m^*,n^*)\sim (p^*,q^*)\llra m^*q^*=n^*p^*.
+\]
+Notemos em seguida que 
+\[
+  \forall m,n\bigl(m,n\in Z\lra(m^*,n^*)\sim(m^*,n^*)\bigr)
+\]
 
-.\qed
-
-\lemma{}{\sl%
-  Sejam $m,n\in Z$. Ent\~ao vale
-  \medskip
-
-  \quad
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      {\rm a)} & $\forall n \bigl(n\in N\longrightarrow n*(-1_K)+1_K=(n-1)*(-1_K)\bigr);$ \cr
-      {\rm b)} & $\varsigma(mn)=\varsigma(m)\cdot\varsigma(n);$                           \cr
-      {\rm c)} & $(-n)^*=-n^*;$                                                           \cr
-      {\rm d)} & $n^*+1^*=(n+1)^*;$                                                       \cr
-      {\rm e)} & $\forall n \bigl(n\in N\longrightarrow n^*\geq0^*\bigr);$ \cr
-      {\rm f)} & $\forall m\bigl(m\in N\longrightarrow n^*+m^*=(n+m)^*\bigr);$            \cr
-      {\rm g)} & $(n+m)^*=n^*+m^*;$                                                       \cr
-      {\rm h)} & $m^*\cdot n^*=(mn)^*;$                                                    \cr
-      {\rm i)} & $m<n\longrightarrow m^*<n^*.$                                            \cr
-    }
-  }
-}
-
-\proof 
-a) Primeiro, observe que
-$$
-  0*(-1_K)+1_K=1_K=(-1)*(-1_K)=(0-1)*(-1_K),
-$$
-i.e., a identidade \'e v\'alida para $n=0$. Suponhamos por hip\'otese de indu\c c\~ao que ela o seja para $n$, em seguida observemos
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $(n+1)*(-1_K)+1_K$ & $=n*(-1_K)-1_K+1_K$              \cr
-      \omit              & $=n*(-1_K)$                   \cr 
-      \omit              & $=\bigl((n+1)-1\bigr)*(-1_K),$ \cr
-    }
-  }
-$$
-portanto, \'e v\'alida para $n+1$, conclu\'\i mos do princ\'\i pio de indu\c c\~ao mate\-m\'atica que a propriedade \'e v\'alida para todo $n\in N$.
-
-
-b) A fun\c c\~ao $\varsigma$ \'e a fun\c c\~ao sinal, verifica-se facilmente, considerando casos, que ela cumpre as propriedades do sinal, ou seja, o sinal do produto \'e o produto dos sinais.
-
-c) 
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $(-n)^*$ & $=|-n|*\varsigma(-n)$                             \cr
-      \omit    & $=|n|*\bigl(\varsigma(-1)\cdot\varsigma(n)\bigr)$ \cr
-      \omit    & $=|n|*\bigl(-1_K\cdot\varsigma(n)\bigr)$          \cr
-      \omit    & $=-1_K\cdot\bigl(|n|*\varsigma(n)\bigr)$          \cr
-      \omit    & $=-n^*$                                           \cr
-    }
-  }
-$$
-
-d) Se $n\in N$, a identidade \'e trivialmente v\'alida, pois segue da defini\c c\~ao. Se $n\in Z\setminus N$, ent\~ao temos dois casos a considerar $n=-1$ ou $n<-1$. Suponha que $n=-1$, conformemente temos
-$$
-  (-1)^*+1^*=-1^*+1^*=0_K=0^*=(-1+1)^*.
-$$
-Agora admita que $n<-1$, temos em conformidade
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $n^*+1^*$ & $=(-n)*(-1_K)+1_K$      \cr
-      \omit     & $=(-n-1)*(-1_K)$        \cr
-      \omit     & $=|n+1|*\varsigma(n+1)$ \cr
-      \omit     & $=(n+1)^*.$             \cr
-    }
-  }
-$$
-
-e) Provemos por indu\c c\~ao sobre $n$. Observemos inicialmente que trivialmente $0^*\geq 0^*$, portanto vale para $n=0$. Suponhamos por hip\'otese de indu\c c\~ao que $n^*\geq0^*$, temos 
-$$
-  (n+1)^*=n^*+1^*>0,
-$$
-pois $1^*>0$, o que prova que a desigualdade \'e v\'alida para $n+1$, concluindo por pelo princ\'\i pio de indu\c c\~ao matem\'atica que ela \'e v\'alida para todo $n\in N$.
-
-
-f) Provemos usando o princ\'\i pio de indu\c c\~ao matem\'atica. Primeiramente notemos que
-$$
-  n^*+0^*=n^*=(n+0)^*,
-$$
-logo, a propriedade \'e v\'alida para $m=0$. Suponhamos que tamb\'em seja para $m$, temos posteriormente
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $n^*+(m+1)^*$ & $=n^*+(m^*+1^*)$          \cr
-      \omit         & $=(n^*+m^*)+1^*$          \cr
-      \omit         & $=(n+m)^*+1^*$            \cr
-      \omit         & $=\bigl((n+m)+1\bigr)^*$  \cr
-      \omit         & $=\bigl(n+(m+1)\bigr)^*,$ \cr
-    }
-  }
-$$
-i.e., a propriedade \'e v\'alida para $m+1$, consequentemente pelo princ\'\i pio de indu\c c\~ao matem\'atica, conclu\'\i mos o requerido.
-
-g) \'E suficiente notar que se $m<0$, ent\~ao $-m\in N$, da\'\i\ 
-$$
-  (n+m)^*-m^*=(n+m)^*+(-m)^*=n^*
-$$
-donde
-$$
-  (n+m)^*=n^*+m^*
-$$
-como requerido. 
-
-h)
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $m^*\cdot n^*$ & $=\bigl(|m|*\varsigma(m)\bigr)\cdot\bigl(|n|*\varsigma(n)\bigr)$ \cr
-      \omit          & $=|m||n|*\bigl(\varsigma(m)\cdot\varsigma(n)\bigr)$              \cr
-      \omit          & $=|mn|*\varsigma(mn)$                                            \cr
-      \omit          & $=(mn)^*$                                                        \cr
-    }
-  }
-$$
-
-i) Notemos primeiramente que se $n>0$, ent\~ao existe $k\in N$, tal que $n=k+1$, da\'\i\ $n^*=k^*+1^*>0^*$. Logo, se $n>m$, ent\~ao $(n-m)^*=n^*-m^*>0^*$, consequentemente $n^*>m^*$.
 \qed
-
-Temos da\'\i, o
-
-\corollary{}{\sl%
-  O conjunto 
-  $$
-    Z^*=\{m^*\in K:m\in Z\}
-  $$
-  \'e isomorfo a $Z$.
-}
-
-%Provemos este item considerando casos. Primeiro observemos que se $m=0$, ent\~ao $n>0$, da\'\i\
-%$$
-%  n^*=n*1_K>0=0^*.
-%$$
-%
-%Igualmente se $n=0$, ent\~ao $m<0$, logo, $-m>0$, e consequentemente $(-m)^*>0^*$, portanto $m^*<0^*$, pelo item b).
-%
-%Suponhamos que $m,n\neq0$, consideremos primeiramente que $0<m<n$. Neste caso temos 
-%$$
-%  m^*<m^*+(n-m)^*=n^*,
-%$$
-%pois $m,n-m\in N$. Seguidamente, suponhamos que $n>0>m$, neste caso segue trivialmente do primeiro caso que
-%$$
-%  m^*<0^*<n^*.
-%$$
-%Por fim, suponhamos que $n<m<0$, ent\~ao $0<-m<-n$, logo 
-%$$
-%  -m^*=(-m)^*<(-n)^*=-n^* 
-%$$
-%donde vem $n^*<m^*$. Os casos tratados s\~ao suficientes para concluir a implica\c c\~ao requerida. 
 
 \theorem{}{\sl%
   Seja $K$ um corpo ordenado com a propriedade da menor cota superior. Ent\~ao $K$ \'e arquimediano e o conjunto
