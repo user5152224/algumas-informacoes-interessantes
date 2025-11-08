@@ -1223,6 +1223,26 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     Portanto, $n+1\in S$, logo $S=\omega$.
   }
   \item{%
+    Seja
+    \[
+      S=\{n:n\in\omega\a (n*x)*y=n*xy\}.
+    \]
+    Primeiro, $0\in S$, pois
+    \[
+      (0*x)y=0_Ky=0_K;
+    \]
+    Segundo, se $n\in S$, ent\~ao
+    \[
+      \begin{split}
+         \bigl((n+1)*x\bigr)y&=(n*x+x)y\cr
+                             &=(n*x)y+xy\cr
+                             &=n*xy+xy\cr
+                             &=(n+1)*xy.
+      \end{split}
+    \]
+    Portanto, $n+1\in S$ e consequentemente $S=\omega$.
+  }
+  \item{%
     Defina
     \[
       S=\{n:n\in\omega\a(m*x)(n*y)=mn*xy\}.
@@ -1237,136 +1257,86 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
         (m*x)\bigl((n+1)*y\bigr)&=(m*x)(n*y)+(m*x)y\cr
                                 &=mn*xy+m*xy\cr
                                 &=(mn+m)*xy\cr
-                                &=\bigl(m(n+1)\bigr)*xy
+                                &=\bigl(m(n+1)\bigr)*xy.
       \end{split}
     \]
-  }
-  \item{%
+    Logo, $n+1\in S$ e, portanto, $S=\omega$.
+
   }
 \end{enumerate}
 \qed
 
-\lemma{}{\sl%
-
-  \medskip
-  \quad
-  \vbox{
-    \halign{
-      \hfill# & #\hfill \cr
-      {\rm a)} & $m*x+n*x=(n+m)*x;$        \cr
-      {\rm b)} & $n*x+n*y=n*(x+y);$        \cr
-      {\rm c)} & $n*(m*x)=nm*x;$           \cr
-      {\rm d)} & $(n*x)\cdot y=n*xy;$      \cr
-      {\rm e)} & $(m*x)\cdot (n*y)=mn*xy;$ \cr
-    }
-  }
-  \medskip
-}
-
-\proof a) Fixemos $m\in N$ e consideremos o conjunto
-$$
-  S=\bigl\{n\in N:m*x+n*x=(n+m)*x\bigr\}.
-$$
-Certamente,
-$$
-  m*x+0*x=m*x=(m+0)*x,
-$$
-i.e., $0\in S$. Supondo que $n\in S$, temos que
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $m*x+(n+1)*x$ & $=m*x+n*x+x$\cr
-      \omit         & $=(m+n)*x+x$  \cr
-      \omit         & $=\bigl(m+(n+1)\bigr)*x$ \cr
-    }
-  }
-$$
-ou seja $n+1\in S$. Provamos portanto que $S\subset N$ \'e um conjunto sucessor, mas como $ N$ \'e um conjunto sucessor minimal conclu\'\i mos que $S= N$. Por fim, da natureza arbitr\'aria de $m\in N$, podemos concluir a identidade.
-
-b) Evidentemente 
-$$
-  0*x+0*y=0_K=0*(x+y).
-$$
-Suponhamos por hip\'otese de indu\c c\~ao que a propriedade seja v\'alida para $n$, seguidamente notemos que
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $(n+1)*x+(n+1)*y$ & $=(n*x+x)+(n*y+y)$ \cr
-      \omit             & $=n*(x+y)+(x+y)$   \cr
-      \omit             & $=(n+1)*(x+y)$     \cr
-    }
-  }
-$$
-portanto a propriedade \'e v\'alida para $n+1$ e, pelo princ\'\i pio de indu\c c\~ao matem\'atica ser\'a v\'alida para todo $n\in N$. 
-
-c) Analogamente fixemos $m\in N$, e consideremos o conjunto
-$$
-  S=\{n\in N:n*(m*x)=nm*x\}.
-$$
-Em verdade, \'e f\'acil ver que $0\in S$. Suponhamos que $n\in S$, notemos que
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $(n+1)*(m*x)$ & $=n*(m*x)+m*x$ \cr
-      \omit         & $=nm*x+m*x$    \cr
-      \omit         & $=\bigl((n+1)m\bigr)*x,$    \cr
-    }
-  }
-$$
-i.e., $n+1\in S$. Pelo mesmo motivo $S= N$ e da arbitrariedade de $m$ fica provada a identidade.
-
-d) Inteiramente an\'alogo aos itens a) e b).
-
-e) \'E suficiente notar que
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $(m*x)\cdot(n*y)$ & $=m*\bigl(x\cdot(n*y)\bigr)$ \cr
-      \omit             & $=m*(n*xy)$             \cr
-      \omit             & $=mn*xy$                \cr
-    }
-  }
-$$
-\qed
 
 \begin{Def}
   Definamos $\sigma:Z\rightarrow K$, por
   \[
-    \sigma(m)=
+    \sigma(n)=
     \begin{cases}
-      \hfill  1_K, & m>0\cr
-      \hfill  0_k, & m=0\cr
-      \hfill -1_K, & m<0.\cr
+      \hfill  1_K, & n>0\cr
+      \hfill  0_K, & n=0\cr
+      \hfill -1_K, & n<0.\cr
     \end{cases}
   \]
-  Al\'em disso, para $m\in Z$ definamos
+  Al\'em disso, para $n\in Z$ definamos
   \[
-    m^*=|m|*\sigma(m)
+    n^*=|n|*\sigma(n)
   \]
   e
   \[
-    m*x=m^*\cdot x.
+    n*x=n^*\cdot x.
   \]
   \label{def_int_K}
 \end{Def}
 
+\begin{lem}
+  Sejam $K$ um corpo com unidade $1_K$. Ent\~ao valem
+  \begin{enumerate}[label = (\alph*)]
+    \item{%
+      \[
+        \forall n\bigl(n\in Z\lra\sigma(-n)=-\sigma(n)\bigr);
+      \]
+    }
+    \item{%
+      \[
+        \forall m,m\bigl(n,m\in Z\lra\sigma(mn)=\sigma(m)\sigma(n)\bigr).
+      \]
+    }
+  \end{enumerate}
+\end{lem}
+\prova Sejam $m,n\in\omega$.
+\begin{enumerate}[label = (\alph*)]
+  \item{%
+    Se $n\in\omega$, ent\~ao
+    \[
+      \sigma(-n)=-1_K=-\sigma(n).
+    \]
+    Caso contr\'ario, $-n\in\omega$, da\'i
+    \[
+      \sigma\bigl(-(-n)\bigr)=-\sigma(-n)\lra\sigma(-n)=-\sigma(n).
+    \]
+  }
+  \item{%
+    Sejam $m,n\in\omega$, note que \'e suficiente notar que
+    \[
+      \begin{split}
+        \sigma(mn)&=\sigma\bigl((-m)(-n)\bigr)\cr
+                  &=-\sigma(-mn)\cr
+                  &=-\sigma\bigl((-m)n\bigr)\cr
+      \end{split}
+    \]
+  }
+\end{enumerate}
+\qed
+
 \subsection{Caracter\'istica de corpos}
 
 \begin{Def}
-  Seja $K$ um corpo com unidade $1_k$ e zero $0_k$. Definimos a caracter\'istica de $K$ como 
+  Seja $K$ um corpo com unidade $1_K$ e zero $0_K$. Definimos a caracter\'istica de $K$ como 
   \[
-    X(K)=\min\{n:n\in\omega\a n^*=0_k\}.
+    X(K)=\min\{n:n\in\omega\a n^*=0_K\}.
   \]
   \label{def_X}
 \end{Def}
-
-\begin{teo}
-  Sejam $m,n\in Z$
-\end{teo}
 
 \begin{teo}
   Seja $K$ um corpo tal que $X(K)=0$. Ent\~ao existe um $Z^*\subset K$, tal que $Z$ \'e isomorfo a $Z$.
@@ -1376,8 +1346,50 @@ $$
 \[
   \zeta(m)=m^*.
 \]
-Doravante, nosso objetvo limitar-se-a \`a prova de que $\zeta$ \'e um isomorfismo.
+Doravante, nosso objetivo limitar-se-a \`a prova de que $\zeta$ \'e um isomorfismo de an\'eis.
 
+Para todo $n\in Z$, temos
+\[
+  \begin{split}
+    \zeta(n)+\zeta(-n)&=|n|*\sigma(n)+|n|*\sigma(-n)\cr
+    &=|n|*(\sigma(n)+\sigma(-n))\cr
+    &=|n|*(\sigma(n)-\sigma(n))\cr
+    &=0,
+  \end{split}
+\]
+i.e., 
+\[
+  \forall n\bigr(n\in Z\lra\zeta(-n)=-\zeta(n)\bigr)
+\]
+
+Sejam $m,n\in Z$. Se um deles \'e zero digamos $n=0$, ent\~ao
+\[
+  \zeta(m+0)=\zeta(m)=\zeta(m)+0_K=\zeta(m)+\zeta(0)
+\]
+
+Se ambos s\~ao estritamente negativos ou ambos s\~ao estritamente positivos, em qualquer caso vale
+\[
+  \begin{split}
+    \zeta(m+n) &=|m+n|*\sigma(m+n)\cr
+               &=(|m|+|n|)*\sigma(m+n)\cr
+               &=|m|*\sigma(m+n)+|n|*\sigma(m+n)\cr
+               &=|m|*\sigma(m)+|n|*\sigma(n)\cr
+               &=\zeta(m)+\zeta(n),\cr
+  \end{split}
+\]
+pois $\sigma(m+n)=\sigma(m)=\sigma(n)$.
+
+Agora, suponhamos que eles t\^em sinais contr\'arios e s\~ao n\~ao nulos. Admitamos sem perda de generalidade que $|m|\leq|n|$. Se $m+n<0$, ent\~ao $n<0<m$  
+\[
+  \zeta(m+n)=(-(m+n))*\sigma(m+n)
+\]
+
+\[
+  \begin{split}
+    \zeta(m)+\zeta(n)&=\zeta(m+n)=\zeta(-((-m)+(-n)))\cr
+                     &=-\zeta(-(m-(-n)))\cr
+  \end{split}
+\]
 \qed
 
 \begin{cor}
