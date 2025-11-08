@@ -1146,7 +1146,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     }
   \end{enumerate}
 \end{teo}
-\prova 
+\prova Sejam $m\in\omega$ e $x,y\in K$.
 \begin{enumerate}[label = (\alph*)]
   \item{%
     Definamos o conjunto
@@ -1164,7 +1164,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     Consequentemente $n+1\in S$, donde pela minimalidade de $\omega$, inferimos que $S=\omega$[\footnote{Esta \'e simplesmente a consequ\^encia da defini\c c\~ao de $\omega$ como o conjunto sucessor minimal, seguindo a terminologia de Halmos.}. 
   }
   \item{%
-    Seja $m\in\omega$. Consideremos o conjunto
+    Consideremos o conjunto
     \[
       S=\{n:n\in\omega\a m*x+n*x=(m+n)*x\}.
     \]
@@ -1183,7 +1183,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     Portanto, $n+1\in S$. Pela minimalidade de $\omega$ decorre que $S=\omega$.
   }
   \item{%
-    Sejam $x,y\in K$, da mesma maneira seja
+    Da mesma maneira seja
     \[
       S=\{n:n\in\omega\a n*x+n*y=n*(x+y)\}.
     \]
@@ -1203,7 +1203,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     i.e., $n+1\in S$. Consequentemente, $S=\omega$.
   }
   \item{%
-    Seja $m\in\omega$. Consideremos novamente
+    Consideremos novamente
     \[
       S=\{n:n\in\omega\a m*(n*x)=mn*x\}.
     \]
@@ -1223,6 +1223,23 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     Portanto, $n+1\in S$, logo $S=\omega$.
   }
   \item{%
+    Defina
+    \[
+      S=\{n:n\in\omega\a(m*x)(n*y)=mn*xy\}.
+    \]
+    Note primeiramente que $0\in S$, porque
+    \[
+      (m*x)(0*y)=(m*x)0_K=0_K.
+    \]
+    Se $n\in S$, ent\~ao
+    \[
+      \begin{split}
+        (m*x)\bigl((n+1)*y\bigr)&=(m*x)(n*y)+(m*x)y\cr
+                                &=mn*xy+m*xy\cr
+                                &=(mn+m)*xy\cr
+                                &=\bigl(m(n+1)\bigr)*xy
+      \end{split}
+    \]
   }
   \item{%
   }
