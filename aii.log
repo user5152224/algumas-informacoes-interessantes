@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.11)  7 NOV 2025 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.11)  8 NOV 2025 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,12 +6,12 @@ entering extended mode
 (./aii.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/book.cls
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/leqno.clo
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/base/leqno.clo
 File: leqno.clo 2016/12/29 v1.2b Standard LaTeX option (left equation numbers)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/bk10.clo
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/base/bk10.clo
 File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
@@ -27,24 +27,24 @@ File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/06/16 v2.17y AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen149
 ))
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen150
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count284
@@ -95,10 +95,10 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -106,7 +106,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks22
 \thm@bodyfont=\toks23
@@ -118,7 +118,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip56
 \dth@everypar=\toks27
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \enitkv@toks@=\toks28
 \labelindent=\skip57
@@ -128,7 +128,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count296
 \enitdp@description=\count297
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip58
@@ -147,17 +147,17 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip71
 \@temptokenb=\toks30
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks31
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count298
@@ -173,72 +173,71 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layoutvoffset=\dimen166
 \Gm@dimlist=\toks32
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekey
-s.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/home/fool/.texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.st
-y
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+))
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitles
-tring.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.
+sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+ (/home/fool/.texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count301
-) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count302
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen167
 \Hy@linkcounter=\count303
 \Hy@pagecounter=\count304
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count305
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -252,18 +251,17 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count306
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/url/url.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen168
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.st
-y
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -282,60 +280,58 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 \c@Hfootnote=\count310
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count311
 \c@bookmark@seq@number=\count312
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilech
-eck.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.st
+y
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecoun
-ter.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.st
+y
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
 \Hy@SectionHShift=\skip72
-)
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+) (/home/fool/.texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/newtxtext.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/newtxtext.sty
 Package: newtxtext 2024/04/01 v1.744(Michael Sharpe) latex and unicode latex su
 pport for TeXGyreTermesX
 
 `newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes a
 nd its extensions (msharpe)
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/xpatch/xpatch.sty
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/xpatch/xpatch.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-09-02 L3 programming layer (loader) 
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex
-.def
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count313
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.s
-ty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-08-16 L3 Experimental document command parser
-)) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+))
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -346,45 +342,45 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
 \XKV@depth=\count314
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/xstring/xstring.sty
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/xstring/xstring.tex
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/xstring/xstring.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count315
 \xs_countb=\count316
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 LaTeX Font Info:    Setting ntxLF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
 \ntx@tmpcnta=\count317
 \ntx@cnt=\count318
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2025-05-24 v2.0.1 Font selection axes (deprecated)
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/figureversions/figureversi
-ons.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/figureversions/figureversions.st
+y
 Package: figureversions 2025-04-29 v1.0.1 Figure versions
 ))
 \tx@sixem=\dimen171
@@ -402,17 +398,16 @@ Package: figureversions 2025-04-29 v1.0.1 Figure versions
 \tx@dimBB=\dimen183
 \tx@dimC=\dimen184
 LaTeX Info: Redefining \oldstylenums on input line 902.
-)
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/newtxmath.sty
+) (/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/newtxmath.sty
 Package: newtxmath 2024/09/22 v1.754
 
 `newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
-) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/oberdiek/centernot.sty
+) (/home/fool/.texlive/2025/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
 \tx@cntz=\count319
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
 \tx@Isdigit=\count320
 \tx@IsAlNum=\count321
 \tx@tA=\toks35
@@ -520,10 +515,10 @@ LaTeX Info: Redefining \Bbbk on input line 2847.
 LaTeX Info: Redefining \not on input line 2995.
 LaTeX Info: Redefining \textsquare on input line 3025.
 LaTeX Info: Redefining \openbox on input line 3027.
-) (/home/papabundus/.texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
+) (/home/fool/.texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box56
 \beforetitleunit=\skip73
@@ -535,7 +530,7 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen188
 \titlewidthfirst=\dimen189
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/babel/babel.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2025/10/01 v25.13 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
 \babel@savecnt=\count322
@@ -556,18 +551,17 @@ on input line 2078.
 \U@D=\dimen190
 \l@unhyphenated=\language90
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
 \bbl@dirlevel=\count323
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/generic/babel-portuges/brazil.ld
-f
+(/home/fool/.texlive/2025/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
 (babel)             (\language72). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
 \MT@toks=\toks39
 \MT@tempbox=\box57
@@ -582,8 +576,7 @@ LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count325
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex
-.def
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 944.
@@ -592,7 +585,7 @@ LaTeX Info: Redefining \lslig on input line 944.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
@@ -614,13 +607,12 @@ LaTeX Info: Redefining \microtypesetup on input line 3065.
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
 e 177.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 177.
-
-(./aii.aux
+ (./aii.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
 (babel)             Reported on input line 8.
 )
@@ -630,7 +622,7 @@ LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 177.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
  177.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/omlntxmi.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 177.
@@ -648,7 +640,7 @@ LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 177.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
 177.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxexa.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
 LaTeX Font Info:    ... okay on input line 177.
@@ -660,7 +652,7 @@ LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 177.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
  177.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    ... okay on input line 177.
@@ -668,7 +660,7 @@ LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 177.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
 e 177.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 177.
@@ -715,7 +707,7 @@ Package hyperref Info: Link coloring OFF on input line 177.
 \openout3 = `aii.out'.
 
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/home/fool/.texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count340
 \scratchdimen=\dimen192
@@ -751,7 +743,7 @@ Package microtype Info: Patching command `\showhyphens'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/sc' will be
@@ -762,7 +754,7 @@ Package microtype Info: Character `013' is missing
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
 e 181.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/ot1minntx.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -796,25 +788,25 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
 LaTeX Font Info:    Trying to load font information for U+msa on input line 181
 .
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 181
 .
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18
 1.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
@@ -823,7 +815,7 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
 
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
 181.
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
@@ -835,7 +827,7 @@ LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
 181.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
@@ -847,7 +839,7 @@ LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
 181.
 
-(/home/papabundus/.texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
+(/home/fool/.texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
@@ -867,10 +859,9 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 [1
 
 
-{/home/papabundus/.texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/
-home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf-pc.e
-nc}{/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf
-.enc}]
+{/home/fool/.texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/f
+ool/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf-pc.enc}{/home/fo
+ol/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 80.0pt on input line 184.
@@ -891,8 +882,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 
 [2
 
-{/home/papabundus/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-th-tlf
-.enc}]
+{/home/fool/.texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-th-tlf.enc}]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
 (Font)              scaled to size 10.0pt on input line 225.
 
@@ -1150,7 +1140,7 @@ Package rerunfilecheck Info: File `aii.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  18674 strings out of 467748
- 288650 string characters out of 5423317
+ 287306 string characters out of 5426443
  734035 words of memory out of 5000000
  46316 multiletter control sequences out of 15000+600000
  710306 words of font info for 505 fonts, out of 8000000 for 9000
@@ -1192,18 +1182,18 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-</home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
-></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI5.p
-fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI7
-.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/stxscr
-.pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txexs.
-pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txmiaX.
-pfb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/txsys.p
-fb></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmb.pfb
-></home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb>
-</home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></
-home/papabundus/.texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on aii.pdf (78 pages, 479470 bytes).
+</home/fool/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></hom
+e/fool/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></home/fo
+ol/.texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></home/fool/.
+texlive/2025/texmf-dist/fonts/type1/public/newtx/stxscr.pfb></home/fool/.texliv
+e/2025/texmf-dist/fonts/type1/public/newtx/txexs.pfb></home/fool/.texlive/2025/
+texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></home/fool/.texlive/2025/texmf-
+dist/fonts/type1/public/newtx/txsys.pfb></home/fool/.texlive/2025/texmf-dist/fo
+nts/type1/public/newtx/ztmb.pfb></home/fool/.texlive/2025/texmf-dist/fonts/type
+1/public/newtx/ztmbi.pfb></home/fool/.texlive/2025/texmf-dist/fonts/type1/publi
+c/newtx/ztmr.pfb></home/fool/.texlive/2025/texmf-dist/fonts/type1/public/newtx/
+ztmri.pfb>
+Output written on aii.pdf (78 pages, 479466 bytes).
 PDF statistics:
  645 PDF objects out of 1000 (max. 8388607)
  535 compressed objects within 6 object streams
