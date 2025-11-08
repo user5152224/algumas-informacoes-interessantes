@@ -1,5 +1,5 @@
 %!latex
-\documentclass[10pt, a5paper, leqno]{book}
+\documentclass[12pt, a4paper, leqno]{book}
 
 \usepackage{%
   amsmath,
@@ -47,8 +47,8 @@
   \fancyhead[CE]{\fontface\sc\leftmark}
   \fancyhead[CO]{\fontface\sc\rightmark}
   \fancyhead[LE,RO]{\fontface\thepage}
-  \setlength{\headheight}{13.6pt}
-  \addtolength{\topmargin}{-1.6pt}
+  \setlength{\headheight}{15pt}
+  \addtolength{\topmargin}{-3pt}
 }
 
 % Numeração dos capítulos em algarismos romanos
@@ -59,7 +59,7 @@
 \let\cleardoublepage=\clearpage
 
 % Geometria da página
-\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}
 
 % Modificar o estilo da numeração das notas de rodapé
 \renewcommand{\thefootnote}{\bfseries\arabic{footnote}}
@@ -1331,15 +1331,20 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 \subsection{Caracter\'istica de corpos}
 
 \begin{Def}
-  Seja $K$ um corpo com unidade $1_K$ e zero $0_K$. Definimos a caracter\'istica de $K$ como 
+  Sejam $K$ um corpo com unidade $1_K$ e zero $0_K$ e
   \[
-    X(K)=\min\{n:n\in\omega\a n^*=0_K\}.
+    E=\{n:n\in\omega\cp\{0\}\a n^*=0_K\}.
   \]
+  Definimos a caracter\'istica de $K$ por 
+  \[
+    X(K)=\bigcap E.
+  \]
+  Observe que $X(K)$ \'e sempre um n\'umero natural, e $E=\emptyset$ se, e somente se, $X(K)=0$.
   \label{def_X}
 \end{Def}
 
 \begin{teo}
-  Seja $K$ um corpo tal que $X(K)=0$. Ent\~ao existe um $Z^*\subset K$, tal que $Z$ \'e isomorfo a $Z$.
+  Seja $K$ um corpo tal que $X(K)=0$. Ent\~ao existe um $Z^*\subset K$ isomorfo a $Z$.
 \end{teo}
 
 \prova De posse da defini\c c\~ao {\bf \ref{def_int_K}}, podemos definir uma fun\c c\~ao $\zeta:Z\lra K$ dado por
@@ -1362,35 +1367,40 @@ i.e.,
   \forall n\bigr(n\in Z\lra\zeta(-n)=-\zeta(n)\bigr)
 \]
 
-Sejam $m,n\in Z$. Se um deles \'e zero digamos $n=0$, ent\~ao
+Sejam $m,n\in Z$. Se $m,n\geq 0$ evidentemente
 \[
-  \zeta(m+0)=\zeta(m)=\zeta(m)+0_K=\zeta(m)+\zeta(0)
+  \zeta(m+n)=|m+n|*\sigma(m+n)=m*\sigma(m)+n*\sigma(n)=\zeta(m)+\zeta(n),
+\]
+porquanto, $\sigma(m)=\sigma(n)=\sigma(m+n)$.
+
+Agora, suponha sem perda de generalidade que $m<0$, temos que $-m\in\omega$, donde
+\[
+  \zeta(m+n)+\zeta(-m)=\zeta(n),
+\]
+logo,
+\[
+  \zeta(m+n)=\zeta(n)-\zeta(-m)=\zeta(m)+\zeta(n).
 \]
 
-Se ambos s\~ao estritamente negativos ou ambos s\~ao estritamente positivos, em qualquer caso vale
+Em seguida, observemos que para quaisquer $m,n\in Z$, vale
 \[
   \begin{split}
-    \zeta(m+n) &=|m+n|*\sigma(m+n)\cr
-               &=(|m|+|n|)*\sigma(m+n)\cr
-               &=|m|*\sigma(m+n)+|n|*\sigma(m+n)\cr
-               &=|m|*\sigma(m)+|n|*\sigma(n)\cr
-               &=\zeta(m)+\zeta(n),\cr
+    \zeta(mn)&=(mn)^*\cr
+    &=|mn|*\sigma(mn)\cr
+    &=(|m||n|)*\bigl(\sigma(m)\sigma(n)\bigr)\cr
+    &=\bigl(|m|*\sigma(m)\bigr)\bigl(|n|*\sigma(n)\bigr)\cr
+    &=m^*n^*\cr
+    &=\zeta(m)\zeta(n).
   \end{split}
 \]
-pois $\sigma(m+n)=\sigma(m)=\sigma(n)$.
 
-Agora, suponhamos que eles t\^em sinais contr\'arios e s\~ao n\~ao nulos. Admitamos sem perda de generalidade que $|m|\leq|n|$. Se $m+n<0$, ent\~ao $n<0<m$  
-\[
-  \zeta(m+n)=(-(m+n))*\sigma(m+n)
-\]
-
-\[
-  \begin{split}
-    \zeta(m)+\zeta(n)&=\zeta(m+n)=\zeta(-((-m)+(-n)))\cr
-                     &=-\zeta(-(m-(-n)))\cr
-  \end{split}
-\]
+Por fim, seja $n\in\ker\zeta$, temos que $\zeta(n)=n^*=0_K$. Se $n\neq 0$, podemos sempre supor que $n>0$, bastando para isso considerar $-n$. Conformemente, ter\'iamos que existe $n\in\omega\cp\{0\}$ tal que $n^*=0_K$, a fortiori $X(K)\neq0$, o que \'e uma contradi\c c\~ao. Isto implica por sua vez que $\ker\zeta=\{0\}$, confirmando que $\zeta$ \'e um isomorfismo.
 \qed
+
+Sob as condi\c c\~oes do teorema anterior temos a
+\begin{Def}
+  Seja $K$ um corpo e $X(K)=0$. Ent\~ao definimos $Z^*=\zeta(Z)$.
+\end{Def}
 
 \begin{cor}
   Se $K$ \'e um corpo tal que $X(K)=0$, ent\~ao existe $Q^*\subset K$ isomorfo ao conjunto dos n\'umeros racionais $Q$.
