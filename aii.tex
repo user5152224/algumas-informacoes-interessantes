@@ -1124,8 +1124,11 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 \end{Def}
 
 \begin{teo}
-  Seja $K$ um corpo, para quaisquer $m,n\in\omega$ e $x,y\in K$ valem
+  Seja $K$ um corpo, com zero $0_K$. Ent\~ao para quaisquer $m,n\in\omega$ e $x,y\in K$ valem
   \begin{enumerate}[label = (\alph*)]
+    \item{%
+      $n*0_K=0_K$;
+    }
     \item{%
       $m*x+n*x=(m+n)*x$;
     }
@@ -1145,6 +1148,21 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 \end{teo}
 \prova 
 \begin{enumerate}[label = (\alph*)]
+  \item{%
+    Definamos o conjunto
+    \[
+      S=\{n:n\in\omega\a n*0_K=0_K\}.
+    \]
+    Certamente que $0\in S$, porquanto pela defini\c c\~ao vale
+    \[
+      0*0_k=0_K.
+    \]
+    Se $n\in S$, temos que
+    \[
+      (n+1)*0_K=n*0_K+0_K=0_K+0_K=0+K.
+    \]
+    Consequentemente $n+1\in S$, donde pela minimalidade de $\omega$, inferimos que $S=\omega$\footnote{Esta \'e simplesmente a consequ\^encia da defini\c c\~ao de $\omega$ como o conjunto sucessor minimal, seguindo a terminologia de Halmos.}. 
+  }
   \item{%
     Seja $m\in\omega$. Consideremos o conjunto
     \[
