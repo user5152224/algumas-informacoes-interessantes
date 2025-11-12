@@ -5,6 +5,7 @@
   amsmath,
   amssymb, 
   amsthm, 
+  dsfont,
   enumitem, 
   fancyhdr,
   geometry,
@@ -40,7 +41,7 @@
 % Estilo dos cabeçalhos
 \def\sc{\MakeUppercase}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\: #1}}
 \renewcommand{\headrulewidth}{0ex}
 \fancypagestyle{est}{%
   \def\fontface{\bf}
@@ -129,6 +130,7 @@
 
 
 \def\AEx{{\bf AEx}\ }
+\def\R{\mathds{R}}
 \def\af{{\it a fortiori}}
 \def\a{\;\wedge\;}
 \def\[{\begin{equation}}
@@ -861,7 +863,7 @@ $$
 
 \proof Sejam $E\subseteq S$, n\~ao vazio limitado inferiormente e $L$ o cojunto das cotas inferiores de $E$ que, como sabemos \'e n\~ao vazio, pois $E$ \'e limitado inferiormente. Em vista da hip\'otese de $S$ ter a propriedade da menor cota superior existe $\sup L$. Seja agora $\gamma>\sup L$. Ent\~ao $\gamma$ n\~ao \'e cota inferior de $E$, pois do contr\'ario $\gamma\leq\sup L$, desta forma $\sup L$ \'e a maior das cotas inferiores de $E$, como consequencia $\inf E=\sup L$. Fica, portanto, completa a prova do teorema.\qed 
 
-\theorem{}{\sl\ Sejam $x,y\in R$.
+\theorem{}{\sl\ Sejam $x,y\in \R$.
 
   a) Se $x>0$, ent\~ao existe $m\in Z$, tal que $mx>y$;
   
@@ -871,7 +873,7 @@ $$
 \proof 
 a) Suponhamos que a implica\c c\~ao \'e falsa, ent\~ao existe $x>0$, tal que para todo $m\in Z$ vale $mx\leq y$.
 
-Particularmente, $x/y>0$, pois $x,y>0$. Da\'\i\ vem que o conjunto $M=\{m(x/y)\in R:m\in Z\}$ \'e limitado superiormente por $1$, como aquele \'e n\~ao vazio, decorre da propriedade da menor cota superior de $R$ que existe $\varsigma=\sup M$. Temos, portanto, que para todo $m\in Z$ vale 
+Particularmente, $x/y>0$, pois $x,y>0$. Da\'\i\ vem que o conjunto $M=\{m(x/y)\in \R:m\in Z\}$ \'e limitado superiormente por $1$, como aquele \'e n\~ao vazio, decorre da propriedade da menor cota superior de $\R$ que existe $\varsigma=\sup M$. Temos, portanto, que para todo $m\in Z$ vale 
 $$
   (m+1)\bigl({x\over y}\bigr)\leq\varsigma
 $$
@@ -884,12 +886,12 @@ i.e., $\varsigma-x/y$ \'e uma cota superior de $M$ o que contradiz a minimalidad
 b) Primeiro, provaremos a seguinte
 
 \noindent{\bf Afirma\c c\~ao.}\ {\sl
-  Para todo $\varrho\in R$, existe um \'unico inteiro $m$, tal que $m\leq\varrho<m+1$.
+  Para todo $\varrho\in \R$, existe um \'unico inteiro $m$, tal que $m\leq\varrho<m+1$.
 } 
 
 \proof Suponha o contr\'ario que para todo $m\in Z$, se $m\leq\varrho$, ent\~ao $m+1\leq\varrho$, note que esta \'ultima condicional \'e equivalente a $\neg(m\leq\varrho<m+1)$. Mas, isto implica por indu\c c\~ao matem\'atica que para todo $m\in N$ vale $m\leq\varrho$, o que contradiz o item a). Conformemente esta contradi\c c\~ao nos leva a concluir de que nossa suposi\c c\~ao inicial est\'a incorreta, provando portanto a exist\^encia. 
 
-Sejam $m_i$ $(i=1,2)$, tais que $m_i\leq\varrho<m_i+1$, da totalidade da ordem $<$ em $R$ e supondo por redu\c c\~ao ao absurdo que $m_1\neq m_2$, podemos supor sem perda de generalidade que $m_1<m_2$. Da\'\i, decorre imediatamente que $m_1+1\leq m_2$, pois suponha por redu\c c\~ao ao absurdo que $m_1+1>m_2$, ter\'\i amos
+Sejam $m_i$ $(i=1,2)$, tais que $m_i\leq\varrho<m_i+1$, da totalidade da ordem $<$ em $\R$ e supondo por redu\c c\~ao ao absurdo que $m_1\neq m_2$, podemos supor sem perda de generalidade que $m_1<m_2$. Da\'\i, decorre imediatamente que $m_1+1\leq m_2$, pois suponha por redu\c c\~ao ao absurdo que $m_1+1>m_2$, ter\'\i amos
 $$
   0<m_2-m_1<1
 $$
@@ -899,14 +901,14 @@ $$
 $$
 um outro absurdo. Estas contradi\c c\~oes nos levam a concluir que a nossa suposi\c c\~ao $m_1\neq m_2$, \'e uma suposi\c c\~ao inver\'\i dica. Destarte fica provada a unicidade.\Qed
 
-Da\'\i\ podemos inferir que dado $\varrho\in R$, tomando $m$ satisfazendo a afirma\c c\~ao anterior, decorre necessariamente que $m+1\leq\varrho+1$, pois suponha o contr\'ario, i.e., que $m+1>\varrho+1$, disto decorre que
+Da\'\i\ podemos inferir que dado $\varrho\in \R$, tomando $m$ satisfazendo a afirma\c c\~ao anterior, decorre necessariamente que $m+1\leq\varrho+1$, pois suponha o contr\'ario, i.e., que $m+1>\varrho+1$, disto decorre que
 $$
   1=(\varrho+1)-\varrho<(m+1)-m=1
 $$
 um absurdo. Concluimos, portanto, que $m+1\in(\varrho,\varrho+1]$, provamos portanto a
 \medskip
 \noindent{\bf Afirma\c c\~ao.}\ {\sl
-  Para todo $\varrho\in R$, existe um inteiro $m$, tal que $m\in(\varrho,\varrho+1]$.
+  Para todo $\varrho\in \R$, existe um inteiro $m$, tal que $m\in(\varrho,\varrho+1]$.
 }\Qed 
 
 Consequentemente, usando o item a) existe $n\in N$, tal que $(y-x)n>1$ e da afirma\c c\~ao imediatamente anterior existe $m\in(nx,nx+1]$, assim vale
@@ -917,7 +919,7 @@ logo, fazendo $q=m/n$, temos da cadeia anterior que $x<q<y$, concluindo portanto
 
 Vale tamb\'em a
 \medskip
-\noindent{\bf Afirma\c c\~ao.\ }{\sl Sejam $\varrho\in R$, $n\leq\varrho$ e $m\in Z$, tal que $m\leq\varrho<m+1$. Ent\~ao $n\leq m$.
+\noindent{\bf Afirma\c c\~ao.\ }{\sl Sejam $\varrho\in \R$, $n\leq\varrho$ e $m\in Z$, tal que $m\leq\varrho<m+1$. Ent\~ao $n\leq m$.
 }
 \medskip
 
@@ -929,7 +931,7 @@ uma contradi\c c\~ao.\qed
 
 Podemos inferir da\'\i\ que $m$ com aquela propriedade \'e o maior inteiro tal que $m\leq\varrho$.
 
-\theorem{\ (Digress\~ao relativa \`a representa\c c\~ao decimal de um n\'umero real)}{\sl Seja $\varrho\in R_+^*$, escolhamos $n_0\in N$, tal que
+\theorem{\ (Digress\~ao relativa \`a representa\c c\~ao decimal de um n\'umero real)}{\sl Seja $\varrho\in \R_+^*$, escolhamos $n_0\in N$, tal que
   $$
     n_0\leq\varrho<n_0+1.
   $$
@@ -961,7 +963,7 @@ donde
 $$
   \varrho-\alpha_{k+1}<{1\over10^{k+1}}<\varrho-\gamma,
 $$
-i.e., existe $\alpha\in A$, tal que $\alpha=\alpha_{k+1}>\gamma$, i.e., todo elemento $\gamma\in R$, tal que $\gamma<\varrho$, n\~ao \'e cota superior de $A$. Al\'em disso $\varrho\geq\alpha$, para todo $\alpha\in A$, i.e., $\varrho$ \'e uma cota superior de $A$, que, conforme conclu\'\i mos, \'e tal que $\varrho=\sup A$.\qed
+i.e., existe $\alpha\in A$, tal que $\alpha=\alpha_{k+1}>\gamma$, i.e., todo elemento $\gamma\in \R$, tal que $\gamma<\varrho$, n\~ao \'e cota superior de $A$. Al\'em disso $\varrho\geq\alpha$, para todo $\alpha\in A$, i.e., $\varrho$ \'e uma cota superior de $A$, que, conforme conclu\'\i mos, \'e tal que $\varrho=\sup A$.\qed
 
 Quando $\varrho=\sup A$, representa-se $\varrho$ por
 $$
@@ -1018,7 +1020,7 @@ $$
 $$ 
 que por sua vez acarreta $\alpha\alpha^{-1}\subset 1^*$. Por outro lado seja $p\in 1^*$, i.e., $p<1$, que podemos supor sem perda de generalidade $p>0$, pois $1^*=(1^*)^2>0$. Segue do lema que existem $r\notin\alpha$ e $q\in\alpha$, tais que $1/p=r/q$ e $1/r\in\alpha^{-1}$, da\'\i\ vem $p=q/r\in\alpha\alpha^{-1}$, o que prova a inclus\~ao $1^*\subset\alpha\alpha^{-1}$. Decorre do axioma da extensionalidade $\alpha\alpha^{-1}=1^*$.\qed
 
-Vale observar que em virtude da defini\c c\~ao provis\'oria do produto de cortes ser limitado apenas a $R_+^*$, n\~ao faz sentido $\alpha0^*$, pois isto n\~ao est\'a definido, uma vez que n\~ao existem elementos estritamente positivos em $0^*$, {\it a fortiori}, muito menos estar\'a definido $(0^*)^{-1}$.
+Vale observar que em virtude da defini\c c\~ao provis\'oria do produto de cortes ser limitado apenas a $\R_+^*$, n\~ao faz sentido $\alpha0^*$, pois isto n\~ao est\'a definido, uma vez que n\~ao existem elementos estritamente positivos em $0^*$, {\it a fortiori}, muito menos estar\'a definido $(0^*)^{-1}$.
 
 \theorem{\ (Lei distributiva)}{\sl Se $\alpha,\beta,\gamma>0^*$}, ent\~ao
 $$
@@ -1034,7 +1036,7 @@ como $\epsilon=\alpha\beta+\alpha\gamma$ \'e um corte decorre que $p\in\epsilon$
 Seja agora $p\in\epsilon$ existem portanto $r,t\in\alpha^\bullet$ e $(s,u)\in\beta^\bullet\times\gamma^\bullet$, tais que
 $p\leq rs+tu$, tomando $v=\max\{r,t\}$, temos que $p\leq v(s+t)\in\delta$, o que prova a outra inclus\~ao $\epsilon\subset\delta$. Do axioma da extensionalidade $\delta=\epsilon$, o que conclui a prova.\qed
 
-Conforme observado em [Rudin] se $\alpha<\beta$, ent\~ao $\alpha+\gamma<\beta+\gamma$, para todo corte $\gamma$, como consequ\^encia se $\alpha>0^*$, ent\~ao $-\alpha<0^*$. Podemos, portanto, definir a multiplica\c c\~ao em $R^*$ por 
+Conforme observado em [Rudin] se $\alpha<\beta$, ent\~ao $\alpha+\gamma<\beta+\gamma$, para todo corte $\gamma$, como consequ\^encia se $\alpha>0^*$, ent\~ao $-\alpha<0^*$. Podemos, portanto, definir a multiplica\c c\~ao em $\R^*$ por 
 $$
   (\Pi)\qquad\alpha\beta=
   \left\{
@@ -1046,9 +1048,9 @@ $$
   \right.
 $$
 
-Sabemos $0^*$ \'e o elemento neutro da adi\c c\~ao em $R$, espera-se naturalmente pelas propriedades de corpos que este seja tal que $\alpha0^*=0^*\alpha=0^*$, para todo $\alpha\in R$ e, por este motivo define-se o produto com $0^*$ desta forma. Feito isto podemos neste est\'agio (seguido o roteiro dado em [Rudin]) afirmar categoricamente que $R$ tem todas as propriedades da adi\c c\~ao e multiplica\c c\~ao satisfeitas, com exce\c c\~ao da propriedade distributiva.
+Sabemos $0^*$ \'e o elemento neutro da adi\c c\~ao em $\R$, espera-se naturalmente pelas propriedades de corpos que este seja tal que $\alpha0^*=0^*\alpha=0^*$, para todo $\alpha\in \R$ e, por este motivo define-se o produto com $0^*$ desta forma. Feito isto podemos neste est\'agio (seguido o roteiro dado em [Rudin]) afirmar categoricamente que $\R$ tem todas as propriedades da adi\c c\~ao e multiplica\c c\~ao satisfeitas, com exce\c c\~ao da propriedade distributiva.
 
-Consideremos $\alpha,\beta,\gamma\in R$, observe que se alguns destes n\'umeros reais for $0^*$, ent\~ao o produto \'e trivial. Desta forma, adimitiremos que $\alpha,\beta,\gamma\in R^*$. Consideremos, a t\'\i tulo de exemplo o caso em que $\alpha<0$, $\beta+\gamma>0$ e $\gamma<0$, neste caso temos que $\beta>0$ e
+Consideremos $\alpha,\beta,\gamma\in \R$, observe que se alguns destes n\'umeros reais for $0^*$, ent\~ao o produto \'e trivial. Desta forma, adimitiremos que $\alpha,\beta,\gamma\in \R^*$. Consideremos, a t\'\i tulo de exemplo o caso em que $\alpha<0$, $\beta+\gamma>0$ e $\gamma<0$, neste caso temos que $\beta>0$ e
 $$
   (-\alpha)(\beta+\gamma)+\alpha\gamma=(-\alpha)(\beta+\gamma)+(-\alpha)(-\gamma)=(-\alpha)\beta
 $$
@@ -1058,9 +1060,9 @@ $$
 $$
 Os outros casos s\~ao tratados de maneira an\'aloga.
 
-Daqui podemos dizer que conclu\'\i mos a constru\c c\~ao de um corpo ordenado  com a propriedade da menor cota superior, a saber, o conjunto $R$ dos cortes de Dedekind.
+Daqui podemos dizer que conclu\'\i mos a constru\c c\~ao de um corpo ordenado  com a propriedade da menor cota superior, a saber, o conjunto $\R$ dos cortes de Dedekind.
 
-Refa\c co as suas demonstra\c c\~oes [Rudin] com adapta\c c\~ao e ponho as minhas no que segue para fins de documenta\c c\~ao, que, existe um corpo ordenado $Q^*$ em $R$ isomorfo ao conjunto dos n\'umeros racionais.
+Refa\c co as suas demonstra\c c\~oes [Rudin] com adapta\c c\~ao e ponho as minhas no que segue para fins de documenta\c c\~ao, que, existe um corpo ordenado $Q^*$ em $\R$ isomorfo ao conjunto dos n\'umeros racionais.
 
 \medskip
 \noindent{\bf Defini\c c\~ao.}{ \sl Seja $q\in Q$ definamos
@@ -1069,7 +1071,7 @@ Refa\c co as suas demonstra\c c\~oes [Rudin] com adapta\c c\~ao e ponho as minha
   $$
 }
 
-\theorem{\ (Indentifica\c c\~ao de $Q$ em $R$)}{%
+\theorem{\ (Indentifica\c c\~ao de $Q$ em $\R$)}{%
   \sl Sejam $r,s\in Q$.
   \smallskip
 
@@ -1077,7 +1079,7 @@ Refa\c co as suas demonstra\c c\~oes [Rudin] com adapta\c c\~ao e ponho as minha
   \vbox{
     \halign{
       \hfill# & #\hfill \cr
-       {\rm a)} & $r^*\in R${\rm;}                  \cr
+       {\rm a)} & $r^*\in \R${\rm;}                  \cr
        {\rm b)} & $r^*+s^*=(r+s)^*${\rm;}           \cr
        {\rm c)} & $r^*s^*=(rs)^*${\rm;}             \cr
        {\rm d)} & $r^*<s^*$, se e somente se $r<s$. \cr
@@ -1107,10 +1109,10 @@ d) Por fim, se $r^*<s^*$, ent\~ao existe $p\in s^*\setminus r^*$, segue que $r\l
 
 Por outro lado, se $r<s$ ent\~ao $r^*\subset s^*$ e $r\in s^*\setminus r^*$.\qed 
 
-O teorema anterior nos diz que o conjunto $Q^*=\{q^*\in R:q\in Q\}$ \'e isomorfo a $Q$, desta forma podemos dizer que precipuamente $Q\subset R$.
+O teorema anterior nos diz que o conjunto $Q^*=\{q^*\in \R:q\in Q\}$ \'e isomorfo a $Q$, desta forma podemos dizer que precipuamente $Q\subset \R$.
 
 \section{Unicidade dos reais}
-Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $R$ com a propriedade da menor cota superior. Existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Em verdade, o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade somas parciais de s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso das s\'eries deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. 
+Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $\R$ com a propriedade da menor cota superior. Existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $\R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Em verdade, o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade somas parciais de s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso das s\'eries deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $\R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. 
 
 \begin{Def}
   Seja $K$ um corpo com zero $0_K$, unidade $1_K$ e $x\in K$ definamos
@@ -1451,7 +1453,7 @@ $$
 $$
 para todo $n\in N$, contradizendo o fato de $\sigma$ ser a menor cota superior do conjunto $M$. 
 
-Imediatamente, suponhamos que $x,y\in R$ sejam tais que $x<y$, da propriedade arquimediana de $K$ existe $n\in N$, tal que $n*(y-x)>1^*$. Seja $m$ o maior inteiro tal que $m^*\leq n*x$. Destarte, de 
+Imediatamente, suponhamos que $x,y\in \R$ sejam tais que $x<y$, da propriedade arquimediana de $K$ existe $n\in N$, tal que $n*(y-x)>1^*$. Seja $m$ o maior inteiro tal que $m^*\leq n*x$. Destarte, de 
 
 $$
   m^*\leq n*x<(m+1)^*=m^*+1^*,
@@ -1522,11 +1524,11 @@ Por fim, se $\nu(m/n)=m^*/n^*=0$, ent\~ao da nossa suposi\c c\~ao que $n\neq0$ t
 
 A constru\c c\~oes a seguir foram motivadas por alguns exerc\'\i cios do livro do [Elon] {\it Curso de An\'alise} Volume 1.
 
-\theorem{\ (Unicidade de $R$ a menos de isomorfismo)}{\sl%
-  Seja $K$ um corpo ordenado com a propriedade da menor cota superior. Ent\~ao $R$ \'e isomorfo a $K$.
+\theorem{\ (Unicidade de $\R$ a menos de isomorfismo)}{\sl%
+  Seja $K$ um corpo ordenado com a propriedade da menor cota superior. Ent\~ao $\R$ \'e isomorfo a $K$.
 }
 
-\proof Defina a aplica\c c\~ao $\varphi:R\rightarrow K$, da seguinte maneira
+\proof Defina a aplica\c c\~ao $\varphi:\R\rightarrow K$, da seguinte maneira
 $$
   \varphi(x)=\sup\Bigl\{{p^*\over q^*}\in K:{p\over q}<x\Bigr\},
 $$
@@ -1536,7 +1538,7 @@ afirmo que $\varphi$ \'e um isomorfismo, \'e o que nos empenharemos a demonstrar
 %$$
 %  \forall x\biggl(x\in R\longrightarrow \sup\Bigl\{{p^*\over q^*}\in K:{p\over q}<x\Bigr\}=\inf\Bigl\{{p^*\over q^*}\in K:{p\over q}>x\Bigr\}\biggr)
 %$$
-%Dado $x\in R$, fa\c camos 
+%Dado $x\in \R$, fa\c camos 
 %$$
 %  A=\Bigl\{{p^*\over q^*}\in K:{p\over q}<x\Bigr\},\quad B=\Bigl\{{p^*\over q^*}\in K:{p\over q}>x\Bigr\},
 %$$
@@ -1583,9 +1585,9 @@ segue portanto que $p/q<r/s\leq x$, i.e., existe $p/q<x$, tal que $p^*/q^*>\alph
 $$
   \gamma=\sup L(x)=\varphi(x),
 $$
-ou seja, provamos que dado $\gamma\in K$ existe $x\in R$, tal que $\varphi(x)=\gamma$, i.e., $\varphi$ \'e sobrejetiva.
+ou seja, provamos que dado $\gamma\in K$ existe $x\in \R$, tal que $\varphi(x)=\gamma$, i.e., $\varphi$ \'e sobrejetiva.
 
-Consideremos $p/q<x+y$, da\'\i\ vem que $p/q-x<y$, da densidade de $Q$ em $R$ existe $r/s\in Q$, tal que 
+Consideremos $p/q<x+y$, da\'\i\ vem que $p/q-x<y$, da densidade de $Q$ em $\R$ existe $r/s\in Q$, tal que 
 $$
   {p\over q}-x<{r\over s}<y,
 $$ 
@@ -1611,7 +1613,7 @@ $$
 $$
 tal que $\alpha<t^*/u^*$, i.e., $\alpha$ n\~ao \'e cota superior do conjunto $L(x+y)$, conformemente $\varphi(x+y)=\varphi(x)+\varphi(y)$.
 
-Para todo $x\in R$ podemos, portanto, concluir que
+Para todo $x\in \R$ podemos, portanto, concluir que
 $$
   \varphi(-x)=\varphi(-x)+\varphi(x)-\varphi(x)=\varphi(x-x)-\varphi(x)=-\varphi(x)
 $$
@@ -1679,7 +1681,7 @@ $$
 como $Q$ \'e isomorfo a $Q^*$, ent\~ao $p/q<m/n$, mas isto contradiria o fato de $\sigma$ ser uma cota superior de $L(m/n)$, segue, portanto, a igualdade mencionada.
 
 \theorem{}{\sl%
-  Se $\psi:R\rightarrow R$ \'e um isomorfismo, ent\~ao $\psi=\iota$, em que $\iota$ \'e a aplica\c c\~ao identidade. Em particular, se $K$ e $L$ s\~ao dois corpos ordenados com a propriedade da menor cota superior, ent\~ao existe um \'unico isomorfismo de $K$ sobre $L$.
+  Se $\psi:\R\rightarrow \R$ \'e um isomorfismo, ent\~ao $\psi=\iota$, em que $\iota$ \'e a aplica\c c\~ao identidade. Em particular, se $K$ e $L$ s\~ao dois corpos ordenados com a propriedade da menor cota superior, ent\~ao existe um \'unico isomorfismo de $K$ sobre $L$.
 } 
 
 \proof Se $\psi$ \'e um isomorfismo, ent\~ao $\psi(1)=1$, donde conclui-se $\psi(m)=m$, para todo $m\in Z$, que por sua vez implica
@@ -1696,13 +1698,13 @@ $$
 $$
 uma contradi\c c\~ao. Uma prova an\'aloga pode ser dada para o caso em que $\varphi(x)<x$. Podemos portanto concluir que $\varphi=\iota$.
 
-Em seguida observemos que se $\varrho,\varsigma:R\rightarrow K$, s\~ao dois isomorfismos de $R$ sobre $K$, ent\~ao $\varsigma^{-1}\varrho=\iota$, consequentemente $\varrho=\varsigma$, i.e., existe um \'unico isomorfismo de $R$ sobre $K$.
+Em seguida observemos que se $\varrho,\varsigma:\R\rightarrow K$, s\~ao dois isomorfismos de $\R$ sobre $K$, ent\~ao $\varsigma^{-1}\varrho=\iota$, consequentemente $\varrho=\varsigma$, i.e., existe um \'unico isomorfismo de $\R$ sobre $K$.
 
-Seja agora um isomorfismo arbitr\'ario $\tau:K\rightarrow L$ e,  $\varphi:R\rightarrow K$ e $\psi:R\rightarrow L$ os \'unicos isomorfismos ent\~ao $\psi^{-1}\tau\varphi=\iota$, logo $\tau=\psi\varphi^{-1}$, desta forma $\tau$ \'e \'unico.
+Seja agora um isomorfismo arbitr\'ario $\tau:K\rightarrow L$ e,  $\varphi:\R\rightarrow K$ e $\psi:\R\rightarrow L$ os \'unicos isomorfismos ent\~ao $\psi^{-1}\tau\varphi=\iota$, logo $\tau=\psi\varphi^{-1}$, desta forma $\tau$ \'e \'unico.
 \qed
 
 \begin{cor}
-  Seja $K$ um corpo arbitr\'ario com $X(R)=0$[\footnote{Confira defini\c c\~ao {\bf\ref{def_X}}.}. Ent\~ao $K$ cont\'em uma c\'opia dos racionais.
+  Seja $K$ um corpo arbitr\'ario com $X(\R)=0$[\footnote{Confira defini\c c\~ao {\bf\ref{def_X}}.}. Ent\~ao $K$ cont\'em uma c\'opia dos racionais.
 \end{cor}
 
 
@@ -1723,9 +1725,9 @@ A seguir relembremos de alguns exerc\'\i cios interessantes de [Rudin], quanto a
   $$
     \forall r,s(r,s\in Q\longrightarrow b^{r+s}=b^rb^s).
   $$
-  Para $x\in R$, definindo 
+  Para $x\in \R$, definindo 
   $$
-    B(x)=\{b^r\in R:r\leq x\a r\in Q\},
+    B(x)=\{b^r\in \R:r\leq x\a r\in Q\},
   $$
   vale,
   $$
@@ -1735,7 +1737,7 @@ A seguir relembremos de alguns exerc\'\i cios interessantes de [Rudin], quanto a
   $$
     b^x=\sup B(x)
   $$
-  para $x\in R$. Al\'em disso, vale tamb\'em
+  para $x\in \R$. Al\'em disso, vale tamb\'em
   $$
     b^{x+y}=b^xb^y.
   $$
@@ -1783,7 +1785,7 @@ Quarto, devemos considerar dois casos, a saber, $x+y\in Q$ e $x+y\notin Q$. Ante
 $$
   b^s=b^{s-t}b^t\leq b^xb^y
 $$
-como $s\leq x+y$ \'e arbitr\'ario necessariamente $b^{x+y}\leq b^{x}b^y$, como conclu\'\i mos que $b^xb^y\leq b^{x+y}$, conclusivamente $b^{x+y}=b^xb^y$. Por outro lado, suponhamos que $x+y=r\in Q$. Antes, sabe-se que para $u,v\in R$ \'e bem conhecida a identidade
+como $s\leq x+y$ \'e arbitr\'ario necessariamente $b^{x+y}\leq b^{x}b^y$, como conclu\'\i mos que $b^xb^y\leq b^{x+y}$, conclusivamente $b^{x+y}=b^xb^y$. Por outro lado, suponhamos que $x+y=r\in Q$. Antes, sabe-se que para $u,v\in \R$ \'e bem conhecida a identidade
 $$
   v^n-u^n=(v-u)\sum_{i=0}^{n-1}u^iv^{n-1-i}
 $$
@@ -1825,13 +1827,13 @@ $$
 $$
 A seguir provaremos que ao inv\'es de tormarmos o supremo para a defini\c c\~ao de $b^x$, poder\'\i amos sem problemas considerar o \'\i nfimo.
 
-Definamos para $b\in R_+$ e $x\in R$, os conjuntos
+Definamos para $b\in \R_+$ e $x\in \R$, os conjuntos
 $$
-  L(b,x)=\{b^t\in R:t\leq x\a t\in Q\}\qquad\hbox{Def.}
+  L(b,x)=\{b^t\in \R:t\leq x\a t\in Q\}\qquad\hbox{Def.}
 $$
 e
 $$
-  U(b,x)=\{b^t\in R:t\geq x\a t\in Q\}\qquad\hbox{Def.}
+  U(b,x)=\{b^t\in \R:t\geq x\a t\in Q\}\qquad\hbox{Def.}
 $$
 Conformemente temos o 
 
@@ -1900,7 +1902,7 @@ Al\'em disso, vimos que se $x\in Q$, ent\~ao
 $$
   b^x=\sup L(b,x).
 $$
-Nesta altura, definimos o s\'\i mbolo $b^x$ para $x\in R$ e $0<b<1$ ou $1<b$, n\~ao \'e dif\'\i cil ver que para $b\in \{0,1\}$ temos $L(b,x)=U(b,x)=\{b\}$. Assim, \'e natural definir $b^x=b$, nestes casos. Desta forma, ficam definidas as pot\^encias de base $b\in R_+$ qualquer.
+Nesta altura, definimos o s\'\i mbolo $b^x$ para $x\in \R$ e $0<b<1$ ou $1<b$, n\~ao \'e dif\'\i cil ver que para $b\in \{0,1\}$ temos $L(b,x)=U(b,x)=\{b\}$. Assim, \'e natural definir $b^x=b$, nestes casos. Desta forma, ficam definidas as pot\^encias de base $b\in \R_+$ qualquer.
 
 Em seguida, provemos o
 
@@ -1927,7 +1929,7 @@ Destarte, existe $s\in Q$ tal que $s\geq x$ e $b^r<b^s\leq b^x$, donde inferimos
 \theorem{\ (Uma defini\c c\~ao de logaritmo)}{\sl%
   Se $b>1$ e 
   $$
-    x=\sup\{w\in R: b^w<y\},
+    x=\sup\{w\in \R: b^w<y\},
   $$
   ent\~ao $b^x=y$. Alem disso, $x$ \'e o \'unico numero real tal que $b^x=y$.
 }
@@ -2781,7 +2783,28 @@ o que \'e evidentemente uma contradi\c c\~ao. Isto por sua vez acarreta que a hi
   Seja $f:[0,\infty[\;\ra R$ cont\'inua e peri\'odica. Ent\~ao $f$ \'e uniformemente cont\'inua.
 \end{exe}
 
-Neste ponto resolvi compilar alguns resultados b\'asicos do c\'alculo (ou an\'alise em $R$) para refer\^encias futuras.
+\section{Derivadas e integrais}
+
+\begin{lem}
+  Seja $f:[a,b]\ra\R$ tal que $f(t)\neq0$, para todo $t\in[a,b]$. Ent\~ao
+  \[
+    (\ln|f|)'={\sigma(f)f'\over |f|}={f'\over f}.
+  \]
+\end{lem}
+\prova Primeiro relembremos da fun\c c\~ao sinal, a saber,
+\[
+  \sigma(x)=(\chi_{\R^*_+}-\chi_{\R^*_-})(x)
+\]
+em que $\chi$ \'e a fun\c c\~ao caracter\'\i stica. \'E sabido que $|\,|'=\sigma$ em ${\R^*}$ e n\~ao \'e dif\'\i cil ver que para todo $x\in \R$
+\[
+  |x|=\sigma(x)\cdot x.
+\]
+Da regra da cadeia temos,
+\[
+  (\ln|f|)'={\sigma(f)f'\over |f|}={f'\over f}.
+\]
+\qed
+
 
 \theorem{}{\sl%
   Sejam $X\subseteq R$, $f:X\rightarrow R$ e $a$ um ponto de m\'inimo\/$($m\'aximo\/$)$ local de $f$ em $X$ tal que $f$ seja deriv\'avel em $a$. Ent\~ao $f'(a)=0$. 
@@ -3100,38 +3123,6 @@ $\dagger$ Mostrar que a defini\c c\~ao indepente do representante!
 \theorem{}{\sl Sejam $\overrightarrow{AB}$ e $\overrightarrow{CD}$ dois vetores quaisquer. Ent\~ao $(A,B_{(C,D)})\sim(C,D_{(A,B)})$}.
 
 \chapter{Ci\^encias naturais}
-
-Nesta se\c c\~ao inclu\'i alguns resultados matem\'aticos que auxiliam na prova de determinados resultados.
-
-\noindent{\bf Lema.\ }{\sl Seja $f$ uma fun\c c\~ao tal que $f(t)\neq0$, para todo $t\in\hbox{\rm dom}\,f$. Ent\~ao}
-$$
-  {d\over dt}\Bigl(\ln\bigl|f(t)\bigr|\Bigr)={d f\over dt}(t){1\over f(t)}.
-$$
-
-\proof Primeiro relembremos da fun\c c\~ao sinal, a saber,
-$$
-  \sigma(x)=(\chi_{R^*_+}-\chi_{R^*_-})(x)
-$$
-em que $\chi_A$ \'e a fun\c c\~ao caracter\'\i stica de A. \'E deveras f\'acil ver que
-$$
-  {d\over dx}|\,|(x)=\sigma(x)|_{R^*}
-$$
-ou simplesmente
-$$
-  {d\over dx}|\,|(x)=\sigma(x)
-$$
-quando o dom\'\i nio \'e sabido, em que $|\,|$ \'e a fun\c c\~ao modular ou m\'odulo. 
-
-Tamb\'em n\~ao \'e dif\'\i cil ver que para todo $x\in R$
-$$ 
-  |x|=\sigma(x)\cdot x
-$$
-
-Da regra da cadeia temos
-$$
-  {d\over dt}\Bigl(\ln\bigl|f(t)\bigr|\Bigr)={1\over\bigl|f(t)\bigr|}\cdot\sigma\bigl(f(t)\bigr)\cdot{df\over dt}(t)={d f\over dt}(t){1\over f(t)}.
-$$
-\qed
 
 \section{Equa\c c\~ao de carga de um capacitor}
 \theorem{}{\sl%
