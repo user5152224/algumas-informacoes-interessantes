@@ -2720,13 +2720,66 @@ observe que $\lim_ag|_{f^{-1}(\{0\})}=0$ mas $1\in g(X\cap(a-\delta,a+\delta))$,
 
 \section{Continuidade uniforme}
 
-A seguir, apresento um resultado sem recorrer a resultados muito sofisticados da an\'alise.
+A seguir, apresento um resultado sem recorrer a resultados muito sofisticados da an\'alise, em outros termos, uma prova usando conceitos elementares do c\'alculo.
 \begin{pro}[Exerc\'icio 3 p. 146 do {\it Calculus} de [Spivak{]}]
   Se $f$ \'e cont\'inua em $[a,b]$, ent\~ao $f$ \'e uniformemente cont\'inua em $[a,b]$.
 \end{pro}
-\prova
+\prova Suponhamos por {\it reductio ad absurdum} que n\~ao \'e o caso de $f$ ser uniformemente cont\'inua em $[a,b]$. Existe, portanto $\varepsilon>0$, tal que para todo $\delta>0$ existem $x,y\in [a,b]$, tais que
+\[
+  |x-y|<\delta\lra|f(x)-f(y)|\geq\varepsilon.
+\]
+Como consequ\^encia dado $\delta>0$, concebamos o conjunto 
+\[
+  X_\delta=\bigl\{(x,y):x\in[a,b]\a \exists y(y\in[a,b]\a|x-y|<\delta\a|f(x)-f(y)|\geq\varepsilon)\bigr\},
+\]
+pela hip\'otese, $X_\delta$ \'e infinito.
+
+Em seguida, bissectamos $[a,b]$. Como $f$ \'e cont\'inua em $(a+b)/2$ existe $\delta_0>0$, tal que
+\[
+  x\in[a,b]\a\Big|x-{a+b\over 2}\Big|<{\delta_0\over 2}\lra\Big|f(x)-f\Bigl({a+b\over 2}\Bigr)\Big|<{\varepsilon\over2}.
+\]
+Portanto, 
+\[
+  X_{\delta_0}\subset\Bigl[a,{a+b\over 2}\Bigr]\o X_{\delta_0}\subset\Bigl[{a+b\over 2},b\Bigr].
+\]
+Seja $K_0$ uma das bisse\c c\~oes de $[a,b]$ que contem $X_{\delta_0}$. Suponhamos constru\'ida a fam\'ilia $\{K_i:i\in n+1\}$, tal que para todo $i\in n+1$, existe $\delta_i>0$, tal que $X_{\delta_i}\subset K_i$. Seja $K_n=[a_n,b_n]$. Bissectamos $K_n$, e de maneira an\'aloga determinamos $\delta_{n+1}>0$, tal que
+\[
+  x\in K_n\a\Big|x-{a_n+b_n\over 2}\Big|<{\delta_{n+1}\over 2}\lra \Big|f(x)-f\Bigl({a_n+b_n\over 2}\Bigr)\Big|<{\varepsilon\over 2}.
+\]
+Da mesma forma, seja $K_{n+1}$ uma das bisse\c c\~oes de $K_n$, tal que $X_{\delta_{n+1}}\subset K_{n+1}$. Destarte, constru\'imos por recurs\~ao matem\'atica uma fam\'ilia enumer\'avel $\{K_n:n\in\omega\}$, ou melhor, uma sequ\^encia $\{K_n\}$, tal que $K_{n+1}\subset K_n$ e $X_{\delta_n}\subset K_n$, para todo $n\in\omega$. Pelo teorema dos intervalos encaixados ({\it Nested Intevals Theorem}) existe $x\in\bigcap_{n\in\omega}K_n$. Da constru\c c\~ao de $\{K_n\}$, temos que 
+\[
+  x\in K_n=[a_n,b_n]\a b_n-a_n<2^{-(n+1)}(b-a)
+\]
+e existem sequ\^encias $\{x_n\}$ e $\{y_n\}$ com 
+\[
+  x_n,y_n\in K_n\a |f(x_n)-f(y_n)|\geq\varepsilon.
+\]
+Da\'i e da continuidade de $f$ em $[a,b]$ vem
+\[
+  0<\varepsilon\leq\lim_n|f(x)-f(x_n)|+\lim_n|f(x)-f(y_n)|=0,
+\]
+o que \'e evidentemente uma contradi\c c\~ao. Isto por sua vez acarreta que a hip\'otese \'e falsa. Consequentemente, $f$ \'e uniformemente cont\'inua em $[a,b]$.
 
 \qed
+
+\begin{exe}
+  Sejam $n\in\omega$ e $f,g:[0,\infty[\;\ra R$, dadas por $f(x)=x^{n+2}$ e $g(x)=x^{1/(n+1)}$. Ent\~ao $f$ n\~ao \'e uniformemente cont\'inua e $g$ o \'e.
+\end{exe}
+\prova\qed
+
+\begin{exe}
+  Seja $f:\;]0,1]\ra R$ dada por ${\rm sen}(1/x)$ \'e limitada, mas n\~ao \'e uniformemente cont\'inua.
+\end{exe}
+\prova\qed
+
+\begin{exe}
+  Seja $f:[0,\infty[\;\ra R$ dada por ${\rm sen}(x^2)$ \'e limitada, mas n\~ao \'e uniformemente cont\'inua.
+\end{exe}
+\prova\qed
+
+\begin{exe}
+  Seja $f:[0,\infty[\;\ra R$ cont\'inua e peri\'odica. Ent\~ao $f$ \'e uniformemente cont\'inua.
+\end{exe}
 
 Neste ponto resolvi compilar alguns resultados b\'asicos do c\'alculo (ou an\'alise em $R$) para refer\^encias futuras.
 
