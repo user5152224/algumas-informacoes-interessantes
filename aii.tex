@@ -3176,6 +3176,84 @@ para todo $t\geq0$.\qed
   Rigorosamente, os dois objetos s\~ao distintos, de maneira que a identidade n\~ao \'e siginificativa.
 }
 
+\section{Espa\c cos vetoriais}
+
+A seguir apresentarei alguns exerc\'icios pertinentes de [Hoffman].
+
+\begin{pro}
+  Sejam $V$ um espa\c co vetorial e $W_i\subset V$, com $i\in\{1,2\}$, subespa\c cos vetoriais tais que $W=W_1\cup W_2$ \'e um subespa\c co de $V$. Ent\~ao, existe um $i\in\{1,2\}$, tal que $W_i\subset W_j$, com $i\neq j$.
+\end{pro}
+\prova Suponhamos por {\it reductio ad absurdum} que
+\[
+  W_1\setminus W_2\neq\emptyset\a W_2\setminus W_1\neq\emptyset
+\]
+Sejam $w_1\in W_1\setminus W_2$ e $w_2\in W_2\setminus W_1$, das hip\'oteses $w=w_1+w_2\in W$. Todavia, $w\not\in W_1$ e $w\not\in W_2$. Pois, digamos que $w\in W_1$, ent\~ao $w_2=w-w_1\in W_1$, o que \'e uma contradi\c c\~ao pois $w_2\in W_2\setminus W_1$. Agora se $w\in W_2$, ent\~ao analogamente $w_1=w-w_2\in W_2$, outra contradi\c c\~ao, pois $W_1\setminus W_2$. Conclu\'imos, portanto, que existe $i\in\{1,2\}$, tal que $W_i\subset W_j$, com $i\neq j$. \qed
+
+\begin{pro}
+  Seja $K$ um corpo, $W$ um espa\c co vetorial sobre $K$. Considere $V=W^K$, munido com a soma e produto por escalar usuais. Ent\~ao 
+  \[
+    V_i=\{f:f\in V\a f(-x)=-f(x)\}
+  \]
+  e
+  \[
+    V_p=\{f:f\in V\a f(-x)=f(x)\}
+  \]
+  s\~ao subespa\c cos de $V$, tais que 
+  \[
+    V_i\cap V_p=\{0\}\a V=V_i+V_p.
+  \]
+\end{pro}
+\prova Primeiro \'e evidente que $0\in V_i$. Sejam agora $f,g\in V_i$ e $\varkappa\in K$, temos que para todo $x\in K$, vale
+\[
+  \begin{split}
+    (\varkappa f+g)(-x)&=\varkappa f(-x)+g(-x)\cr 
+                      &=-\varkappa f(x)-g(x)\cr
+                      &=-(\varkappa f(x)+g(x))\cr
+                      &=-(\varkappa f+g)(x),
+  \end{split}
+\]
+consequentemente $V_i$ \'e um subespa\c co de $V$. O outro caso \'e ainda mais simples de ser provado, o argumento \'e inteiramente semelhante.
+
+Seja agora $f\in V_i\cap V_p$, temos para todo $x\in K$
+\[ 
+  f(x)=f(-x)=-f(x),
+\]
+logo $f=0$ e, consequentemente $V_i\cap V_p=\{0\}$.
+
+Por fim, seja $f\in V$. Note que $f_i,f_p\in V$ dadas por
+\[
+  f_i(x)={f(x)-f(-x)\over 2}\quad\a\quad f_p(x)={f(x)+f(-x)\over 2}
+\]
+s\~ao tais que, para todo $x\in K$ vale
+\[
+  f_i(-x)={f(-x)-f(x)\over 2}=-{f(x)-f(-x)\over 2}=-f_i(x),
+\]
+e. 
+\[
+  f_p(-x)={f(-x)+f(x)\over 2}={f(x)+f(-x)\over 2}=f_p(x),
+\]
+i.e., $(f_i,f_p)\in V_i\times V_p$. Ademais, $f=f_i+f_p$, consequentemente $V=V_i+V_p$.\qed
+\begin{pro}
+  Sejam $V_i\subset V$, com $i\in\{1,2\}$, subespa\c cos do espa\c co vetorial $V$, tais que 
+  \[ 
+    V=V_1+V_2\quad\a\quad V_1\cap V_2=\{0\}.
+  \]
+  Ent\~ao para todo $v\in V$ existe \'unico $(v_1,v_2)\in V_1\times V_2$, tais que $v=v_1+v_2$.
+\end{pro}
+\prova A exist\^encia decorre da defini\c c\~ao, provemos, portanto, a unicidade. Para tanto, sejam $v\in V$ e $v_i,w_i\in V_1$, com $i\in\{1,2\}$, tais que
+\[
+  v=v_1+v_2=w_1+w_2,
+\]
+temos que 
+\[
+  v_1-w_1=w_2-v_2\in V_1\cap V_2=\{0\}.
+\]
+Decorre que
+\[
+  v_1-w_1=0=v_2-w_2,
+\]
+o que por sua vez acarreta $v_i=w_i$, com $i\in\{1,2\}$.\qed
+
 
 \chapter{Considera\c c\~oes finais}
 
