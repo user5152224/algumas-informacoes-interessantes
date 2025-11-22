@@ -130,7 +130,11 @@
 
 
 \def\AEx{{\bf AEx}\ }
+\def\K{\mathds{K}}
+\def\L{\mathds{L}}
 \def\R{\mathds{R}}
+\def\Q{\mathds{Q}}
+\def\Z{\mathds{Z}}
 \def\af{{\it a fortiori}}
 \def\a{\;\wedge\;}
 \def\[{\begin{equation}}
@@ -1050,7 +1054,7 @@ $$
 
 Sabemos $0^*$ \'e o elemento neutro da adi\c c\~ao em $\R$, espera-se naturalmente pelas propriedades de corpos que este seja tal que $\alpha0^*=0^*\alpha=0^*$, para todo $\alpha\in \R$ e, por este motivo define-se o produto com $0^*$ desta forma. Feito isto podemos neste est\'agio (seguido o roteiro dado em [Rudin]) afirmar categoricamente que $\R$ tem todas as propriedades da adi\c c\~ao e multiplica\c c\~ao satisfeitas, com exce\c c\~ao da propriedade distributiva.
 
-Consideremos $\alpha,\beta,\gamma\in \R$, observe que se alguns destes n\'umeros reais for $0^*$, ent\~ao o produto \'e trivial. Desta forma, adimitiremos que $\alpha,\beta,\gamma\in \R^*$. Consideremos, a t\'\i tulo de exemplo o caso em que $\alpha<0$, $\beta+\gamma>0$ e $\gamma<0$, neste caso temos que $\beta>0$ e
+Consideremos $\alpha,\beta,\gamma\in \R$, observe que se alguns destes n\'umeros reais for $0^*$, ent\~ao o produto \'e trivial. Desta forma, admitiremos que $\alpha,\beta,\gamma\in \R^*$. Consideremos, a t\'\i tulo de exemplo o caso em que $\alpha<0$, $\beta+\gamma>0$ e $\gamma<0$, neste caso temos que $\beta>0$ e
 $$
   (-\alpha)(\beta+\gamma)+\alpha\gamma=(-\alpha)(\beta+\gamma)+(-\alpha)(-\gamma)=(-\alpha)\beta
 $$
@@ -1115,9 +1119,9 @@ O teorema anterior nos diz que o conjunto $Q^*=\{q^*\in \R:q\in Q\}$ \'e isomorf
 Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $\R$ com a propriedade da menor cota superior. Existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $\R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Em verdade, o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade somas parciais de s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso das s\'eries deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $\R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. 
 
 \begin{Def}
-  Seja $K$ um corpo com zero $0_K$, unidade $1_K$ e $x\in K$ definamos
+  Seja $\K$ um corpo com zero $0_\K$, unidade $1_\K$ e $x\in \K$ definamos
   \[
-    0*x=0_K
+    0*x=0_\K
   \]
   e indutivamente
   \[
@@ -1127,10 +1131,10 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 \end{Def}
 
 \begin{teo}
-  Seja $K$ um corpo, com zero $0_K$. Ent\~ao para quaisquer $m,n\in\omega$ e $x,y\in K$ valem
+  Seja $\K$ um corpo, com zero $0_\K$. Ent\~ao para quaisquer $m,n\in\omega$ e $x,y\in \K$ valem
   \begin{enumerate}[label = (\alph*)]
     \item{%
-      $n*0_K=0_K$;
+      $n*0_K=0_\K$;
     }
     \item{%
       $m*x+n*x=(m+n)*x$;
@@ -1149,20 +1153,20 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     }
   \end{enumerate}
 \end{teo}
-\prova Sejam $m\in\omega$ e $x,y\in K$.
+\prova Sejam $m\in\omega$ e $x,y\in \K$.
 \begin{enumerate}[label = (\alph*)]
   \item{%
     Definamos o conjunto
     \[
-      S=\{n:n\in\omega\a n*0_K=0_K\}.
+      S=\{n:n\in\omega\a n*0_\K=0_\K\}.
     \]
     Certamente que $0\in S$, porquanto pela defini\c c\~ao vale
     \[
-      0*0_k=0_K.
+      0*0_k=0_\K.
     \]
     Se $n\in S$, temos que
     \[
-      (n+1)*0_K=n*0_K+0_K=0_K+0_K=0_K.
+      (n+1)*0_\K=n*0_\K+0_\K=0_\K+0_\K=0_\K.
     \]
     Consequentemente $n+1\in S$, donde pela minimalidade de $\omega$, inferimos que $S=\omega$[\footnote{Esta \'e simplesmente a consequ\^encia da defini\c c\~ao de $\omega$ como o conjunto sucessor minimal, seguindo a terminologia de Halmos.}. 
   }
@@ -1173,7 +1177,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     \]
     Primeiramente, observemos que $0\in S$, pois
     \[
-      m*x+0*x=m*x+0_K=m*x=(m+0)*x.
+      m*x+0*x=m*x+0_\K=m*x=(m+0)*x.
     \]
     Em seguida, suponhamos que $n\in S$. Temos conformemente
     \[ 
@@ -1192,7 +1196,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     \]
     Temos que $0\in S$, pois
     \[
-      0*x+0*y=0_K=0*(x+y).
+      0*x+0*y=0_\K=0*(x+y).
     \]
     Se $n\in S$, ent\~ao
     \[
@@ -1212,7 +1216,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     \]
     Notemos que $0\in S$, uma vez que
     \[
-      m*(0*x)=m*0_K=0_K=0*x=m0*x.
+      m*(0*x)=m*0_\K=0_\K=0*x=m0*x.
     \]
     Se $n\in S$, ent\~ao
     \[ 
@@ -1232,7 +1236,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     \]
     Primeiro, $0\in S$, pois
     \[
-      (0*x)y=0_Ky=0_K;
+      (0*x)y=0_\K y=0_\K;
     \]
     Segundo, se $n\in S$, ent\~ao
     \[
@@ -1252,7 +1256,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
     \]
     Note primeiramente que $0\in S$, porque
     \[
-      (m*x)(0*y)=(m*x)0_K=0_K.
+      (m*x)(0*y)=(m*x)0_\K=0_\K.
     \]
     Se $n\in S$, ent\~ao
     \[
@@ -1271,16 +1275,16 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 
 
 \begin{Def}
-  Definamos $\sigma:Z\rightarrow K$, por
+  Definamos $\sigma:\Z\rightarrow \K$, por
   \[
     \sigma(n)=
     \begin{cases}
-      \hfill  1_K, & n>0\cr
-      \hfill  0_K, & n=0\cr
-      \hfill -1_K, & n<0.\cr
+      \hfill  1_\K, & n>0\cr
+      \hfill  0_\K, & n=0\cr
+      \hfill -1_\K, & n<0.\cr
     \end{cases}
   \]
-  Al\'em disso, para $n\in Z$ definamos
+  Al\'em disso, para $n\in \Z$ definamos
   \[
     n^*=|n|*\sigma(n)
   \]
@@ -1292,16 +1296,16 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 \end{Def}
 
 \begin{lem}
-  Sejam $K$ um corpo com unidade $1_K$. Ent\~ao valem
+  Sejam $\K$ um corpo com unidade $1_\K$. Ent\~ao valem
   \begin{enumerate}[label = (\alph*)]
     \item{%
       \[
-        \forall n\bigl(n\in Z\lra\sigma(-n)=-\sigma(n)\bigr);
+        \forall n\bigl(n\in \Z\lra\sigma(-n)=-\sigma(n)\bigr);
       \]
     }
     \item{%
       \[
-        \forall m,m\bigl(n,m\in Z\lra\sigma(mn)=\sigma(m)\sigma(n)\bigr).
+        \forall m,m\bigl(n,m\in \Z\lra\sigma(mn)=\sigma(m)\sigma(n)\bigr).
       \]
     }
   \end{enumerate}
@@ -1311,7 +1315,7 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
   \item{%
     Se $n\in\omega$, ent\~ao
     \[
-      \sigma(-n)=-1_K=-\sigma(n).
+      \sigma(-n)=-1_\K=-\sigma(n).
     \]
     Caso contr\'ario, $-n\in\omega$, da\'i
     \[
@@ -1335,46 +1339,46 @@ Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo 
 \subsection{Caracter\'istica de corpos}
 
 \begin{Def}
-  Seja $K$ um corpo com unidade $1_K$ e zero $0_K$. Definimos a caracter\'istica de $K$ por 
+  Seja $\K$ um corpo com unidade $1_\K$ e zero $0_\K$. Definimos a caracter\'istica de $\K$ por 
   \[
-    X(K)=\bigcap\{n:n\in\omega\cp\{0\}\a n^*=0_K\}.
+    X(\K)=\bigcap\{n:n\in\omega\cp\{0\}\a n^*=0_\K\}.
     \label{corpo_carac}
   \]
-  Observe que $X(K)$ \'e sempre um n\'umero natural, podendo inclusive ser $0=\emptyset$.
+  Observe que $X(\K)$ \'e sempre um n\'umero natural, podendo inclusive ser $0=\emptyset$.
   \label{def_X}
 \end{Def}
 
 \begin{teo}
-  Seja $K$ um corpo tal que $X(K)=0$. Ent\~ao existe um $Z^*\subset K$ isomorfo a $Z$.
+  Seja $\K$ um corpo tal que $X(\K)=0$. Ent\~ao existe um $\Z^*\subset \K$ isomorfo a $\Z$.
 \end{teo}
 
-\prova De posse da defini\c c\~ao {\bf \ref{def_int_K}}, podemos definir uma fun\c c\~ao $\zeta:Z\lra K$ dada por
+\prova De posse da defini\c c\~ao {\bf \ref{def_int_K}}, podemos definir uma fun\c c\~ao $\zeta:\Z\lra \K$ dada por
 \[
   \zeta(m)=m^*.
 \]
 Doravante, nosso objetivo limitar-se-a \`a prova de que $\zeta$ \'e um isomorfismo de an\'eis.
 
-Para todo $n\in Z$, temos
+Para todo $n\in \Z$, temos
 \[
   \begin{split}
     \zeta(n)+\zeta(-n)&=|n|*\sigma(n)+|n|*\sigma(-n)\cr
     &=|n|*(\sigma(n)+\sigma(-n))\cr
     &=|n|*(\sigma(n)-\sigma(n))\cr
-    &=0_K,
+    &=0_\K,
   \end{split}
 \]
 i.e., 
 \[
-  \forall n\bigr(n\in Z\lra\zeta(-n)=-\zeta(n)\bigr)
+  \forall n\bigr(n\in \Z\lra\zeta(-n)=-\zeta(n)\bigr)
 \]
 
-Sejam $m,n\in Z$. Se $m+n=0$, ent\~ao \'e imediato que
+Sejam $m,n\in \Z$. Se $m+n=0$, ent\~ao \'e imediato que
 \[
   \zeta(m+n)=\zeta(m)+\zeta(n).
 \]
 Com efeito, se $m+n=0$, ent\~ao vimos que $-\zeta(m)=\zeta(-m)=\zeta(n)$, da\'i vem
 \[
-  \zeta(m+n)=0_K=\zeta(m)-\zeta(m)=\zeta(m)+\zeta(-m)=\zeta(m)+\zeta(n)
+  \zeta(m+n)=0_\K=\zeta(m)-\zeta(m)=\zeta(m)+\zeta(-m)=\zeta(m)+\zeta(n)
 \]
 
 Agora suponhamos que $m+n\neq0$. Se $m$ e $n$ t\^em o mesmo sinal, ent\~ao
@@ -1393,7 +1397,7 @@ o que por sua vez acarreta
   \zeta(m+n)=\zeta(m)+\zeta(n).
 \]
 
-Em seguida, observemos que para quaisquer $m,n\in Z$, vale
+Em seguida, observemos que para quaisquer $m,n\in \Z$, vale
 \[
   \begin{split}
     \zeta(mn)&=(mn)^*\cr
@@ -1405,244 +1409,222 @@ Em seguida, observemos que para quaisquer $m,n\in Z$, vale
   \end{split}
 \]
 
-Por fim, seja $n\in\ker\zeta$, temos que $\zeta(n)=n^*=0_K$. Se $n\neq 0$, podemos sempre supor que $n>0$, bastando para isso considerar $-n$. Conformemente incorrer\'iamos na exist\^encia de um $n\in\omega\cp\{0\}$ tal que $n^*=0_K$, a fortiori $X(K)\neq0$, o que \'e uma contradi\c c\~ao. Isto implica por sua vez que $\ker\zeta=\{0\}$, confirmando que $\zeta$ \'e um isomorfismo. Assim, para concluirmos basta tomar $Z^*=\zeta(Z)$.
+Por fim, seja $n\in\ker\zeta$, temos que $\zeta(n)=n^*=0_\K$. Se $n\neq 0$, podemos sempre supor que $n>0$, bastando para isso considerar $-n$. Conformemente incorrer\'iamos na exist\^encia de um $n\in\omega\cp\{0\}$ tal que $n^*=0_\K$, a fortiori $X(\K)\neq0$, o que \'e uma contradi\c c\~ao. Isto implica por sua vez que $\ker\zeta=\{0\}$, confirmando que $\zeta$ \'e um isomorfismo. Assim, para concluirmos basta tomar $\Z^*=\zeta(\Z)$.
 \qed
 
 Sob as condi\c c\~oes do teorema anterior temos a
 \begin{Def}
-  Seja $K$ um corpo e $X(K)=0$. Ent\~ao definimos $Z^*=\zeta(Z)$.
+  Seja $\K$ um corpo e $X(\K)=0$. Ent\~ao definimos $\Z^*=\zeta(\Z)$.
 \end{Def}
 
 \begin{teo}
-  Se $K$ \'e um corpo tal que $X(K)=0$, ent\~ao existe $Q^*\subset K$ isomorfo ao conjunto dos n\'umeros racionais $Q$.
+  Se $\K$ \'e um corpo tal que $X(\K)=0$, ent\~ao existe $\Q^*\subset \K$ isomorfo ao conjunto dos n\'umeros racionais $\Q$.
+  \label{copia_de_Q_em_K}
 \end{teo}
-\prova Consideremos $Z^*$ definido anteriormente. Em $Z^*\times Z^*$ definimos a seguinte rela\c c\~ao
+\prova Em $\Z^*\times(\Z^*\cp\{0_\K\})$ definimos a seguinte rela\c c\~ao
 \[
-  (m^*,n^*)\sim (p^*,q^*)\llra m^*q^*=n^*p^*.
+  (m^*,n^*)\sim^* (p^*,q^*)\llra m^*q^*=n^*p^*.
 \]
-Doravante adimitamos que $m,n,p,q,r,s\in Z$. 
+Doravante, admitamos que $m,n,p,q,r,s\in\Z$. 
 
-Primeiramente vale
+Primeiramente, observemos
 \[
-  (m^*,n^*)\sim(m^*,n^*).
+  (m^*,n^*)\sim^*(m^*,n^*)\llra m^*n^*=n^*m^*.
 \]
-De fato,
-\[
-  m^*n^*=n^*m^*.
-\]
-Portanto, $\sim$ \'e reflexiva.
+Portanto, $\sim^*$ \'e reflexiva.
 
 Em seguida, 
 \[
-  (m^*,n^*)\sim(p^*,q^*)\llra m^*q^*=n^*p^*\llra p^*n^*=q^*m^*\llra(p^*,q^*)\sim(m^*,n^*).
+  (m^*,n^*)\sim^*(p^*,q^*)\llra m^*q^*=n^*p^*\llra p^*n^*=q^*m^*\llra(p^*,q^*)\sim^*(m^*,n^*).
 \]
-Logo, $\sim$ \'e sim\'etrica.
+Logo, $\sim^*$ \'e sim\'etrica.
 
 E por fim, suponhamos que 
 \[
-  (m^*,n^*)\sim(p^*,q^*)\a (p^*,q^*)\sim(r^*,s^*).
+  (m^*,n^*)\sim^*(p^*,q^*)\a (p^*,q^*)\sim^*(r^*,s^*).
 \]
 Segue portanto que
 \[
-  m^*q^*s^*=n^*p^*s^*=n^*q^*r^* \lra m^*s^*=n^*r^*\llra (m^*,n^*)\sim(r^*,s^*).
+  m^*q^*s^*=n^*p^*s^*=n^*q^*r^* \lra m^*s^*=n^*r^*\llra (m^*,n^*)\sim^*(r^*,s^*).
 \]
-Consequentemente, $\sim$ \'e transitiva, {\it a fotiori}, $\sim$ \'e uma rela\c c\~ao de equival\^encia.
+Consequentemente, $\sim^*$ \'e transitiva, {\it a fortiori}, $\sim^*$ \'e uma rela\c c\~ao de equival\^encia. 
 
+Podemos construir uma bije\c c\~ao natural $\rho:\Z\times(\Z\cp \{0\})\ra \Z^*\times(\Z^*\cp\{0_\K\})$, dada por
+\[
+  \rho\bigl((m,n)\bigr)=(m^*,n^*).
+\]
+Esta bije\c c\~ao por sua vez, nos fornece um isomorfismo natural definido em 
+\[
+  \Q={\Z\times(\Z\cp\{0\})\over\sim}
+\]
+com imagens em
+\[
+  \Q^*={\Z^*\times(\Z^*\cp\{0_\K\})\over\sim^*}
+\]
 
+Com efeito, sejam $m,n\in \Z$, denotaremos a classe cujo representante \'e $(m,n)$ por $m/n$, e a classe de representante $(m^*,n^*)$ por $m^*/n^*$. Agora, basta definir $\varrho:\Q\ra\Q^*$ por
+\[
+  \varrho\bigl({m\over n}\bigr)={m^*\over n^*}.
+\]
+A prova de que $\varrho$ preserva a adi\c c\~ao e a multiplica\c c\~ao \'e imediata ao isomorfismo $\zeta:\Z\ra\Z^*$; al\'em disso, \'e trivialmente sobrejetiva. Suponha que
+\[
+  {m^*\over n^*}=\varrho\bigl({m\over n}\bigr)=\varrho\bigl({p\over q}\bigr)={p^*\over q^*}
+\]
+Da\'i vem 
+\[
+  m^*q^*=n^*p^*\llra mq=\zeta^{-1}(m^*q^*)=\zeta^{-1}(n^*p^*)=np,
+\]
+por conseguinte $m/n=p/q$ e consequentemente $\varrho$ \'e injetiva, portanto, bijetiva, {\it a fortiori}, um isomorfismo de $\Q$ em $\Q^*$.
 
+Finalmente, observemos que $\Q^*$ pode ser observado como subconjunto de $\K^*$, bastanto para isso considerar a identifica\c c\~ao $\iota:\Q^*\ra\K$ dada por $\iota(m/n)=m^*(n^*)^{-1}$. Em verdade, sejam $(m,n)$ e $(p,q)$ dois representantes de $m/n$, temos em conformidade 
+\[
+  m^*q^*=n^*p^*\llra m^*(n^*)^{-1}=p^*(q^*)^{-1},
+\]
+i.e., a defini\c c\~ao de $\iota$ n\~ao \'e amb\'igua. Com um racioc\'inio an\'alogo, v\^e-se que $\iota$ \'e injetiva. Destarte, sem perdas podemos identificar $\Q^*$ com $\iota(\Q^*)\subset K$, e abusar da nota\c c\~ao escrevendo $\Q^*\subset \K$.\qed
 
-\qed
+\begin{Def}
+  Seja $\K$ um corpo e $X(\K)=0$. Ent\~ao definimos $\Q^*$ como no teorema {\bf\ref{copia_de_Q_em_K}}. Ademais, da identifica\c c\~ao podemos sem ambigudade supor
+  \[
+    {m^*\over n^*}=m^*(n^*)^{-1}.
+  \]
+\end{Def}
 
-\theorem{}{\sl%
-  Seja $K$ um corpo ordenado com a propriedade da menor cota superior. Ent\~ao $K$ \'e arquimediano e o conjunto
-  $$
-    Q^*=\Bigl\{{m^*\over n^*}\in K:m,n\in Z\a n\neq0\Bigr\}
-  $$
-  \'e denso em $K$.
-}
+\begin{teo}
+  Seja $\K$ um corpo ordenado com a propriedade da menor cota superior tal que $X(\K)=0$. Ent\~ao $\K$ \'e arquimediano e o conjunto $\Q^*$ \'e denso em $\K$.
+  \label{K_arqui}
+\end{teo}
 
-\proof Sejam $x>0_K$ e $y\in K$, consideremos o conjunto
-$$
-  M=\{n*x:n\in N\}
-$$
-Afirmo que existe $n\in N$ tal que $n*x>y$. De fato, suponha que $y$ seja um majorante do conjunto $M$, decorre de $K$ ter a propriedade da menor cota superior que existe $\sigma=\sup M$, da\'\i\ vem que para todo $n\in N$
-$$
+\prova Sejam $x>0_\K$ e $y\in \K$, consideremos o conjunto
+\[
+  M=\{n*x:n\in\omega\}
+\]
+Afirmo que existe $n\in\omega$ tal que $n*x>y$. De fato, suponha que $y$ seja um majorante do conjunto $M$, decorre de $\K$ ter a propriedade da menor cota superior que existe $\sigma=\sup M$, da\'\i\ vem que para todo $n\in\omega$
+\[
   n*x\leq\sigma
-$$
-por maior raz\~ao 
-$$
-  (n+1)*x\leq\sigma
-$$
-para todo $n\in N$, donde
-$$
-  n*x=(n+1)*x-x\leq\sigma-x<\sigma
-$$
-para todo $n\in N$, contradizendo o fato de $\sigma$ ser a menor cota superior do conjunto $M$. 
+\]
+por maior raz\~ao, para todo $n\in\omega$, segue-se
+\[
+  (n+1)*x\leq\sigma,
+\]
+donde para todo $n\in\omega$ vale
+\[
+  n*x=(n+1)*x-x\leq\sigma-x<\sigma,
+\]
+contradizendo o fato de $\sigma$ ser a menor cota superior do conjunto $M$. 
 
-Imediatamente, suponhamos que $x,y\in \R$ sejam tais que $x<y$, da propriedade arquimediana de $K$ existe $n\in N$, tal que $n*(y-x)>1^*$. Seja $m$ o maior inteiro tal que $m^*\leq n*x$. Destarte, de 
+Imediatamente, suponhamos que $x,y\in \R$ sejam tais que $x<y$, da propriedade arquimediana de $\K$ existe $n\in\omega$, tal que $n*(y-x)>1^*$. Seja $m$ o maior inteiro tal que $m^*\leq n*x$. Destarte, de 
 
-$$
+\[
   m^*\leq n*x<(m+1)^*=m^*+1^*,
-$$ 
+\] 
 conclu\'\i mos que 
-$$
+\[
   (m+1)^*\leq n*x+1^*
-$$
+\]
 pois do contr\'ario ter\'\i amos
-$$
+\[
   1^*=m^*+1^*-m^*>n*x+1^*-n*x=1^*,
-$$
+\]
 um absurdo. Logo,
-$$
+\[
   n^*\cdot x=n*x<(m+1)^*\leq n*x+1^*<n*y=n^*\cdot y
-$$
+\]
 donde
-$$
+\[
   x<{(m+1)^*\over n^*}<y.
-$$
-Em outros termos $Q^*$ \'e denso em $K$.
+\]
+Em outros termos $\Q^*$ \'e denso em $\K$.\qed
+
+\begin{teo}
+  Sejam $\K$ e $\Q^*$ como no teorema {\bf \ref{K_arqui}}. Ent\~ao
+  \[
+    \Q^*=\{q^*:q^*=m^*/n^*\in \Q^*\a m^*\geq0^*\},
+  \]
+  e
+  \[
+    {m\over n}<{p\over q}\llra{m^*\over n^*}<{p^*\over q^*}.
+  \]
+  \label{iso_ord_Q}
+\end{teo}
+\prova \'E suficiente observar que vale
+\[
+  {m^*\over n^*}={-m^*\over -n^*}
+\]
+e
+\[
+  {m\over n}<{p\over q}\llra mq<np\llra m^*q^*<n^*p^*\llra{m^*\over n^*}<{p^*\over q^*}.
+\]
 \qed
-
-Observe que ao considerar uma fra\c c\~ao $m^*/n^*$, podemos sempre supor que $n^*>0$, pois
-$$
-  {m^*\over n^*}={-1^*\cdot m^*\over-1^*\cdot n^*}={-m^*\over-n^*}.
-$$
-Desta forma, para um corpo ordenado $K$
-$$
-  Q^*=\Bigl\{{m^*\over n^*}:m,n\in Z\a n>0\Bigr\}.
-$$
-Assim, existe um isomorfismo natural de $Q$ em $Q^*$, \'e o que veremos no
-
-\theorem{}{\sl%
-  Seja $K$ um corpo ordenado a aplica\c c\~ao $\nu:Q\rightarrow Q^*$, dada por
-$$
-  \nu\Bigl({m\over n}\Bigr)={m^*\over n^*}.
-$$
-\'e um isomorfismo.
-}
-
-\proof Primeiramente notemos que
-$$
-  \vbox{
-    \halign{
-      \hfill#&#\hfill\cr
-      $\displaystyle\nu\Bigl({m\over n}+{p\over q}\Bigr)$ & $=\displaystyle\nu\Bigl({mq+np\over nq}\Bigr)$ \cr
-      \omit                                               & $\displaystyle={(mq+np)^*\over(nq)^*}$         \cr
-      \omit                                               & $\displaystyle={m^*q^*+n^*p^*\over n^*q^*}$    \cr
-      \omit                                               & $\displaystyle={m^*\over n^*}+{p^*\over q^*}$  \cr
-      \omit                                               & $\displaystyle=\nu\Bigl({m\over n}\Bigr)+\nu\Bigl({p\over q}\Bigr).$  \cr
-    }
-  }
-$$
-Em seguida, observemos que
-$$
-  \nu\Bigl({m\over n}{p\over q}\Bigr)=\nu\Bigl({mp\over nq}\Bigr)={m^*p^*\over n^*q^*}={m^*\over n^*}{p^*\over q^*}=\nu\Bigl({m\over n}\Bigr)\nu\Bigl({p\over q}\Bigr).
-$$
-Imediatamente notemos que
-$$
-  {m\over n}<{p\over q}\longrightarrow mq<np\longrightarrow m^*q^*<n^*p^*\longrightarrow{m^*\over n^*}<{p^*\over q^*},
-$$
-consequentemente
-$$
-  {m\over n}<{p\over q}\longrightarrow\nu\Bigl({m\over n}\Bigr)<\nu\Bigl({p\over q}\Bigr).
-$$
-Por fim, se $\nu(m/n)=m^*/n^*=0$, ent\~ao da nossa suposi\c c\~ao que $n\neq0$ temos que $m^*=0$, consequentemente $m=0$, em conformidade $\ker\nu=\{0\}$ e $\nu$ \'e trivialmente sobrejetiva, portanto, um isomorfismo. \qed
 
 A constru\c c\~oes a seguir foram motivadas por alguns exerc\'\i cios do livro do [Elon] {\it Curso de An\'alise} Volume 1.
 
-\theorem{\ (Unicidade de $\R$ a menos de isomorfismo)}{\sl%
-  Seja $K$ um corpo ordenado com a propriedade da menor cota superior. Ent\~ao $\R$ \'e isomorfo a $K$.
-}
+\begin{teo}[Unicidade de $\R$ a menos de isomorfismo]
+  Seja $\K$ um corpo e $\Q^*$ como teorema {\bf \ref{K_arqui}}.  Ent\~ao $\R$ \'e ordenadamente isomorfo a $\K$.
+\end{teo}
 
-\proof Defina a aplica\c c\~ao $\varphi:\R\rightarrow K$, da seguinte maneira
-$$
-  \varphi(x)=\sup\Bigl\{{p^*\over q^*}\in K:{p\over q}<x\Bigr\},
-$$
-afirmo que $\varphi$ \'e um isomorfismo, \'e o que nos empenharemos a demonstrar doravante.
+\prova Seja $\rho:\Q\ra\Q^*$ um isomorfismo, doravante quando for coveniente denotaremos $\rho(q)$ por $q^*$. Defina a aplica\c c\~ao $\varphi:\R\rightarrow\K$, da seguinte maneira
+\[
+  \varphi(x)=\sup\rho(\Q\,\cap\,]-\infty,x[).
+\]
+Afirmo que $\varphi$ \'e um isomorfismo. \'E o que nos empenharemos a demonstrar doravante.
 
-%Antes de prosseguir observemos uma propriedade interessante que nos auxiliar\'a na desmonstra\c c\~ao, {\it viz}
-%$$
-%  \forall x\biggl(x\in R\longrightarrow \sup\Bigl\{{p^*\over q^*}\in K:{p\over q}<x\Bigr\}=\inf\Bigl\{{p^*\over q^*}\in K:{p\over q}>x\Bigr\}\biggr)
-%$$
-%Dado $x\in \R$, fa\c camos 
-%$$
-%  A=\Bigl\{{p^*\over q^*}\in K:{p\over q}<x\Bigr\},\quad B=\Bigl\{{p^*\over q^*}\in K:{p\over q}>x\Bigr\},
-%$$
-%$$
-%  \alpha=\sup A\quad\hbox{e}\quad\beta=\inf B.
-%$$
-%Como todo elemento de $B$ \'e cota superior de $A$, segue que $\alpha$ \'e menor que todo elemento de $B$, portanto, uma cota inferior, donde $\alpha\leq\beta$. Provemos que n\~ao \'e o caso que $\alpha<\beta$. De fato, suponha que $\alpha<\beta$, da densidade de $Q^*$ em $K$ podemos considerar $p^*/q^*,r^*/s^*\in Q^*$, tais que
-%$$
-%  \alpha<{p^*\over q^*}<{r^*\over s^*}<\beta
-%$$
-%da\'\i\ vem
-%$$
-%  x\leq{p\over q}<{r\over s}\leq x
-%$$
-%o que \'e um absurdo, em consequ\^encia, $\alpha=\beta$.
 
-Inicialmente, observemos que $\varphi$ est\'a bem definida pois o su\-premo \'e \'unico e o conjunto sobre o qual se toma o supremo \'e n\~ao vazio e limitado superiormente. 
+Inicialmente, observemos que $\varphi$ est\'a bem definida pois o supremo \'e \'unico e o conjunto sobre o qual se toma o supremo \'e n\~ao vazio e limitado superiormente em $\Q^*$. Efetivamente, basta tomar $q\in \Q\cap[x,\infty[$, da\'i e do teorema {\bf\ref{iso_ord_Q}} segue que $q^*$ \'e um majorante de $\rho(\Q\,\cap\,]-\infty,x[)$.
 
-Em seguida, provemos que $\varphi$ \'e injetiva. Ora, se $x<y$ ent\~ao existem $p/q, r/s$ tais que $x<p/q<r/s<y$, consequentemente
+Em seguida, provemos que $\varphi$ \'e injetiva. Ora, se $x<y$ ent\~ao existem $p,q\in \Q$ tais que $x<p<q<y$, consequentemente
 $$
-  \varphi(x)\leq{p^*\over q^*}<{r^*\over s^*}\leq\varphi(y),
+  \varphi(x)\leq p^*<q^*\leq\varphi(y),
 $$
-observe que isto tamb\'em prova que $\varphi$ \'e um isomorfismo de ordem.
+observe que isto tamb\'em prova que $\varphi$ \'e estritamente crescente.
 
-Imediatamente, Seja $\gamma\in K$, consideremos
-$$
-  x=\sup\Bigl\{{p\over q}\in K:{p^*\over q^*}<\gamma\Bigr\}.
-$$
-Observe que faz sentido considerarmos o supremo uma vez que existe $r^*/s^*\in K$, tal que $r^*/s^*>\gamma$, logo o conjunto sobre o qual toma-se o supremo \'e limitado superiormente; al\'em disso, tal conjunto \'e trivialmente n\~ao vazio. Queremos provar que $\gamma=\sup L(x)$, em que
-$$
-  L(x)=\Bigl\{{p^*\over q^*}\in K: {p\over q}<x\Bigr\}\qquad\hbox{Def.}
-$$
-Para tanto, observemos que se $p/q<x$, necessariamente $p^*/q^*<\gamma$, pois se $p^*/q^*\geq\gamma$, ent\~ao $p/q$ seria uma cota superior do conjunto 
-$$
-  \Bigl\{{r\over s}\in K:{r^*\over s^*}<\gamma\Bigr\},
-$$ 
-logo $p/q\geq x$, uma contradi\c c\~ao. Desta forma, $\gamma\geq\sup L(x)$.
+Imediatamente, Seja $\beta\in \K$, consideremos 
+\[
+  x=\sup\rho^{-1}(\Q^*\,\cap\,]\infty,\beta[).
+\] 
+Observe que faz sentido considerarmos o supremo uma vez que existe $q^*\in\K$, tal que $q^*>\beta$, logo o conjunto sobre o qual toma-se o supremo \'e limitado superiormente, pois $q$ \'e um majorante de tal conjunto; al\'em disso, tal conjunto \'e trivialmente n\~ao vazio. Queremos provar que $\beta=\varphi(x)$. Para tanto, observemos que se $q<x$, necessariamente $q^*<\beta$, pois se $q^*\geq\beta$, ent\~ao $q$ seria uma cota superior do conjunto $\rho^{-1}(\Q^*\,\cap\,]\infty,\beta[)$, logo $q\geq x$, uma contradi\c c\~ao. Desta forma, $\beta\geq\varphi(x)$.
 
-Seja agora $\alpha<\gamma$, consideremos $p^*/q^*,r^*/s^*\in K$, tais que
-$$
-  \alpha<{p^*\over q^*}<{r^*\over s^*}<\gamma
-$$
-segue portanto que $p/q<r/s\leq x$, i.e., existe $p/q<x$, tal que $p^*/q^*>\alpha$, portanto $\alpha$ n\~ao \'e cota superior do conjunto $L(x)$, em consequ\^encia
-$$
-  \gamma=\sup L(x)=\varphi(x),
-$$
-ou seja, provamos que dado $\gamma\in K$ existe $x\in \R$, tal que $\varphi(x)=\gamma$, i.e., $\varphi$ \'e sobrejetiva.
+Seja agora $\alpha<\beta$, do teorema {\bf\ref{iso_ord_Q}} podemos considerar $p^*,q^*\in \K$, tais que
+\[
+  \alpha<p^*<q^*<\beta
+\]
+segue-se que $p<q\leq x$, i.e., existe $p<x$, tal que $p^*>\alpha$, portanto $\alpha$ n\~ao \'e cota superior do conjunto $\varphi(x)$, em consequ\^encia $\varphi(x)=\beta$, ou seja, provamos que dado $\beta\in K$ existe $x\in \R$, tal que $\varphi(x)=\beta$, i.e., $\varphi$ \'e sobrejetiva.
 
-Consideremos $p/q<x+y$, da\'\i\ vem que $p/q-x<y$, da densidade de $Q$ em $\R$ existe $r/s\in Q$, tal que 
-$$
-  {p\over q}-x<{r\over s}<y,
-$$ 
-como consequ\^encia $p/q-r/s<x$ e $r^*/s^*\leq\varphi(y)$, da\'\i\ decorre que $p^*/q^*-r^*/s^*\leq\varphi(x)$, portanto 
-$$
-  {p^*\over q^*}=\Bigl({p^*\over q^*}-{r^*\over s^*}\Bigr)+{r^*\over s^*}\leq\varphi(x)+\varphi(y),
-$$
-como $p/q<x+y$ \'e arbitr\'ario temos
-$$
+Consideremos $p<x+y$, da\'\i\ vem que $p-x<y$, da densidade de $\Q$ em $\R$ existe $q\in \Q$, tal que 
+\[
+  p-x<q<y,
+\] 
+como consequ\^encia 
+\[
+  p-q<x\a q^*\leq\varphi(y),
+\]
+da\'i\ decorre que 
+\[
+  p^*-q^*\leq\varphi(x),
+\]
+portanto,
+\[
+  p^*=(p^*-q^*)+q^*\leq\varphi(x)+\varphi(y),
+\]
+como $p<x+y$ \'e arbitr\'ario temos
+\[
   \varphi(x+y)\leq\varphi(x)+\varphi(y).
-$$
-Seja agora $\alpha<\varphi(x)+\varphi(y)$, da\'\i\ segue que $\alpha-\varphi(y)<\varphi(x)$, como $\varphi(x)$ \'e a menor cota superior existe $p/q<x$  tal que 
-$$
-  \alpha-\varphi(y)<{p^*\over q^*}\leq\varphi(x).
-$$
-Por outro lado, como $\alpha-p^*/q^*<\varphi(y)$, pelo mesmo motivo existe $r/s<y$, tal que 
-$$
-  \alpha-{p^*\over q^*}<{r^*\over s^*}\leq\varphi(y),
-$$
+\]
+Seja agora $\alpha<\varphi(x)+\varphi(y)$, segue-se que $\alpha-\varphi(y)<\varphi(x)$, como $\varphi(x)$ \'e a menor cota superior existe $q<x$  tal que 
+\[
+  \alpha-\varphi(y)<q^*\leq\varphi(x).
+\]
+Por outro lado, como $\alpha-q^*<\varphi(y)$, pelo mesmo motivo existe $p<y$, tal que 
+\[
+  \alpha-q^*<p^*\leq\varphi(y),
+\]
 donde podemos inferir que existe 
-$$
-  {t\over u}={p\over q}+{r\over s}<x+y,
-$$
-tal que $\alpha<t^*/u^*$, i.e., $\alpha$ n\~ao \'e cota superior do conjunto $L(x+y)$, conformemente $\varphi(x+y)=\varphi(x)+\varphi(y)$.
-
-Para todo $x\in \R$ podemos, portanto, concluir que
-$$
-  \varphi(-x)=\varphi(-x)+\varphi(x)-\varphi(x)=\varphi(x-x)-\varphi(x)=-\varphi(x)
-$$
+\[
+  r=p+q<x+y,
+\]
+tal que $\alpha<r^*$, i.e., $\alpha$ n\~ao \'e cota superior do conjunto $\varphi(x+y)$, conformemente $\varphi(x+y)=\varphi(x)+\varphi(y)$. Podemos, portanto, concluir que para todo $x\in \R$ vale
+\[
+  \varphi(-x)=\varphi(-x)+\varphi(x)-\varphi(x)=\varphi(x-x)-\varphi(x)=-\varphi(x).
+\]
 %$$
 %  \vbox{
 %    \halign{
@@ -1655,72 +1637,68 @@ $$
 %    }
 %  }
 %$$
-
 Desta forma, \'e suficiente provarmos que 
-$$
+\[
   \varphi(xy)=\varphi(x)\varphi(x)
-$$
+\]
 para $x,y>0$, pois se ao menos um deles for nulo a identidade \'e imediata. Caso, digamos $x<0<y$, basta considerar $-x$, pois 
-$$
+\[
   \varphi(-xy)=\varphi(-x)\varphi(y)\longrightarrow -\varphi(xy)=-\varphi(x)\varphi(y)
-$$
+\]
 como consequ\^encia
-$$
+\[
   \varphi(xy)=\varphi(x)\varphi(y).
-$$
-
-Dessarte, consideremos $x,y>0$. Seja $p/q<xy$, podemos sem perda de generalidade supor que $p/q>0$.  Tome $r/s\in Q$, tal que 
-$$
-  {p\over qy}<{r\over s}<x
-$$
-como $ps/qr<y$, temos necessariamente que
-$$
-  {p^*\over q^*}={r^*\over s^*}\Bigl({p^*\over q^*}{s^*\over r^*}\Bigr)\leq\varphi(x)\varphi(y)
-$$
+\]
+Dessarte, consideremos $x,y>0$. Seja $p<xy$, podemos sem perda de generalidade supor que $p>0$.  Tome $q\in \Q$, tal que 
+\[
+  {p\over y}<q<x
+\]
+como $p/q<y$, temos necessariamente que
+\[
+  p^*=q^*{p^*\over q^*}\leq\varphi(x)\varphi(y)
+\]
 como consequ\^encia
-$$
+\[
   \varphi(xy)\leq\varphi(x)\varphi(y).
+\]
+Seja $\alpha<\varphi(x)\varphi(y)$, podemos supor sem perda de generalidade que $\alpha>0^*$, pois $\varphi(x),\varphi(y)>0^*$. Existe, portanto, $p<x$, tal que
 $$
-Seja $\alpha<\varphi(x)\varphi(y)$, podemos supor sem perda de generalidade que $\alpha>0^*$, pois $\varphi(x),\varphi(y)>0^*$. Existe, portanto, $p/q<x$, tal que
+  {\alpha\over\varphi(x)}<p^*\leq\varphi(y)
 $$
-  {\alpha\over\varphi(x)}<{p^*\over q^*}\leq\varphi(y)
+da\'\i\ tamb\'em encontramos $q<x$, tal que
 $$
-da\'\i\ tamb\'em encontramos $r/s<x$, tal que
-$$
-  \alpha\cdot{q^*\over p^*}<{r^*\over s^*}\leq\varphi(x)
+  {\alpha\over p^*}<q^*\leq\varphi(x)
 $$
 donde
 $$
-  {t^*\over u^*}={p^*\over q^*}{r^*\over s^*}
+  r^*=p^*q^*
 $$
-\'e tal que $t/u<xy$ e $\alpha<t^*/u^*$, provando que $\alpha$ n\~ao \'e cota superior do conjunto $L(xy)$, concluindo portanto que $\varphi(xy)=\varphi(x)\varphi(y)$.
+\'e tal que $r<xy$ e $\alpha<r^*$, provando que $\alpha$ n\~ao \'e cota superior do conjunto $\varpi(xy)$, concluindo portanto que $\varphi(xy)=\varphi(x)\varphi(y)$. O que conclui a prova do teorema.
+
+Ademais, vale observar que em particular
+\[
+  \varphi(q)=q^*.
+\]
+Com efeito, seja $\sigma=\varphi(q)$ evidentemente $\sigma\leq q^*$. Se $\sigma<q^*$, ent\~ao existe $p^*\in Q^*$, tal que 
+\[
+  \sigma<p^*<q^*
+\]
+como $\Q$ \'e ordenadamente isomorfo a $\Q^*$, ent\~ao $p<q$, mas isto contradiria o fato de $\sigma$ ser uma cota superior de $\varphi(q)$, segue, portanto, a igualdade mencionada.
 \qed
 
-Vale observar que em particular
-$$
-  \varphi\Bigl({m\over n}\Bigr)={m^*\over n^*}.
-$$
-Com efeito, seja $\sigma=\varphi(m/n)$ evidentemente $\sigma\leq m^*/n^*$. Se $\sigma<m^*/n^*$, ent\~ao existe $p^*/q^*\in Q^*$, tal que 
-$$
-  \sigma<{p^*\over q^*}<{m^*\over n^*}
-$$
-como $Q$ \'e isomorfo a $Q^*$, ent\~ao $p/q<m/n$, mas isto contradiria o fato de $\sigma$ ser uma cota superior de $L(m/n)$, segue, portanto, a igualdade mencionada.
+\begin{teo}
+  Se $\psi:\R\rightarrow\R$ \'e um isomorfismo, ent\~ao $\psi=\iota$, em que $\iota$ \'e a aplica\c c\~ao identidade. Em particular, se $\K$ e $\L$ s\~ao dois corpos ordenados com a propriedade da menor cota superior, ent\~ao existe um \'unico isomorfismo de $\K$ sobre $\L$.
+\end{teo}
 
-\theorem{}{\sl%
-  Se $\psi:\R\rightarrow \R$ \'e um isomorfismo, ent\~ao $\psi=\iota$, em que $\iota$ \'e a aplica\c c\~ao identidade. Em particular, se $K$ e $L$ s\~ao dois corpos ordenados com a propriedade da menor cota superior, ent\~ao existe um \'unico isomorfismo de $K$ sobre $L$.
-} 
+\proof Se $\psi$ \'e um isomorfismo, ent\~ao $\psi(1)=1$, donde conclui-se $\psi(m)=m$, para todo $m\in \Z$, que por sua vez implica $\psi\bigl(q\bigr)=q$, para todo $q\in\Q$. 
 
-\proof Se $\psi$ \'e um isomorfismo, ent\~ao $\psi(1)=1$, donde conclui-se $\psi(m)=m$, para todo $m\in Z$, que por sua vez implica
+Se $x<\varphi(x)$, ent\~ao existe $p\in \Q$, tal que 
 $$
-  \psi\Bigl({p\over q}\Bigr)={p\over q},
-$$
-para todo $p,q\in Z$. Se $x<\varphi(x)$, ent\~ao existe $p/q\in Q$, tal que 
-$$
-  x<{p\over q}=\varphi\Bigl({p\over q}\Bigr)<\varphi(x)
+  x<p=\varphi(p)<\varphi(x)
 $$
 donde se conclui 
 $$
-  x<{p\over q}<x
+  x<p<x
 $$
 uma contradi\c c\~ao. Uma prova an\'aloga pode ser dada para o caso em que $\varphi(x)<x$. Podemos portanto concluir que $\varphi=\iota$.
 
@@ -1729,9 +1707,6 @@ Em seguida observemos que se $\varrho,\varsigma:\R\rightarrow K$, s\~ao dois iso
 Seja agora um isomorfismo arbitr\'ario $\tau:K\rightarrow L$ e,  $\varphi:\R\rightarrow K$ e $\psi:\R\rightarrow L$ os \'unicos isomorfismos ent\~ao $\psi^{-1}\tau\varphi=\iota$, logo $\tau=\psi\varphi^{-1}$, desta forma $\tau$ \'e \'unico.
 \qed
 
-\begin{cor}
-  Seja $K$ um corpo arbitr\'ario com $X(\R)=0$[\footnote{Confira defini\c c\~ao {\bf\ref{def_X}}.}. Ent\~ao $K$ cont\'em uma c\'opia dos racionais.
-\end{cor}
 
 
 A seguir relembremos de alguns exerc\'\i cios interessantes de [Rudin], quanto a constru\c c\~ao de pot\^encias qualquer e da constru\c c\~ao do logaritmo, ambos de base $b>0$ qualquer.
