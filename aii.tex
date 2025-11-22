@@ -980,17 +980,17 @@ $$
 A representa\c c\~ao do n\'umero corresponde \`a uma sequ\^encia finita de seus primeiros d\'\i gitos seguido de retic\^encias. Subentende-se que os outros d\'\i gitos sejam determinados indutivamente. 
 
 \section{Constru\c c\~ao dos n\'umeros reais}
-Mais precisamente, nos concentraremos na constru\c c\~ao do inverso multiplicativo. Doravante admitamos que letras gregas representem cortes e letras romanas representem n\'umeros racionais, salvo quando for explicitamente dito o contr\'ario. Dado um corte $\alpha$, por conveni\^encia definiremos que
-$$
-  \alpha^\bullet=\{p\in\alpha:p>0\}.
-$$
+Doravante admitamos que letras gregas representem cortes e letras romanas representem n\'umeros racionais, salvo quando for explicitamente dito o contr\'ario. Dado um corte $\alpha$, por conveni\^encia definiremos que
 
-Seja $\alpha>0^*$ (um corte estritamente positivo, veja o livro {\it Principles of Mathematical Analysis} de W.~Rudin ou o {\it Calculus} de M.~Spivak). Definamos
-$$
-  \alpha^{-1}=\Bigl\{r\in Q: \exists s,t\bigl(s,t\in Q\a t>1 \a1/st\notin\alpha\a r\leq s\bigr)\Bigr\}\quad\hbox{Def.}
-$$
 
- Antes de prosseguirmos, precisaremos do
+\begin{Def}%
+Seja $\alpha$ um corte tal que $\alpha>0^*$, i.e., um corte estritamente positivo\footnote{veja o [Rudin] ou [Spivak]).}. Definamos
+\[
+  \alpha^{-1}=\{r\in \Q: \exists s,t(s,t\in \Q\a t>1 \a1/st\notin\alpha\a r\leq s)\}.
+\]
+\end{Def}
+
+Antes de prosseguirmos, precisaremos do
 
 \lemma{\ (Adaptado de [Spivak])}Sejam $\alpha>0^*$ e $p\in Q$, tal que $p>1$. Ent\~ao existem $q,r\in Q$, tais que $q\in\alpha$, $1/r\in\alpha^{-1}$ e $p=r/q$.
 
@@ -1562,7 +1562,7 @@ A constru\c c\~oes a seguir foram motivadas por alguns exerc\'\i cios do livro d
   Seja $\K$ um corpo e $\Q^*$ como teorema {\bf \ref{K_arqui}}.  Ent\~ao $\R$ \'e ordenadamente isomorfo a $\K$.
 \end{teo}
 
-\prova Seja $\rho:\Q\ra\Q^*$ um isomorfismo, doravante quando for coveniente denotaremos $\rho(q)$ por $q^*$. Defina a aplica\c c\~ao $\varphi:\R\rightarrow\K$, da seguinte maneira
+\prova Seja $\varrho:\Q\ra\Q^*$ um isomorfismo, doravante quando for coveniente denotaremos $\varrho(q)$ por $q^*$. Defina a aplica\c c\~ao $\varphi:\R\rightarrow\K$, da seguinte maneira
 \[
   \varphi(x)=\sup\rho(\Q\,\cap\,]-\infty,x[).
 \]
@@ -1625,18 +1625,6 @@ tal que $\alpha<r^*$, i.e., $\alpha$ n\~ao \'e cota superior do conjunto $\varph
 \[
   \varphi(-x)=\varphi(-x)+\varphi(x)-\varphi(x)=\varphi(x-x)-\varphi(x)=-\varphi(x).
 \]
-%$$
-%  \vbox{
-%    \halign{
-%      \hfill#&#\hfill\cr
-%      $\varphi(-x)$ & $\displaystyle=\sup\Bigl\{{p^*\over q^*}\in K:{p\over q}<-x\Bigr\}$ \cr
-%      \omit         & $\displaystyle=\sup\Bigl\{-\Bigl(-{p^*\over q^*}\Bigr)\in K:{p\over q}<-x\Bigr\}$ \cr
-%      \omit         & $\displaystyle=-\inf\Bigl\{-{p^*\over q^*}\in K:-{p\over q}>x\Bigr\}$ \cr
-%      \omit         & $\displaystyle=-\inf\Bigl\{{p^*\over q^*}\in K:{p\over q}>x\Bigr\}$ \cr
-%      \omit         & $\displaystyle=-\varphi(x)$ \cr
-%    }
-%  }
-%$$
 Desta forma, \'e suficiente provarmos que 
 \[
   \varphi(xy)=\varphi(x)\varphi(x)
@@ -1707,6 +1695,7 @@ Em seguida observemos que se $\varrho,\varsigma:\R\rightarrow K$, s\~ao dois iso
 Seja agora um isomorfismo arbitr\'ario $\tau:K\rightarrow L$ e,  $\varphi:\R\rightarrow K$ e $\psi:\R\rightarrow L$ os \'unicos isomorfismos ent\~ao $\psi^{-1}\tau\varphi=\iota$, logo $\tau=\psi\varphi^{-1}$, desta forma $\tau$ \'e \'unico.
 \qed
 
+\vfill\break
 
 
 A seguir relembremos de alguns exerc\'\i cios interessantes de [Rudin], quanto a constru\c c\~ao de pot\^encias qualquer e da constru\c c\~ao do logaritmo, ambos de base $b>0$ qualquer.
