@@ -2795,6 +2795,27 @@ Da regra da cadeia temos,
 \]
 \qed
 
+\begin{Def}
+  Denotaremos o conjunto das fun\c c\~oes reais Riemann integr\'aveis em $[a,b]$, por $\mathscr{R}(\R^{[a,b]})$. Ademais quando $f\in\mathscr{R}(\R^{[a,b]})$ definiremos $I_f\in \R^{[a,b]}$ por
+  \[
+    I_f(x)=\int_a^xf\,d\iota,
+  \]
+  em que $\iota$ \'e a fun\c c\~ao identidade\footnote{Estou considerando a integral de Riemann-Stietjes onde a fun\c c\~ao mon\'otona em questa\~ao \'e a fun\c c\~ao identidade.}.
+  
+\end{Def}
+\begin{teo}
+  Seja $f\in\mathscr{R}(\R^{[a,b]})$[\footnote{Conjuto das fun\c c\~oes $\R^{[a,b]}$} Riemann integr\'aveis em $[a,b]$. Se $f$ \'e cont\'inua em $c\in[a,b]$, ent\~ao $I_f'(c)=f(c)$, {\it a fortiori}, se $f\in\mathscr{C}(\R^{[a,b]})$, ent\~ao $I_f'=f$.
+\end{teo}
+\prova
+Seja $\varepsilon>0$ da continuidade de $f$ em $c$ existe $\delta>0$, tal que
+\[
+  \forall x(x\in[a,b]\a |x-c|<\delta\lra |f(x)-f(c)|<\varepsilon),
+\]
+da\'i segue que em qualquer caso, i.e., seja $h<0$ ou seja $h>0$, segue-se
+\[
+  \Big|{I_f(c+h)-I_f(c)\over h}-f(c)\Big|=\Big|{1\over h}\int^{c+h}_cf-f(c)\,d\iota\Big|
+\]
+
 
 \theorem{}{\sl%
   Sejam $X\subseteq R$, $f:X\rightarrow R$ e $a$ um ponto de m\'inimo\/$($m\'aximo\/$)$ local de $f$ em $X$ tal que $f$ seja deriv\'avel em $a$. Ent\~ao $f'(a)=0$. 
