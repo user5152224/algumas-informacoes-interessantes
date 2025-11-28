@@ -130,6 +130,7 @@
 
 
 \def\AEx{{\bf AEx}\ }
+\def\scr#1{\mathscr{#1}}
 \def\K{\mathds{K}}
 \def\L{\mathds{L}}
 \def\R{\mathds{R}}
@@ -2410,6 +2411,13 @@ Um outro fato interessate \'e o seguinte, cuja prova pode ser vista no livro do 
 
 \proof O caminho para a prova deste teorema \'e {\it reductio ad absurdum}. Suponha por absurdo que n\~ao existam $a$ e $b$, com tais propriedades, construamos $\mathscr{C}=\{]f(x),f(y)[\;\in2^Y:x,y\in X\}$. Afirmamos que, $\mathscr{C}$ \'e uma cobertura aberta de $f(X)$. Com efeito, seja $f(z)\in Y$, como n\~ao existe um menor elemento em $f(X)$, segue que existe $x\in X$, tal que $f(x)<f(z)$. Analogamente como $f(z)$ n\~ao pode ser o maior elemento de $f(X)$, existe $y\in X$ tal que $f(z)<f(y)$. Portanto, $f(X)\subseteq\bigcup\mathscr{C}$, como afirmamos. Da premisa que $X$ \'e compacto e $f$ cont\'inua, decorre que $f(X)$ \'e compacto, consequentemente existe uma subcobertura finita de $\mathscr{C}$, digamos, $\mathscr{D}=\{]f(x_i),f(y_i)[\;\in2^X:i\in n\}$  com $n\in\omega$. Em virtude, da ordem em $Y$ ser linear existem $i,j\in n$, tais que $f(X)=\bigcup\mathscr{D}=\;]f(x_i),f(y_j)[$, mas isto acarretaria $f(x_i),f(y_j)\notin f(X)$, o que \'e uma contradi\c c\~ao. Esta contradi\c c\~ao foi obtida supondo-se que n\~ao existiam $a$ e $b$ com aquelas propriedades. Desta contradi\c c\~ao a condicional \'e necessariamente verdadeira, pois sua nega\c c\~ao acarreta num absurdo.\qed
 
+\begin{exe}[Fun\c c\~ao cont\'inua que satisfaz o teorema do valor intermedi\'ario, mas n\~ao \'e cont\'inua]
+  Considere $f:[0,1]\ra \R$, dada por $f=(1-\iota)\chi_{]0,1[}$[\footnote{Aqui, $\chi$ \'e a fun\c c\~ao caracter\'istica e $\iota$ a identidade.}.
+\end{exe}
+\prova \'E suficiente notar que $f([0,1])=[0,1]$. No entanto, $f$ \'e descont\'inua em $0$ e $1$.\qed
+
+Este exemplo, apesar de in\'ocuo, nos diz que nem toda fun\c c\~ao que preserva conexos \'e cont\'inua. O mesmo pode ser inferido a respeito de compactos e perfeitos.
+
 
 \definition{}{\sl%
   Seja $f:X\rightarrow Y$, em que $X$ e $Y$ sejam espa\c cos topol\'ogicos satisfazendo o axioma $\rm{T}_1$ e $a\in X'$, i.e., $a$ \'e um ponto limite $($de acumula\c c\~ao$)$ de X. Diremos que $f(x)$ converge $($tende$)$ a $l\in Y$, quando $x$ converge $($tende$)$ a $a$, quando para toda vizinhan\c ca $V_y$ de $y$ existir uma vizinhan\c ca $V_a$ de $a$ tal que
@@ -2813,7 +2821,7 @@ Seja $\varepsilon>0$, da continuidade de $f$ em $c$, existe $\delta>0$, tal que
 \]
 da\'i segue que em qualquer caso, i.e., seja $h<0$ ou seja $h>0$, tem-se 
 \[
-  \bigg|{I_f(c+h)-I_f(c)\over h}-f(c)\bigg|=\bigg|{1\over h}\int^{c+h}_cf-f(c)\,d\iota\bigg|\leq\varepsilon,
+  \Big|{I_f(c+h)-I_f(c)\over h}-f(c)\Big|=\Big|{1\over h}\int^{c+h}_cf-f(c)\,d\iota\Big|\leq\varepsilon,
 \]
 ou seja, $I_f'(c)=f(c)$. Particularmente, se $f\in\mathscr{C}(\R^{[a,b]})$, ent\~ao $I_f'=f$.\qed
 
@@ -2822,16 +2830,19 @@ ou seja, $I_f'(c)=f(c)$. Particularmente, se $f\in\mathscr{C}(\R^{[a,b]})$, ent\
 \end{Def}
 
 \begin{teo}
-  Em $\mathscr{D}$, podemos considerar a rela\c c\~ao $\Delta\subset\mathscr{D}\times\mathscr{D}$ definida por 
+  Em $\mathscr{D}$, podemos considerar a rela\c c\~ao $D\subset\mathscr{D}\times\mathscr{D}$ definida por 
   \[
-    (f,g)\in\Delta \llra f'=g'.
+    (f,g)\in D\llra f'=g'.
   \]
-  Desta forma, $\Delta$ \'e uma rela\c c\~ao de equival\^encia. Ademais dado $f\in\mathscr{D}$ a classe de equival\^encia determinada por $f$ \'e 
+  Desta forma, $D$ \'e uma rela\c c\~ao de equival\^encia. Ademais, dado $f\in\mathscr{D}$ a classe de equival\^encia determinada por $f$ \'e 
   \[
     [f]=\R+f=\{x:\exists\kappa(\kappa\in\R\a x=f+\kappa)\}.
   \]
 \end{teo}
 \prova Provar.\qed
+\begin{Def}
+  Seja $f\in\R^{[a,b]}$. Qualquer fun\c c\~ao $F\in\R^{[a,b]}$, tal que $F'=f$, \'e chamada primitiva de $f$.
+\end{Def}
 
 \begin{Def}
   Seja $f\in\mathscr{C}(\R^{[a,b]})$. Definiremos
