@@ -193,7 +193,9 @@
 
 \section{Teoria dos conjuntos}
 
-Decidi abordar a constru\c c\~ao dada no ap\^endice do livro {\it General Topology} de John L. Kelley ({\it vide} pp. 250--281). Esta abordagem de constru\c c\~ao da teoria dos conjuntos, \'e reminiscente da teoria NBG (Neumann-Bernays-G\"odel). Na realidade, conforme atestei posteriormente, o sistema empregado por Kelley, \'e uma adapta\c c\~ao do sistema de A. P. Morse, como ele bem afirma em sua obra. Reconhe\c co, a necessidade de se intruduzir a igualdade `$=$', seguiremos a linha de racioc\'inio de Kelley, referindo-se a igualdade como identidade l\'ogica. Assim, se $a$ e $b$, s\~ao dois objetos, $a=b$, quando o nome `$a$' designar o objeto designado pelo nome `$b$' e vice-versa. Talvez futuramente eu discorra mais um pouco sobre o aparato l\'ogico, mas por ora, nos restringiremos aos resultados.
+Decidi abordar a constru\c c\~ao dada no ap\^endice do livro {\it General Topology} de John L. Kelley ({\it vide} pp. 250--281). Conforme atestei, o sistema empregado por Kelley, \'e uma adapta\c c\~ao do sistema de A. P. Morse, como ele bem afirma em sua obra.
+
+Nosso sistema axiom\'atico constituir\'a al\'em da l\'ogica proposicional, de objetos indefinidos chamados {\bf classes}, denotadas doravante por letras do alfabeto latino. Adicionalmente, com uma rela\c c\~ao $\in$, chamada pertin\^encia.
 
 \begin{Def}[Conjuntos]
   $$
@@ -540,6 +542,59 @@ Segundo e, por fim,
 %  w\subset y\a x\subset z\lra w\cup x\subset w\cup y\a x\cup y\subset y\cup z\lra w\cup x\subset y\cup z.
 %\]
 %\qed
+
+\begin{teo}
+  \[
+    \forall x,y(x\subset y\llra x\cup y=y)
+  \]
+\end{teo}
+\prova Sejam $x,y$ classes arbitr\'arias, segue-se
+\[
+ x\subset y\a y\subset x\cup y\llra x\cup y\subset y\a y\subset x\cup y\llra x\cup y=y.
+\]
+\qed
+
+\begin{teo}[\scshape 30 Theorem]
+  \[
+    \forall x,y(x\subset y\llra x\cap y=x)
+  \]
+\end{teo}
+\prova Dadas as classes $x$ e $y$, temos
+\[
+  x\subset y\a x\cap y\subset x\llra x\subset x\cap y\a x\cap y\subset x\llra x\cap y=x.
+\]
+\qed
+
+\begin{teo}[\scshape 31 Theorem]
+  \[
+    \forall x,y\Bigl(x\subset y\lra \bigcup x\subset \bigcup y\a\bigcap y\subset\bigcap x\Bigr).
+  \]
+\end{teo}
+\prova Sejam $x,y,z$ classes arbitr\'arias, tais que $x\subset y$. Primeiro temos
+\[
+  z\in\bigcup x \lra\exists w(w\in x\a z\in w)\lra\exists w(w\in y\a z\in w)\lra z\in\bigcup y.
+\]
+Segundo,
+\[
+  z\in\bigcap y \lra\forall w(w\in y\lra z\in w)\lra\exists w(w\in x\lra z\in w)\lra z\in\bigcap x.
+\]
+\qed
+\begin{teo}[\scshape 32 Theorem]
+  \[
+    \forall x,y\Bigl(x\in y\lra x\subset\bigcup y\a \bigcap\subset x\Bigr)
+  \]
+\end{teo}
+\prova Sejam $x,y,z$, classes aleat\'orias tais que $x\in y$. Inicialmente, temos
+\[
+  z\in x\lra \exists w(w\in y\a z\in w)\lra z\in\bigcup y.
+\]
+Finalmente,
+\[
+  z\in\bigcap y\lra\forall w(w\in y\lra z\in w)\lra z\in x.
+\]
+\qed
+
+\vfill\break
 
 \theorem{\ (Bernstein-Cantor-Schr\"oder)}{Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.}
 
