@@ -159,6 +159,9 @@
 \def\tvm{{\bf TVM}}
 \def\U{{\cal U}}
 
+\def\B{\begin{document}}
+\def\E{\end{document}}
+
 % Define um estilo de teorema
 \newtheoremstyle{slanted}
 {10pt}
@@ -166,9 +169,9 @@
 {\slshape}
 {}
 {\bfseries}
-{.}
+{}
 {0.5em}
-{\thmname{#1}\thmnumber{ #2}\bf\thmnote{ (#3)}}
+{\thmname{#1}\thmnumber{ #2}\bf\thmnote{ ({\scshape #3})}}
 
 \theoremstyle{slanted}
 
@@ -182,15 +185,26 @@
 \newtheorem{teo}{Teorema}
 
 
-\begin{document}
 
 \pagestyle{est}
 
 \chapter*{Prel\'udio}
   O texto que segue trata-se de um comp\^endio de resultados que acho relevantes, portanto, o texto reflete, e muito, minha subjetividade. N\~ao obstante, este texto estar\'a em constru\c c\~ao cont\'inua, de maneira que n\~ao haver\'a vers\~ao final enquanto as circunst\^ancias da vida sobrepujarem o meu \'impeto de colecionar tais e tais resultados. Alguns, resultados s\~ao de minha autoria, mas certamente est\~ao enviesados por uma ou outra obra, de maneira que n\~ao descobri a roda, mas me sustentei sobre o trabalho de v\'arios indiv\'iduos perspicazes que pela primeira vez se depararam com o problema, e talvez, eles pr\'oprios tenham o resolvido. Saliento tamb\'em que, muitos---a maioria---dos resultados n\~ao s\~ao meus, de forma que talvez eu j\'a os tenha visto em determinado momento de minha vida, e simplesmente os reproduzi aqui. Al\'em disso, \'e imposs\'ivel colecionar todos os resultados interessantes, portanto, me ative aos que ao menos tive alguma ideia de demonstra\c c\~ao, talvez inspirada por outros. 
 
+\B
+
 \chapter{Ci\^encias formais}
 
+\section{L\'ogica}
+Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
+\begin{teo}[\scshape Teorema da dedu\c c\~ao ou lei da dedu\c c\~ao de Tarski]
+  Todo teorema de uma teoria dedutiva \'e satisfeito por qualquer modelo do sistema de axiomas desta teoria; al\'em disso, a qualquer teorema corresponde uma senten\c ca geral a qual pode ser formulada e provada dentro da estrutura da l\'ogica e que estabelece o fato que o teorema em quest\~ao \'e satisfeito para um modelo qualquer do sistema de axiomas.
+\end{teo}
+\qed
+
+\begin{Def}[Sistema de axiomas mutualmente independente]
+  Um sistema de axiomas \'e dito {\rm\scshape mutualmente independente} se nenhum axioma do sistema pode ser derivado dos outros por m\'etodos de infer\^encia l\'ogica, i.e., da l\'ogica proposicional e de disciplinas precedentes\footnote{Isto est\'a em conformidade segundo Tarski. Quais seriam estas disciplinas?}.
+\end{Def}
 \section{Teoria dos conjuntos}
 
 Decidi abordar a constru\c c\~ao dada no ap\^endice do livro {\it General Topology} de John L. Kelley ({\it vide} pp. 250--281). Conforme atestei, o sistema empregado por Kelley, \'e uma adapta\c c\~ao do sistema de A. P. Morse, como ele bem afirma em sua obra.
@@ -595,6 +609,8 @@ Finalmente,
 \qed
 
 \vfill\break
+
+\E
 
 \theorem{\ (Bernstein-Cantor-Schr\"oder)}{Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.}
 
@@ -3377,6 +3393,7 @@ o que por sua vez acarreta $v_i=w_i$, com $i\in\{1,2\}$.\qed
 \section{Espa\c cos vetoriais}
 \section{M\'odulos}
 \section{Regra de tr\^es simples e composta}
+\section{Inconsist\^encia de modelos LLM}
 
 \end{document}
 
