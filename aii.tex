@@ -755,26 +755,10 @@ i.e., $X\sim Y$.\qed
 }
 
 
-%\noindent{\it Prova alternativa do teorema.\ } Existe uma sugest\~ao dada pelo Halmos que embora esteja errada, ela me sujeriu um processo simples de demonstra\c c\~ao. Apesar de tudo, n\~ao consegui determinar quais propriedades m\'\i nimas $f$ e $g$ devem possuir para garantir o resultado auxiliar. Em vista desse impasse, nos ateremos ao caso em que ambas $f$ e $g$ sejam injetivas.
+\noindent{\it Prova alternativa do teorema.\ } Existe uma sugest\~ao dada pelo Halmos que embora esteja errada, ela me sujeriu um processo simples de demonstra\c c\~ao. Apesar de tudo, n\~ao consegui determinar quais propriedades m\'\i nimas $f$ e $g$ devem possuir para garantir o resultado auxiliar. Em vista desse impasse, nos ateremos ao caso em que ambas $f$ e $g$ sejam injetivas.
 
 \bigskip
 
-\bigskip
-\noindent{\bf Quest\~ao *7 do cap\'\i tulo III do livro Introduction to Logic de Alfred Tarski.} \lq\lq{\sl ...We know that variables occurring in arithmetic stand for names of numbers. Do the variables ocurring in sentential calculus stand for names of sentences or for sentences themselves? May we, therefore, say, if we want to be exact, that the laws of this calculus assert something about the sentences and their properties?\/}\rq\rq
-\medskip
-\noindent{\it My answer\/}: The variables occurring in sentential calculus stands for the sentences themselves, for the logical operations are applied over the sentences, not over their names. According to the text you write
-$$
-  \hbox{2 is prime {\it and} $\alpha$ is a greek letter}.
-$$
-not
-$$
-  \hbox{\lq\lq 2 is prime\rq\rq {\it and} \lq\lq$\alpha$ is a greek letter\rq\rq}.
-$$
-The names of the sentences have no logical value, then no logical operation over them is meaningful.
-
-Over the sentential calculus, i.e., using it you can assert something about sentences and their properties, for example you can say that a sentence is true or false based on the logical value of its components, and you can assign it a property, as a tautology, a contradiction or a contigency. But it is relevant to put some criticism over the perspective of the sentences isolated, which with the sentential calculus alone we can't assert nothing about the nature of them, as we can say that the number 3 is prime using the arithmetic and the number itself.
-
-\bigskip
 \noindent{\bf Digress\~ao a respeito de \'algebras de Boole.} Segundo o livro {\sl Introduction to Boolean Algebras} de Halmos e Givant, uma \'algebra booleana \'e um conjunto $B$ munido de duas opera\c c\~oes bin\'arias $\cap$ e $\cup$, uma opera\c c\~ao un\'aria $'$ e dois elementos distintos $0$ e $1$, satisfazendo os seguintes axiomas:
 
 \bigskip
@@ -1054,7 +1038,7 @@ A representa\c c\~ao do n\'umero corresponde \`a uma sequ\^encia finita de seus 
 Doravante admitamos que letras gregas representem cortes e letras romanas representem n\'umeros racionais, salvo quando for explicitamente dito o contr\'ario. Dado um corte $\alpha$, por conveni\^encia definiremos que
 
 
-\begin{Def}%
+\begin{Def}[Simplificar]%
 Seja $\alpha$ um corte tal que $\alpha>0^*$, i.e., um corte estritamente positivo\footnote{veja o [Rudin] ou [Spivak]).}. Definamos
 \[
   \alpha^{-1}=\{r\in \Q: \exists s,t(s,t\in \Q\a t>1 \a1/st\notin\alpha\a r\leq s)\}.
@@ -2482,7 +2466,7 @@ Um outro fato interessate \'e o seguinte, cuja prova pode ser vista no livro do 
 \proof O caminho para a prova deste teorema \'e {\it reductio ad absurdum}. Suponha por absurdo que n\~ao existam $a$ e $b$, com tais propriedades, construamos $\mathscr{C}=\{]f(x),f(y)[\;\in2^Y:x,y\in X\}$. Afirmamos que, $\mathscr{C}$ \'e uma cobertura aberta de $f(X)$. Com efeito, seja $f(z)\in Y$, como n\~ao existe um menor elemento em $f(X)$, segue que existe $x\in X$, tal que $f(x)<f(z)$. Analogamente como $f(z)$ n\~ao pode ser o maior elemento de $f(X)$, existe $y\in X$ tal que $f(z)<f(y)$. Portanto, $f(X)\subseteq\bigcup\mathscr{C}$, como afirmamos. Da premisa que $X$ \'e compacto e $f$ cont\'inua, decorre que $f(X)$ \'e compacto, consequentemente existe uma subcobertura finita de $\mathscr{C}$, digamos, $\mathscr{D}=\{]f(x_i),f(y_i)[\;\in2^X:i\in n\}$  com $n\in\omega$. Em virtude, da ordem em $Y$ ser linear existem $i,j\in n$, tais que $f(X)=\bigcup\mathscr{D}=\;]f(x_i),f(y_j)[$, mas isto acarretaria $f(x_i),f(y_j)\notin f(X)$, o que \'e uma contradi\c c\~ao. Esta contradi\c c\~ao foi obtida supondo-se que n\~ao existiam $a$ e $b$ com aquelas propriedades. Desta contradi\c c\~ao a condicional \'e necessariamente verdadeira, pois sua nega\c c\~ao acarreta num absurdo.\qed
 
 \begin{exe}[Fun\c c\~ao que satisfaz o teorema do valor intermedi\'ario, mas n\~ao \'e cont\'inua]
-  Considere $f:[0,1]\ra \R$, dada por $f=(1-\iota)\chi_{]0,1[}$[\footnote{Aqui, $\chi$ \'e a fun\c c\~ao caracter\'istica e $\iota$ a identidade.}.
+  Considere $f:[0,1]\ra \R$, dada por $f=\iota\chi_{]0,1[}+(1-\iota)\chi_{\{0,1\}})$[\footnote{Aqui, $\chi$ \'e a fun\c c\~ao caracter\'istica e $\iota$ a identidade.}.
 \end{exe}
 \prova \'E suficiente notar que $f([0,1])=[0,1]$. No entanto, $f$ \'e descont\'inua em $0$ e $1$.\qed
 
