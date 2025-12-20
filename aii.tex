@@ -160,6 +160,8 @@
 \def\tvm{{\bf TVM}}
 \def\U{{\cal U}}
 \def\rf#1#2{{\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
+\def\Cap{{\textstyle\bigcap}\,}
+\def\Cup{{\textstyle\bigcup}\,}
 
 \def\B{\begin{document}}
 \def\E{\end{document}}
@@ -437,25 +439,25 @@ novamente decorre por \AEx.\qed
 
 \begin{Def}
   \[
-    \bigcap x=\bigl\{z:\forall y(y\in x\lra z\in y)\bigr\}.
+    \Cap x=\bigl\{z:\forall y(y\in x\lra z\in y)\bigr\}.
   \]
 \end{Def}
 \begin{Def}
   \[
-    \bigcup x=\bigl\{z:\exists y(y\in x\a z\in y)\bigr\}.
+    \Cup x=\bigl\{z:\exists y(y\in x\a z\in y)\bigr\}.
   \]
 \end{Def}
 
-A classe $\bigcap x$ \'e a interse\c c\~ao dos membros de $x$ e, a classe $\bigcup x$ \'e a uni\~ao dos membros de $x$.
+A classe $\Cap x$ \'e a interse\c c\~ao dos membros de $x$ e, a classe $\Cup x$ \'e a uni\~ao dos membros de $x$.
 
 \begin{teo}
   \[
-    \bigcap\emptyset=\U\a\bigcup\emptyset=\emptyset.
+    \Cap\emptyset=\U\a\Cup\emptyset=\emptyset.
   \]
 \end{teo}
 \prova
 \[
-  \forall x\Bigl(x\in\bigcap\emptyset\llra\varsigma(x)\a\forall y(y\in\emptyset\llra x\in y)\llra x\in\U\Bigr),
+  \forall x\Bigl(x\in\Cap\emptyset\llra\varsigma(x)\a\forall y(y\in\emptyset\llra x\in y)\llra x\in\U\Bigr),
 \]
 pois $\phi$ definida por
 \[
@@ -465,7 +467,7 @@ pois $\phi$ definida por
 
 Em seguida,
 \[
-  \forall x\bigl(x\in\bigcup\emptyset\llra\varsigma(x)\a\exists(y\in\emptyset\a x\in y)\llra x\in\emptyset\bigr),
+  \forall x\bigl(x\in\Cup\emptyset\llra\varsigma(x)\a\exists(y\in\emptyset\a x\in y)\llra x\in\emptyset\bigr),
 \]
 porquanto, $\psi$ definida por
 \[
@@ -586,31 +588,31 @@ Segundo e, por fim,
 
 \begin{teo}[\scshape 31 Theorem]
   \[
-    \forall x,y\Bigl(x\subset y\lra \bigcup x\subset \bigcup y\a\bigcap y\subset\bigcap x\Bigr).
+    \forall x,y\Bigl(x\subset y\lra \Cup x\subset \Cup y\a\Cap y\subset\Cap x\Bigr).
   \]
 \end{teo}
 \prova Sejam $x,y,z$ classes arbitr\'arias, tais que $x\subset y$. Primeiro temos
 \[
-  z\in\bigcup x \lra\exists w(w\in x\a z\in w)\lra\exists w(w\in y\a z\in w)\lra z\in\bigcup y.
+  z\in\Cup x \lra\exists w(w\in x\a z\in w)\lra\exists w(w\in y\a z\in w)\lra z\in\Cup y.
 \]
 Segundo,
 \[
-  z\in\bigcap y \lra\forall w(w\in y\lra z\in w)\lra\exists w(w\in x\lra z\in w)\lra z\in\bigcap x.
+  z\in\Cap y \lra\forall w(w\in y\lra z\in w)\lra\exists w(w\in x\lra z\in w)\lra z\in\Cap x.
 \]
 \qed
 \begin{teo}[\scshape 32 Theorem]
   \[
-    \forall x,y\Bigl(x\in y\lra x\subset\bigcup y\a \bigcap y\subset x\Bigr)
+    \forall x,y\Bigl(x\in y\lra x\subset\Cup y\a \Cap y\subset x\Bigr)
   \]
   \label{T32}
 \end{teo}
 \prova Sejam $x,y,z$, classes aleat\'orias tais que $x\in y$. Inicialmente, temos
 \[
-  z\in x\lra \exists w(w\in y\a z\in w)\lra z\in\bigcup y.
+  z\in x\lra \exists w(w\in y\a z\in w)\lra z\in\Cup y.
 \]
 Finalmente,
 \[
-  z\in\bigcap y\lra\forall w(w\in y\lra z\in w)\lra z\in x.
+  z\in\Cap y\lra\forall w(w\in y\lra z\in w)\lra z\in x.
 \]
 \qed
 
@@ -627,6 +629,7 @@ Finalmente,
   \[
     \forall x,z\bigl(\varsigma(x)\a z\subset x\lra\varsigma(z)\bigr).
   \]
+  \label{T33}
 \end{teo}
 \prova Sejam as classes $x$ e $z$, tais $\varsigma(x)$ e $z\subset x$, tem se
   \[
@@ -636,18 +639,18 @@ Finalmente,
 
 \begin{teo}[34 Theorem]
   \[
-    \emptyset = \bigcap\U\a\U=\bigcup\U.
+    \emptyset = \Cap\U\a\U=\Cup\U.
   \]
 \end{teo}
-\prova Primeiramente suponhamos por {\it reductio ad absurdum} que exista $x\in\bigcap\U$, ent\~ao $\varsigma(x)$, pelo {\bf Teorema \ref{T26}} segue-se $\emptyset\subset x$; assim necessariamente $\varsigma(\emptyset)$, ou equivalentemente $\emptyset\in\U$. Pelo {\bf Teorema \ref{T32}} tem-se que $\bigcup\U\subset\emptyset$, novamente pelo {\bf Teorema \ref{T26}} temos $\emptyset\subset\bigcap\U$, logo, pelo {\bf Teorema \ref{T27}} e da suposi\c c\~ao inicial decorre que $x\in\bigcap\U=\emptyset$, o que \'e uma contradi\c c\~ao. Consequentemente, n\~ao \'e o caso que exista $x\in\bigcap\U$, i.e., $\bigcap\U=\emptyset$.\footnote{Segue a mesma linha de racioc\'inio de Kelley, apenas parafraseei.} 
+\prova Primeiramente suponhamos por {\it reductio ad absurdum} que exista $x\in\Cap\U$, ent\~ao $\varsigma(x)$, pelo \rf{Teorema}{T26} segue-se $\emptyset\subset x$; assim necessariamente $\varsigma(\emptyset)$, ou equivalentemente $\emptyset\in\U$. Pelo \rf{Teorema}{T32} tem-se que $\Cup\U\subset\emptyset$, novamente pelo \rf{Teorema}{T26} temos $\emptyset\subset\Cap\U$, logo, pelo \rf{Teorema}{T27} e da suposi\c c\~ao inicial decorre que $x\in\Cap\U=\emptyset$, o que \'e uma contradi\c c\~ao. Consequentemente, n\~ao \'e o caso que exista $x\in\Cap\U$, i.e., $\Cap\U=\emptyset$[\footnote{Segui a mesma linha de racioc\'inio de Kelley, mas com a minhas adapta\c c\~oes.}.
 
-Agora, seja $x\in\U$, pelo \AS existe $y\in\U$, tal que $x\in y$, pois $x\subset x$, pela defini\c c\~ao de $\bigcup\U$, segues-se que $x\in \bigcup\U$, consequentemente $\U\subset\bigcup\U$. Por outro lado, pelo {\bf Teorema \ref{T26}}, temos $\bigcup\U\subset\U$, consequentemente pelo {\bf Teorema \ref{T27}}, $\bigcup\U=\U$.\qed
+Agora, seja $x\in\U$, pelo \AS existe $y\in\U$, tal que $x\in y$, pois $x\subset x$, pela defini\c c\~ao de $\Cup\U$, segues-se que $x\in \Cup\U$, consequentemente $\U\subset\Cup\U$. Por outro lado, pelo \rf{Teorema}{T26}, temos $\Cup\U\subset\U$, consequentemente pelo \rf{Teorema}{T27}, $\Cup\U=\U$.\qed
 
 \begin{teo}[35 Theorem]
-  Para toda classe $x$, se $x\neq\emptyset$, ent\~ao $\varsigma(\bigcap x)$.
+  Para toda classe $x$, se $x\neq\emptyset$, ent\~ao $\varsigma(\Cap x)$.
   \label{T35}
 \end{teo}
-\prova Se $x\neq\emptyset$, ent\~ao existe $y\in x$, logo $\varsigma(y)$ e pelo {\bf Teorema \ref{T32}} tem-se $\bigcap x\subset y$, da\'i e do {\bf Teorema \ref{T32}}, decorre que $\varsigma(\bigcap x)$.\qed 
+\prova Se $x\neq\emptyset$, ent\~ao existe $y\in x$, logo $\varsigma(y)$ e pelo \rf{Teorema}{T32} tem-se $\Cap x\subset y$, da\'i e do \rf{Teorema}{T32}, decorre que $\varsigma(\Cap x)$.\qed 
 
 \begin{Def}
   $2^x=\{y:y\subset x\}$.
@@ -657,11 +660,24 @@ Agora, seja $x\in\U$, pelo \AS existe $y\in\U$, tal que $x\in y$, pois $x\subset
   $2^\U=\U.$
   \label{T37}
 \end{teo}
-\prova Certamente pelo {\scshape Teorema \ref{T26}} segue que $2^\U\subset\U$. Agora, dado $x\in\U$, ent\~ao evidentemente $x\subset\U$, consquentemente $x\in 2^\U$. Pelo \rf{Teorema}{T27}, conclu\'imos que $2^\U=\U$.\qed
+\prova Certamente pelo \rf{Teorema}{T26} segue que $2^\U\subset\U$. Agora, dado $x\in\U$, ent\~ao evidentemente $x\subset\U$, consquentemente $x\in 2^\U$. Pelo \rf{Teorema}{T27}, conclu\'imos que $2^\U=\U$.\qed
+
+\begin{teo}[38 Theorem]
+  Se $\varsigma(x)$, ent\~ao $\varsigma(2^x)$. 
+\end{teo}
+\prova Se $\varsigma(x)$, pelo \AS existe $y\in\U$, tal que para todo $z$, se $z\subset y$, ent\~ao $z\in y$. Como consequ\^ecnia, $2^x\subset y$, pelo \rf{Teorema}{T33} segue-se que $\varsigma(2^x)$.\qed
+
+\begin{teo}[39 Theorem]
+  $\neg\varsigma(\U)$.
+\end{teo}
+\prova Consideremos a classe $\mathcal{R}=\{x:x\notin x\}$[\footnote{O ${\cal R}$ \'e em homenagem a Bertrand Russel, um dos primeiros a descobrir paradoxos na teoria ing\^enia dos conjuntos, criada pelo matem\'atico brilhante Georg Cantor.}. Provemos que $\neg\varsigma(\mathcal{R})$, i.e., $\mathcal{R}$. Para tanto, suponhamos por {\it reductio ad absurdum} que $\varsigma(\mathcal{R})$, temos ent\~ao a equival\^encia
+\[
+  \varsigma(\mathcal{R})\a \mathcal{R}\in\mathcal{R}\quad\hbox{se, e somente se,}\quad\varsigma(\mathcal{R})\a \mathcal{R}\notin\mathcal{R},
+\]
+o que \'e uma inconsist\^encia, i.e., uma contradi\c c\~ao. Logo, $\neg\varsigma(\mathcal{R})$. Ademais, da pr\'opria defini\c c\~ao de classificadores $\mathcal{R}\subset\U$, como $\mathcal{R}$ \'e uma classe pr\'opria, necessariamente $\U$ tamb\'em o ser\'a. Com efeito, suponha por {\it reductio ad absurdum} que $\varsigma(\U)$, pelo \rf{Teorema}{T33}, inferir\'iamos que $\varsigma(\mathcal{R})$, o que \'e uma contradi\c c\~ao com o argumento anterior.\qed
+
 
 \vfill\break
-
-\E
 
 \theorem{\ (Bernstein-Cantor-Schr\"oder)}{Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.}
 
@@ -2522,7 +2538,7 @@ Um outro fato interessate \'e o seguinte, cuja prova pode ser vista no livro do 
 \end{exe}
 \prova \'E suficiente notar que $f([0,1])=[0,1]$. No entanto, $f$ \'e descont\'inua em $0$ e $1$.\qed
 
-Este exemplo, apesar de in\'ocuo, nos diz que nem toda fun\c c\~ao que preserva conexos \'e cont\'inua. O mesmo pode ser inferido a respeito de compactos e perfeitos.
+Este exemplo, apesar de in\'ocuo, nos diz que nem toda fun\c c\~ao que preserva conexos \'e cont\'inua, o mesmo pode ser inferido a respeito de compactos e perfeitos.
 
 
 \definition{}{\sl%
@@ -3454,9 +3470,6 @@ o que por sua vez acarreta $v_i=w_i$, com $i\in\{1,2\}$.\qed
   }
   \item{
     Diferencibilidade de fun\c c\~oes reais inversas de vari\'aveis reais;
-  }
-  \item{
-    Diferenciabilidade de $\ln|x|$\footnote{J\'a feita, apenas organizar.};
   }
   \item{
     Mudan\c ca de vari\'aveis em integrais;
