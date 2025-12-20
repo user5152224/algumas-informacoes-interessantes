@@ -130,6 +130,7 @@
 
 
 \def\AEx{{\bf AEx}\ }
+\def\AS{{\bf AS}\ }
 \def\scr#1{\mathscr{#1}}
 \def\K{\mathds{K}}
 \def\L{\mathds{L}}
@@ -150,14 +151,15 @@
 \def\o{\;\vee\,}
 \def\parallel{\mathbin{/\kern-3pt/}}
 \def\pma{{\bfseries PMA}}
-\def\prova{\noindent{\itshape\bfseries Prova.\/}\ \ }
-\def\qed{\nopagebreak\par\hfill\rule{.5em}{1em}\medskip}
+\def\prova{\noindent{\bfseries\scshape Prova}\quad}
+\def\qed{\nopagebreak\ \hfill\rule{.42em}{1em}\bigskip}
 \def\ra{\rightarrow}
 \def\res{\noindent{\itshape\bfseries Resolu\c c\~ao.\/}\ }
 \def\rge{\rangle}
 \def\sen{{\rm sen}}
 \def\tvm{{\bf TVM}}
 \def\U{{\cal U}}
+\def\rf#1#2{{\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
 
 \def\B{\begin{document}}
 \def\E{\end{document}}
@@ -171,7 +173,7 @@
 {\bfseries}
 {}
 {0.5em}
-{\thmname{#1}\thmnumber{ #2}\bf\thmnote{ ({\scshape #3})}}
+{\scshape\thmname{\scshape #1} \thmnumber{\scshape #2}\bf\thmnote{ \scshape(#3)}}
 
 \theoremstyle{slanted}
 
@@ -218,7 +220,7 @@ Nosso sistema axiom\'atico constituir\'a al\'em da l\'ogica proposicional, de ob
   \`A cada classe $x$ tal que $\varsigma(x)$, daremos o nome de conjunto. Desta maneira $\varsigma(x)$ se, e somente se, $x$ \'e um conjunto.
 \end{Def}
 
-\begin{axi}[Axioma-esquema da classifica\c c\~ao]
+\begin{axi}[II Classification axiom-scheme\;\textbullet\;Axioma-esquema da classifica\c c\~ao]
   Seja $\phi$ uma fun\c c\~ao proposicional tendo como par\^ametros as classes. Ent\~ao
   $$
     \forall y\bigl(y\in\{x:\phi(x)\}\longleftrightarrow\varsigma(y)\wedge\phi(y)\bigr).
@@ -232,7 +234,7 @@ Enfatizo que os objetos da teoria de classes, resumem-se, como \'e esperado, \`a
 \end{Def}
 
 
-\begin{axi}[\AEx: Axioma da extens\~ao ou extensionalidade]
+\begin{axi}[I Axiom of extent\;\textbullet\;\AEx: Axioma da extensionalidade]
   $$
     \forall x,y\bigl(x=y\longleftrightarrow\forall z(z\in x\longleftrightarrow z\in y)\bigr).
   $$
@@ -478,10 +480,11 @@ porquanto, $\psi$ definida por
 
 Uma classe $x$ \'e uma subclasse de $y$, ou est\'a contida em $y$, ou $y$ contem $x$, se, e somente se, $x\subset y$.
 
-\begin{teo}
+\begin{teo}[26 Theorem]
   \[
     \forall x(\emptyset\subset x\a x\subset\U)
   \]
+  \label{T26}
 \end{teo}
 \prova Seja $x$ uma classe. Temos primeiramente
 \[
@@ -495,10 +498,11 @@ Por outro, lado temos
 \]
 o que conclui a prova.\qed
 
-\begin{teo}
+\begin{teo}[27 Theorem]
   \[
     \forall x,y(x=y\llra x\subset y\a y\subset x).
   \]
+  \label{T27}
 \end{teo}
 \prova Sejam $x$ e $y$ classes quaisquer 
 \[
@@ -510,10 +514,11 @@ o que conclui a prova.\qed
 \]
 \qed
 
-\begin{teo}
+\begin{teo}[28 Theorem]
   \[
     \forall x,y,z(x\subset y\a y\subset z\lra x\subset z)
   \]
+  \label{T28}
 \end{teo}
 \prova Sejam $x,y,z$ classes quaisquer. Temos
 
@@ -595,8 +600,9 @@ Segundo,
 \qed
 \begin{teo}[\scshape 32 Theorem]
   \[
-    \forall x,y\Bigl(x\in y\lra x\subset\bigcup y\a \bigcap\subset x\Bigr)
+    \forall x,y\Bigl(x\in y\lra x\subset\bigcup y\a \bigcap y\subset x\Bigr)
   \]
+  \label{T32}
 \end{teo}
 \prova Sejam $x,y,z$, classes aleat\'orias tais que $x\in y$. Inicialmente, temos
 \[
@@ -608,8 +614,54 @@ Finalmente,
 \]
 \qed
 
+\subsection{Exist\^encia de conjuntos}
+
+\begin{axi}[III Axiom\;\textbullet\;AS: Axioma de subconjuntos]
+  \[
+    \forall x\Bigl(\varsigma(x)\lra\exists y\bigl(\varsigma(y)\a\forall z(z\subset x\lra z\in y)\bigr)\Bigr).
+  \]
+  \label{AxSub}
+\end{axi}
+
+\begin{teo}[33 Theorem]
+  \[
+    \forall x,z\bigl(\varsigma(x)\a z\subset x\lra\varsigma(z)\bigr).
+  \]
+\end{teo}
+\prova Sejam as classes $x$ e $z$, tais $\varsigma(x)$ e $z\subset x$, tem se
+  \[
+   \varsigma(x)\mathop{\lra}^{\AS}\exists y(w\subset x\lra w\in y)\lra z\in w\lra\varsigma(z).
+  \]
+\qed
+
+\begin{teo}[34 Theorem]
+  \[
+    \emptyset = \bigcap\U\a\U=\bigcup\U.
+  \]
+\end{teo}
+\prova Primeiramente suponhamos por {\it reductio ad absurdum} que exista $x\in\bigcap\U$, ent\~ao $\varsigma(x)$, pelo {\bf Teorema \ref{T26}} segue-se $\emptyset\subset x$; assim necessariamente $\varsigma(\emptyset)$, ou equivalentemente $\emptyset\in\U$. Pelo {\bf Teorema \ref{T32}} tem-se que $\bigcup\U\subset\emptyset$, novamente pelo {\bf Teorema \ref{T26}} temos $\emptyset\subset\bigcap\U$, logo, pelo {\bf Teorema \ref{T27}} e da suposi\c c\~ao inicial decorre que $x\in\bigcap\U=\emptyset$, o que \'e uma contradi\c c\~ao. Consequentemente, n\~ao \'e o caso que exista $x\in\bigcap\U$, i.e., $\bigcap\U=\emptyset$.\footnote{Segue a mesma linha de racioc\'inio de Kelley, apenas parafraseei.} 
+
+Agora, seja $x\in\U$, pelo \AS existe $y\in\U$, tal que $x\in y$, pois $x\subset x$, pela defini\c c\~ao de $\bigcup\U$, segues-se que $x\in \bigcup\U$, consequentemente $\U\subset\bigcup\U$. Por outro lado, pelo {\bf Teorema \ref{T26}}, temos $\bigcup\U\subset\U$, consequentemente pelo {\bf Teorema \ref{T27}}, $\bigcup\U=\U$.\qed
+
+\begin{teo}[35 Theorem]
+  Para toda classe $x$, se $x\neq\emptyset$, ent\~ao $\varsigma(\bigcap x)$.
+  \label{T35}
+\end{teo}
+\prova Se $x\neq\emptyset$, ent\~ao existe $y\in x$, logo $\varsigma(y)$ e pelo {\bf Teorema \ref{T32}} tem-se $\bigcap x\subset y$, da\'i e do {\bf Teorema \ref{T32}}, decorre que $\varsigma(\bigcap x)$.\qed 
+
+\begin{Def}
+  $2^x=\{y:y\subset x\}$.
+\end{Def}
+
+\begin{teo}[37 Theorem]
+  $2^\U=\U.$
+  \label{T37}
+\end{teo}
+\prova Certamente pelo {\scshape Teorema \ref{T26}} segue que $2^\U\subset\U$. Agora, dado $x\in\U$, ent\~ao evidentemente $x\subset\U$, consquentemente $x\in 2^\U$. Pelo \rf{Teorema}{T27}, conclu\'imos que $2^\U=\U$.\qed
+
 \vfill\break
 
+\E
 
 \theorem{\ (Bernstein-Cantor-Schr\"oder)}{Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.}
 
@@ -3366,17 +3418,53 @@ o que por sua vez acarreta $v_i=w_i$, com $i\in\{1,2\}$.\qed
 \chapter{Considera\c c\~oes finais}
 
 \chapter{A fazer}
-\section{Geometria euclidiana}
-\section{Geometria anal\'itica}
-\section{\'Algebra Linear}
-\section{Anel dos inteiros}
-\subsection{MMC e MDC}
-\section{Anel dos polin\^omios}
-\section{Anel das matrizes}
-\section{Espa\c cos vetoriais}
-\section{M\'odulos}
-\section{Regra de tr\^es simples e composta}
-\section{Inconsist\^encia de modelos LLM}
+\begin{enumerate}[label = {\bf \Roman*.}]
+  \item{
+    Geometria euclidiana;
+  }
+  \item{
+    Geometria anal\'itica;
+  }
+  \item{
+    \'Algebra Linear;
+  }
+  \item{
+    Anel dos inteiros;
+  }
+  \item{
+    MMC e MDC;
+  }
+  \item{
+    Anel dos polin\^omios;
+  }
+  \item{
+    Anel das matrizes;
+  }
+  \item{
+    Espa\c cos vetoriais;
+  }
+  \item{
+    M\'odulos;
+  }
+  \item{
+    Regra de tr\^es simples e composta;
+  }
+  \item{
+    Inconsist\^encia de modelos LLM;
+  }
+  \item{
+    Diferencibilidade de fun\c c\~oes reais inversas de vari\'aveis reais;
+  }
+  \item{
+    Diferenciabilidade de $\ln|x|$\footnote{J\'a feita, apenas organizar.};
+  }
+  \item{
+    Mudan\c ca de vari\'aveis em integrais;
+  }
+  \item{
+    Defini\c c\~ao de primitivas ou integrais indefinidas.
+  }
+\end{enumerate}
 
 \E
 
