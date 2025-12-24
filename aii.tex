@@ -190,7 +190,7 @@
 
 
 \B
-
+\iffalse % IGNORAR
 \pagestyle{est}
 
 \chapter*{Prel\'udio}
@@ -2710,6 +2710,8 @@ Para responder \`a esta pergunta eu percorri o caminho mais dif\'icil. Primeiro 
   \]
   Conclu\'imos que \'e v\'alida para $n+1$. Por indu\c c\~ao matem\'atica provamos o requerido.\qed
 
+\fi % IGNORAR
+
 \begin{exe}[Exerc\'icio 16 do \pma]
   Considere $\alpha\in\;]0,\infty[$ e a sequ\^encia $x:\omega\lra R$ tal que $x_0>\sqrt{\alpha}$ e
   \begin{equation}
@@ -2734,9 +2736,45 @@ Para responder \`a esta pergunta eu percorri o caminho mais dif\'icil. Primeiro 
   donde segue-se que $l=\sqrt{\alpha}$.\qed
 \end{exe}
 
- 
+\begin{teo}[4.31 Remark: {\it Principles of Mathematical Analysis}]
+  Seja $E\subset\;]a,b[$ enumer\'avel, virtualmente denso. Enumeremos $E$, digamos, por uma sequ\^encia $\sigma\in E^\omega$, neste caso a sequ\^encia \'e uma bije\c c\~ao entre $\omega$ e $E$. Seja tamb\'em $\sum a_n$ uma s\'erie convergente de termos estritamente positivos. Seguidamente seja $x\in\;]a,b[$ definamos
+  \[
+    \kappa_x=\sigma^{-1}(]a,x[).
+  \]
+  e 
+  $\alpha_x\in(\kappa_x)^\omega$ uma fun\c c\~ao qualquer satisfazendo a condi\c c\~ao: se $\kappa_x$ for finito, ent\~ao existe $n_x\in\omega$, tal que $\alpha_x(n_x)=\varkappa_x$ e $\alpha_x(\cp n_x)=\{0\}$. Ent\~ao
+  \[
+    \Sigma_x=\sum_{k=0}^\infty\alpha_{xk}<\infty.
+  \]
+  E o n\'umero $\Sigma_x$ independe da fun\c c\~ao $\alpha_x$.
 
-\theorem{\ (Teorema do ponto fixo)\footnote{\`As vezes chamado de teorema do ponto fixo de Banach. No entanto, o espa\c co basta ser m\'etrico e completo, i.e., toda sequ\^encia de Cauchy \'e convergente.}}{\sl%
+  Ent\~ao $f\in\R^{]a,b[}$, tal que $f(x)=\Sigma_x$ tem as seguintes propriedades:
+  \begin{enumerate}[label = (\alph*)]
+    \item{%
+      $f$ \'e monotonicamente crescente em $]a,b[$;
+    }
+    \item{%
+      $f$ \'e descont\'inua em todo ponto de $E$; Em verdade,
+      \[
+        f(x_n+)-f(x_n-)=a_n;
+      \]
+    }
+    \item{%
+      $f$ \'e cont\'inua em $]a,b[\,\cp\, E$.
+    }
+  \end{enumerate}
+\end{teo}
+\prova Primeiramente, suponha que $a<x<y<b$. Sabe-se que $\varkappa_x\subset\varkappa_y$. Temos duas possibilidades a considerar $\varkappa_y$ \'e finito ou infinito. Se $\varkappa_y$ for finito, ent\~ao $\varkappa_x$ e
+  \[
+    \delta=\varkappa_y\cp\varkappa_x,
+  \]
+  tamb\'em o \'e ser\~ao. Logo $f(x)\leq f(y)$, segue da manipula\c c\~ao de somas finitas. 
+
+  Agora, suponhamos que $\varkappa_y$ seja infinito. Se $\delta$ for finito, podemos reordenar $\sum_{k\in\varkappa_y}a_k$ de tal maneira que os seus primeiros termos coincidam com os de $\delta$. Caso $\delta$
+
+ 
+\E
+\theorem{\ (Teorema do ponto fixo)\footnote{\`As vezes chamado de teorema do ponto fixo de Banach. Basta que o espa\c co seja m\'etrico e completo, i.e., toda sequ\^encia de Cauchy \'e convergente.}}{\sl%
   Sejam $(X,\varrho)$ um espa\c co m\'etrico completo, $\varkappa\in R_+$, tal que $\varkappa<1$ e $f:X\rightarrow X$ uma fun\c c\~ao tal que\footnote{Uma fun\c c\~ao com tal propriedade \'e chamada de contra\c c\~ao, pois contrai segundo a m\'etrica sua imagem com rela\c c\~ao ao seu dom\'inio.} 
   $$
     \forall x,y\Bigl(x,y\in X\lra \varrho(f(x),f(y))\leq\varkappa\varrho(x,y)\Bigr).
