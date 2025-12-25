@@ -152,14 +152,14 @@
 \def\parallel{\mathbin{/\kern-3pt/}}
 \def\pma{{\bfseries PMA}}
 \def\prova{\noindent{\bfseries\scshape Prova}\quad}
-\def\qed{\nopagebreak\ \hfill\rule{.42em}{1em}\bigskip}
+\def\qed{\nopagebreak\hbox{ }\hfill\rule{.42em}{1em}\bigskip}
 \def\ra{\rightarrow}
 \def\res{\noindent{\itshape\bfseries Resolu\c c\~ao.\/}\ }
 \def\rge{\rangle}
 \def\sen{{\rm sen}}
 \def\tvm{{\bf TVM}}
 \def\U{{\cal U}}
-\def\rf#1#2{{\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
+\def\rf#1#2{{\rm\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
 \def\Cap{{\textstyle\bigcap}\,}
 \def\Cup{{\textstyle\bigcup}\,}
 
@@ -2736,19 +2736,55 @@ Para responder \`a esta pergunta eu percorri o caminho mais dif\'icil. Primeiro 
   donde segue-se que $l=\sqrt{\alpha}$.\qed
 \end{exe}
 
+\begin{Def}
+  Sejam $\sum a_n$ uma s\'erie convergente de termos estritamente positivos, e $K\subset\omega$. Seja $\kappa_K$ a caracter\'istica de $K$. Ent\~ao definimos
+  \[
+    \Sigma_K=\sum_{i=0}^\infty\kappa_K(i)a_i.
+  \]
+  Evidentemente $\Sigma_K$ \'e finito pois $\sum a_n<\infty$.
+  \label{SomaEmConjunto}
+\end{Def}
+
+%\begin{lem}
+%  Sejam $\sum a_n$ uma s\'erie convergente de termos n\~ao negativos e $k\in\omega\setminus\{0\}$. Ent\~ao
+%  \[
+%    \sum_{i=0}^\infty\biggl(\sum_{j=ki}^{k(i+1)-1}a_j\biggr)=\sum_{i=0}^\infty a_i.
+%  \]
+%\end{lem}
+%\prova \'E suficiente observar que para todo $n\in\omega$, vale
+%\[
+%  \sum_{i=0}^n\biggl(\sum_{j=ki}^{k(i+1)-1}a_j\biggr)=\sum_{i=0}^{k(n+1)-1}a_i.
+%\]
+%\qed
+
+\begin{lem}
+  Considere $\sum a_n$ como na \rf{Defini\c c\~ao}{SomaEmConjunto}. Sejam $K,L\in 2^\omega$.
+  \begin{enumerate}[label = {\rm\Roman*.}]
+    \item{%
+      Se $K\cap L=\emptyset$, ent\~ao
+      \[
+        \Sigma_K+\Sigma_L=\Sigma_{K\cup L}.
+      \]
+    }
+    \item{%
+      Se $K\subset L$, ent\~ao $\Sigma_K\leq\Sigma_L$; 
+    }
+  \end{enumerate}
+  \label{PropSomaEmConjunto}
+\end{lem}
+\prova Provar.\qed
+
+
 \begin{teo}[4.31 Remark: {\it Principles of Mathematical Analysis}]
   Seja $E\subset\;]a,b[$ enumer\'avel, virtualmente denso. Enumeremos $E$, digamos, por uma sequ\^encia $\sigma\in E^\omega$, neste caso a sequ\^encia \'e uma bije\c c\~ao entre $\omega$ e $E$. Seja tamb\'em $\sum a_n$ uma s\'erie convergente de termos estritamente positivos. Seguidamente seja $x\in\;]a,b[$ definamos
   \[
-    \kappa_x=\sigma^{-1}(]a,x[).
+    K_x=\sigma^{-1}(]a,x[).
   \]
-  e 
-  $\alpha_x\in(\kappa_x)^\omega$ uma fun\c c\~ao qualquer satisfazendo a condi\c c\~ao: se $\kappa_x$ for finito, ent\~ao existe $n_x\in\omega$, tal que $\alpha_x(n_x)=\varkappa_x$ e $\alpha_x(\cp n_x)=\{0\}$. Ent\~ao
+  Seja 
   \[
-    \Sigma_x=\sum_{k=0}^\infty\alpha_{xk}<\infty.
+    f=\bigl\{z:\exists x\bigl(x\in\;]a,b[\;\a z=(x,\Sigma_{K_x})\bigr)\bigr\}
   \]
-  E o n\'umero $\Sigma_x$ independe da fun\c c\~ao $\alpha_x$.
-
-  Ent\~ao $f\in\R^{]a,b[}$, tal que $f(x)=\Sigma_x$ tem as seguintes propriedades:
+  Ent\~ao $f\in\R^{]a,b[}$, tem as seguintes propriedades:
   \begin{enumerate}[label = (\alph*)]
     \item{%
       $f$ \'e monotonicamente crescente em $]a,b[$;
@@ -2756,7 +2792,7 @@ Para responder \`a esta pergunta eu percorri o caminho mais dif\'icil. Primeiro 
     \item{%
       $f$ \'e descont\'inua em todo ponto de $E$; Em verdade,
       \[
-        f(x_n+)-f(x_n-)=a_n;
+        f(\sigma_n+)-f(\sigma_n-)=a_n;
       \]
     }
     \item{%
@@ -2764,14 +2800,61 @@ Para responder \`a esta pergunta eu percorri o caminho mais dif\'icil. Primeiro 
     }
   \end{enumerate}
 \end{teo}
-\prova Primeiramente, suponha que $a<x<y<b$. Sabe-se que $\varkappa_x\subset\varkappa_y$. Temos duas possibilidades a considerar $\varkappa_y$ \'e finito ou infinito. Se $\varkappa_y$ for finito, ent\~ao $\varkappa_x$ e
+\prova Primeiramente, suponha que $a<x<y<b$. Evidentemente $K_x\subset K_y$, por conseguinte do \rf{Lema}{PropSomaEmConjunto} $f(x)\leq f(y)$, segue-se (a).
+
+  Seguidamente, provemos que para todo $x\in\;]a,b[$
   \[
-    \delta=\varkappa_y\cp\varkappa_x,
+    f(x)=\sup\bigl\{f(t):t\in\;]a,x[\bigr\}=f(x-).
+    \label{eq2412251821}
   \]
-  tamb\'em o \'e ser\~ao. Logo $f(x)\leq f(y)$, segue da manipula\c c\~ao de somas finitas. 
+  Para tanto seja $\varepsilon>0$, existe naturalmente $i_\varepsilon\in\omega$, tal que
+  \[
+    0\leq\sum_{i=0}^{i_\varepsilon-1+n}\kappa_{K_x}(i)a_i-\sum_{i=0}^{i_\varepsilon-1}\kappa_{K_x}(i)a_i<\varepsilon.
+    \label{eq2412251816}
+  \]
+  para todo $n\in\omega$. Podemos escolher $t\in\;]a,x[$, tal que $i_\varepsilon\cap K_x\subset K_t$, temos que  $f(t)\leq f(x)$ e 
+  \[
+    \sum_{i=0}^{i_\varepsilon-1}\kappa_{K_x}(i)a_i\leq\sum_{i=0}^\infty\kappa_{K_t}(i)a_i=f(t).
+    \label{eq2412251817}
+  \]
+  Tomando o limite em (\ref{eq2412251816}) e comparando com (\ref{eq2412251817}) obtemos
+  \[
+    0\leq f(x)-f(x-)\leq f(x)-f(t)\leq\varepsilon,
+  \]
+  como $\varepsilon>0$ \'e arbitr\'ario inferimos (\ref{eq2412251821}).
 
-  Agora, suponhamos que $\varkappa_y$ seja infinito. Se $\delta$ for finito, podemos reordenar $\sum_{k\in\varkappa_y}a_k$ de tal maneira que os seus primeiros termos coincidam com os de $\delta$. Caso $\delta$
 
+  Em seguida observemos que 
+  \[
+    I=\Cap\bigl\{K_t:t\in\;]x,b[\bigr\}\neq\emptyset
+    \label{eq2412251901}
+  \]
+  se, e somente se, existe $n\in\omega$, tal que $x=\sigma_n$. Com efeito, como $I\subset\mathfrak{I}\sigma$, se $I\neq\emptyset$, existe $n\in\omega$, tal que $\sigma_n\in I$. Da\'i segue que $\sigma_n\in K_t$, para todo $t\in\;]x,b[$, logo, $\sigma_n\in\;]x,t[$, para todo $t\in\;]x,b[$, consequentemente $\sigma_n=x$. A rec\'iproca n\~ao \'e dif\'icil\footnote{Provar.}.
+
+  Assim, se $x\notin{\mathfrak I}\sigma=E$, ent\~ao $I=\emptyset$. Suponhamos que este seja o caso. Portanto, sejam $y\in\;]x,b[$ e $\varepsilon>0$, como $\sum\kappa_{K_y}(i)a_i<\infty$, existe $i_\varepsilon$, tal que 
+  \[
+    \sum_{i=i_\varepsilon}^{\infty}\kappa_{K_y}(i)a_i<\varepsilon.
+  \]
+  Podemos escolher $t\in\;]x,y[$, tal que $i_\varepsilon^+\subset\cp K_t$. De fato, basta tomar $t<\min\{\sigma_i:i\in i_\varepsilon^+\}$. Ademais,
+  \[
+    0\leq f(x+)-f(x)\leq f(t)-f(x)\leq\sum_{i=i_\varepsilon}^\infty\kappa_{K_t}(i)a_i\leq\sum_{i=i_\varepsilon}^\infty\kappa_{K_y}(i)a_i<\varepsilon,
+  \]
+  como $\varepsilon>0$ \'e arbitr\'ario segue-se que $f(x+)=f(x)=f(-x)$, consequentemente $f$ \'e cont\'inua em $x$. Como $x\in\;]a,b[\,\cp\, E$, \'e arbitr\'ario provamos (c).
+
+  Agora seja, $y\in\;]\sigma_n,b[$, novamente dado $\varepsilon>0$ escolhamos $i_\varepsilon>n$, tal que
+  \[
+    \sum_{i=i_\varepsilon}^\infty\kappa_{K_y}(i)a_i<\varepsilon.
+  \]
+  Escolhamos $t\in\;]\sigma_n,y[$, tal que $i_\varepsilon^+\subset\cp K_t$.
+  Temos em conformidade,
+  \[
+    0\leq f(\sigma_n+)-f(\sigma_n)-a_n\leq\sum_{i=i_\varepsilon}^\infty\kappa_{K_t}(i)a_i\leq\sum_{i=i_\varepsilon}^\infty\kappa_{K_y}(i)a_i<\varepsilon.
+  \]
+  Da arbitrariedade de $\varepsilon>0$, conclu\'imos que 
+  \[
+    f(\sigma_n+)-f(\sigma_n)=f(\sigma_n+)-f(\sigma_n-)=a_n,
+  \]
+  provando portanto o item (b).\qed
  
 \E
 \theorem{\ (Teorema do ponto fixo)\footnote{\`As vezes chamado de teorema do ponto fixo de Banach. Basta que o espa\c co seja m\'etrico e completo, i.e., toda sequ\^encia de Cauchy \'e convergente.}}{\sl%
