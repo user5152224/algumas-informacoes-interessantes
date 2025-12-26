@@ -3412,60 +3412,6 @@ $\dagger$ Mostrar que a defini\c c\~ao indepente do representante!
 
 \theorem{}{\sl Sejam $\overrightarrow{AB}$ e $\overrightarrow{CD}$ dois vetores quaisquer. Ent\~ao $(A,B_{(C,D)})\sim(C,D_{(A,B)})$}.
 
-\chapter{Ci\^encias naturais}
-
-\section{Equa\c c\~ao de carga de um capacitor}
-\theorem{}{\sl%
-Seja um capacitor de capacit\^ancia $C$ conectado em s\'erie com um resistor de resist\^encia $R$ e \`a uma bateira de tens\~ao $V_f$. Admitindo-se que o capacitor esteja inicialmente descarregado a equa\c c\~ao de carga do capacitor \'e dada por:
-$$
-  V(t)=V_f(1-e^{-{t\over RC}}).
-$$
-}
-
-\proof A corrente no capacitor $I(t)$ \'e a mesma que a corrente no resistor, consequentemente
-$$
-  (\ddag)\qquad{V_f-V(t)\over R}=I(t)={dQ\over dt}(t)=C{dV\over dt}(t)
-$$
-em que $V(t)$ \'e a tens\~ao no capacitor no instante $t$. Temos portanto de $(\ddag)$ que
-$$
-  {1\over RC}={dV\over dt}(t){1\over V_f-V(t)}=-{d\over dt}\bigl(V_f-V(t)\bigr){1\over V_f-V(t)}
-$$
-em consequ\^encia do lema que vimos e multiplicando ambos membros por $-1$, decorre que
-$$
-  -{1\over RC}={d\over dt}\bigl(V_f-V(t)\bigr){1\over V_f-V(t)}={d\over dt}\Bigl(\ln\bigl|V_f-V(t)\bigr|\Bigr)
-$$
-do teorema fundamental do c\'alculo vem
-$$
-  -{T\over RC}=\int_{0}^T{d\over dt}\Bigl(\ln\bigl|V_f-V(t)\bigr|\Bigr)\,dt=\ln\bigl|V_f-V(t)\bigr|\biggr|_0^T
-$$
-para $T\geq0$.
-
-Agora admitindo-se que $V(0)=0$, e que $V_f-V(t)>0$ para todo $t\in R_+$ obtemos
-$$
-  -{T\over RC}=\ln\bigl(V_f-V(t)\bigr)\biggr|_0^T=\ln {V_f-V(T)\over V_f}
-$$
-donde se conclui
-$$
-  {V_f-V(T)\over V_f}=e^{-T\over RC}
-$$
-que por sua vez implica
-$$
-  V(T)=V_f(1-e^{-{T\over RC}})
-$$
-como $T$ \'e arbitr\'ario podemos escrever sem perdas
-$$
-  V(t)=V_f(1-e^{-{t\over RC}})
-$$
-para todo $t\geq0$.\qed
-
-\noindent{\bf Como tratar adequadamente convers\~oes entre grandezas, e.g., grandezas angulares?\ }{\sl%
-  Como explicar rigorosamente a igualdade que se encontra rotineiramente em livros: 
-  $$
-    2\pi\,{\rm rad}=360^\circ\,{\rm?}
-  $$
-  Rigorosamente, os dois objetos s\~ao distintos, de maneira que a identidade n\~ao \'e siginificativa.
-}
-
 \section{Espa\c cos vetoriais}
 
 A seguir apresentarei alguns exerc\'icios pertinentes de [Hoffman].
@@ -3543,6 +3489,61 @@ Decorre que
   v_1-w_1=0=v_2-w_2,
 \]
 o que por sua vez acarreta $v_i=w_i$, com $i\in\{1,2\}$.\qed
+
+\chapter{Ci\^encias naturais}
+
+\section{Equa\c c\~ao de carga de um capacitor}
+\theorem{}{\sl%
+Seja um capacitor de capacit\^ancia $C$ conectado em s\'erie com um resistor de resist\^encia $R$ e \`a uma bateira de tens\~ao $V_f$. Admitindo-se que o capacitor esteja inicialmente descarregado a equa\c c\~ao de carga do capacitor \'e dada por:
+$$
+  V(t)=V_f(1-e^{-{t\over RC}}).
+$$
+}
+
+\proof A corrente no capacitor $I(t)$ \'e a mesma que a corrente no resistor, consequentemente
+$$
+  (\ddag)\qquad{V_f-V(t)\over R}=I(t)={dQ\over dt}(t)=C{dV\over dt}(t)
+$$
+em que $V(t)$ \'e a tens\~ao no capacitor no instante $t$. Temos portanto de $(\ddag)$ que
+$$
+  {1\over RC}={dV\over dt}(t){1\over V_f-V(t)}=-{d\over dt}\bigl(V_f-V(t)\bigr){1\over V_f-V(t)}
+$$
+em consequ\^encia do lema que vimos e multiplicando ambos membros por $-1$, decorre que
+$$
+  -{1\over RC}={d\over dt}\bigl(V_f-V(t)\bigr){1\over V_f-V(t)}={d\over dt}\Bigl(\ln\bigl|V_f-V(t)\bigr|\Bigr)
+$$
+do teorema fundamental do c\'alculo vem
+$$
+  -{T\over RC}=\int_{0}^T{d\over dt}\Bigl(\ln\bigl|V_f-V(t)\bigr|\Bigr)\,dt=\ln\bigl|V_f-V(t)\bigr|\biggr|_0^T
+$$
+para $T\geq0$.
+
+Agora admitindo-se que $V(0)=0$, e que $V_f-V(t)>0$ para todo $t\in R_+$ obtemos
+$$
+  -{T\over RC}=\ln\bigl(V_f-V(t)\bigr)\biggr|_0^T=\ln {V_f-V(T)\over V_f}
+$$
+donde se conclui
+$$
+  {V_f-V(T)\over V_f}=e^{-T\over RC}
+$$
+que por sua vez implica
+$$
+  V(T)=V_f(1-e^{-{T\over RC}})
+$$
+como $T$ \'e arbitr\'ario podemos escrever sem perdas
+$$
+  V(t)=V_f(1-e^{-{t\over RC}})
+$$
+para todo $t\geq0$.\qed
+
+\noindent{\bf Como tratar adequadamente convers\~oes entre grandezas, e.g., grandezas angulares?\ }{\sl%
+  Como explicar rigorosamente a igualdade que se encontra rotineiramente em livros: 
+  $$
+    2\pi\,{\rm rad}=360^\circ\,{\rm?}
+  $$
+  Rigorosamente, os dois objetos s\~ao distintos, de maneira que a identidade n\~ao \'e siginificativa.
+}
+
 
 
 \chapter{Considera\c c\~oes finais}
