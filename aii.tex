@@ -172,7 +172,7 @@
 \def\R{\mathds{R}}
 \def\Z{\mathds{Z}}
 \def\af{{\it a fortiori}}
-\def\a{\;\wedge\;}
+\def\a{\wedge}
 \def\[{\begin{equation}}
 \def\cp{\mathbin{\neg}}
 \def\]{\end{equation}}
@@ -715,9 +715,37 @@
     \varsigma(\mathcal{R})\a \mathcal{R}\in\mathcal{R}\quad\hbox{se, e somente se,}\quad\varsigma(\mathcal{R})\a \mathcal{R}\notin\mathcal{R},
   \]
   o que \'e uma inconsist\^encia, i.e., uma contradi\c c\~ao. Logo, $\neg\varsigma(\mathcal{R})$. Ademais, da pr\'opria defini\c c\~ao de classificadores $\mathcal{R}\subset\U$, como $\mathcal{R}$ \'e uma classe pr\'opria, necessariamente $\U$ tamb\'em o ser\'a. Com efeito, suponha por {\it reductio ad absurdum} que $\varsigma(\U)$, pelo \rf{Teorema}{T33}, inferir\'iamos que $\varsigma(\mathcal{R})$, o que \'e uma contradi\c c\~ao com o argumento anterior.\qed
+
+  % TODO: Completar a demonstra\c c\~ao.
+  \begin{teo}[Defini\c c\~ao por indu\c c\~ao]
+    Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\bigcup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.
+  \end{teo}
+  \prova
+  Primeiramente seja $p\in\omega$, definamos
+  \[
+    \mathscr{F}_p=\bigl\{g:g\in X^{p+2}\,\a\,g(0)=a\,\a\,\forall q\bigl(q\in p+1\lra g(q+1)=F(g|_{q+1})\bigr\}
+  \]
+  \[
+    C=\Bigl\{p:p\in\omega\,\a\,\exists! g\Bigl(g\in X^{p+2}\,\a\,g(0)=a\,\a\,\forall q\bigl(q\in p+1\lra g(q+1)=F(g|_{q+1})\bigr)\Bigr)\Bigr\}.
+  \]
+  Primeiro, provemos que $0\in C$. 
+
+
+
+
+  Com efeito, seja $h\in X^1$, tal que $h(0)=a$, basta definir $g|(1)=h$ e $g(1)=F(g|(1))$, \'e evidente que $g\in X^2$, \'e tal que $g(0)=a$ e $g|(2)=(Fg|)|(2)$; al\'em disso $g$ \'e \'unica, pois $\gamma(0)=a$ e $\gamma|(2)=(F\gamma|)|(2)$, temos que $g|(1)=\gamma|(1)$, logo $g(1)=F(g|(1))=F(\gamma|(1))=\gamma(1)$, o que prova a unicidade, logo $0\in C$. Suponha que $p\in C$, segue, portanto, que existe uma \'unica $h\in X^{p+2}$, tal que $h(0)=0$ e $h|(p+2)=(Fh|)|(p+2)$. Definamos $g|(p+2)=h|(p+2)$ e $g(p+2)=F(h|(p+2))$, segue-se $g\in X^{p+3}$. Se $\gamma\in X^{p+3}$, \'e tal que $\gamma(0)=a$ e $\gamma|(p+3)=(F\gamma|)|(p+3)$, ent\~ao $\gamma|(p+2)=h|(p+2)$, pois $h$ \'e \'unica. Como consequ\^encia $g(p+2)=F(h|(p+2))=F(\gamma|(p+2))=\gamma(p+2)$, o que prova a unicidade de $g$, acarretando que $p+1\in C$. Pelo princ\'ipio de indu\c c\~ao matem\'atica $C=\omega$. 
+
+  Para cada $p$ seja $g_p\in X^{p+2}$ a \'unica fun\c c\~ao tal que $g_p(0)=a$ e $g_p|(p+2)=(Fg|)|(p+2)$, defina $f=\bigcup_{p\in\omega}g_p$. Provemos que $f$ \'e uma fun\c c\~ao. De fato, suponhamos que $(a,b),(a,c)\in f$, existem portanto $m,n\in\omega$, que podemos supor sem perda de generalidade, tais que $m\leq n$, $(a,b)\in g_m$ e $(a,c)\in g_n$, como $g_m|(m+2)=g_n|(m+2)$ pois $g_m$ \'e \'unica, segue-se necessariamente que $b=g_m(a)=g_n(a)=c$, provando portanto que $f$ \'e uma fun\c c\~ao. Ademais, $f$ \'e tal que $f(0)=a$ e $f(p+1)=F(f|(p+1))$; al\'em disso, seja $\phi$ uma outra fun\c c\~ao cumprindo as propriedades estipuladas, naturalmente para todo $p\in\omega$ vale 
+  \[
+    f|(p+2)=g_p|(p+2)=\phi|(p+2),
+  \]
+  portanto, $f=\phi$, i.e., f \'e a \'unica com as propriedades estipuladas.\qed
   
   
   \vfill\break
+
+  \fi
+  \enddoc
 
   \theorem{\ (Bernstein-Cantor-Schr\"oder)}{Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.}
   
