@@ -46,7 +46,7 @@
    \addtocontents{toc}{%
      \vskip 1cm
      \protect\centering\protect
-     \hyperlink{partnum:\the\partnum}{\bf\scshape Parte \expandafter\MakeUppercase{\romannumeral\the\partnum}\hskip .28cm -\hskip .28cm #1}
+     \hyperlink{partnum:\the\partnum}{\scshape Parte \expandafter\MakeUppercase{\romannumeral\the\partnum}\hskip .28cm \textbullet\hskip .28cm #1}
      \protect\par
    }
   \global\advance\partnum by 1%    
@@ -237,7 +237,7 @@
   
   \parte{Ci\^encias formais}
   
-  \iffalse % IGNORAR?
+  \iftrue % IGNORAR?
 
   \chapter{L\'ogica}
   Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
