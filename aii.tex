@@ -165,10 +165,11 @@
 \def\AEx{{\bf AEx}\ }
 \def\AS{{\bf AS}\ }
 \def\scr#1{\mathscr{#1}}
+\def\C{\mathds{C}}
 \def\K{\mathds{K}}
 \def\L{\mathds{L}}
-\def\R{\mathds{R}}
 \def\Q{\mathds{Q}}
+\def\R{\mathds{R}}
 \def\Z{\mathds{Z}}
 \def\af{{\it a fortiori}}
 \def\a{\;\wedge\;}
@@ -189,7 +190,7 @@
 \def\ra{\rightarrow}
 \def\res{\noindent{\itshape\bfseries Resolu\c c\~ao.\/}\ }
 \def\rge{\rangle}
-\def\sen{{\rm sen}}
+\def\sen{\,{\rm sen}\,}
 \def\tvm{{\bf TVM}}
 \def\U{{\cal U}}
 \def\rf#1#2{{\rm\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
@@ -236,7 +237,7 @@
   
   \parte{Ci\^encias formais}
   
-  \iftrue % IGNORAR?
+  \iffalse % IGNORAR?
 
   \chapter{L\'ogica}
   Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
@@ -3486,6 +3487,20 @@
 
   \section{C\^onicas}
 
+  \begin{Def}
+    Consideremos $g$ um polin\^omio de duas vari\'aveis de grau $2$ com coeficientes em $\R$ dado por
+    \[
+      g(x,y)=ax^2+bxy+cy^2+dx+ey+f.
+    \]
+    Uma c\^onica $C$ \'e o locus (lugar geom\'etico) ou conjunto de pontos
+    \[
+      C=\{(x,y):(x,y)\in\R^2\a g(x,y)=0\}.
+    \]
+    \label{def3012252158}
+  \end{Def}
+
+  O objetivo das pr\'oximas se\c c\~oes \'e aplicar transforma\c c\~oes ao sistema de coordenadas, de tal maneira que a c\^onica seja facilmente reconhecida. Doravante, a menos da men\c c\~ao expl\'icita em contr\'ario, sempre quando referirmos a $g$, estaremos considerando um polin\^omio como estipulado na \rf{Defini\c c\~ao}{def3012252158}.
+
   \begin{teo}[Exerc\'icio 23-10 {[Boulos e Camargo]}]
   \end{teo}
   \prova Primeiramente consideremos o sistema
@@ -3505,7 +3520,7 @@
  
   Notemos em seguida que qualquer solu\c c\~ao $(x,y)$ de (\ref{S291220252034}), satisfaz
   \[
-    ax^2+bxy+cy^2+{d\over2}x+{e\over2}y=x(ax+{b\over2}xy+{d\over2})+y({b\over2}x+cy+{e\over2})=0;
+    ax^2+bxy+cy^2+{d\over2}x+{e\over2}y=x(ax+{b\over2}y+{d\over2})+y({b\over2}x+cy+{e\over2})=0;
     \label{eq2912252053}
   \]
   al\'em disso, para uma tal solu\c c\~ao $(x,y)$, vale
@@ -3538,6 +3553,32 @@
     \end{split}
   \]
   Em outros termos $g$ \'e constante nas solu\c c\~oes de (\ref{S291220252034}).\qed
+
+  \subsection{Rota\c c\~oes de sistema de coordenadas}
+
+  Podemos enxergar algrebica e isometricamente $\R^2$ como $\C^2$, da\'i a base can\^onica \'e simplesmente ${\mathcal B}=\{1,i\}$. Como \'e sabido uma rota\c c\~ao da base por um \^angulo $\theta$ em rela\c c\~ao ao eixo gerado por $1$ no sentido anti-hor\'ario \'e simplesmente uma multiplica\c c\~ao complexa por $e^{i\theta}$, a nova base \'e simplesmente ${\mathcal B}_\theta=\{e^{i\theta},e^{i(\theta+\pi/2)}\}$. Destarte, dado $w$, existem $u,v\in\R$, tais que $w=(u,b)_{{\cal B}_\theta}$, evidentemente 
+  \[
+    w=(u\cos\theta-v\sen\theta)+i(u\sen\theta+v\cos\theta).
+  \]
+  Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico \'e dado pela identidade
+  \[
+    \begin{bmatrix}
+      x\cr
+      y\cr
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      \cos\theta & -\sen\theta\cr
+      \sen\theta & \cos\theta\cr
+    \end{bmatrix}
+    \begin{bmatrix}
+      u\cr
+      v\cr
+    \end{bmatrix}
+  \]
+
+  \subsection{Elimina\c c\~ao do termo quadr\'atico misto por rota\c c\~oes}
+
 
   \chapter{\'Algebra linear}
   
