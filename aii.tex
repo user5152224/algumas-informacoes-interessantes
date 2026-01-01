@@ -177,6 +177,7 @@
 \def\cp{\mathbin{\neg}}
 \def\]{\end{equation}}
 \def\fr#1#2{\frac{#1}{#2}}
+\def\frak{\mathfrak}
 \def\la{\leftarrow}
 \def\lge{\langle}
 \def\lla{\longleftarrow}
@@ -721,26 +722,17 @@
     Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\bigcup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.
   \end{teo}
   \prova
-  Primeiramente seja $p\in\omega$, definamos
+  Primeiramente, para cada $p\in\omega$, definamos
   \[
-    \mathscr{F}_p=\bigl\{g:g\in X^{p+2}\,\a\,g(0)=a\,\a\,\forall q\bigl(q\in p+1\lra g(q+1)=F(g|_{q+1})\bigr\}
+    \mathfrak{F}_p=\bigl\{g:g\in X^{p+2}\,\a\,g(0)=a\,\a\,\forall q\bigl(q\in p+1\lra g(q+1)=F(g|_{q+1})\bigr\}.
   \]
+  Seguidamente definamos,
   \[
-    C=\Bigl\{p:p\in\omega\,\a\,\exists! g\Bigl(g\in X^{p+2}\,\a\,g(0)=a\,\a\,\forall q\bigl(q\in p+1\lra g(q+1)=F(g|_{q+1})\bigr)\Bigr)\Bigr\}.
+    C=\bigl\{p:p\in\omega\,\a\,\exists! g(g\in\mathfrak{F}_p)\bigr\}.
   \]
-  Primeiro, provemos que $0\in C$. 
+  Primeiro, considere $g\in X^{2}$, tal que $g(0)=a$ e $g(1)=F(g|_1)$. Naturalmente se $\gamma\in{\mathfrak F}_0$, ent\~ao $\gamma(0)=a=g(0)$, logo, $\gamma|_1=g|_1$ e consequentemente $\gamma(1)=F(\gamma|_1)=F(g|_1)=g(1)$, o que prova que $0\in C$. Em seguida, suponhamos que $p\in\omega$, segue que existe uma \'unica $h\in{\mathfrak F}_p$, defina $g\in X^{p+3}$, tal que $g|_{p+2}=h$ e $g(p+2)=F(g|_{p+2})$. Seja agora $\gamma\in{\frak F}_{p+1}$, pela unicidade de $h$ segue-se que $\gamma|_{p+2}=h=g|_{p+2}$, por conseguinte $\gamma(p+2)=F(h|_{p+2})=g(p+2)$, que por sua vez, acarreta $\gamma=g$, o que prova a unicidade de $g$. Pelo princ\'ipio de indu\c c\~ao matem\'atica $C=\omega$. 
 
-
-
-
-  Com efeito, seja $h\in X^1$, tal que $h(0)=a$, basta definir $g|(1)=h$ e $g(1)=F(g|(1))$, \'e evidente que $g\in X^2$, \'e tal que $g(0)=a$ e $g|(2)=(Fg|)|(2)$; al\'em disso $g$ \'e \'unica, pois $\gamma(0)=a$ e $\gamma|(2)=(F\gamma|)|(2)$, temos que $g|(1)=\gamma|(1)$, logo $g(1)=F(g|(1))=F(\gamma|(1))=\gamma(1)$, o que prova a unicidade, logo $0\in C$. Suponha que $p\in C$, segue, portanto, que existe uma \'unica $h\in X^{p+2}$, tal que $h(0)=0$ e $h|(p+2)=(Fh|)|(p+2)$. Definamos $g|(p+2)=h|(p+2)$ e $g(p+2)=F(h|(p+2))$, segue-se $g\in X^{p+3}$. Se $\gamma\in X^{p+3}$, \'e tal que $\gamma(0)=a$ e $\gamma|(p+3)=(F\gamma|)|(p+3)$, ent\~ao $\gamma|(p+2)=h|(p+2)$, pois $h$ \'e \'unica. Como consequ\^encia $g(p+2)=F(h|(p+2))=F(\gamma|(p+2))=\gamma(p+2)$, o que prova a unicidade de $g$, acarretando que $p+1\in C$. Pelo princ\'ipio de indu\c c\~ao matem\'atica $C=\omega$. 
-
-  Para cada $p$ seja $g_p\in X^{p+2}$ a \'unica fun\c c\~ao tal que $g_p(0)=a$ e $g_p|(p+2)=(Fg|)|(p+2)$, defina $f=\bigcup_{p\in\omega}g_p$. Provemos que $f$ \'e uma fun\c c\~ao. De fato, suponhamos que $(a,b),(a,c)\in f$, existem portanto $m,n\in\omega$, que podemos supor sem perda de generalidade, tais que $m\leq n$, $(a,b)\in g_m$ e $(a,c)\in g_n$, como $g_m|(m+2)=g_n|(m+2)$ pois $g_m$ \'e \'unica, segue-se necessariamente que $b=g_m(a)=g_n(a)=c$, provando portanto que $f$ \'e uma fun\c c\~ao. Ademais, $f$ \'e tal que $f(0)=a$ e $f(p+1)=F(f|(p+1))$; al\'em disso, seja $\phi$ uma outra fun\c c\~ao cumprindo as propriedades estipuladas, naturalmente para todo $p\in\omega$ vale 
-  \[
-    f|(p+2)=g_p|(p+2)=\phi|(p+2),
-  \]
-  portanto, $f=\phi$, i.e., f \'e a \'unica com as propriedades estipuladas.\qed
-  
+  Em verdade provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\bigcup_p f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema temos novamente da unicidade que para todo $p\in\omega$, segue-se $f|_{p+2}=f_p=\varphi|_{p+2}$, logo $f=\phi$.\qed
   
   \vfill\break
 
