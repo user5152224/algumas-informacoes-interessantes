@@ -33,7 +33,7 @@
   \null\vfill%
   {%
     \centering
-    {\fontsize{120}{120}\selectfont \expandafter\MakeUppercase{\romannumeral\the\partnum}}% 
+    {\fontsize{80}{80}\selectfont \expandafter\MakeUppercase{\romannumeral\the\partnum}}% 
             
     \vspace{1cm}\noindent
     {%            
@@ -73,7 +73,7 @@
 \def\sc{\MakeUppercase}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\: #1}}
-\renewcommand{\headrulewidth}{0ex}
+\renewcommand{\headrulewidth}{.1ex}
 \fancypagestyle{est}{%
   \def\fontface{\bf}
   \fancyhf{}
@@ -713,7 +713,7 @@
   \end{teo}
   \prova Consideremos a classe $\mathcal{R}=\{x:x\notin x\}$[\footnote{O ${\cal R}$ \'e em homenagem a Bertrand Russel, um dos primeiros a descobrir paradoxos na teoria ing\^enia dos conjuntos, criada pelo matem\'atico eminente Georg Cantor.}. Provemos que $\neg\varsigma(\mathcal{R})$, i.e., $\mathcal{R}$. Para tanto, suponhamos por {\it reductio ad absurdum} que $\varsigma(\mathcal{R})$, temos ent\~ao a equival\^encia
   \[
-    \varsigma(\mathcal{R})\a \mathcal{R}\in\mathcal{R}\quad\hbox{se, e somente se,}\quad\varsigma(\mathcal{R})\a \mathcal{R}\notin\mathcal{R},
+    \varsigma(\mathcal{R})\a \mathcal{R}\in\mathcal{R}\;\;\hbox{se, e somente se,}\;\;\varsigma(\mathcal{R})\a \mathcal{R}\notin\mathcal{R},
   \]
   o que \'e uma inconsist\^encia, i.e., uma contradi\c c\~ao. Logo, $\neg\varsigma(\mathcal{R})$. Ademais, da pr\'opria defini\c c\~ao de classificadores $\mathcal{R}\subset\U$, como $\mathcal{R}$ \'e uma classe pr\'opria, necessariamente $\U$ tamb\'em o ser\'a. Com efeito, suponha por {\it reductio ad absurdum} que $\varsigma(\U)$, pelo \rf{Teorema}{T33}, inferir\'iamos que $\varsigma(\mathcal{R})$, o que \'e uma contradi\c c\~ao com o argumento anterior.\qed
 
@@ -3369,6 +3369,7 @@
   
   \chapter{Geometria anal\'itica}
   
+  \iffalse % IGNORAR
   No que segue vamos tentar construir o conceito de vetor. A princ\'inpio era tratar axiomaticamente esta constru\c c\~ao, mas tenho uma certa convic\c c\~ao que esta tarefa foge as minhas capacidades.
   
   Primeiro vamos considerar um conjunto $E$ chamado espa\c co, este espa\c co possui certos objetos indefinidos, como pontos denotados por letras mai\'usculas do alfabeto latino $A,\ldots,Z$; retas denotadas por letras min\'usculas do alfabeto latino $a,\ldots,z$; e planos denotados por letras do alfabeto grego $\alpha,\ldots,\omega$.
@@ -3503,6 +3504,8 @@
   \theorem{}{\sl Sejam $\overrightarrow{AB}$ e $\overrightarrow{CD}$ dois vetores quaisquer. Ent\~ao $(A,B_{(C,D)})\sim(C,D_{(A,B)})$}.
   
   \newpage
+
+  \fi % IGNORAR
 
   \section{C\^onicas}
 
