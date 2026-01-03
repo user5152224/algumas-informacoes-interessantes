@@ -228,10 +228,6 @@
 
 
 \begdoc
-  \tableofcontents
-
-  % Remover paginação da tabela de conteúdos
-  \addtocontents{toc}{\protect\thispagestyle{empty}}
 
   % Dedicatória
   \null\vfill\hfill
@@ -239,6 +235,11 @@
     Dedico o resultado destas anota\c c\~oes aos meus Senhores. Primeiro, a Deus, que, consoante o seu desígnio, me concede o discernimento e o p\~ao de cada dia. Segundo, a Jesus, n\~ao menos importante, em cujas palavras tanto me comprazo, e ciente de que Ele \'e O caminho e A verdade. 
   }{}
   \newpage        
+
+  \tableofcontents
+
+  % Remover paginação da tabela de conteúdos
+  \addtocontents{toc}{\protect\thispagestyle{empty}}
 
   \pagestyle{est}
   
