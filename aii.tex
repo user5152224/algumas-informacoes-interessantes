@@ -5,6 +5,7 @@
   amsmath,
   amssymb, 
   amsthm, 
+  cite,
   dsfont,
   enumitem, 
   fancyhdr,
@@ -17,10 +18,6 @@
   titlesec,
   xcolor,
 }
-
-%\usepackage[natbib=true,style=authoryear,backend=bibtex,useprefix=true]{biblatex}
-\usepackage{biblatex}
-\addbibresource{bibliografia.bib}
 
 \usepackage[brazil]{babel}
 
@@ -167,41 +164,41 @@
 
 
 \def\AEx{{\bf AEx}\ }
-\def\AS{{\bf AS}\ }
-\def\scr#1{\mathscr{#1}}
-\def\C{\mathds{C}}
-\def\K{\mathds{K}}
-\def\L{\mathds{L}}
-\def\Q{\mathds{Q}}
-\def\R{\mathds{R}}
-\def\Z{\mathds{Z}}
 \def\af{{\it a fortiori}}
+\def\AS{{\bf AS}\ }
 \def\a{\wedge}
 \def\[{\begin{equation}}
+\def\Cap{{\textstyle\bigcap}\,}
+\def\C{\mathds{C}}
 \def\cp{\mathbin{\neg}}
+\def\ct#1{#1 \citenum{#1}}
+\def\Cup{{\textstyle\bigcup}\,}
 \def\]{\end{equation}}
 \def\fr#1#2{\frac{#1}{#2}}
 \def\frak{\mathfrak}
+\def\K{\mathds{K}}
 \def\la{\leftarrow}
 \def\lge{\langle}
 \def\lla{\longleftarrow}
 \def\llra{\longleftrightarrow}
+\def\L{\mathds{L}}
 \def\lra{\longrightarrow}
 \def\o{\;\vee\,}
 \def\parallel{\mathbin{/\kern-3pt/}}
 \def\pma{{\bfseries PMA}}
 \def\prova{\noindent{\bfseries\scshape Prova}\quad}
 \def\qed{\nopagebreak\hbox{ }\hfill\rule{.42em}{1em}\bigskip}
+\def\Q{\mathds{Q}}
 \def\ra{\rightarrow}
 \def\res{\noindent{\itshape\bfseries Resolu\c c\~ao.\/}\ }
+\def\rf#1#2{{\rm\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
 \def\rge{\rangle}
+\def\R{\mathds{R}}
+\def\scr#1{\mathscr{#1}}
 \def\sen{\,{\rm sen}\,}
 \def\tvm{{\bf TVM}}
 \def\U{{\cal U}}
-\def\rf#1#2{{\rm\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
-\def\Cap{{\textstyle\bigcap}\,}
-\def\Cup{{\textstyle\bigcup}\,}
-%\def\ct#1{[\hyperref[cite.#1]{#1}]}
+\def\Z{\mathds{Z}}
 
 
 \def\begdoc{\begin{document}}
@@ -216,7 +213,7 @@
 {\bfseries}
 {}
 {0.5em}
-{\scshape\thmname{\scshape #1} \thmnumber{\scshape #2}\bf\thmnote{ \scshape(#3)}}
+{\scshape\thmname{\scshape #1} \thmnumber{\scshape #2}\thmnote{ \scshape(#3)}}
 
 \theoremstyle{slanted}
 
@@ -243,7 +240,7 @@
   
   \parte{Ci\^encias formais}
   
-  \iffalse % IGNORAR?
+  \iftrue % IGNORAR?
 
   \chapter{L\'ogica}
   Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
@@ -3526,7 +3523,7 @@
     \label{def3012252158}
   \end{Def}
 
-  O objetivo das pr\'oximas se\c c\~oes \'e aplicar transforma\c c\~oes ao sistema de coordenadas, de tal maneira que a c\^onica seja facilmente reconhecida. Doravante, a menos que haja men\c c\~ao expl\'icita em contr\'ario, sempre quando referirmos a $g$, estaremos considerando um polin\^omio como estipulado na \rf{Defini\c c\~ao}{def3012252158}.
+  O objetivo das pr\'oximas se\c c\~oes \'e aplicar transforma\c c\~oes ao sistema de coordenadas, de tal maneira que a c\^onica seja facilmente reconhecida.
 
   % TODO: Completar e organizar esta seção.
   \subsection{Elimina\c c\~ao dos termos lineares por transla\c c\~oes}
@@ -3549,10 +3546,10 @@
       y&=v+k\cr
     \end{aligned}
   \]
-  Em seguida, calculemos $g(x,y)=g(u+h,v+k)$. Conformemente,
+  Em seguida, calculemos $G(u,v)=g(u+h,v+k)$. Conformemente,
   \[
     \begin{aligned}
-      g(x,y)&=a(u+h)^2+b(u+h)(v+k)+c(v+k)^2+d(u+h)+e(v+h)+f\cr
+      G(u,v)&=a(u+h)^2+b(u+h)(v+k)+c(v+k)^2+d(u+h)+e(v+h)+f\cr
             &=au^2+buv+cv^2+u(2ah+bk+d)+v(bh+2ck+e)\cr
             &\qquad+\underbrace{ah^2+bhk+ck^2+dh+ek+f}_{g(h,k)}\cr
             &=au^2+buv+cv^2+u(2ah+bk+d)+v(bh+2ck+e)+g(h,k)\cr
@@ -3583,22 +3580,20 @@
   \]
   Cuja solubilidade \'e atestada pelo determinante
   \[
-    \left|\;\,
-    \begin{aligned}
-      a         &\;\;&{b\over 2} \cr
-      {b\over2} &\;\;&c          \cr
-    \end{aligned}
-    \;\,\right|
+    \begin{vmatrix}
+      a  & b/2 \cr
+      b/2 & c \cr
+    \end{vmatrix}
     \;=\;ac-{b^2\over4}.
   \]
   \'E sabido que o sistema (\ref{S2912252034}) admite uma \'unica solu\c c\~ao, i.e., \'e determinado, se, e somente se, $ac-b^2/4\neq0$. Caso contr\'ario, o sistema admite infinitas solu\c c\~oes, neste caso diz-se que ele \'e indetemindado, ou n\~ao admite solu\c c\~oes, i.e., \'e imposs\'ivel.
 
-  Destarte, temos, um m\'etodo pragm\'atico para determinar se \'e poss\'ivel eliminar os termos lineares do polin\^omio $g$, a saber, se, e somente se, o sistema (\ref{S2912252034}) admite solu\c c\~oes.
+  Destarte, temos um m\'etodo pragm\'atico para determinar se \'e poss\'ivel eliminar os termos lineares do polin\^omio $g$, a saber, se, e somente se, o sistema (\ref{S2912252034}) admite solu\c c\~oes.
 
-  A seguir est\'a provado que no caso do sistema (\ref{S2912252034}) admitir infinitas solu\c c\~oes, o termo independente de $g$ no novo sistema \'e inexor\'avel \`a escolha da solu\c c\~ao do sistema (\ref{S2912252034}).
+  A seguir est\'a provado que no caso do sistema (\ref{S2912252034}) admitir infinitas solu\c c\~oes, o termo independente de $g$ no novo sistema de coordenadas \'e inexor\'avel \`a escolha da solu\c c\~ao do sistema (\ref{S2912252034}).
 
 
-  \begin{teo}[Exerc\'icio 23-10 {[Boulos e Camargo]}]
+  \begin{teo}[Exerc\'icio 23-10\;-\;\ct{BoulosCamargo}]
     Se o sistema (\ref{S2912252034}) admite infinitas solu\c c\~oes, ent\~ao $g$ \'e constante no seu conjunto de solu\c c\~oes.
   \end{teo}
   \prova Sejam $(h,k)$ e $(u,v)$ solu\c c\~oes do sistema (\ref{S2912252034}). Em verdade n\~ao \'e dif\'icil notar que $(h+k,u+v)$ tamb\'em o \'e, bastando para isto substituir as respectivas coordenadas do par no sistema (\ref{S2912252034}) e atestar as igualdades.
@@ -3643,12 +3638,16 @@
   \]
   Em outros termos $g$ \'e constante no conjunto de solu\c c\~oes do sistema (\ref{S2912252034}).\qed
 
-  \subsection{Rota\c c\~oes de sistema de coordenadas}
 
-  Podemos enxergar algrebica e isometricamente $\R^2$ como $\C^2$, da\'i a base can\^onica \'e simplesmente ${\mathcal B}=\{1,i\}$. Como \'e sabido uma rota\c c\~ao da base por um \^angulo $\theta$ em rela\c c\~ao ao eixo gerado por $1$ no sentido anti-hor\'ario \'e simplesmente uma multiplica\c c\~ao complexa por $e^{i\theta}$, a nova base \'e simplesmente ${\mathcal B}_\theta=\{e^{i\theta},e^{i(\theta+\pi/2)}\}$. Destarte, dado $w$, existem $u,v\in\R$, tais que $w=(u,b)_{{\cal B}_\theta}$, evidentemente 
-  \[
-    w=(u\cos\theta-v\sen\theta)+i(u\sen\theta+v\cos\theta).
-  \]
+  \subsection{Elimina\c c\~ao do termo quadr\'atico misto por rota\c c\~oes}
+
+  
+  % TODO: Demonstrar a rela\c c\~ao do sistema de coordenadas via geometria euclidiana.
+
+%  Podemos enxergar algrebica e isometricamente $\R^2$ como $\C^2$, da\'i a base can\^onica \'e simplesmente ${\mathcal B}=\{1,i\}$. Como \'e sabido uma rota\c c\~ao da base por um \^angulo $\theta$ em rela\c c\~ao ao eixo gerado por $1$ no sentido anti-hor\'ario \'e simplesmente uma multiplica\c c\~ao complexa por $e^{i\theta}$, a nova base \'e simplesmente ${\mathcal B}_\theta=\{e^{i\theta},e^{i(\theta+\pi/2)}\}$. Destarte, dado $w$, existem $u,v\in\R$, tais que $w=(u,b)_{{\cal B}_\theta}$, evidentemente 
+%  \[
+%    w=(u\cos\theta-v\sen\theta)+i(u\sen\theta+v\cos\theta).
+%  \]
   Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico \'e dado pela identidade
   \[
     \begin{bmatrix}
@@ -3664,9 +3663,83 @@
       u\cr
       v\cr
     \end{bmatrix}
+    \label{eq3001261537}
   \]
 
-  \subsection{Elimina\c c\~ao do termo quadr\'atico misto por rota\c c\~oes}
+  Fazendo a substitui\c c\~ao de $(x,y)$ segundo (\ref{eq3001261537}) obtemos
+  \[
+    \begin{aligned}
+      G(u,v)&=(a\cos^2\theta+b\cos\theta\sin\theta+c\sin^2\theta)u^2+\bigl((a-c)\sin2\theta+b\cos2\theta\bigr)uv\cr
+            &\qquad+(a\sin^2\theta-b\cos\theta\sin\theta+c\cos^2\theta)v^2+(d\cos\theta+e\cos\theta)u\cr
+            &\qquad+(e\cos\theta-d\sin\theta)v+f\cr
+    \end{aligned}
+  \]
+  Por quest\~oes pr\'aticas, escreveremos
+  \[
+    G(u,v)=\alpha u^2+\beta uv+\gamma v^2+\delta u+\varepsilon v+f,
+  \]
+  o que pressup\~oe as igualdades
+  \[
+    \begin{aligned}
+      \alpha      &=a\cos^2\theta+b\cos\theta\sin\theta+c\sin^2\theta\cr
+      \beta       &=(a-c)\sin2\theta+b\cos2\theta\cr
+      \gamma      &=a\sin^2\theta-b\cos\theta\sin\theta+c\cos^2\theta\cr
+      \delta      &=d\cos\theta+e\cos\theta\cr
+      \varepsilon &=e\cos\theta-d\sin\theta\cr
+    \end{aligned}
+    \label{eq0301261557}
+  \]
+  Agora, nosso intento \'e que o termo misto se anule, para este fim devemos determinar $\theta$, tal que $\beta=0$.  Notavelmente, estamos estipulando {\it a priori} que $b\neq0$, pois do contr\'ario a rota\c c\~ao do sistema de coordenadas n\~ao teria des\'ignio algum. Em conformidade com esta estipula\c c\~ao e com as nota\c c\~oes anteriores segue-se o 
+  \begin{teo}
+    Seja $C$ uma c\^onica cujo o termo quadr\'atico misto do polin\^omio subjacente $g$ seja n\~ao nulo. Ent\~ao existe uma rota\c c\~ao $R_\theta$ de um \^angulo $\theta$, segundo a qual o termo quadr\'atico misto do polin\^omio subjacente $G=gR_\theta$ \'e nulo
+    \label{teo0301261705}
+  \end{teo}
+  \prova De (\ref{eq0301261557}) segue que 
+  \[
+    (a-c)\sin2\theta=b\cos2\theta
+    \label{eq0301261559}
+  \]
+  Da\'i vem necessariamente que $2\theta\neq n\pi$, para todo $n\in\Z$, consequentemente $\sin2\theta\neq0$. Com efeito, suponha que exista $n\in\Z$, tal que $2\theta=n\pi$, decorre de (\ref{eq0301261559}) que
+  \[
+    b=b\cos2\theta=(a-c)\sin2\theta=0,
+  \]
+  o que contradiz nossa suposi\c c\~ao. Portanto, podemos escrever
+  \[
+    \cot2\theta={\cos2\theta\over\sin2\theta}={a-c\over b}.
+    \label{eq0301261607}
+  \]
+  Conforme se sabe, $\cot$ tem restri\c c\~oes invers\'iveis em $\R\cp\pi\Z$. Se reduzirmos nossa escolha ao intervalo $[0,2\pi[$, temos duas solu\c c\~oes para (\ref{eq0301261607}), uma no semiciclo superior e a outra no semiciclo inferior.\qed
+
+  Escolhido $\theta$ conforme no \rf{Teorema}{teo0301261705}, temos de (\ref{eq0301261557}) e (\ref{eq0301261607}) que
+  \[
+    \alpha-\gamma=b\cot2\theta\cos2\theta+b\sin\theta={b\over\sin2\theta}.
+  \]
+  Em conson\^ancia com (\ref{eq0301261557}), podemos inferir
+  \[
+    \alpha={1\over2}\Bigl(a+c+{b\over2}\Bigr)\quad\hbox{e}\quad\gamma={1\over2}\Bigl(a+c-{b\over2}\Bigr)
+  \]
+  As identidades trigonom\'etricas 
+  \[
+    \begin{aligned}
+    \sin^22\theta &={1\over1+\cot^22\theta}\cr
+    \cos2\theta   &=\cot2\theta\sin2\theta \cr
+    \cos^2\theta  &={1+\cos2\theta\over2}  \cr
+    \sin^2\theta  &={1-\cos2\theta\over2}  \cr
+    \end{aligned}
+  \]
+  nos permitem determinar uma solu\c c\~ao do sistema
+  \[
+    \left\{\;
+    \begin{aligned}
+      \delta      &=d\cos\theta+e\sin\theta\cr
+      \varepsilon &=e\cos\theta-d\sin\theta\cr
+    \end{aligned}
+    \right.
+  \]
+
+  Em suma, o que podemos concluir \'e que dada uma c\^onica, podemos sempre supor sem perda de generalidade que o termo quadr\'atico misto do polin\^omio subjacente $g$ \'e nulo.
+  
+  
 
 
   \chapter{\'Algebra linear}
@@ -3849,7 +3922,11 @@
     }
   \end{enumerate}
 
+  \begin{thebibliography}{}
+    \bibitem{BoulosCamargo}
+    CAMARGO, IVAN DE; BOULOS, PAULO. {\it Geometria Anal\'itica}. 3ª ed. rev. e ampl. S\~ao~Paulo, 2005.
+  \end{thebibliography}
 
-  \printbibliography
+
 \enddoc
 
