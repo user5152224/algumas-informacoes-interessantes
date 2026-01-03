@@ -18,6 +18,10 @@
   xcolor,
 }
 
+%\usepackage[natbib=true,style=authoryear,backend=bibtex,useprefix=true]{biblatex}
+\usepackage{biblatex}
+\addbibresource{bibliografia.bib}
+
 \usepackage[brazil]{babel}
 
 % Espaçamento de letra para o cabeçalho dos capítulos
@@ -197,6 +201,8 @@
 \def\rf#1#2{{\rm\scshape\bfseries\hyperref[#2]{#1 \ref{#2}}}}
 \def\Cap{{\textstyle\bigcap}\,}
 \def\Cup{{\textstyle\bigcup}\,}
+%\def\ct#1{[\hyperref[cite.#1]{#1}]}
+
 
 \def\begdoc{\begin{document}}
 \def\enddoc{\end{document}}
@@ -3548,7 +3554,7 @@
     \begin{aligned}
       g(x,y)&=a(u+h)^2+b(u+h)(v+k)+c(v+k)^2+d(u+h)+e(v+h)+f\cr
             &=au^2+buv+cv^2+u(2ah+bk+d)+v(bh+2ck+e)\cr
-            &\qquad+ah^2+bhk+ck^2+dh+ek+f\cr
+            &\qquad+\underbrace{ah^2+bhk+ck^2+dh+ek+f}_{g(h,k)}\cr
             &=au^2+buv+cv^2+u(2ah+bk+d)+v(bh+2ck+e)+g(h,k)\cr
     \end{aligned}
   \]
@@ -3588,6 +3594,8 @@
   \'E sabido que o sistema (\ref{S2912252034}) admite uma \'unica solu\c c\~ao, i.e., \'e determinado, se, e somente se, $ac-b^2/4\neq0$. Caso contr\'ario, o sistema admite infinitas solu\c c\~oes, neste caso diz-se que ele \'e indetemindado, ou n\~ao admite solu\c c\~oes, i.e., \'e imposs\'ivel.
 
   Destarte, temos, um m\'etodo pragm\'atico para determinar se \'e poss\'ivel eliminar os termos lineares do polin\^omio $g$, a saber, se, e somente se, o sistema (\ref{S2912252034}) admite solu\c c\~oes.
+
+  A seguir est\'a provado que no caso do sistema (\ref{S2912252034}) admitir infinitas solu\c c\~oes, o termo independente de $g$ no novo sistema \'e inexor\'avel \`a escolha da solu\c c\~ao do sistema (\ref{S2912252034}).
 
 
   \begin{teo}[Exerc\'icio 23-10 {[Boulos e Camargo]}]
@@ -3841,5 +3849,7 @@
     }
   \end{enumerate}
 
+
+  \printbibliography
 \enddoc
 
