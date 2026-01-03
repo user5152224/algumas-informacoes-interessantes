@@ -225,11 +225,10 @@
 
 
 \begdoc
-  \tableofcontents
+  %\tableofcontents
 
   % Remover paginação da tabela de conteúdos
-  \addtocontents{toc}{\protect\thispagestyle{empty}}
-
+  %\addtocontents{toc}{\protect\thispagestyle{empty}}
 
   \pagestyle{est}
   
@@ -238,7 +237,7 @@
   
   \parte{Ci\^encias formais}
   
-  \iftrue % IGNORAR?
+  \iffalse % IGNORAR?
 
   \chapter{L\'ogica}
   Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
@@ -3516,7 +3515,7 @@
     \]
     Uma c\^onica $C$ \'e o locus (lugar geom\'etico) ou conjunto de pontos
     \[
-      C=\{(x,y):(x,y)\in\R^2\a g(x,y)=0\}.
+      C=\{(x,y):(x,y)\in\R^2\,\a\, g(x,y)=0\}.
     \]
     \label{def3012252158}
   \end{Def}
@@ -3525,6 +3524,16 @@
 
   % TODO: Completar e organizar esta seção.
   \subsection{Elimina\c c\~ao dos termos lineares por transla\c c\~oes}
+
+  Dado um ponto $\varOmega=(h,k)$ de $\R^2$ e um vetor arbit\'ario $(x,y)$, as coordenadas $(u,v)$ de $(x,y)$ relativo ao sistema cuja origem \'e $\varOmega$ s\~ao simplesmente dadas pela identidade
+  \[
+    (u,v)=(x,y)-(h,k).
+  \]
+  Em verdade, o sistema de coordenadas \'e a transforma\c c\~ao afim $T:\R^2\ra\R^2$, dada por
+  \[
+    T(v)=v-\varOmega.
+  \]
+  Em outros termos, estamos calculando as coordenadas dum ponto $v$ relativo a um sistema de coordenadas cuja a origem \'e precisamente $\varOmega$.
 
   \begin{teo}[Exerc\'icio 23-10 {[Boulos e Camargo]}]
   \end{teo}
