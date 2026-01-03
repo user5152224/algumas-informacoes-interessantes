@@ -3520,12 +3520,12 @@
     \label{def3012252158}
   \end{Def}
 
-  O objetivo das pr\'oximas se\c c\~oes \'e aplicar transforma\c c\~oes ao sistema de coordenadas, de tal maneira que a c\^onica seja facilmente reconhecida. Doravante, a menos da men\c c\~ao expl\'icita em contr\'ario, sempre quando referirmos a $g$, estaremos considerando um polin\^omio como estipulado na \rf{Defini\c c\~ao}{def3012252158}.
+  O objetivo das pr\'oximas se\c c\~oes \'e aplicar transforma\c c\~oes ao sistema de coordenadas, de tal maneira que a c\^onica seja facilmente reconhecida. Doravante, a menos que haja men\c c\~ao expl\'icita em contr\'ario, sempre quando referirmos a $g$, estaremos considerando um polin\^omio como estipulado na \rf{Defini\c c\~ao}{def3012252158}.
 
   % TODO: Completar e organizar esta seção.
   \subsection{Elimina\c c\~ao dos termos lineares por transla\c c\~oes}
 
-  Dado um ponto $\varOmega=(h,k)$ de $\R^2$ e um vetor arbit\'ario $(x,y)$, as coordenadas $(u,v)$ de $(x,y)$ relativo ao sistema cuja origem \'e $\varOmega$ s\~ao simplesmente dadas pela identidade
+  Dados pontos $\varOmega=(h,k)$ e $(x,y)$ de $\R^2$, as coordenadas $(u,v)$ de $(x,y)$ relativo ao sistema cuja origem \'e $\varOmega$, s\~ao simplesmente dadas pela identidade
   \[
     (u,v)=(x,y)-(h,k).
   \]
@@ -3535,48 +3535,84 @@
   \]
   Em outros termos, estamos calculando as coordenadas dum ponto $v$ relativo a um sistema de coordenadas cuja a origem \'e precisamente $\varOmega$.
 
-  A rela\c c\~ao das coordenadas $(u,v)$ do sistema transladado com as coordenadas do antigo \'e expressa pelo sistema
+  A rela\c c\~ao das coordenadas $(u,v)$ do sistema transladado segundo o sistema antigo \'e expressa pelo sistema
   \[
-    \left\{
+    \Biggl\{\,
     \begin{aligned}
       x&=u+h\cr
       y&=v+k\cr
     \end{aligned}
-    \right.
   \]
+  Em seguida, calculemos $g(x,y)=g(u+h,v+k)$. Conformemente,
+  \[
+    \begin{aligned}
+      g(x,y)&=a(u+h)^2+b(u+h)(v+k)+c(v+k)^2+d(u+h)+e(v+h)+f\cr
+            &=au^2+buv+cv^2+u(2ah+bk+d)+v(bh+2ck+e)\cr
+            &\qquad+ah^2+bhk+ck^2+dh+ek+f\cr
+            &=au^2+buv+cv^2+u(2ah+bk+d)+v(bh+2ck+e)+g(h,k)\cr
+    \end{aligned}
+  \]
+
+  Nosso objetivo \'e eliminar os termos lineares segundo $u$ e $v$. Para tanto, precisamos resolver o sistema
+
+  % TODO: Consertar.
+  \[
+    \Biggl\{\,
+    \begin{aligned}
+      2ah +bk + d &=0\cr
+      bh +2ck + e &=0\cr
+    \end{aligned}
+    \label{S0301261148}
+  \]
+  que por sua vez, \'e equivalente ao sistema
+  % TODO: Consertar.
+  \[
+    \left\{\,
+    \begin{aligned}
+               ah +{b\over2}k &=-{d\over2} \cr
+      {b\over 2}h +ck         &=-{e\over2} \cr
+    \end{aligned}
+    \right.
+    \label{S2912252034}
+  \]
+  Cuja solubilidade \'e atestada pelo determinante
+  \[
+    \left|\;\,
+    \begin{aligned}
+      a         &\;\;&{b\over 2} \cr
+      {b\over2} &\;\;&c          \cr
+    \end{aligned}
+    \;\,\right|
+    \;=\;ac-{b^2\over4}.
+  \]
+  \'E sabido que o sistema (\ref{S2912252034}) admite uma \'unica solu\c c\~ao, i.e., \'e determinado, se, e somente se, $ac-b^2/4\neq0$. Caso contr\'ario, o sistema admite infinitas solu\c c\~oes, neste caso diz-se que ele \'e indetemindado, ou n\~ao admite solu\c c\~oes, i.e., \'e imposs\'ivel.
+
+  Destarte, temos, um m\'etodo pragm\'atico para determinar se \'e poss\'ivel eliminar os termos lineares do polin\^omio $g$, a saber, se, e somente se, o sistema (\ref{S2912252034}) admite solu\c c\~oes.
 
 
   \begin{teo}[Exerc\'icio 23-10 {[Boulos e Camargo]}]
+    Se o sistema (\ref{S2912252034}) admite infinitas solu\c c\~oes, ent\~ao $g$ \'e constante no seu conjunto de solu\c c\~oes.
   \end{teo}
-  \prova Primeiramente consideremos o sistema
-
-  % TODO: Consertar esta matriz.
-  \[
-    \left\{
-    \begin{aligned}
-               ax +{b\over2}y + {d\over2} &=0\cr
-      {b\over 2}x +cy         + {e\over2} &=0\cr
-    \end{aligned}
-    \right.
-    \label{S291220252034}
-  \]
-
-  Sejam $(h,k)$ e $(u,v)$ solu\c c\~oes de do sistema (\ref{S291220252034}). Em verdade n\~ao \'e dif\'icil notar que $(h+k,u+v)$ tamb\'em o \'e, bastando para isto substituir as respectivas coordenadas no sistema (\ref{S291220252034}) e atestar as igualdades.
+  \prova Sejam $(h,k)$ e $(u,v)$ solu\c c\~oes do sistema (\ref{S2912252034}). Em verdade n\~ao \'e dif\'icil notar que $(h+k,u+v)$ tamb\'em o \'e, bastando para isto substituir as respectivas coordenadas do par no sistema (\ref{S2912252034}) e atestar as igualdades.
  
-  Notemos em seguida que qualquer solu\c c\~ao $(x,y)$ de (\ref{S291220252034}), satisfaz
+  Notemos em seguida que qualquer solu\c c\~ao $(x,y)$ de (\ref{S2912252034}), satisfaz
   \[
-    ax^2+bxy+cy^2+{d\over2}x+{e\over2}y=x(ax+{b\over2}y+{d\over2})+y({b\over2}x+cy+{e\over2})=0;
+    ax^2+bxy+cy^2+{d\over2}x+{e\over2}y=x\Bigl(ax+{b\over2}y+{d\over2}\Bigr)+y\Bigl({b\over2}x+cy+{e\over2}\Bigr)=0
     \label{eq2912252053}
   \]
-  al\'em disso, para uma tal solu\c c\~ao $(x,y)$, vale
+  e
   \[
-    g(x,y)={d\over2}x+{e\over2}y+f.
+    \begin{aligned}
+      g(x,y)&=ax^2+bxy+cy^2+dx+ey+f\cr
+            &=x\Bigl(ax+{b\over2}y+{d\over2}\Bigr)+y\Bigl({b\over2}x+cy+{e\over2}\Bigr)+{d\over2}x+{e\over2}y+f\cr
+            &={d\over2}x+{e\over2}y+f.
+    \end{aligned}
     \label{eq2912252123}
   \]
 
   Em conformidade, segue-se
   \[
-    2\Bigl(u\bigl(a(u+h)+{b\over 2}(k+v)+{d\over2}\bigr)+v\bigl({b\over 2}(u+h)+c(v+k)+{e\over2}\bigr)\Bigr)=0
+    2\Bigl[u\Bigl(a(u+h)+{b\over 2}(k+v)+{d\over2}\Bigr)+v\Bigl({b\over 2}(u+h)+c(v+k)+{e\over2}\Bigr)\Bigr]=0
     \label{eq2912252055}
   \]
 
@@ -3597,7 +3633,7 @@
             &=g(u,v)
     \end{split}
   \]
-  Em outros termos $g$ \'e constante nas solu\c c\~oes de (\ref{S291220252034}).\qed
+  Em outros termos $g$ \'e constante no conjunto de solu\c c\~oes do sistema (\ref{S2912252034}).\qed
 
   \subsection{Rota\c c\~oes de sistema de coordenadas}
 
