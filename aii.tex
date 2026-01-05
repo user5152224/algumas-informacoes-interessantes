@@ -73,6 +73,12 @@
 \titleformat{\section}{\centering\large\scshape}{\thesection}{1em}{}[]
 \titleformat{\subsection}{\centering\scshape}{\thesubsection}{1em}{}[]
 
+% Controle dos níveis chapter (1), section, subscetion e subsubsection.
+\setcounter{secnumdepth}{4}
+
+% Exibir a numeração do nível subsubsection na tabela de conteúdos
+\setcounter{tocdepth}{4}
+
 % Estilo dos cabeçalhos
 \def\sc{\MakeUppercase}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
@@ -3661,6 +3667,7 @@
 %  \[
 %    w=(u\cos\theta-v\sen\theta)+i(u\sen\theta+v\cos\theta).
 %  \]
+  \subsubsection{Rota\c c\~oes de sistemas de coordenadas}
   Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico \'e dado pela identidade
   \[
     \begin{bmatrix}
