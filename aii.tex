@@ -260,7 +260,7 @@
   
   \parte{Ci\^encias formais}
   
-  \iftrue % IGNORAR?
+  \iffalse % IGNORAR?
 
   \chapter{L\'ogica}
   Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
@@ -3669,6 +3669,42 @@
 %    w=(u\cos\theta-v\sen\theta)+i(u\sen\theta+v\cos\theta).
 %  \]
   \subsubsection{Rota\c c\~oes de sistemas de coordenadas}
+  Consideremos um sistema de coordenadas cartesianas e um sistema cujos eixos sejam obtidos do primeiro por uma rota\c c\~ao dum \^angulo $\theta$ no setido anti-hor\'ario em rela\c c\~ao ao eixo das abscissas. 
+
+  \begin{figure}[!h]
+    \caption{Rota\c c\~ao dum sistema de coordenadas cartesiano por um \^angulo $\theta$.}
+  \end{figure}
+
+  Consideremos um ponto $w=(u,v)_\theta$ cujas coordenadas s\~ao dadas em rela\c c\~ao ao sistema rotacionado. Nosso objetivo \'e determinar as coordenadas de $w$ relativo ao primeiro sistema. A t\'itulo de exemplo, usaremos um m\'etodo geom\'etrico para um caso particular, que pode ser adaptado aos outros casos.
+
+  Observemos, pois, a figura seguinte
+
+  \begin{figure}[!h]
+    \caption{Rota\c c\~ao dum sistema de coordenadas cartesiano por um \^angulo $\theta$.}
+  \end{figure}
+
+  Em conformidade com a figura estamos supondo que $\theta\in\,]0,\pi/2[$. Uma an\'alise geom\'etrica nos forne\c ce o seguinte sistema
+  \[
+    \left\{\;
+    \begin{aligned}
+      u&={x\over\cos\theta}+v\tan\theta\cr
+      y&={v\over\cos\theta}+x\tan\theta\cr
+    \end{aligned}
+    \right.
+    \label{S0501261935}
+  \]
+  Donde, multiplicando a primeira por $\cos\theta$, obtemos
+  \[
+    x=u\cos\theta-v\sin\theta,
+  \]
+  Substituindo $x$ na segunda equa\c c\~ao de (\ref{S0501261935}), deduz-se
+  \[
+    \begin{aligned}
+      y&={v\over\cos\theta}+\tan\theta(u\cos\theta-v\sin\theta)\cr
+       &={v\over\cos\theta}+u\sin\theta+{v\sin^2\theta\over\cos\theta}\cr
+       &=u\sin\theta+v\cos\theta.
+    \end{aligned}
+  \]
   Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico \'e dado pela identidade
   \[
     \begin{bmatrix}
