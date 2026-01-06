@@ -260,7 +260,7 @@
   
   \parte{Ci\^encias formais}
   
-  \iffalse % IGNORAR?
+  \iftrue % IGNORAR?
 
   \chapter{L\'ogica}
   Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
@@ -740,7 +740,7 @@
   o que \'e uma inconsist\^encia, i.e., uma contradi\c c\~ao. Logo, $\neg\varsigma(\mathcal{R})$. Ademais, da pr\'opria defini\c c\~ao de classificadores $\mathcal{R}\subset\U$, como $\mathcal{R}$ \'e uma classe pr\'opria, necessariamente $\U$ tamb\'em o ser\'a. Com efeito, suponha por {\it reductio ad absurdum} que $\varsigma(\U)$, pelo \rf{Teorema}{T33}, inferir\'iamos que $\varsigma(\mathcal{R})$, o que \'e uma contradi\c c\~ao com o argumento anterior.\qed
 
   \begin{teo}[Defini\c c\~ao por indu\c c\~ao]
-    Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\bigcup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.
+    Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\Cup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.
   \end{teo}
   \prova
   Primeiramente, para cada $p\in\omega$, definamos
@@ -753,14 +753,16 @@
   \]
   Primeiro, considere $g\in X^{2}$, tal que $g(0)=a$ e $g(1)=F(g|_1)$. Naturalmente se $\gamma\in{\mathfrak F}_0$, ent\~ao $\gamma(0)=a=g(0)$, logo, $\gamma|_1=g|_1$ e consequentemente $\gamma(1)=F(\gamma|_1)=F(g|_1)=g(1)$, o que prova que $0\in C$. Em seguida, suponhamos que $p\in\omega$, segue que existe uma \'unica $h\in{\mathfrak F}_p$, defina $g\in X^{p+3}$, tal que $g|_{p+2}=h$ e $g(p+2)=F(g|_{p+2})$. Seja agora $\gamma\in{\frak F}_{p+1}$, pela unicidade de $h$ segue-se que $\gamma|_{p+2}=h=g|_{p+2}$, por conseguinte $\gamma(p+2)=F(h)=g(p+2)$, que por sua vez, acarreta $\gamma=g$, o que prova a unicidade de $g$. Destarte, $p+1\in C$. Como $\omega$ \'e o conjunto sucessor (indutivo) minimal segue-se que $C=\omega$. 
 
-  Em verdade provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\bigcup_{p\in\omega} f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Agora seja $p\in\omega$, notemos que $f|_{p+2}=f_p$, consequentemente $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, portanto $f$ satisfaz as hip\'oteses do teorema, i.e., provamos a exist\^encia. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema, temos que para todo $p\in\omega$, vale $f|_{p+2},\phi|_{p+2}\in{\frak F}_p$, por conseguinte $f|_{p+2}=f_p=\phi|_{p+2}$, que por sua vez implica que $f=\phi$, pois $p\in\omega$ \'e arbitr\'ario, provando portanto a unicidade de $f$.\qed
+  Em verdade provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\Cup_{p\in\omega} f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Agora seja $p\in\omega$, notemos que $f|_{p+2}=f_p$, consequentemente $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, portanto $f$ satisfaz as hip\'oteses do teorema, i.e., provamos a exist\^encia. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema, temos que para todo $p\in\omega$, vale $f|_{p+2},\phi|_{p+2}\in{\frak F}_p$, por conseguinte $f|_{p+2}=f_p=\phi|_{p+2}$, que por sua vez implica que $f=\phi$, pois $p\in\omega$ \'e arbitr\'ario, provando portanto a unicidade de $f$.\qed
   
   \vfill\break
 
-
-  \theorem{\ (Bernstein-Cantor-Schr\"oder)}{Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.}
+  % TODO: Dá para melhorar?
+  \begin{teo}[Bernstein-Cantor-Schr\"oder {[Revisar]}]
+  Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.
+  \end{teo}
   
-  \proof Supomos que $f(X)\subset Y$ e $g(Y)\subset X$ (aqui $\subset$ \'e a inclus\~ao pr\'opria). Destas inclus\~oes deriva-se facilmente a proposi\c c\~ao
+  \prova Supomos que $f(X)\subset Y$ e $g(Y)\subset X$ (aqui $\subset$ \'e a inclus\~ao pr\'opria). Destas inclus\~oes deriva-se facilmente a proposi\c c\~ao
   $$
     (\Delta)\qquad\forall i\Bigl(i\in N\longrightarrow(g\!f)^i(X)\supset(g\!f)^i\bigl(g(Y)\bigr)\supset(g\!f)^{i+1}(X)\Bigr).
   $$
@@ -778,7 +780,7 @@
   
   Definamos
   $$
-    A=\bigcap_{i\in N}A_i,\quad C=\bigcup_{i\in N}C_i\quad e\quad D=\bigcup_{i\in N}D_i.
+    A=\Cap_{i\in N}A_i,\quad C=\Cup_{i\in N}C_i\quad e\quad D=\Cup_{i\in N}D_i.
   $$
   Estes s\~ao disjuntos aos pares. De fato, inicialmente provemos que $C\cap D=\emptyset$. Note que
   $$
@@ -819,7 +821,7 @@
   $$
   em que
   $$
-    B=\bigcap_{i\in N}B_i,\quad E=\bigcup_{i\in N}E_i\quad e\quad F=\bigcup_{i\in N}F_i.
+    B=\Cap_{i\in N}B_i,\quad E=\Cup_{i\in N}E_i\quad e\quad F=\Cup_{i\in N}F_i.
   $$
   Em verdade, basta trocar os pap\'eis de $f$ com $g$ e $X$ com $Y$, concomitamente.
   
@@ -894,15 +896,13 @@
   \bigskip
   
   \medskip
-  \lemma{}{\sl%
-    Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existe um conjunto $A\subseteq X$, tal que
-    $$
-      X\setminus A=g\bigl(Y\setminus f(A)\bigr).
-    $$
-  }
+
+  % TODO: Prova?
+  \begin{teo}[Exerc\'icio - \ct{HalmosNaive}]
+    Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existem subconjuntos $A\subset X$ e $B\subset Y$, tais que $f(A)=B$ e $X\cp A=g(Y\cp B)$.
+  \end{teo}
+  \prova ?\qed
   
-  
-  \noindent{\it Prova alternativa do teorema.\ } Existe uma sugest\~ao dada pelo Halmos que embora esteja errada, ela me sujeriu um processo simples de demonstra\c c\~ao. Apesar de tudo, n\~ao consegui determinar quais propriedades m\'\i nimas $f$ e $g$ devem possuir para garantir o resultado auxiliar. Em vista desse impasse, nos ateremos ao caso em que ambas $f$ e $g$ sejam injetivas.
   
   \bigskip
   
@@ -1030,8 +1030,11 @@
   
   \bigskip
   
-  \theorem{\ (\'Algebra de Boole dada no livro de Hewitt~e Stromberg {\it Real and Abstract Analysis}) [Huntington]}{\sl Seja $B$ um conjunto munido com uma opera\c c\~ao bin\'aria $\cup$ e uma opera\c c\~ao un\'aria $'$ satisfazendo os seguintes axiomas:
+  % TODO: Completar? Citar refer\^encia do artigo.
+  \begin{teo}[Huntington]
+    Seja $B$ um conjunto munido com uma opera\c c\~ao bin\'aria $\cup$ e uma opera\c c\~ao un\'aria $'$ satisfazendo os seguintes axiomas
     \medskip
+    % TODO: Usar enumerate.
     \halign{
       \qquad\rm# & \rm#\hfill & \rm\quad#\hfill \cr
       a) & $a',a\cup b\in B$                & ({\it Estabilidade de $'$ e $\cup$}); \cr
@@ -1041,103 +1044,41 @@
       e) & $a'=(a'\cup b')'\cup(a'\cup b)'$ & ({\it Caracteriza\c c\~ao de $'$}).   \cr
     }
     \medskip
-    Ent\~ao $\langle B,\cup,'\rangle$ \'e uma \'algebra de Boole. Tais axiomas $($ou postulados\/$)$ s\~ao conhecidos como postulados de Huntington.
-  }
+    Ent\~ao $(B,\cup,')$ \'e uma \'algebra de Boole.
+  \end{teo}
   
-  Resumo das propriedades encontradas at\'e ent\~ao:
+  %Resumo das propriedades encontradas at\'e ent\~ao:
+  %
+  %Sejam $a,b\in B$, temos
+  %$$
+  %  \vbox{
+  %    \halign{
+  %      # & #\cr
+  %      $a\cup a'$ & $=\bigl((a'\cup b'')'\cup(a'\cup b')'\bigr)\cup\bigl((a''\cup b'')'\cup(a''\cup b')'\bigr)$\hfill\cr 
+  %      \omit      & $=\bigl((b'\cup a'')'\cup(b'\cup a')'\bigr)\cup\bigl((b''\cup a'')'\cup(b''\cup a')'\bigr)$\hfill\cr 
+  %      \omit      & $=b\cup b'$\hfill                                                                           \cr
+  %    }
+  %  }
+  %$$
+  %
+  %Do resultado anterior trocando $a$ e $b$, por $a'$ e $a''$ respectivamente, obtemos $a'\cup a''=a''\cup a'''$, para todo $a\in B$, {\it a fortiori} para todo $a\in B$, vale
+  %$$
+  %  a''=(a'''\cup a'')'\cup(a'''\cup a')'=(a'\cup a'')'\cup(a'\cup a''')'=a.
+  %$$
   
-  Sejam $a,b\in B$, temos
-  $$
-    \vbox{
-      \halign{
-        # & #\cr
-        $a\cup a'$ & $=\bigl((a'\cup b'')'\cup(a'\cup b')'\bigr)\cup\bigl((a''\cup b'')'\cup(a''\cup b')'\bigr)$\hfill\cr 
-        \omit      & $=\bigl((b'\cup a'')'\cup(b'\cup a')'\bigr)\cup\bigl((b''\cup a'')'\cup(b''\cup a')'\bigr)$\hfill\cr 
-        \omit      & $=b\cup b'$\hfill                                                                           \cr
-      }
-    }
-  $$
+  \begin{Def}
+    Um conjunto ordenado $S$ \'e dito ter a propriedade da menor cota superior se, para todo conjunto n\~ao vazio $E$ limitado superiormente admite a menor das cotas superiores de $E$, denotada por $\sup E$.
+  \end{Def}
   
-  Do resultado anterior trocando $a$ e $b$, por $a'$ e $a''$ respectivamente, obtemos $a'\cup a''=a''\cup a'''$, para todo $a\in B$, {\it a fortiori} para todo $a\in B$, vale
-  $$
-    a''=(a'''\cup a'')'\cup(a'''\cup a')'=(a'\cup a'')'\cup(a'\cup a''')'=a.
-  $$
+  \begin{teo}
+    Todo conjunto ordenado que tem a propriedade da menor cota superior tem a propriedade da maior cota superior.
+  \end{teo}
   
-  \noindent{\bf Defini\c c\~ao.}\ Um conjunto ordenado $S$ \'e dito ter a propriedade da menor cota superior se, para todo conjunto n\~ao vazio $E$ limitado superiormente admite a menor das cotas superiores de $E$, denotada por $\sup E$.
+  \prova Sejam $E\subseteq S$, n\~ao vazio limitado inferiormente e $L$ o cojunto das cotas inferiores de $E$ que, como sabemos \'e n\~ao vazio, pois $E$ \'e limitado inferiormente. Em vista da hip\'otese de $S$ ter a propriedade da menor cota superior existe $\sup L$. Seja agora $\gamma>\sup L$. Ent\~ao $\gamma$ n\~ao \'e cota inferior de $E$, pois do contr\'ario $\gamma\leq\sup L$, desta forma $\sup L$ \'e a maior das cotas inferiores de $E$, como consequencia $\inf E=\sup L$. Fica, portanto, completa a prova do teorema.\qed 
   
-  \theorem{} Todo conjunto ordenado que tem a propriedade da menor cota superior tem a propriedade da maior cota superior.
-  
-  \proof Sejam $E\subseteq S$, n\~ao vazio limitado inferiormente e $L$ o cojunto das cotas inferiores de $E$ que, como sabemos \'e n\~ao vazio, pois $E$ \'e limitado inferiormente. Em vista da hip\'otese de $S$ ter a propriedade da menor cota superior existe $\sup L$. Seja agora $\gamma>\sup L$. Ent\~ao $\gamma$ n\~ao \'e cota inferior de $E$, pois do contr\'ario $\gamma\leq\sup L$, desta forma $\sup L$ \'e a maior das cotas inferiores de $E$, como consequencia $\inf E=\sup L$. Fica, portanto, completa a prova do teorema.\qed 
-  
-  \theorem{}{\sl\ Sejam $x,y\in \R$.
-  
-    a) Se $x>0$, ent\~ao existe $m\in Z$, tal que $mx>y$;
-    
-    b) Existe $q\in Q$ tal que $x<q<y$.
-  }
-  
-  \proof 
-  a) Suponhamos que a implica\c c\~ao \'e falsa, ent\~ao existe $x>0$, tal que para todo $m\in Z$ vale $mx\leq y$.
-  
-  Particularmente, $x/y>0$, pois $x,y>0$. Da\'\i\ vem que o conjunto $M=\{m(x/y)\in \R:m\in Z\}$ \'e limitado superiormente por $1$, como aquele \'e n\~ao vazio, decorre da propriedade da menor cota superior de $\R$ que existe $\varsigma=\sup M$. Temos, portanto, que para todo $m\in Z$ vale 
-  $$
-    (m+1)\bigl({x\over y}\bigr)\leq\varsigma
-  $$
-  como consequ\^encia para todo $m\in Z$ vale
-  $$
-    m({x\over y})\leq\varsigma-{x\over y}<\varsigma,
-  $$
-  i.e., $\varsigma-x/y$ \'e uma cota superior de $M$ o que contradiz a minimalidade de $\varsigma$.
-  
-  b) Primeiro, provaremos a seguinte
-  
-  \noindent{\bf Afirma\c c\~ao.}\ {\sl
-    Para todo $\varrho\in \R$, existe um \'unico inteiro $m$, tal que $m\leq\varrho<m+1$.
-  } 
-  
-  \proof Suponha o contr\'ario que para todo $m\in Z$, se $m\leq\varrho$, ent\~ao $m+1\leq\varrho$, note que esta \'ultima condicional \'e equivalente a $\neg(m\leq\varrho<m+1)$. Mas, isto implica por indu\c c\~ao matem\'atica que para todo $m\in N$ vale $m\leq\varrho$, o que contradiz o item a). Conformemente esta contradi\c c\~ao nos leva a concluir de que nossa suposi\c c\~ao inicial est\'a incorreta, provando portanto a exist\^encia. 
-  
-  Sejam $m_i$ $(i=1,2)$, tais que $m_i\leq\varrho<m_i+1$, da totalidade da ordem $<$ em $\R$ e supondo por redu\c c\~ao ao absurdo que $m_1\neq m_2$, podemos supor sem perda de generalidade que $m_1<m_2$. Da\'\i, decorre imediatamente que $m_1+1\leq m_2$, pois suponha por redu\c c\~ao ao absurdo que $m_1+1>m_2$, ter\'\i amos
-  $$
-    0<m_2-m_1<1
-  $$
-  o que \'e um absurdo, pois $m_2-m_1\in Z$ e n\~ao existe inteiro entre $0$ e $1$. Por maior raz\~ao $m_1+1\leq m_2$, mas isto por sua vez acarreta que
-  $$
-    \varrho<m_1+1\leq m_2\leq \varrho
-  $$
-  um outro absurdo. Estas contradi\c c\~oes nos levam a concluir que a nossa suposi\c c\~ao $m_1\neq m_2$, \'e uma suposi\c c\~ao inver\'\i dica. Destarte fica provada a unicidade.\Qed
-  
-  Da\'\i\ podemos inferir que dado $\varrho\in \R$, tomando $m$ satisfazendo a afirma\c c\~ao anterior, decorre necessariamente que $m+1\leq\varrho+1$, pois suponha o contr\'ario, i.e., que $m+1>\varrho+1$, disto decorre que
-  $$
-    1=(\varrho+1)-\varrho<(m+1)-m=1
-  $$
-  um absurdo. Concluimos, portanto, que $m+1\in(\varrho,\varrho+1]$, provamos portanto a
-  \medskip
-  \noindent{\bf Afirma\c c\~ao.}\ {\sl
-    Para todo $\varrho\in \R$, existe um inteiro $m$, tal que $m\in(\varrho,\varrho+1]$.
-  }\Qed 
-  
-  Consequentemente, usando o item a) existe $n\in N$, tal que $(y-x)n>1$ e da afirma\c c\~ao imediatamente anterior existe $m\in(nx,nx+1]$, assim vale
-  $$
-    nx<m\leq nx+1<ny,
-  $$
-  logo, fazendo $q=m/n$, temos da cadeia anterior que $x<q<y$, concluindo portanto a prova do item b).\qed
-  
-  Vale tamb\'em a
-  \medskip
-  \noindent{\bf Afirma\c c\~ao.\ }{\sl Sejam $\varrho\in \R$, $n\leq\varrho$ e $m\in Z$, tal que $m\leq\varrho<m+1$. Ent\~ao $n\leq m$.
-  }
-  \medskip
-  
-  \proof Ora, se $n>m$, ent\~ao $n\geq m+1$, da\'\i\ vem
-  $$
-    \varrho<m+1\leq n\leq\varrho
-  $$
-  uma contradi\c c\~ao.\qed
-  
-  Podemos inferir da\'\i\ que $m$ com aquela propriedade \'e o maior inteiro tal que $m\leq\varrho$.
-  
-  \theorem{\ (Digress\~ao relativa \`a representa\c c\~ao decimal de um n\'umero real)}{\sl Seja $\varrho\in \R_+^*$, escolhamos $n_0\in N$, tal que
+  % TODO: Melhorar.
+  \begin{teo}[Expans\~oes $b$-\'adicas]
+    Seja $\varrho\in\;]0,\infty[$, escolhamos $n_0\in N$, tal que
     $$
       n_0\leq\varrho<n_0+1.
     $$
@@ -1154,7 +1095,7 @@
       A=\{\alpha_k:k\in N\}.
     $$
     Ent\~ao nestas condi\c c\~oes $\varrho=\sup A$.
-  }
+  \end{teo}
   
   \proof De $(\Delta)$ segue necessariamente que 
   $$
@@ -1544,7 +1485,7 @@
   \begin{Def}
     Seja $\K$ um corpo com unidade $1_\K$ e zero $0_\K$. Definimos a caracter\'istica de $\K$ por 
     \[
-      X(\K)=\bigcap\{n:n\in\omega\cp\{0\}\a n^*=0_\K\}.
+      X(\K)=\Cap\{n:n\in\omega\cp\{0\}\a n^*=0_\K\}.
       \label{corpo_carac}
     \]
     Observe que $X(\K)$ \'e sempre um n\'umero natural, podendo inclusive ser $0=\emptyset$.
@@ -2180,7 +2121,7 @@
      ent\~ao A1--A4 s\~ao satisfeitas, mas A5 falha.
   }
   
-  \proof Seja $S\subseteq R$ um conjunto n\~ao vazio limitado superiormente, fa\c ca\-mos $\varsigma=\bigcup S$, provemos que $\varsigma$ \'e a menor das cotas superiores de $S$. Com efeito, primeiro provemos que $\varsigma$ satisfaz I e II. De fato, sabendo que $S\neq\emptyset$, existe $\alpha\subset\varsigma$ tal que $\alpha\neq\emptyset$, em consequ\^encia $\varsigma\neq\emptyset$. Seja $\beta$ uma cota superior de $S$ que \'e garantida das hip\'oteses. Dado $\alpha\in S$, inferimos que $\alpha\subseteq\beta$, desta maneira $\varsigma\subseteq\beta$. Assim, basta notar $Q\setminus\varsigma\supseteq Q\setminus\beta\neq\emptyset$, em outros termos $\varsigma\neq Q$, logo vale I. Seja agora, $p\in\varsigma$ e $q\in Q$ com $q<p$, segue que existe $\alpha\in S$, tal que $p\in\alpha$, como este \'ultimo \'e um corte $q\in\alpha$, como $\alpha\subseteq\varsigma$, segue que $q\in\varsigma$, fica portanto provada II. Como $\varsigma$ esta contida em toda cota superior de $S$, decorre que $\sup S=\varsigma$. Consequentemente $R$ tem a propriedade da menor cota superior.
+  \proof Seja $S\subseteq R$ um conjunto n\~ao vazio limitado superiormente, fa\c ca\-mos $\varsigma=\Cup S$, provemos que $\varsigma$ \'e a menor das cotas superiores de $S$. Com efeito, primeiro provemos que $\varsigma$ satisfaz I e II. De fato, sabendo que $S\neq\emptyset$, existe $\alpha\subset\varsigma$ tal que $\alpha\neq\emptyset$, em consequ\^encia $\varsigma\neq\emptyset$. Seja $\beta$ uma cota superior de $S$ que \'e garantida das hip\'oteses. Dado $\alpha\in S$, inferimos que $\alpha\subseteq\beta$, desta maneira $\varsigma\subseteq\beta$. Assim, basta notar $Q\setminus\varsigma\supseteq Q\setminus\beta\neq\emptyset$, em outros termos $\varsigma\neq Q$, logo vale I. Seja agora, $p\in\varsigma$ e $q\in Q$ com $q<p$, segue que existe $\alpha\in S$, tal que $p\in\alpha$, como este \'ultimo \'e um corte $q\in\alpha$, como $\alpha\subseteq\varsigma$, segue que $q\in\varsigma$, fica portanto provada II. Como $\varsigma$ esta contida em toda cota superior de $S$, decorre que $\sup S=\varsigma$. Consequentemente $R$ tem a propriedade da menor cota superior.
   
   Dados $\alpha,\beta\neq\emptyset$, necessariamente $\alpha+\beta\neq\emptyset$. Agora se $r\notin\alpha$ e $s\notin\beta$, ent\~ao $r+s$ majora estritamente todo elemento de $\alpha+\beta$, consequentemente $r+s\notin\alpha+\beta$, e portanto $\alpha+\beta\neq Q$, fica provadado portanto que a soma satisfaz I. Sejam agora $r\in\alpha+\beta$ e $s\in Q$ com $s<r$, segue que existe $(p,q)\in\alpha\times\beta$, tal que $r=p+q$. Assim, $s<p+q$, logo $s-p<q$, isto \'e, $s-p\in\beta$, da\'\i\ vem que 
   $$ 
@@ -2399,17 +2340,17 @@
   
   \corollary{}{\sl Uma reuni\~ao de uma fam\'ilia cont\'avel com membros cont\'aveis \'e cont\'avel.}
   
-  \proof Podemos supor que nossa fam\'ilia \'e $\{E_n:n\in\omega\}$, para cada $n$ existe uma fun\c c\~ao $f_n:\omega\rightarrow E_n$. Agora basta definirmos $f:\omega\times\omega\rightarrow U$, por $f(m,n)=f_m(n)$, com $U=\bigcup_{n\in\omega}E_n$. Como $f\circ\phi^{-1}:\omega\rightarrow U$ ($\phi$ dada no teorema anterior) \'e sobrejetiva e $U$ infinito, ent\~ao $U$ \'e cont\'avel.
+  \proof Podemos supor que nossa fam\'ilia \'e $\{E_n:n\in\omega\}$, para cada $n$ existe uma fun\c c\~ao $f_n:\omega\rightarrow E_n$. Agora basta definirmos $f:\omega\times\omega\rightarrow U$, por $f(m,n)=f_m(n)$, com $U=\Cup_{n\in\omega}E_n$. Como $f\circ\phi^{-1}:\omega\rightarrow U$ ($\phi$ dada no teorema anterior) \'e sobrejetiva e $U$ infinito, ent\~ao $U$ \'e cont\'avel.
   
   \theorem{}{\sl%
-    Seja $\mathscr A$ uma cole\c c\~ao no m\'aximo cont\'avel de membros no m\'aximo cont\'aveis. Ent\~ao $\bigcup\mathscr A$ \'e no m\'aximo cont\'avel.
+    Seja $\mathscr A$ uma cole\c c\~ao no m\'aximo cont\'avel de membros no m\'aximo cont\'aveis. Ent\~ao $\Cup\mathscr A$ \'e no m\'aximo cont\'avel.
   }
   
-  \proof Das hip\'oteses existe $I\in\omega\cup\{\omega\}$ e uma bije\c c\~ao $\kappa:I\rightarrow\mathscr A$, digamos que $A_i=\kappa(i)$. Para cada $i\in I$, existe uma bije\c c\~ao $f_i:B_i\rightarrow A_i$, com $B_i\in\omega\cup\{\omega\}$. Definamos $f\subseteq(\omega\times\omega)\times A$, com $A=\bigcup\mathscr A$ por
+  \proof Das hip\'oteses existe $I\in\omega\cup\{\omega\}$ e uma bije\c c\~ao $\kappa:I\rightarrow\mathscr A$, digamos que $A_i=\kappa(i)$. Para cada $i\in I$, existe uma bije\c c\~ao $f_i:B_i\rightarrow A_i$, com $B_i\in\omega\cup\{\omega\}$. Definamos $f\subseteq(\omega\times\omega)\times A$, com $A=\Cup\mathscr A$ por
   $$
     ((m,n),a)\in f\leftrightarrow a=f_m(n)
   $$
-  Ent\~ao $f$ \'e uma fun\c c\~ao. De fato, suponhamos que $((m,n),a),((m,n),b)\in f$, ent\~ao da defini\c c\~ao $a=f_m(n)=b$. Assim, $f:\hbox{dom}\,f\rightarrow A$, \'e uma sobreje\c c\~ao. Em verdade, dado $a\in A$, existe $i\in I$, tal que $a\in A_i$, como $f_i$ \'e uma bije\c c\~ao existe $m\in B_i$, tal que $f_i(m)=a$, consequentemente $f(i,m)=a$. Usando o axioma da escolha podemos construir um conjunto $C\subseteq\omega\times\omega$ tal que $f|_C:C\rightarrow A$ \'e uma bije\c c\~ao. Como todo conjunto de $\omega\times\omega$ \'e no m\'aximo cont\'avel decorrer\'a por maior raz\~ao que $A=\bigcup\mathscr A$ tamb\'em o ser\'a.
+  Ent\~ao $f$ \'e uma fun\c c\~ao. De fato, suponhamos que $((m,n),a),((m,n),b)\in f$, ent\~ao da defini\c c\~ao $a=f_m(n)=b$. Assim, $f:\hbox{dom}\,f\rightarrow A$, \'e uma sobreje\c c\~ao. Em verdade, dado $a\in A$, existe $i\in I$, tal que $a\in A_i$, como $f_i$ \'e uma bije\c c\~ao existe $m\in B_i$, tal que $f_i(m)=a$, consequentemente $f(i,m)=a$. Usando o axioma da escolha podemos construir um conjunto $C\subseteq\omega\times\omega$ tal que $f|_C:C\rightarrow A$ \'e uma bije\c c\~ao. Como todo conjunto de $\omega\times\omega$ \'e no m\'aximo cont\'avel decorrer\'a por maior raz\~ao que $A=\Cup\mathscr A$ tamb\'em o ser\'a.
 
   \chapter{An\'alise matem\'atica}
   
@@ -2643,7 +2584,7 @@
     Seja $f:X\rightarrow Y$, cont\'inua, $X$ compacto e $Y$ munido da topologia ordem. Ent\~ao existem $a,b$, tais que, se $x\in X$, ent\~ao $f(a)\leq f(x)\leq f(b)$.
   }
   
-  \proof O caminho para a prova deste teorema \'e {\it reductio ad absurdum}. Suponha por absurdo que n\~ao existam $a$ e $b$, com tais propriedades, construamos $\mathscr{C}=\{]f(x),f(y)[\;\in2^Y:x,y\in X\}$. Afirmamos que, $\mathscr{C}$ \'e uma cobertura aberta de $f(X)$. Com efeito, seja $f(z)\in Y$, como n\~ao existe um menor elemento em $f(X)$, segue que existe $x\in X$, tal que $f(x)<f(z)$. Analogamente como $f(z)$ n\~ao pode ser o maior elemento de $f(X)$, existe $y\in X$ tal que $f(z)<f(y)$. Portanto, $f(X)\subseteq\bigcup\mathscr{C}$, como afirmamos. Da premisa que $X$ \'e compacto e $f$ cont\'inua, decorre que $f(X)$ \'e compacto, consequentemente existe uma subcobertura finita de $\mathscr{C}$, digamos, $\mathscr{D}=\{]f(x_i),f(y_i)[\;\in2^X:i\in n\}$  com $n\in\omega$. Em virtude, da ordem em $Y$ ser linear existem $i,j\in n$, tais que $f(X)=\bigcup\mathscr{D}=\;]f(x_i),f(y_j)[$, mas isto acarretaria $f(x_i),f(y_j)\notin f(X)$, o que \'e uma contradi\c c\~ao. Esta contradi\c c\~ao foi obtida supondo-se que n\~ao existiam $a$ e $b$ com aquelas propriedades. Desta contradi\c c\~ao a condicional \'e necessariamente verdadeira, pois sua nega\c c\~ao acarreta num absurdo.\qed
+  \proof O caminho para a prova deste teorema \'e {\it reductio ad absurdum}. Suponha por absurdo que n\~ao existam $a$ e $b$, com tais propriedades, construamos $\mathscr{C}=\{]f(x),f(y)[\;\in2^Y:x,y\in X\}$. Afirmamos que, $\mathscr{C}$ \'e uma cobertura aberta de $f(X)$. Com efeito, seja $f(z)\in Y$, como n\~ao existe um menor elemento em $f(X)$, segue que existe $x\in X$, tal que $f(x)<f(z)$. Analogamente como $f(z)$ n\~ao pode ser o maior elemento de $f(X)$, existe $y\in X$ tal que $f(z)<f(y)$. Portanto, $f(X)\subseteq\Cup\mathscr{C}$, como afirmamos. Da premisa que $X$ \'e compacto e $f$ cont\'inua, decorre que $f(X)$ \'e compacto, consequentemente existe uma subcobertura finita de $\mathscr{C}$, digamos, $\mathscr{D}=\{]f(x_i),f(y_i)[\;\in2^X:i\in n\}$  com $n\in\omega$. Em virtude, da ordem em $Y$ ser linear existem $i,j\in n$, tais que $f(X)=\Cup\mathscr{D}=\;]f(x_i),f(y_j)[$, mas isto acarretaria $f(x_i),f(y_j)\notin f(X)$, o que \'e uma contradi\c c\~ao. Esta contradi\c c\~ao foi obtida supondo-se que n\~ao existiam $a$ e $b$ com aquelas propriedades. Desta contradi\c c\~ao a condicional \'e necessariamente verdadeira, pois sua nega\c c\~ao acarreta num absurdo.\qed
   
   \begin{exe}[Fun\c c\~ao que satisfaz o teorema do valor intermedi\'ario, mas n\~ao \'e cont\'inua]
     Considere $f:[0,1]\ra \R$, dada por $f=\iota\chi_{]0,1[}+(1-\iota)\chi_{\{0,1\}}$[\footnote{Aqui, $\chi$ \'e a fun\c c\~ao caracter\'istica e $\iota$ a identidade.}.
@@ -2677,7 +2618,7 @@
     
       Seja $\{r_n\}$ uma subsequ\^encia da sequ\^encia das somas parciais $\{s_n\}$ da s\'erie constru\'ida no teorema. Ent\~ao, para todo $n\in\omega$, $A_n=\{p\in\omega:y_p\le r_n\le x_p\}\neq\emptyset$. Com efeito, o \'ultimo termo de $r_n$ \'e da forma $-Q_k$ ou $P_m$, isto, \'e evidente da pr\'opria constru\c c\~ao da soma, pois seus termos s\~ao de tais formas. Evidentemente, como o n\'umero de termos de $r_n$ cresce, necessariamente $k$ e $m$ crescem. Observe que $\{k_n\}$ \'e uma sequ\^encia estritamente crescente, o mesmo ocorre com $\{m_n\}$, para facilitar meu argumento, suponha que $m_0=k_0=0$. Suponhamos, que o \'ultimo termo de $r_n$ seja $-Q_{k}$, certamente $k\in(k_{i_n-1},k_{i_n}]\cap\omega$ para algum $i_n\in\omega$, pois
     $$
-      \omega\setminus\{0\}=\omega\cap\bigcup_{n\in\omega}(k_n,k_{n+1}],
+      \omega\setminus\{0\}=\omega\cap\Cup_{n\in\omega}(k_n,k_{n+1}],
     $$
     Da\'i,vem $y_{i_n}\leq r_n\leq x_{i_n}$. Um argumento an\'alogo pode ser aplicado ao caso que o \'ultimo termo de $r_n$ \'e da forma $P_m$. Assim, conclu\'imos que $A_n\neq\emptyset$ para todo $n\in\omega$. 
     
@@ -3091,7 +3032,7 @@
   \[
     x\in K_n\a\Big|x-{a_n+b_n\over 2}\Big|<{\delta_{n+1}\over 2}\lra \Big|f(x)-f\Bigl({a_n+b_n\over 2}\Bigr)\Big|<{\varepsilon\over 2}.
   \]
-  Da mesma forma, seja $K_{n+1}$ uma das bisse\c c\~oes de $K_n$, tal que $X_{\delta_{n+1}}\subset K_{n+1}$. Destarte, constru\'imos por recurs\~ao matem\'atica uma fam\'ilia enumer\'avel $\{K_n:n\in\omega\}$, ou melhor, uma sequ\^encia $\{K_n\}$, tal que $K_{n+1}\subset K_n$ e $X_{\delta_n}\subset K_n$, para todo $n\in\omega$. Pelo teorema dos intervalos encaixados ({\it Nested Intevals Theorem}) existe $x\in\bigcap_{n\in\omega}K_n$. Da constru\c c\~ao de $\{K_n\}$, temos que 
+  Da mesma forma, seja $K_{n+1}$ uma das bisse\c c\~oes de $K_n$, tal que $X_{\delta_{n+1}}\subset K_{n+1}$. Destarte, constru\'imos por recurs\~ao matem\'atica uma fam\'ilia enumer\'avel $\{K_n:n\in\omega\}$, ou melhor, uma sequ\^encia $\{K_n\}$, tal que $K_{n+1}\subset K_n$ e $X_{\delta_n}\subset K_n$, para todo $n\in\omega$. Pelo teorema dos intervalos encaixados ({\it Nested Intevals Theorem}) existe $x\in\Cap_{n\in\omega}K_n$. Da constru\c c\~ao de $\{K_n\}$, temos que 
   \[
     x\in K_n=[a_n,b_n]\a b_n-a_n<2^{-(n+1)}(b-a)
   \]
@@ -3449,7 +3390,7 @@
       \item{%
         Seja ${\cal F}=\{S_i\in{\mathscr{P}(E)}:i\in n+1\}$ uma fam\'ilia de seguimentos disjuntos aos pares. Ent\~ao
         $$
-          \mu\biggl(\bigcup_{i\in n+1}S_i\biggr)=\sum_{i=0}^n\mu(S_i);
+          \mu\biggl(\Cup_{i\in n+1}S_i\biggr)=\sum_{i=0}^n\mu(S_i);
         $$
       }
       \item{%
@@ -3659,7 +3600,6 @@
   Em outros termos $g$ \'e constante no conjunto de solu\c c\~oes do sistema (\ref{S2912252034}).\qed
 
 
-  \subsection{Elimina\c c\~ao do termo quadr\'atico misto por rota\c c\~oes}
 
   
   % TODO: Demonstrar a rela\c c\~ao do sistema de coordenadas via geometria euclidiana.
@@ -3668,7 +3608,7 @@
 %  \[
 %    w=(u\cos\theta-v\sen\theta)+i(u\sen\theta+v\cos\theta).
 %  \]
-  \subsubsection{Rota\c c\~oes de sistemas de coordenadas}
+  \subsection{Rota\c c\~oes de sistemas de coordenadas}
   Consideremos um sistema de coordenadas cartesianas e um sistema cujos eixos sejam obtidos do primeiro por uma rota\c c\~ao dum \^angulo $\theta$ no setido anti-hor\'ario em rela\c c\~ao ao eixo das abscissas. 
 
   \begin{figure}[!h]
@@ -3701,11 +3641,38 @@
   \[
     \begin{aligned}
       y&={v\over\cos\theta}+\tan\theta(u\cos\theta-v\sin\theta)\cr
-       &={v\over\cos\theta}+u\sin\theta+{v\sin^2\theta\over\cos\theta}\cr
+       &={v\over\cos\theta}+u\sin\theta-{v\sin^2\theta\over\cos\theta}\cr
        &=u\sin\theta+v\cos\theta.
     \end{aligned}
   \]
-  Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico \'e dado pela identidade
+  em s\'intese temos
+  \[
+    \left\{\;
+    \begin{aligned}
+      x&=u\cos\theta-v\sin\theta\cr
+      y&=u\sin\theta+v\cos\theta\cr
+    \end{aligned}
+    \right.
+    \label{S0501262000}
+  \]
+  
+  Uma outra maneira, mais geral \'e recorrer \`a \'algebra linear em conjunto com os recursos da geometria anal\'itica. Seja ${\mathcal B}=\{e_1,e_2\}$ a base can\^onica do $\R^2$. Uma base ortonormal, para o segundo sistema \'e 
+  \[
+    r=\cos\theta e_1+\sin\theta e_2
+    \label{S0501262012}
+  \]
+  e
+  \[
+    s=\cos\Bigl({\pi\over2}+\theta\Bigr)e_1+\sin\Bigl({\pi\over2}+\theta\Bigr)e_2=-\sin\theta e_1+\cos\theta e_2.
+    \label{S0501262001}
+  \]
+  Al\'em do mais, o \^angulo entre $r$ e $e_1$ \'e 
+  \[
+    \arccos\Bigl({\lge r,e_1\rge\over |r||e_1|}\Bigr)=\arccos(\cos\theta)=\theta,
+  \]
+  supondo evidentemente que $\theta\in\,]0,\pi[$. Esta conting\^encia n\~ao \'e t\~ao restritiva quanto se parece, pois fun\c c\~oes circulares s\~ao per\'iodicas de per\'iodo $2\pi$, podemos para fins de c\'alculo reduzir \^angulos ao intervalo $[0,2\pi]$; al\'em disso, se $\theta\in[\pi,2\pi]$, podemos considerar o outro ramo invers\'ivel de $\cos$, a saber, aquele cujo dom\'inio \'e $[-\pi,0]$. E por que n\~ao consideramos m\'ultiplos de $\pi$? A raz\~ao \'e que precipuamente, ter\'iamos os mesmo sistema de coordenadas, o que nos importa somente s\~ao os eixos, i.e., as retas correspondentes, n\~ao como s\~ao determinados.
+
+  Portanto, um vetor $w=(u,v)_\theta$ relativo \`a base ${\mathcal B}_\theta=\{r,s\}$ tem coordenadas satisfazendo o sistema (\ref{S0501262000}). Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico satisfazem a identidade
   \[
     \begin{bmatrix}
       x\cr
@@ -3723,7 +3690,8 @@
     \label{eq3001261537}
   \]
 
-  Fazendo a substitui\c c\~ao de $(x,y)$ segundo (\ref{eq3001261537}) obtemos
+  \subsection{Elimina\c c\~ao do termo quadr\'atico misto por rota\c c\~oes}
+  Munido das observa\c c\~oes da se\c c\~ao anterior, apliquemos uma rota\c c\~ao ao nosso sistema de coordenadas. Fazendo a substitui\c c\~ao de $(x,y)$ segundo (\ref{eq3001261537}) obtemos
   \[
     \begin{aligned}
       G(u,v)&=(a\cos^2\theta+b\cos\theta\sin\theta+c\sin^2\theta)u^2+\bigl((a-c)\sin2\theta+b\cos2\theta\bigr)uv\cr
@@ -3765,7 +3733,7 @@
     \cot2\theta={\cos2\theta\over\sin2\theta}={a-c\over b}.
     \label{eq0301261607}
   \]
-  Conforme se sabe, $\cot$ tem restri\c c\~oes invers\'iveis em $\R\cp\pi\Z$. Se reduzirmos nossa escolha ao intervalo $[0,2\pi[$, temos duas solu\c c\~oes para (\ref{eq0301261607}), uma no semiciclo superior e a outra no semiciclo inferior.\qed
+  Se reduzirmos nossa escolha ao intervalo $[0,2\pi[$, temos duas solu\c c\~oes para (\ref{eq0301261607}), uma no semiciclo superior e a outra no semiciclo inferior.\qed
 
   Escolhido $\theta$ conforme no \rf{Teorema}{teo0301261705}, temos de (\ref{eq0301261557}) e (\ref{eq0301261607}) que
   \[
@@ -3935,7 +3903,9 @@
 
   \begin{thebibliography}{}
     \bibitem{BoulosCamargo}
-    CAMARGO, IVAN DE; BOULOS, PAULO. {\it Geometria Anal\'itica}. 3ª ed. rev. e ampl. S\~ao~Paulo, 2005.
+    CAMARGO, IVAN DE; BOULOS, PAULO. {\it Geometria Anal\'itica}. 3ª ed. rev. e ampl. S\~ao~Paulo: Prentice Hall, 2005.
+    \bibitem{HalmosNaive}
+    HALMOS, PAUL R. {\it Naive Set Theory}. Garden City, New York: Dover Publications, 2017.
   \end{thebibliography}
 
 \enddoc
