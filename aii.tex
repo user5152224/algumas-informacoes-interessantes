@@ -178,6 +178,7 @@
 \def\AS{{\bf AS}\ }
 \def\a{\wedge}
 \def\[{\begin{equation}}
+\def\cal{\mathcal}
 \def\Cap{{\textstyle\bigcap}\,}
 \def\C{\mathds{C}}
 \def\cp{\mathbin{\neg}}
@@ -3487,7 +3488,7 @@
   O objetivo das pr\'oximas se\c c\~oes \'e aplicar transforma\c c\~oes ao sistema de coordenadas, de tal maneira que a c\^onica seja facilmente reconhecida.
 
   % TODO: Completar e organizar esta seção.
-  \subsection{Elimina\c c\~ao dos termos lineares por transla\c c\~oes}
+  \subsection{Transla\c c\~oes de sistema de coordenadas.}
 
   Dados pontos $\varOmega=(h,k)$ e $(x,y)$ de $\R^2$, as coordenadas $(u,v)$ de $(x,y)$ relativo ao sistema cuja origem \'e $\varOmega$, s\~ao simplesmente dadas pela identidade
   \[
@@ -3499,7 +3500,7 @@
   \]
   Em outros termos, estamos calculando as coordenadas dum ponto $v$ relativo a um sistema de coordenadas cuja a origem \'e precisamente $\varOmega$.
 
-  A rela\c c\~ao das coordenadas $(u,v)$ do sistema transladado segundo o sistema antigo \'e expressa pelo sistema
+  A rela\c c\~ao das coordenadas de $(u,v)$ do sistema transladado com as coordenadas de $(x,y)$ segundo o sistema antigo \'e expressa pelo sistema
   \[
     \Biggl\{\,
     \begin{aligned}
@@ -3507,6 +3508,8 @@
       y&=v+k\cr
     \end{aligned}
   \]
+
+  \subsection{Elimina\c c\~ao dos termos lineares por transla\c c\~oes}
   Em seguida, calculemos $G(u,v)=g(u+h,v+k)$. Conformemente,
   \[
     \begin{aligned}
@@ -3599,9 +3602,6 @@
   \]
   Em outros termos $g$ \'e constante no conjunto de solu\c c\~oes do sistema (\ref{S2912252034}).\qed
 
-
-
-  
   % TODO: Demonstrar a rela\c c\~ao do sistema de coordenadas via geometria euclidiana.
 
 %  Podemos enxergar algrebica e isometricamente $\R^2$ como $\C^2$, da\'i a base can\^onica \'e simplesmente ${\mathcal B}=\{1,i\}$. Como \'e sabido uma rota\c c\~ao da base por um \^angulo $\theta$ em rela\c c\~ao ao eixo gerado por $1$ no sentido anti-hor\'ario \'e simplesmente uma multiplica\c c\~ao complexa por $e^{i\theta}$, a nova base \'e simplesmente ${\mathcal B}_\theta=\{e^{i\theta},e^{i(\theta+\pi/2)}\}$. Destarte, dado $w$, existem $u,v\in\R$, tais que $w=(u,b)_{{\cal B}_\theta}$, evidentemente 
@@ -3609,13 +3609,12 @@
 %    w=(u\cos\theta-v\sen\theta)+i(u\sen\theta+v\cos\theta).
 %  \]
   \subsection{Rota\c c\~oes de sistemas de coordenadas}
-  Consideremos um sistema de coordenadas cartesianas e um sistema cujos eixos sejam obtidos do primeiro por uma rota\c c\~ao dum \^angulo $\theta$ no setido anti-hor\'ario em rela\c c\~ao ao eixo das abscissas. 
 
   \begin{figure}[!h]
     \caption{Rota\c c\~ao dum sistema de coordenadas cartesiano por um \^angulo $\theta$.}
   \end{figure}
 
-  Consideremos um ponto $w=(u,v)_\theta$ cujas coordenadas s\~ao dadas em rela\c c\~ao ao sistema rotacionado. Nosso objetivo \'e determinar as coordenadas de $w$ relativo ao primeiro sistema. A t\'itulo de exemplo, usaremos um m\'etodo geom\'etrico para um caso particular, que pode ser adaptado aos outros casos.
+  Consideremos um ponto $w=(u,v)_\theta$ cujas coordenadas s\~ao dadas em rela\c c\~ao ao sistema rotacionado. Nosso objetivo \'e determinar as coordenadas de $w$ relativo ao primeiro sistema. A t\'itulo de exemplo, usaremos um m\'etodo geom\'etrico para um caso particular.
 
   Observemos, pois, a figura seguinte
 
@@ -3623,7 +3622,6 @@
     \caption{Rota\c c\~ao dum sistema de coordenadas cartesiano por um \^angulo $\theta$.}
   \end{figure}
 
-  % TODO: Salientar que rotações dos eixos por ângulos maiores que 90 podem ser observadas como rotações em ângulos ]0,-90[. Note o que importa são os eixos, que são em essência retas, e não a base que as determina.
   Em conformidade com a figura estamos supondo que $\theta\in\,]0,\pi/2[$. Uma an\'alise geom\'etrica nos forne\c ce o seguinte sistema
   \[
     \left\{\;
@@ -3657,7 +3655,7 @@
     \label{S0501262000}
   \]
   
-  Uma outra maneira, mais geral \'e recorrer \`a \'algebra linear, munido com os recursos da geometria anal\'itica, ou mais geralmente espaços vetoriais com produto interno. Seja ${\mathcal B}=\{e_1,e_2\}$ a base can\^onica do $\R^2$. Uma base ortonormal, para o segundo sistema \'e 
+  Uma outra maneira, \'e recorrer \`a \'algebra linear, mais precisamente a espa\c cos vetoriais munidos com produto interno. Seja ${\mathcal B}=\{e_1,e_2\}$ a base can\^onica do $\R^2$. Uma base ortonormal, para o segundo sistema \'e 
   \[
     r=\cos\theta e_1+\sin\theta e_2
     \label{S0501262012}
@@ -3669,11 +3667,11 @@
   \]
   Al\'em do mais, o \^angulo entre $r$ e $e_1$ \'e 
   \[
-    \arccos\Bigl({\lge r,e_1\rge\over |r||e_1|}\Bigr)=\arccos(\cos\theta)=\theta,
+    \eta=\arccos\Bigl({\lge r,e_1\rge\over |r||e_1|}\Bigr)=\arccos(\cos\theta).
   \]
-  supondo evidentemente que $\theta\in\,]0,\pi[$. Esta escolha n\~ao \'e t\~ao restritiva quanto se parece, pois fun\c c\~oes circulares s\~ao per\'iodicas de per\'iodo $2\pi$. Podemos para fins de c\'alculo reduzir os \^angulos ao intervalo $[0,2\pi]$; al\'em disso, se $\theta\in[\pi,2\pi]$, podemos considerar o outro ramo invers\'ivel de $\cos$, a saber, aquele cujo dom\'inio \'e $[-\pi,0]$. E por que n\~ao consideramos m\'ultiplos de $\pi$? A raz\~ao \'e que precipuamente, ter\'iamos os mesmo sistema de coordenadas, o que nos importa somente s\~ao os eixos, i.e., as retas correspondentes, n\~ao como as determinamos.
 
-  Portanto, um vetor $w=(u,v)_\theta$ relativo \`a base ${\mathcal B}_\theta=\{r,s\}$ tem coordenadas satisfazendo o sistema (\ref{S0501262000}). Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico satisfazem a identidade
+
+  Portanto, um vetor $w=(u,v)_\theta$ relativo \`a base ${\mathcal B}_\theta=\{r,s\}$, tem coordenadas satisfazendo o sistema (\ref{S0501262000}). Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico satisfazem a identidade
   \[
     \begin{bmatrix}
       x\cr
@@ -3691,7 +3689,27 @@
     \label{eq3001261537}
   \]
 
+  \`A transforma\c c\~ao linear $R_\theta:\R^2\ra\R^2$ cuja matriz associada \'e
+  \[
+    [R_\theta]=
+    \begin{bmatrix}
+      \cos\theta & -\sen\theta\cr
+      \sen\theta & \cos\theta\cr
+    \end{bmatrix}
+  \]
+  daremos o nome de rota\c c\~ao por um \^angulo $\theta$. Ademais, para qualquer $\theta$ t\^em-se
+  \[
+    [R_\theta]^{-1}=
+    \begin{bmatrix}
+       \cos\theta & \sen\theta\cr
+      -\sen\theta & \cos\theta\cr
+    \end{bmatrix}.
+  \]
+  Em conson\^ancia, $R_\theta$ \'e um isomorfismo de $\R^2$.
+
+
   \subsection{Elimina\c c\~ao do termo quadr\'atico misto por rota\c c\~oes}
+
   Munido das observa\c c\~oes da se\c c\~ao anterior, apliquemos uma rota\c c\~ao ao nosso sistema de coordenadas. Fazendo a substitui\c c\~ao de $(x,y)$ segundo (\ref{eq3001261537}) obtemos
   \[
     \begin{aligned}
@@ -3734,7 +3752,7 @@
     \cot2\theta={\cos2\theta\over\sin2\theta}={a-c\over b}.
     \label{eq0301261607}
   \]
-  Se reduzirmos nossa escolha ao intervalo $[0,2\pi[$, temos duas solu\c c\~oes para (\ref{eq0301261607}), uma no semiciclo superior e a outra no semiciclo inferior.\qed
+  Temos duas solu\c c\~oes para (\ref{eq0301261607}) em $[0,2\pi[$ uma no semiciclo superior e outra no inferior.\qed
 
   Escolhido $\theta$ conforme no \rf{Teorema}{teo0301261705}, temos de (\ref{eq0301261557}) e (\ref{eq0301261607}) que
   \[
@@ -3764,6 +3782,62 @@
   \]
 
   Em suma, o que podemos concluir \'e que dada uma c\^onica, podemos sempre supor sem perda de generalidade que o termo quadr\'atico misto do polin\^omio subjacente seja nulo.
+
+  \begin{obs}\rm%
+    Relembremos que dada uma fun\c c\~ao polinomial do segundo grau $p:\R\ra\R$, cuja lei \'e
+    \[
+      p(\lambda)=\lambda^2+b\lambda+c.
+    \]
+    Vale
+    \[
+      r_1+r_2=-b\quad\hbox{e}\quad r_1r_2=c,
+    \]
+    em que $r_i$ com $i=1,2$, s\~ao as ra\'izes da equa\c c\~ao $p(\lambda)=0$.
+
+    Nesta se\c c\~ao, escolhemos um $\theta$ adequado para que $\beta=0$, com isso determinamos
+    \[
+      \alpha={1\over2}\Bigl(a+c+{b\over\sin2\theta}\Bigr)\quad\hbox{e}\quad\gamma={1\over2}\Bigl(a+c-{b\over\sin2\theta}\Bigr).
+    \]
+    Da\'i temos
+    \[
+      \begin{aligned}
+       \alpha\gamma&={1\over4}\biggl((a+c)^2-{b^2\over\sin^22\theta}\biggr)\cr
+                   &={(a+c)^2\sin^22\theta-b^2\over4\sin^22\theta}\cr
+                   &={(a+c)^2\sin^22\theta-b^2(\cos^22\theta+\sin^22\theta)\over4\sin^22\theta}\cr
+                   &={(a+c)^2\sin^22\theta-\overbrace{b^2\cos^22\theta}^{(\ref{eq0301261559})\ (a-c)^2\sin^22\theta}-b^2\sin^22\theta\over4\sin^22\theta}\cr
+                   &={(a+c)^2\sin^22\theta-(a-c)^2\sin^22\theta-b^2\sin^22\theta\over4\sin^22\theta}\cr
+                   &={\sin^22\theta\bigl((a+c)^2-(a-c)^2-b^2\bigr)\over4\sin^22\theta}\cr
+                   &={(a+c)^2-(a-c)^2-b^2\over4}\cr
+                   &={(a+c+a-c)(a+c-(a-c))-b^2\over4}\cr
+                   &={4ac-b^2\over4}\cr
+                   &=ac-{b^2\over4}.\cr
+      \end{aligned}
+    \]
+    Adicionamente, sabendo que $\alpha+\gamma=a+c$, segue-se que $\alpha$ e $\gamma$ s\~ao ra\'izes do polin\^omio $p$, dado por
+    \[ 
+      p(\lambda)=\lambda^2-(a+c)\lambda+ac-{b^2\over4}.
+    \]
+    Logo,
+    \[
+      p(\lambda)=0\;\,\hbox{se, e somente se,}\;\,\det([M_p-\lambda I])=0
+    \]
+    em que
+    \[
+      [M_p]=
+      \begin{bmatrix}
+        a   & b/2 \cr
+        b/2 &c    \cr
+      \end{bmatrix},
+    \]
+    i.e., $\alpha$ e $\gamma$ s\~ao os autovalores da transforma\c c\~ao $M_p$.
+
+     
+  \end{obs}
+
+
+
+
+  
   
   
 
