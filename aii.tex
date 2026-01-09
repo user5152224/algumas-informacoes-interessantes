@@ -179,11 +179,11 @@
 \def\a{\wedge}
 \def\[{\begin{equation}}
 \def\cal{\mathcal}
-\def\Cap{{\textstyle\bigcap}\,}
+\def\Cap{\mathop{\textstyle\bigcap}}
 \def\C{\mathds{C}}
 \def\cp{\mathbin{\neg}}
 \def\ct#1{#1 \citenum{#1}}
-\def\Cup{{\textstyle\bigcup}\,}
+\def\Cup{\mathop{\textstyle\bigcup}}
 \def\]{\end{equation}}
 \def\fr#1#2{\frac{#1}{#2}}
 \def\frak{\mathfrak}
@@ -508,7 +508,7 @@
   \end{Def}
   \begin{Def}
     \[
-      \Cup x=\bigl\{z:\exists y(y\in x\a z\in y)\bigr\}.
+      \Cup x=\bigl\{z:\exists y(y\in x\a z\in y)\bigr\}\subset.
     \]
   \end{Def}
   
@@ -898,25 +898,54 @@
   
   \medskip
 
-  % TODO: Prova?
   \begin{teo}[Exerc\'icio - \ct{HalmosNaive}]
-    Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existem subconjuntos $A\subset X$ e $B\subset Y$, tais que $f(A)=B$ e $X\cp A=g(Y\cp B)$.
+    Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existe um subconjunto $A\subset X$, tal que $X\cp A=g(Y\cp f(A))$.
     \label{teo0801261705}
   \end{teo}
-  \prova ?\qed
+  \prova 
+  Defina a cole\c c\~ao
+  \[
+    \Gamma=\bigl\{E:E\in2^X\,\a\,E\subset X\cp g\bigl(Y\cp f(E)\bigr)\bigr\}.
+  \]
+  Note que $\emptyset\in\Gamma$, portanto $\Gamma\neq\emptyset$. Agora seja $E\in\Gamma$, temos naturalmente
+  \[
+    f(E)\subset f\bigl[X\cp g(Y\cp f(E))\bigr],
+  \]
+  que por sua vez acarreta
+  \[
+    X\cp g(Y\cp f(E))\subset X\cp g\bigl[Y\cp f\bigl(X\cp g(Y\cp f(E))\bigl)\bigr].
+  \]
+  Podemos concluir que 
+  \[
+    E\subset X\cp g(Y\cp f(E))\in\Gamma.
+    \label{eq0901261959}
+  \]
 
-  \begin{obs}\rm%
-    Conjuntos da natureza
-    \[
-      S=\bigl\{x:x\in x\,\a\,X\cp\{x\}\subset g\bigr(Y\cp f(\{x\})\bigl)\bigr\}
-    \]
-    Satisfazem,
-    \[
-      X\cp S\subset g(Y\cp f(S)),
-    \]
-    mas n\~ao h\'a garantias da igualdade. Foram in\'umeras tentativas fracassadas.
-  \end{obs}
-  
+  Seguidamente, consideremos uma cadeia arbitr\'aria ${\scr C}$ n\~ao vazia de elementos de $\Gamma$ ordenada segundo a inclus\~ao $\subset$. Conformente,
+  \[
+    \begin{aligned}
+      \Cup_{E\in{\scr C}}E&\subset\Cup_{E\in{\scr C}} X\cp g(Y\cp f(E))\cr
+                          &= X\cp\Cap_{E\in{\scr C}} g\bigl(Y\cp f(E)\bigr)\cr
+                          &= X\cp g\Bigl(\Cap_{E\in{\scr C}}Y\cp f(E)\Bigr)\cr
+                          &= X\cp g\Bigl(Y\cp\Cup_{E\in{\scr C}}f(E)\Bigr)\cr
+                          &= X\cp g\Bigl[Y\cp f\Bigl(\Cup_{E\in{\scr C}}E\Bigr)\Bigr].\cr
+    \end{aligned}
+  \]
+  Em outros termos, $S=\bigcup_{E\in{\scr C}}E\in\Gamma$ \'e uma cota superior de $\scr C$. Em vista de $\scr C$ ser arbitr\'aria, segue pelo lema de Zorn que $\Gamma$ possui elemento maximal $M$ segundo $\subset$. Conforme vimos em (\ref{eq0901261959}), se $M\in\Gamma$, ent\~ao 
+  \[
+    M\subset X\cp g\bigl(Y\cp f(M)\bigr)\in\Gamma,
+  \]
+  consequentemente,
+  \[
+    M= X\cp g\bigl(Y\cp f(M)\bigr),
+    \label{eq0901261938}
+  \]
+  pois, $M$ \'e maximal. Finalmente, tomando $A=M$, segue de (\ref{eq0901261938}) que
+  \[
+    X\cp A=g\bigl(Y\cp f(A)\bigr).
+  \]
+  \qed
+
   \noindent{\bf Digress\~ao a respeito de \'algebras de Boole.} Segundo o livro {\sl Introduction to Boolean Algebras} de Halmos e Givant, uma \'algebra booleana \'e um conjunto $B$ munido de duas opera\c c\~oes bin\'arias $\cap$ e $\cup$, uma opera\c c\~ao un\'aria $'$ e dois elementos distintos $0$ e $1$, satisfazendo os seguintes axiomas:
   
   \bigskip
