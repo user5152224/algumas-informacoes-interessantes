@@ -173,7 +173,8 @@
 
 
 
-\def\AEx{{\bf AEx}\ }
+\def\AEx{{\bf AEx}}
+\def\AEs{{\bf AEs}}
 \def\af{{\it a fortiori}}
 \def\AS{{\bf AS}\ }
 \def\a{\wedge}
@@ -900,7 +901,7 @@
   
   \medskip
 
-  \begin{teo}[Exerc\'icio - \ct{HalmosNaive}]
+  \begin{teo}[Exerc\'icio - \ct{HalmosNaive}[\footnote{Na minha primeira demonstra\c c\~ao deste resultado eu fiz recorr\^encia ao \AEs, precipuamente um de seus equivalentes, a saber, o lema de Zorn. Em verdade, ele n\~ao \'e necess\'ario, pois conforme se observa basta a unicidade do supremo, que por sua vez, \'e garantida no conjunto das partes munido com a ordem parcial induzida pela inclus\~ao $\subset$. Esta observa\c c\~ao tardia s\'o veio ao meu conhecimento depois que pus a minha demonstra\c c\~ao inicial no llm {\bf ChatGPT}, ele enfatizou que a demonstra\c c\~ao do teorema possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Embora ele n\~ao tenha sugerido nenhuma adapta\c c\~ao \`a minha prova, eu percebi posteriormente que o ponto principal da demonstra\c c\~ao jaz sobre a desigualdade (\ref{eq1001261141}), usada anteriormente para provar que toda cadeia n\~ao vazia admite {\it supremum}, e consequentemente conluir a exist\^encia dum elemento maximal.}]
     Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existe um subconjunto $A\subset X$, tal que $X\cp A=g(Y\cp f(A))$.
     \label{teo0801261705}
   \end{teo}
@@ -917,23 +918,28 @@
   \[
     X\cp g(Y\cp f(E))\subset X\cp g\bigl[Y\cp f\bigl(X\cp g(Y\cp f(E))\bigl)\bigr].
   \]
-  Podemos concluir que 
+  Podemos concluir que se $E\in\Gamma$, ent\~ao
   \[
     E\subset X\cp g(Y\cp f(E))\in\Gamma.
     \label{eq0901261959}
   \]
 
-  Seguidamente, consideremos uma cadeia arbitr\'aria ${\scr C}$ n\~ao vazia de elementos de $\Gamma$ ordenada segundo a inclus\~ao $\subset$. Conformente,
+  Em seguida, observemos que
   \[
     \begin{aligned}
-      \Cup_{E\in{\scr C}}E&\subset\Cup_{E\in{\scr C}} X\cp g(Y\cp f(E))\cr
-                          &= X\cp\Cap_{E\in{\scr C}} g\bigl(Y\cp f(E)\bigr)\cr
-                          &= X\cp g\Bigl(\Cap_{E\in{\scr C}}Y\cp f(E)\Bigr)\cr
-                          &= X\cp g\Bigl(Y\cp\Cup_{E\in{\scr C}}f(E)\Bigr)\cr
-                          &= X\cp g\Bigl[Y\cp f\Bigl(\Cup_{E\in{\scr C}}E\Bigr)\Bigr].\cr
+      \Cup_{E\in\Gamma}E&\subset\Cup_{E\in\Gamma} X\cp g(Y\cp f(E))\cr
+                        &= X\cp\Cap_{E\in\Gamma} g\bigl(Y\cp f(E)\bigr)\cr
+                        &= X\cp g\Bigl(\Cap_{E\in\Gamma}Y\cp f(E)\Bigr)\cr
+                        &= X\cp g\Bigl(Y\cp\Cup_{E\in\Gamma}f(E)\Bigr)\cr
+                        &= X\cp g\Bigl[Y\cp f\Bigl(\Cup_{E\in\Gamma}E\Bigr)\Bigr].\cr
     \end{aligned}
+    \label{eq1001261141}
   \]
-  Em outros termos, $S=\bigcup_{E\in{\scr C}}E\in\Gamma$ \'e uma cota superior de $\scr C$. Em vista de $\scr C$ ser arbitr\'aria, segue pelo lema de Zorn que $\Gamma$ possui elemento maximal $M$ segundo $\subset$. Conforme vimos em (\ref{eq0901261959}), se $M\in\Gamma$, ent\~ao 
+  Em outros termos, 
+  \[
+    M=\Cup_{E\in\Gamma}E=\sup\Gamma\in\Gamma
+  \]  
+  Conforme vimos em (\ref{eq0901261959}), segue-se que
   \[
     M\subset X\cp g\bigl(Y\cp f(M)\bigr)\in\Gamma,
   \]
@@ -942,30 +948,34 @@
     M= X\cp g\bigl(Y\cp f(M)\bigr),
     \label{eq0901261938}
   \]
-  pois, $M$ \'e maximal. Finalmente, tomando $A=M$, segue de (\ref{eq0901261938}) que
+  pois, $M$ \'e o elemento m\'aximo. Finalmente, tomando $A=M$, segue de (\ref{eq0901261938}) que
   \[
     X\cp A=g\bigl(Y\cp f(A)\bigr).
   \]
   \qed
 
-  A posteriori, eu pus esta demonstra\c c\~ao no llm {\bf ChatGPT}, e ele me enfatizou que a demonstra\c c\~ao do teorema anterior possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Enunciarei o teorema sob uma perspectiva mais geral seguindo o artigo de Tarski, que generalizou o teorema aplicado ao conjunto das partes de um conjunto arbitr\'ario para reticulados completos.
+  Segue o teorema que tem o \rf{Teorema}{teo0801261705} como corol\'ario.
 
-  \begin{teo}[Teorema do ponto fixo para reticulados\footnote{Latice-Theoretical fixpoint theorem.}]%
+  \begin{teo}[Teorema do ponto fixo para reticulados\footnote{Enunciarei o teorema sob uma perspectiva mais geral seguindo o artigo de Tarski, que generalizou o teorema aplicado ao conjunto das partes de um conjunto arbitr\'ario para reticulados completos.}]%
     Sejam 
     \begin{enumerate}[label = ({\rm\roman*})]
       \item{%
-        ${\frak A}=\lge A,\leq\rge$ um reticulado completo;
+        ${\frak A}=(A,\leq)$ um reticulado completo;
       }
       \item{%
-        $f\in A^A$ uma fun\c c\~ao crescente; 
+        $f:A\ra A$ uma fun\c c\~ao crescente; 
       }
       \item{%
         $F$ o conjunto de todos pontos fixos de $f$.
       }
     \end{enumerate}
-    Ent\~ao $F\neq\emptyset$ e o sistema $\lge F,\leq\rge$ \'e um reticulado completo. Em particular temos
+    Ent\~ao $F\neq\emptyset$ e o sistema ${\frak S}=(F,\leq)$ \'e um reticulado completo. Em particular temos
     \[
-      \Vee F=\Vee\{\}
+      \Vee F=\Vee\{x:x\in A\,\a\,f(x)\leq x\}
+    \]
+    e
+    \[
+      \Wedge F=\Wedge\{x:x\in A\,\a\,x\leq f(x)\}.
     \]
   \end{teo}
   \prova Provar.\qed
