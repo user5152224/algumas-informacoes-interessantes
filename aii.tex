@@ -209,6 +209,8 @@
 \def\sen{\,{\rm sen}\,}
 \def\tvm{{\bf TVM}}
 \def\U{{\cal U}}
+\def\Vee{\mathop{\textstyle\bigvee}}
+\def\Wedge{\mathop{\textstyle\bigwedge}}
 \def\Z{\mathds{Z}}
 
 
@@ -945,6 +947,28 @@
     X\cp A=g\bigl(Y\cp f(A)\bigr).
   \]
   \qed
+
+  A posteriori, eu pus esta demonstra\c c\~ao no llm {\bf ChatGPT}, e ele me enfatizou que a demonstra\c c\~ao do teorema anterior possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Enunciarei o teorema sob uma perspectiva mais geral seguindo o artigo de Tarski, que generalizou o teorema aplicado ao conjunto das partes de um conjunto arbitr\'ario para reticulados completos.
+
+  \begin{teo}[Teorema do ponto fixo para reticulados\footnote{Latice-Theoretical fixpoint theorem.}]%
+    Sejam 
+    \begin{enumerate}[label = ({\rm\roman*})]
+      \item{%
+        ${\frak A}=\lge A,\leq\rge$ um reticulado completo;
+      }
+      \item{%
+        $f\in A^A$ uma fun\c c\~ao crescente; 
+      }
+      \item{%
+        $F$ o conjunto de todos pontos fixos de $f$.
+      }
+    \end{enumerate}
+    Ent\~ao $F\neq\emptyset$ e o sistema $\lge F,\leq\rge$ \'e um reticulado completo. Em particular temos
+    \[
+      \Vee F=\Vee\{\}
+    \]
+  \end{teo}
+  \prova Provar.\qed
 
   \noindent{\bf Digress\~ao a respeito de \'algebras de Boole.} Segundo o livro {\sl Introduction to Boolean Algebras} de Halmos e Givant, uma \'algebra booleana \'e um conjunto $B$ munido de duas opera\c c\~oes bin\'arias $\cap$ e $\cup$, uma opera\c c\~ao un\'aria $'$ e dois elementos distintos $0$ e $1$, satisfazendo os seguintes axiomas:
   
