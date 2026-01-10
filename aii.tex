@@ -760,149 +760,7 @@
   Primeiro, considere $g\in X^{2}$, tal que $g(0)=a$ e $g(1)=F(g|_1)$. Naturalmente se $\gamma\in{\mathfrak F}_0$, ent\~ao $\gamma(0)=a=g(0)$, logo, $\gamma|_1=g|_1$ e consequentemente $\gamma(1)=F(\gamma|_1)=F(g|_1)=g(1)$, o que prova que $0\in C$. Em seguida, suponhamos que $p\in\omega$, segue que existe uma \'unica $h\in{\mathfrak F}_p$, defina $g\in X^{p+3}$, tal que $g|_{p+2}=h$ e $g(p+2)=F(g|_{p+2})$. Seja agora $\gamma\in{\frak F}_{p+1}$, pela unicidade de $h$ segue-se que $\gamma|_{p+2}=h=g|_{p+2}$, por conseguinte $\gamma(p+2)=F(h)=g(p+2)$, que por sua vez, acarreta $\gamma=g$, o que prova a unicidade de $g$. Destarte, $p+1\in C$. Como $\omega$ \'e o conjunto sucessor (indutivo) minimal segue-se que $C=\omega$. 
 
   Em verdade, provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\Cup_{p\in\omega} f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Agora seja $p\in\omega$, notemos que $f|_{p+2}=f_p$, consequentemente $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, portanto $f$ satisfaz as hip\'oteses do teorema, i.e., provamos a exist\^encia. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema, temos que para todo $p\in\omega$, vale $f|_{p+2},\phi|_{p+2}\in{\frak F}_p$, por conseguinte $f|_{p+2}=f_p=\phi|_{p+2}$, que por sua vez implica que $f=\phi$, pois $p\in\omega$ \'e arbitr\'ario, provando portanto a unicidade de $f$.\qed
-  
-  \vfill\break
-
-  % TODO: Dá para melhorar?
-  \begin{teo}[Bernstein-Cantor-Schr\"oder {[Revisar]}]
-  Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.
-  \end{teo}
-  
-  \prova Supomos que $f(X)\subset Y$ e $g(Y)\subset X$ (aqui $\subset$ \'e a inclus\~ao pr\'opria). Destas inclus\~oes deriva-se facilmente a proposi\c c\~ao
-  $$
-    (\Delta)\qquad\forall i\Bigl(i\in N\longrightarrow(g\!f)^i(X)\supset(g\!f)^i\bigl(g(Y)\bigr)\supset(g\!f)^{i+1}(X)\Bigr).
-  $$
-  Para cada $i\in N$, fa\c camos:
-  $$
-    A_{2i}=(g\!f)^i(X)\quad\hbox{e}\quad A_{2i+1}=(g\!f)^i\bigl(g(Y)\bigr)
-  $$
-  em vista de $(\Delta)$ decorre que $\{A_i:i\in N\}$ \'e uma fam\'\i lia de conjuntos estritamente decrescente.
-  
-  Sejam agora
-  $$
-    C_i=(g\!f)^i\bigr(X\setminus g(Y)\bigr)\quad\hbox{e}\quad D_i=(g\!f)^ig\bigl(Y\setminus f(X)\bigr)
-  $$
-  com $i\in N$. 
-  
-  Definamos
-  $$
-    A=\Cap_{i\in N}A_i,\quad C=\Cup_{i\in N}C_i\quad e\quad D=\Cup_{i\in N}D_i.
-  $$
-  Estes s\~ao disjuntos aos pares. De fato, inicialmente provemos que $C\cap D=\emptyset$. Note que
-  $$
-    \forall i,j\bigl(i,j\in N\longrightarrow C_i\cap D_j=\emptyset\bigr),
-  $$
-  pois dados $i,j\in N$, temos
-  $$
-    C_i\cap D_j=A_{2i}\cap A_{2j+1}\setminus\bigl(A_{2i+1}\cup A_{2(j+1)}\bigr)\subset A_a\setminus A_b=\emptyset,
-  $$
-  sendo
-  $$
-    a=\max\{2i, 2j\}\quad\hbox{e}\quad b=\min\{2(i+1), 2(j+1)\}.
-  $$
-  uma vez que $A_b\subset A_a$, como consequ\^encia $C\cap D=\emptyset$.
-  
-  Seguidamente, dados $i,j\in N$, obtem-se
-  $$
-    A\cap (C_i\cup D_j)=A\setminus\bigl(A_{2i+1}\cap A_{2(j+1)}\bigr)=\emptyset,
-  $$
-  consequentemente $A\cap(C\cup D)=\emptyset$.
-  
-  Afirmo que 
-  $$
-    X=A\cup C\cup D
-  $$
-  Decerto, observe que se $x\in X\setminus(C\cup D)$, ent\~ao necessariamente $x\in A_i$ para todo $i\in N$, pois, se existir $i\in N$ tal que $x\notin A_i$, ent\~ao consideremos $m=\min\{i\in N:x\notin A_i\}$, \'e certo que $m>0$. Assim, existe $l\in N$, tal que $l+1=m$, e consequentemente $x\in A_l\setminus A_{l+1}\subset C\cup D$, uma contradi\c c\~ao.
-  
-  De maneira inteiramente an\'aloga para cada $i\in N$, fa\c camos:
-  $$
-    B_{2i}=(f\!g)^i(Y)\quad\hbox{e}\quad B_{2i+1}=(f\!g)^i\bigl(f(X)\bigr);
-  $$
-  $$
-    E_i=(f\!g)^i\bigr(Y\setminus f(X)\bigr)\quad\hbox{e}\quad F_i=(f\!g)^if\bigl(X\setminus g(Y)\bigr).
-  $$
-  Prova-se sem dificuldades que
-  $$
-    Y=B\cup E\cup F,
-  $$
-  em que
-  $$
-    B=\Cap_{i\in N}B_i,\quad E=\Cup_{i\in N}E_i\quad e\quad F=\Cup_{i\in N}F_i.
-  $$
-  Em verdade, basta trocar os pap\'eis de $f$ com $g$ e $X$ com $Y$, concomitamente.
-  
-  Agora observemos que por indu\c c\~ao matem\'atica decorre que
-  $$
-    \forall i\bigl(i\in N\longrightarrow \phi(\gamma\phi)^i=(\phi\gamma)^i\phi\bigr).
-  $$
-  para quaisquer que sejam as fun\c c\~oes $\phi$ e $\gamma$, em que a composi\c c\~ao fa\c ca sentido. Em verdade, para $i=0$ temos necessariamente
-  $$
-    \phi(\gamma\phi)^0=\phi=(\phi\gamma)^i\phi.
-  $$
-  Suponhamos por hip\'otese de indu\c c\~ao que a propriedade seja v\'alida para $i\in N$, notemos que
-  $$
-    \phi(\gamma\phi)^{i+1}=\phi(\gamma\phi)^i(\gamma\phi)=(\phi\gamma)^i(\phi\gamma)\phi=(\phi\gamma)^{i+1}\phi
-  $$
-  o que prova que \'e v\'alida para $i+1$, conclu\'\i mos por indu\c c\~ao matem\'atica que a propriedade \'e v\'alida para todo $i\in N$.
-  
-  Posteriormente, em vista do resultado anterior observemos que para cada $i\in N$
-  $$
-    A_{2i+1}=(g\!f)^ig(Y)=g(f\!g)^i(Y)=g(B_{2i})
-  $$
-  e
-  $$
-    B_{2i+1}=(f\!g)^if(X)=f(g\!f)^i(X)=f(A_{2i}).
-  $$
-  Em consequ\^encia para todo $i\in N$
-  $$
-    B_{2i}=g^{-1}(A_{2i+1})\quad\hbox{e}\quad B_{2i+1}=f(A_{2i}).
-  $$
-  Em seguida, definamos $\varphi:X\rightarrow Y$ por
-  
-  $$
-    \varphi(x)=
-    \left\{
-    \begin{matrix}
-      \hfill f(x),      & x\in A\cup C;\hfill   \cr
-      \hfill g^{-1}(x), & x\in D.\hfill \cr
-    \end{matrix}
-    \right.
-  $$
-  Pela pr\'opria defini\c c\~ao $\varphi$ \'e injetiva.
-  
-  Imediatamente observe que para todo $i\in N$
-  $$
-    \varphi(C_i)=f\Bigl((g\!f)^i\bigl(X\setminus g(Y)\bigr)\Bigr)=(f\!g)^if\bigl(X\setminus g(Y)\bigr)=F_i
-  $$
-  e
-  $$
-    \varphi(D_i)=g^{-1}\Bigl((g\!f)^ig\bigl(Y\setminus f(X)\bigr)\Bigr)=(f\!g)^i\bigl(Y\setminus f(X)\bigr)=E_i.
-  $$
-  Al\'em do mais, para todo $i\in N$, temos
-  $$
-    \varphi(A_{2i})=f(A_{2i})=f(g\!f)^i(X)=(f\!g)^if(X)=B_{2i+1}
-  $$
-  e
-  $$
-    \varphi(A_{2i+1})=f(A_{2i+1})=f(g\!f)^ig(Y)=(f\!g)^if\!g(Y)=B_{2(i+1)}.
-  $$
-  Em suma,
-  $$
-    \forall i \bigl(i\in N\longrightarrow\varphi(A_i)=B_{i+1}\wedge\varphi(C_i)=F_i\wedge\varphi(D_i)=E_i\bigr).
-  $$
-  Conformemente
-  $$
-    \varphi(A)=B,\quad\varphi(C)=F\quad\hbox{e}\quad\varphi(D)=E.
-  $$
-  {\it a fortiori}
-  $$
-    \varphi(X)=\varphi(A\cup C\cup D)=\varphi(A)\cup\varphi(C)\cup\varphi(D)=B\cup E\cup F=Y,
-  $$
-  i.e., $X\sim Y$.\qed
-  \bigskip
-  
-  \medskip
-
+   
   \begin{teo}[Exerc\'icio - \ct{HalmosNaive}[\footnote{Na minha primeira demonstra\c c\~ao deste resultado eu fiz recorr\^encia ao \AEs, precipuamente um de seus equivalentes, a saber, o lema de Zorn. Em verdade, ele n\~ao \'e necess\'ario, pois conforme se observa basta a unicidade do supremo, que por sua vez, \'e garantida no conjunto das partes munido com a ordem parcial induzida pela inclus\~ao $\subset$. Esta observa\c c\~ao tardia s\'o veio ao meu conhecimento depois que pus a minha demonstra\c c\~ao inicial no llm {\bf ChatGPT}, ele enfatizou que a demonstra\c c\~ao do teorema possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Embora ele n\~ao tenha sugerido nenhuma adapta\c c\~ao \`a minha prova, eu percebi posteriormente que o ponto principal da demonstra\c c\~ao jaz sobre a desigualdade (\ref{eq1001261141}), usada anteriormente para provar que toda cadeia n\~ao vazia admite {\it supremum}, e consequentemente concluir a exist\^encia dum elemento maximal.}]
     Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existe um subconjunto $A\subset X$, tal que $X\cp A=g(Y\cp f(A))$.
     \label{teo0801261705}
@@ -4042,6 +3900,8 @@
     $$
     Rigorosamente, os dois objetos s\~ao distintos, de maneira que a identidade n\~ao \'e siginificativa.
   }
+
+  %\input{old.tex}
 
   \begin{thebibliography}{}
     \bibitem{BoulosCamargo}
