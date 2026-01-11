@@ -760,8 +760,10 @@
   Primeiro, considere $g\in X^{2}$, tal que $g(0)=a$ e $g(1)=F(g|_1)$. Naturalmente se $\gamma\in{\mathfrak F}_0$, ent\~ao $\gamma(0)=a=g(0)$, logo, $\gamma|_1=g|_1$ e consequentemente $\gamma(1)=F(\gamma|_1)=F(g|_1)=g(1)$, o que prova que $0\in C$. Em seguida, suponhamos que $p\in\omega$, segue que existe uma \'unica $h\in{\mathfrak F}_p$, defina $g\in X^{p+3}$, tal que $g|_{p+2}=h$ e $g(p+2)=F(g|_{p+2})$. Seja agora $\gamma\in{\frak F}_{p+1}$, pela unicidade de $h$ segue-se que $\gamma|_{p+2}=h=g|_{p+2}$, por conseguinte $\gamma(p+2)=F(h)=g(p+2)$, que por sua vez, acarreta $\gamma=g$, o que prova a unicidade de $g$. Destarte, $p+1\in C$. Como $\omega$ \'e o conjunto sucessor (indutivo) minimal segue-se que $C=\omega$. 
 
   Em verdade, provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\Cup_{p\in\omega} f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Agora seja $p\in\omega$, notemos que $f|_{p+2}=f_p$, consequentemente $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, portanto $f$ satisfaz as hip\'oteses do teorema, i.e., provamos a exist\^encia. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema, temos que para todo $p\in\omega$, vale $f|_{p+2},\phi|_{p+2}\in{\frak F}_p$, por conseguinte $f|_{p+2}=f_p=\phi|_{p+2}$, que por sua vez implica que $f=\phi$, pois $p\in\omega$ \'e arbitr\'ario, provando portanto a unicidade de $f$.\qed
+
+  O pr\'oximo teorema \'e um exerc\'icio que me apareceu quando lia [\ct{HalmosNaive}], este teorema me fez estancar no texto. Eu voltei a atacar o problema v\'arios meses depois, com v\'arios fracassos em sequ\^encia. Em fim consegui, com adapta\c c\~oes posteriores.
    
-  \begin{teo}[Exerc\'icio - \ct{HalmosNaive}[\footnote{Na minha primeira demonstra\c c\~ao deste resultado eu fiz recorr\^encia ao \AEs, precipuamente um de seus equivalentes, a saber, o lema de Zorn. Em verdade, ele n\~ao \'e necess\'ario, pois conforme se observa basta a unicidade do supremo, que por sua vez, \'e garantida no conjunto das partes munido com a ordem parcial induzida pela inclus\~ao $\subset$. Esta observa\c c\~ao tardia s\'o veio ao meu conhecimento depois que pus a minha demonstra\c c\~ao inicial no llm {\bf ChatGPT}, ele enfatizou que a demonstra\c c\~ao do teorema possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Embora ele n\~ao tenha sugerido nenhuma adapta\c c\~ao \`a minha prova, eu percebi posteriormente que o ponto principal da demonstra\c c\~ao jaz sobre a desigualdade (\ref{eq1001261141}), usada anteriormente para provar que toda cadeia n\~ao vazia admite {\it supremum}, e consequentemente concluir a exist\^encia dum elemento maximal.}]
+  \begin{teo}[Exerc\'icio - \ct{HalmosNaive}[\footnote{Na minha primeira demonstra\c c\~ao deste resultado eu fiz recorr\^encia ao \AEs, precipuamente um de seus equivalentes, a saber, o lema de Zorn. Em verdade, ele n\~ao \'e necess\'ario, pois conforme se observa basta a unicidade do supremo, que por sua vez, \'e garantida no conjunto das partes munido com a ordem parcial induzida pela inclus\~ao $\subset$. Esta observa\c c\~ao tardia s\'o veio ao meu conhecimento depois que pus a minha demonstra\c c\~ao inicial no llm {\bf ChatGPT}, ele enfatizou que a demonstra\c c\~ao do teorema possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Embora ele n\~ao tenha sugerido nenhuma adapta\c c\~ao \`a minha prova, eu percebi posteriormente que o ponto principal da demonstra\c c\~ao jaz sobre a desigualdade (\ref{eq1001261141}). Esta \'ultima usada anteriormente para provar que toda cadeia n\~ao vazia admite {\it supremum}, e consequentemente concluir a exist\^encia dum elemento maximal.}]
     Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existe um subconjunto $A\subset X$, tal que $X\cp A=g(Y\cp f(A))$.
     \label{teo0801261705}
   \end{teo}
@@ -814,8 +816,11 @@
   \]
   \qed
 
-  A seguir apresentarei o teorema devido a Tarski segundo o qual podemos inferir que \rf{Teorema}{teo0801261705}. Vale observar que a prova do teorema \rf{Teorema}{teo0801261705} \'e autocontida, de maneira que n\~ao se faz necess\'ario transcender o escopo para reticulados.
+  % TODO: Mostrar Cantor-Schröder-Bernstein como corol\'ario
 
+  A seguir apresentarei um teorema devido a Tarski segundo o qual podemos inferir o \rf{Teorema}{teo0801261705} como corol\'ario. Em verdade, trata-se de uma generaliza\c c\~ao do teorema do ponto fixo de Knaster-Tarski. Vale salientar que a prova do teorema \rf{Teorema}{teo0801261705} \'e autocontida, de maneira que n\~ao \'e preciso transcender o escopo para reticulados. Sobre essa perspectiva mais geral deve-se reconhecer os objetos do teorema anterior como uma realiza\c c\~ao do sistema de axiomas abarcados pelo \rf{Teorema}{teo1001262040}, ou seja, h\'a mais verbaliza\c c\~ao.
+
+  % TODO: Provar.
   \begin{teo}[Teorema do ponto fixo para reticulados\footnote{Enunciarei o teorema sob uma perspectiva mais geral seguindo o artigo de Tarski, que generalizou o teorema aplicado ao conjunto das partes de um conjunto arbitr\'ario para reticulados completos.}]%
     Sejam 
     \begin{enumerate}[label = ({\rm\roman*})]
@@ -837,6 +842,7 @@
     \[
       \Wedge F=\Wedge\{x:x\in X\,\a\,x\leq f(x)\}.
     \]
+    \label{teo1001262040}
   \end{teo}
   \prova Provar.\qed
 
