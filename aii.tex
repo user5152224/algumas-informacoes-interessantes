@@ -184,7 +184,7 @@
 \def\Cap{\mathop{\textstyle\bigcap}}
 \def\C{\mathds{C}}
 \def\cp{\mathbin{\neg}}
-\def\ct#1{#1 \citenum{#1}}
+\def\ct#1{{[#1 \citenum{#1}]}}
 \def\Cup{\mathop{\textstyle\bigcup}}
 \def\]{\end{equation}}
 \def\fr#1#2{\frac{#1}{#2}}
@@ -745,7 +745,7 @@
   \]
   o que \'e uma inconsist\^encia, i.e., uma contradi\c c\~ao. Logo, $\neg\varsigma(\mathcal{R})$. Ademais, da pr\'opria defini\c c\~ao de classificadores $\mathcal{R}\subset\U$, como $\mathcal{R}$ \'e uma classe pr\'opria, necessariamente $\U$ tamb\'em o ser\'a. Com efeito, suponha por {\it reductio ad absurdum} que $\varsigma(\U)$, pelo \rf{Teorema}{T33}, inferir\'iamos que $\varsigma(\mathcal{R})$, o que \'e uma contradi\c c\~ao com o argumento anterior.\qed
 
-  \begin{teo}[Defini\c c\~ao por indu\c c\~ao]
+  \begin{teo}[Defini\c c\~ao por indu\c c\~ao ou recurs\~ao]
     Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\Cup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.
   \end{teo}
   \prova
@@ -761,9 +761,9 @@
 
   Em verdade, provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\Cup_{p\in\omega} f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Agora seja $p\in\omega$, notemos que $f|_{p+2}=f_p$, consequentemente $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, portanto $f$ satisfaz as hip\'oteses do teorema, i.e., provamos a exist\^encia. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema, temos que para todo $p\in\omega$, vale $f|_{p+2},\phi|_{p+2}\in{\frak F}_p$, por conseguinte $f|_{p+2}=f_p=\phi|_{p+2}$, que por sua vez implica que $f=\phi$, pois $p\in\omega$ \'e arbitr\'ario, provando portanto a unicidade de $f$.\qed
 
-  O pr\'oximo teorema \'e um exerc\'icio que me apareceu quando lia [\ct{HalmosNaive}], este teorema me fez estancar no texto. Eu voltei a atacar o problema v\'arios meses depois, com v\'arios fracassos em sequ\^encia. Em fim consegui, com adapta\c c\~oes posteriores.
+  O pr\'oximo teorema \'e um exerc\'icio que me apareceu quando lia \ct{HalmosNaive}, este teorema me fez estancar no texto. Eu voltei a atacar o problema v\'arios meses depois, com v\'arios fracassos em sequ\^encia. Em fim consegui, com adapta\c c\~oes posteriores.
    
-  \begin{teo}[Exerc\'icio - \ct{HalmosNaive}[\footnote{Na minha primeira demonstra\c c\~ao deste resultado eu fiz recorr\^encia ao \AEs, precipuamente um de seus equivalentes, a saber, o lema de Zorn. Em verdade, ele n\~ao \'e necess\'ario, pois conforme se observa basta a unicidade do supremo, que por sua vez, \'e garantida no conjunto das partes munido com a ordem parcial induzida pela inclus\~ao $\subset$. Esta observa\c c\~ao tardia s\'o veio ao meu conhecimento depois que pus a minha demonstra\c c\~ao inicial no llm {\bf ChatGPT}, ele enfatizou que a demonstra\c c\~ao do teorema possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Embora ele n\~ao tenha sugerido nenhuma adapta\c c\~ao \`a minha prova, eu percebi posteriormente que o ponto principal da demonstra\c c\~ao jaz sobre a desigualdade (\ref{eq1001261141}). Esta \'ultima usada anteriormente para provar que toda cadeia n\~ao vazia admite {\it supremum}, e consequentemente concluir a exist\^encia dum elemento maximal.}]
+  \begin{teo}[Exerc\'icio - \ct{HalmosNaive}\footnote{Na minha primeira demonstra\c c\~ao deste resultado eu fiz recorr\^encia ao \AEs, precipuamente um de seus equivalentes, a saber, o lema de Zorn. Em verdade, ele n\~ao \'e necess\'ario, pois conforme se observa basta a unicidade do supremo, que por sua vez, \'e garantida no conjunto das partes munido com a ordem parcial induzida pela inclus\~ao $\subset$. Esta observa\c c\~ao tardia s\'o veio ao meu conhecimento depois que pus a minha demonstra\c c\~ao inicial no llm {\bf ChatGPT}, ele enfatizou que a demonstra\c c\~ao do teorema possui no seu cerne uma rela\c c\~ao com o teorema do ponto fixo de Knaster-Tarski. Embora ele n\~ao tenha sugerido nenhuma adapta\c c\~ao \`a minha prova, eu percebi posteriormente que o ponto principal da demonstra\c c\~ao jaz sobre a desigualdade (\ref{eq1001261141}). Esta \'ultima usada anteriormente para provar que toda cadeia n\~ao vazia admite {\it supremum}, e consequentemente concluir a exist\^encia dum elemento maximal.}]
     Sejam $f:X\rightarrow Y$ e $g:Y\rightarrow X$. Ent\~ao existe um subconjunto $A\subset X$, tal que $X\cp A=g(Y\cp f(A))$.
     \label{teo0801261705}
   \end{teo}
@@ -816,7 +816,24 @@
   \]
   \qed
 
-  % TODO: Mostrar Cantor-Schröder-Bernstein como corol\'ario
+  Conforme notado por Halmos em \ct{HalmosNaive} o \rf{Teorema}{teo0801261705} \'e uma maneira elegante de se demonstrar o
+
+  \begin{cor}[Bernstein-Cantor-Schröder]
+    Sejam $X$ e $Y$ conjuntos tais que existe uma inje\c c\~ao pr\'opria de $X$ em $Y$ e vice-versa. Ent\~ao $X$ \'e equivalente a $Y$.
+  \end{cor}
+  \prova Pelo \rf{Teorema}{teo0801261705} existe $A\subset X$, tal que 
+  \[
+    X\cp A=g(Y\cp f(A)).
+  \]
+  Definamos $h:X\ra Y$, por
+  \[
+    h(x)=
+    \begin{cases}
+      f(x),      & x\in A\cr
+      g^{-1}(x), & x\in X\cp A\cr
+    \end{cases}
+  \]
+  Ent\~ao sabemos naturalmente que $h$ \'e uma bije\c c\~ao entre $X$ e $Y$, o que prova o requerido.\qed
 
   A seguir apresentarei um teorema devido a Tarski segundo o qual podemos inferir o \rf{Teorema}{teo0801261705} como corol\'ario. Em verdade, trata-se de uma generaliza\c c\~ao do teorema do ponto fixo de Knaster-Tarski. Vale salientar que a prova do teorema \rf{Teorema}{teo0801261705} \'e autocontida, de maneira que n\~ao \'e preciso transcender o escopo para reticulados. Sobre essa perspectiva mais geral deve-se reconhecer os objetos do teorema anterior como uma realiza\c c\~ao do sistema de axiomas abarcados pelo \rf{Teorema}{teo1001262040}, ou seja, h\'a mais verbaliza\c c\~ao.
 
