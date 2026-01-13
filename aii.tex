@@ -16,7 +16,15 @@
   newtxmath,
   setspace,
   titlesec,
+  tikz,
   xcolor,
+}
+
+% Bibliotecas do tikz
+\usetikzlibrary{
+  arrows.meta,
+  calc,
+  math,
 }
 
 \usepackage[brazil]{babel}
@@ -198,6 +206,7 @@
 \def\lra{\longrightarrow}
 % TODO : Conflito de notação com reticulados
 \def\o{\vee}
+\def\ora{\overrightarrow}
 \def\parallel{\mathbin{/\kern-3pt/}}
 \def\pma{{\bfseries PMA}}
 \def\prova{\noindent{\bfseries\scshape Prova}\quad}
@@ -3558,41 +3567,94 @@
 %  \]
   \subsection{Rota\c c\~oes de sistemas de coordenadas}
 
-  \begin{figure}[!h]
-    \caption{Rota\c c\~ao dum sistema de coordenadas cartesiano por um \^angulo $\theta$.}
-  \end{figure}
 
   Consideremos um ponto $w=(u,v)_\theta$ cujas coordenadas s\~ao dadas em rela\c c\~ao ao sistema rotacionado. Nosso objetivo \'e determinar as coordenadas de $w$ relativo ao primeiro sistema. A t\'itulo de exemplo, usaremos um m\'etodo geom\'etrico para um caso particular.
 
   Observemos, pois, a figura seguinte
 
   \begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[
+      >={
+        Stealth[length=8pt]
+      }
+    ]
+      \def\rot((#1,#2),#3){
+        ({#1*cos(#3)-#2*sin(#3)}, {#1*sin(#3)+#2*cos(#3)})
+      }
+      \def\st{.5}
+      \def\sep{1.15}
+      \def\ang{15}
+      \def\radius{1}
+
+      \coordinate (O) at (0,0);
+      \fill (O) circle [radius=1.5pt];
+      \node at (235:.35) {$O$};
+
+      \coordinate (P) at (2.1, 3.5);
+      \draw [fill=black] (P) circle [radius=1.5pt];
+      \node at ($(O)!1.08!(P)$) {$P$};
+      \draw [dashed] (P) -- (P|-O) coordinate (P1);
+      \draw [dashed] (P) -- (P-|O) coordinate (P2);
+
+      \draw [->] (0,-\st) -- (0,5);
+      \draw [->] (-\st,0) -- (5,0);
+
+      \draw [->] \rot((0, -\st), \ang) -- \rot((0, 5), \ang) coordinate (V);
+      \draw [->] \rot((-\st,0), \ang) -- \rot((5,0), \ang) coordinate (U);
+
+      \draw [dashed] (P) -- ($(0,0)!(P)!(U)$) coordinate (P3);
+      \draw [dashed] (P) -- ($(0,0)!(P)!(V)$) coordinate (P4);
+
+      \foreach \i in {1,...,4} {
+        \fill (P\i) circle [radius=1.5pt];
+        \node at ($(P)!\sep!(P\i)$) {$P_{\i}$};
+      }
+      
+
+      \draw (\radius,0) arc [start angle=0, end angle=\ang, radius=\radius];
+      \node at (\ang/2:1.5) {$\theta$};
+      \draw (0,\radius) arc [start angle=90, end angle=\ang+90, radius=\radius];
+      \node at (\ang/2+90:1.5) {$\theta$};
+    \end{tikzpicture}
     \caption{Rota\c c\~ao dum sistema de coordenadas cartesiano por um \^angulo $\theta$.}
   \end{figure}
 
-  Em conformidade com a figura estamos supondo que $\theta\in\,]0,\pi/2[$. Uma an\'alise geom\'etrica nos forne\c ce o seguinte sistema
+  Seguirei a mesma linha de racioc\'inio empregada em \ct{Iezzi7}. Da geometria anal\'itica b\'asica temos
   \[
-    \left\{\;
+      \ora{OP_1}=\ora{P_2P},\quad\ora{OP_2}=\ora{P_1P},\quad\ora{OP_3}=\ora{P_4P},\quad\ora{OP_4}=\ora{P_3P}
+  \]
+  e
+  \[
+    \ora{OP}=\ora{OP_3}+\ora{P_3P}=\ora{OP_4}+\ora{P_4P}.
+  \]
+
+  Seguidamente, para $i\in\{1,2\}$, definamos
+  \[  
+    \pi_i(w)=\lge u,e_i\rge,
+  \]
+  as proeje\c c\~oes usuais sobre os eixos gerados pela base can\^onica $\{e_1,e_2\}$. Em conson\^ancia, temos
+  \[
     \begin{aligned}
-      u&={x\over\cos\theta}+v\tan\theta\cr
-      y&={v\over\cos\theta}+x\tan\theta\cr
+      \pi_1(\ora{OP})&=\pi_1(\ora{OP_3})+\pi_1(\ora{P_3P})\cr
+                     &=\pi_1(\ora{OP_3})+\pi_1(\ora{OP_4})\cr
+                     &=|\ora{OP_3}|\cos\theta+|\ora{OP_4}|\cos\Bigl({\pi\over2}+\theta\Bigr)\cr
+                     &=|\ora{OP_3}|\cos\theta-|\ora{OP_4}|\sin\theta\cr
+                     &=u\cos\theta-v\sin\theta\cr
     \end{aligned}
-    \right.
-    \label{S0501261935}
   \]
-  Donde, multiplicando a primeira por $\cos\theta$, obtemos
-  \[
-    x=u\cos\theta-v\sin\theta,
-  \]
-  Substituindo $x$ na segunda equa\c c\~ao de (\ref{S0501261935}), deduz-se
+  e
   \[
     \begin{aligned}
-      y&={v\over\cos\theta}+\tan\theta(u\cos\theta-v\sin\theta)\cr
-       &={v\over\cos\theta}+u\sin\theta-{v\sin^2\theta\over\cos\theta}\cr
-       &=u\sin\theta+v\cos\theta.
+      \pi_2(\ora{OP})&=\pi_2(\ora{OP_4})+\pi_2(\ora{P_4P})\cr
+                     &=\pi_2(\ora{OP_4})+\pi_2(\ora{OP_3})\cr
+                     &=|\ora{OP_4}|\cos\theta+|\ora{OP_3}|\cos\Bigl({\pi\over2}-\theta\Bigr)\cr
+                     &=|\ora{OP_4}|\cos\theta+|\ora{OP_3}|\sin\theta\cr
+                     &=v\cos\theta+u\sin\theta.\cr
     \end{aligned}
   \]
-  em s\'intese temos
+
+  Em s\'intese, obtemos a seguinte rela\c c\~ao das coordenadas do par $(x,y)$ no sistema anterior, em rela\c c\~ao \`as do par $(u,v)$, no novo sistema, nomeadamente
   \[
     \left\{\;
     \begin{aligned}
