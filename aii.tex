@@ -24,6 +24,7 @@
 \usetikzlibrary{
   arrows.meta,
   calc,
+  decorations.pathreplacing,
   math,
 }
 
@@ -92,7 +93,7 @@
 \def\sc{\MakeUppercase}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\: #1}}
-\renewcommand{\headrulewidth}{.1ex}
+\renewcommand{\headrulewidth}{0ex}
 \fancypagestyle{est}{%
   \def\fontface{\bf}
   \fancyhf{}
@@ -3455,17 +3456,61 @@
   % TODO: Completar e organizar esta seção.
   \subsection{Transla\c c\~oes de sistema de coordenadas.}
 
-  Dados pontos $\varOmega=(h,k)$ e $(x,y)$ de $\R^2$, as coordenadas $(u,v)$ de $(x,y)$ relativo ao sistema cuja origem \'e $\varOmega$, s\~ao simplesmente dadas pela identidade
+  % TODO: Produzir diagrama.
+  \begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[
+        >={
+          Stealth[length=8pt]
+        }
+      ]
+      \def\st{.5}
+      \def\h{2}
+      \def\k{2}
+
+      \coordinate (O) at (0,0);
+      \coordinate (Om) at (\h,\k);
+      \coordinate (P) at (3.5,4);
+
+      \fill (O)  circle [radius=1.5pt] node [anchor=north east] {$O$};
+      \fill (Om) circle [radius=1.5pt] node [anchor=north east] {$\varOmega$};
+      \fill (P)  circle [radius=1.5pt] node [anchor=south west] {$P$};
+      
+
+      \draw [->] (0,-\st) -- (0,5) node [above] {$y$};
+      \draw [->] (-\st,0) -- (5,0) node [right] {$x$};
+
+      \draw [dashed] (P) -- ($(O)!(P)!(5,0)$);
+      \draw [dashed] (P) -- ($(O)!(P)!(0,5)$);
+
+      \draw [dashed] (P) -- ($(O)!(P)!(5,0)$) coordinate (X) node [below] {$x$};
+      \draw [dashed] (P) -- ($(O)!(P)!(0,5)$) coordinate (Y) node [left]  {$y$};
+
+      \draw [dashed] (Om) -- ($(O)!(Om)!(5,0)$) coordinate (H) node [below] {$h$};
+      \draw [dashed] (Om) -- ($(O)!(Om)!(0,5)$) coordinate (K) node [left]  {$k$};
+
+      \draw [decorate, decoration={brace, amplitude=6pt}, line width=1pt] (H) -- (X) node [midway, above=5pt] {$x-h$};
+      \draw [decorate, decoration={brace, amplitude=6pt}, line width=1pt] (Y) -- (K) node [midway, right=5pt] {$y-k$};
+
+      \draw [->] (0+\h,-\st+\k) -- (0+\h,5) node [above] {$v$};
+      \draw [->] (-\st+\h,0+\k) -- (5,0+\k) node [right] {$u$};
+
+    \end{tikzpicture}
+    \caption{Transla\c c\~ao dum sistema de coordenadas cartesiano.}
+  \end{figure}
+
+
+  Dados pontos $\varOmega=(h,k)$ e $P=(x,y)$ de $\R^2$, as coordenadas $(u,v)$ de $P$ relativo ao sistema cuja origem \'e $\varOmega$, s\~ao simplesmente dadas pela identidade
   \[
     (u,v)=(x,y)-(h,k).
   \]
-  Em verdade, o sistema de coordenadas \'e a transforma\c c\~ao afim $T:\R^2\ra\R^2$, dada por
+  Mais precisamente a rela\c c\~ao entre os sistemas de coordenadas \'e dada pela transforma\c c\~ao afim $T:\R^2\ra\R^2$, definida por
   \[
     T(v)=v-\varOmega.
   \]
   Em outros termos, estamos calculando as coordenadas dum ponto $v$ relativo a um sistema de coordenadas cuja a origem \'e precisamente $\varOmega$.
 
-  A rela\c c\~ao das coordenadas de $(u,v)$ do sistema transladado com as coordenadas de $(x,y)$ segundo o sistema antigo \'e expressa pelo sistema
+  A rela\c c\~ao das coordenadas de $(u,v)$ do sistema transladado com as coordenadas de $(x,y)$ segundo o sistema antigo pode ser sintetizada pelo sistema linear
   \[
     \Biggl\{\,
     \begin{aligned}
@@ -3540,21 +3585,26 @@
     \label{eq2912252055}
   \]
 
-  de (\ref{eq2912252053}) com $(x,y)=(u,v)$ e (\ref{eq2912252055}) podemos inferir
+  Desenvolvendo (\ref{eq2912252055}) e tomando $(x,y)=(u,v)$ em (\ref{eq2912252123}) podemos inferir
   \[
-    au^2+buv+cv^2+{d\over 2}u+{e\over 2}v+2ahu+2ckv+bhv+buk=0.
+    2(au^2+buv+cv^2+{d\over 2}u+{e\over 2}v)+2ahu+2ckv+bhv+buk=0,
     \label{eq2912252132}
   \]
-  Como consequ\^encia, de (\ref{eq2912252053}), (\ref{eq2912252123}) e (\ref{eq2912252132}) temos
+  ou melhor,
+  \[
+    au^2+buv+cv^2+{d\over 2}u+{e\over 2}v+2ahu+2ckv+bhv+buk=0.
+    \label{eq1401261239}
+  \]
+  Como consequ\^encia, de (\ref{eq2912252053}), (\ref{eq2912252123}) e (\ref{eq1401261239}) temos
   \[
     \begin{split}
       g(h,k)&=ah^2+bhk+ck^2+dh+ck+f\cr
-            &=ah^2+bhk+ck^2+dh+ck+f+au^2+buv+cv^2\cr
-            &\qquad+{d\over 2}u+{e\over 2}v+2ahu+2ckv+bhv+buk\cr
-            &=a(h+u)^2+b(u+h)(v+k)+c(k+v)^2\cr
-            &\qquad+{d\over2}(h+u)+{e\over2}(k+v)+{d\over2}u+{e\over2}v+f\cr
+            &=ah^2+bhk+ck^2+dh+ck+f\cr
+            &\qquad+\overbrace{au^2+buv+cv^2+{d\over 2}u+{e\over 2}v+2ahu+2ckv+bhv+buk}^{0\ (\ref{eq1401261239})}\cr
+            &=\overbrace{a(h+u)^2+b(u+h)(v+k)+c(k+v)^2+{d\over2}(h+u)+{e\over2}(k+v)}^{0\ (\ref{eq2912252053})}\cr
+            &\qquad+{d\over2}u+{e\over2}v+f\cr
             &={d\over2}u+{e\over2}v+f\cr
-            &=g(u,v)
+            &\kern-8pt\stackrel{(\ref{eq2912252123})}{=}g(u,v)
     \end{split}
   \]
   Em outros termos $g$ \'e constante no conjunto de solu\c c\~oes do sistema (\ref{S2912252034}).\qed
@@ -3568,17 +3618,17 @@
   \subsection{Rota\c c\~oes de sistemas de coordenadas}
 
 
-  Consideremos um ponto $w=(u,v)_\theta$ cujas coordenadas s\~ao dadas em rela\c c\~ao ao sistema rotacionado. Nosso objetivo \'e determinar as coordenadas de $w$ relativo ao primeiro sistema. A t\'itulo de exemplo, usaremos um m\'etodo geom\'etrico para um caso particular.
+  Consideremos um ponto (vetor) $P=(u,v)_\theta$ cujas coordenadas s\~ao dadas em rela\c c\~ao ao sistema rotacionado. Nosso objetivo \'e determinar as coordenadas de $P$ relativo ao primeiro sistema. Primeiramente usaremos o m\'etodo geom\'etrico e em seguida um alg\'ebrico.
 
   Observemos, pois, a figura seguinte
 
   \begin{figure}[!h]
     \centering
     \begin{tikzpicture}[
-      >={
-        Stealth[length=8pt]
-      }
-    ]
+        >={
+          Stealth[length=8pt]
+        }
+      ]
       \def\rot((#1,#2),#3){
         ({#1*cos(#3)-#2*sin(#3)}, {#1*sin(#3)+#2*cos(#3)})
       }
@@ -3597,32 +3647,35 @@
       \draw [dashed] (P) -- (P|-O) coordinate (P1);
       \draw [dashed] (P) -- (P-|O) coordinate (P2);
 
-      \draw [->] (0,-\st) -- (0,5);
-      \draw [->] (-\st,0) -- (5,0);
+      \draw [->] (0,-\st) -- (0,5) node [above] {$y$};
+      \draw [->] (-\st,0) -- (5,0) node [right] {$x$};
 
-      \draw [->] \rot((0, -\st), \ang) -- \rot((0, 5), \ang) coordinate (V);
-      \draw [->] \rot((-\st,0), \ang) -- \rot((5,0), \ang) coordinate (U);
+      \draw [->] \rot((0, -\st), \ang) -- \rot((0, 5), \ang) coordinate (V) node [above] {$v$};
+      \draw [->] \rot((-\st,0), \ang) -- \rot((5,0), \ang) coordinate (U)   node [right] {$u$};
 
       \draw [dashed] (P) -- ($(0,0)!(P)!(U)$) coordinate (P3);
       \draw [dashed] (P) -- ($(0,0)!(P)!(V)$) coordinate (P4);
 
       \foreach \i in {1,...,4} {
         \fill (P\i) circle [radius=1.5pt];
-        \node at ($(P)!\sep!(P\i)$) {$P_{\i}$};
       }
-      
 
       \draw (\radius,0) arc [start angle=0, end angle=\ang, radius=\radius];
       \node at (\ang/2:1.5) {$\theta$};
       \draw (0,\radius) arc [start angle=90, end angle=\ang+90, radius=\radius];
       \node at (\ang/2+90:1.5) {$\theta$};
+
+      \node [below] at (P1) {$P_1$};
+      \node [left]  at (P2) {$P_2$};
+      \node [below] at (P3) {$P_3$};
+      \node [left]  at (P4) {$P_4$};
     \end{tikzpicture}
     \caption{Rota\c c\~ao dum sistema de coordenadas cartesiano por um \^angulo $\theta$.}
   \end{figure}
 
-  Seguirei a mesma linha de racioc\'inio empregada em \ct{Iezzi7}. Da geometria anal\'itica b\'asica temos
+  Seguirei a mesma linha de racioc\'inio empregada em \ct{Iezzi7}. Da geometria anal\'itica temos
   \[
-      \ora{OP_1}=\ora{P_2P},\quad\ora{OP_2}=\ora{P_1P},\quad\ora{OP_3}=\ora{P_4P},\quad\ora{OP_4}=\ora{P_3P}
+      \ora{OP_1}=\ora{P_2P},\ \ora{OP_2}=\ora{P_1P},\ \ora{OP_3}=\ora{P_4P},\ \ora{OP_4}=\ora{P_3P}
   \]
   e
   \[
@@ -3654,7 +3707,7 @@
     \end{aligned}
   \]
 
-  Em s\'intese, obtemos a seguinte rela\c c\~ao das coordenadas do par $(x,y)$ no sistema anterior, em rela\c c\~ao \`as do par $(u,v)$, no novo sistema, nomeadamente
+  Em s\'intese, obtemos a seguinte rela\c c\~ao das coordenadas do ponto $P$ no sistema anterior, em rela\c c\~ao \`as do novo sistema, nomeadamente
   \[
     \left\{\;
     \begin{aligned}
@@ -3681,7 +3734,7 @@
   \]
 
 
-  Portanto, um vetor $w=(u,v)_\theta$ relativo \`a base ${\mathcal B}_\theta=\{r,s\}$, tem coordenadas satisfazendo o sistema (\ref{S0501262000}). Assim, as coordenadas $x$ e $y$ de $w$ relativas ao sistema can\^onico satisfazem a identidade
+  Portanto, um vetor $P=(u,v)_\theta$ relativo \`a base ${\mathcal B}_\theta=\{r,s\}$, tem coordenadas satisfazendo o sistema (\ref{S0501262000}). Assim, as coordenadas $x$ e $y$ de $P$ relativas ao sistema can\^onico satisfazem a identidade
   \[
     \begin{bmatrix}
       x\cr
