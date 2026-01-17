@@ -32,7 +32,7 @@
 \usepackage[brazil]{babel}
 
 % Espaçamento de letra para o cabeçalho dos capítulos
-\usepackage[letterspace=203]{microtype}
+\usepackage[letterspace=147]{microtype}
 
 % Macro para criação de partes (adaptado de https://tex.stackexchange.com/questions/364330/how-to-divide-the-toc-in-two-parts)
 \newcount\partnum
@@ -65,33 +65,61 @@
   \newpage\thispagestyle{empty}
 }
 
-%\makeatletter
-%\def\@makechapterhead#1{%
-%    \vspace*{50\p@}%
-%    {\parindent \z@ \raggedright \normalfont
-%        \ifnum \c@secnumdepth >\m@ne
-%        \Huge\bfseries\textcolor{red}{\thechapter}\par\nobreak  % Extra large, bold, and red chapter number
-%        \vskip 2\p@
-%        \fi
-%        \interlinepenalty\@M
-%        \Huge \bfseries #1\par\nobreak
-%        \vskip 40\p@
-%}}
-%\makeatother
+\makeatletter
+\def\@makechapterhead#1{%
+  \def\ruleheight{1pt}
+  \def\spacing{5pt}
+  {\raggedleft%
+    \ifnum \c@secnumdepth >\m@ne
+      \hrule height \ruleheight          
+      \vskip \spacing
+      {
+        \bfseries\scriptsize
+        CAP\'ITULO
+      }\par
+      \vskip \spacing
+      \expandafter\MakeUppercase{
+        \fontsize{35}{35}\selectfont
+        \thechapter
+      }
+      \vskip .42pt
+      \bfseries\MakeUppercase{#1}
+    \fi
+    \interlinepenalty\@M
+    \vskip 200\p@
+  }
+}
+\makeatother
+
+\makeatletter
+\def\@makeschapterhead#1{%
+  \def\ruleheight{1pt}
+  \def\spacing{5pt}
+  {\raggedleft%
+    \ifnum \c@secnumdepth >\m@ne
+      \hrule height \ruleheight          
+      \vskip \spacing
+      \bfseries\MakeUppercase{#1}
+    \fi
+    \interlinepenalty\@M
+    \vskip 200\p@
+  }
+}
+\makeatother
 
 % Formatação do título dos capítulos
-\titleformat{\chapter}[display]
-{}%
-{
-   \centering
-   {
-     \fontsize{70pt}{70pt}
-     \selectfont\thechapter
-   }
-}%
-{0cm}%
-{\centering\scshape\lsstyle\MakeUppercase}%
-[]
+%\titleformat{\chapter}[display]
+%{}%
+%{
+%   \centering
+%   {
+%     \fontsize{70pt}{70pt}
+%     \selectfont\thechapter
+%   }
+%}%
+%{0cm}%
+%{\centering\scshape\lsstyle\MakeUppercase}%
+%[]
 
 % Formatação do título das se\c c\~oes e subseções
 \titleformat{\section}{\centering\scshape\lsstyle\MakeUppercase}{\thesection}{1em}{}[]
