@@ -35,76 +35,76 @@
 \usepackage[letterspace=147]{microtype}
 
 % Macro para criação de partes (adaptado de https://tex.stackexchange.com/questions/364330/how-to-divide-the-toc-in-two-parts)
-\newcount\partnum
-\partnum 1    
-
-\def\parte#1{
-  \clearpage
-  \thispagestyle{empty}
-  \null\vfill%
-  {%
-    \centering
-    {\fontsize{70}{70}\selectfont \expandafter\MakeUppercase{\romannumeral\the\partnum}}% 
-            
-    \vspace{1cm}\noindent
-    {%            
-      \label{partnum:\the\partnum}%
-      \hypertarget{partnum:\the\partnum}{\lsstyle\scshape\MakeUppercase{#1}}%
-    }
-    \par
-  }
- % Need \protect to prevent breaking of commands during write process to the .aux file.
-   \addtocontents{toc}{%
-     \vskip 1cm
-     \protect\centering\protect
-     \hyperlink{partnum:\the\partnum}{\scshape Parte \expandafter\MakeUppercase{\romannumeral\the\partnum}\hskip .28cm \textbullet\hskip .28cm #1}
-     \protect\par
-   }
-  \global\advance\partnum by 1%    
-  \vfill\null%
-  \newpage\thispagestyle{empty}
-}
+%\newcount\partnum
+%\partnum 1    
+%
+%\def\parte#1{
+%  \clearpage
+%  \thispagestyle{empty}
+%  \null\vfill%
+%  {%
+%    \centering
+%    {\fontsize{70}{70}\selectfont \expandafter\MakeUppercase{\romannumeral\the\partnum}}% 
+%            
+%    \vspace{1cm}\noindent
+%    {%            
+%      \label{partnum:\the\partnum}%
+%      \hypertarget{partnum:\the\partnum}{\lsstyle\scshape\MakeUppercase{#1}}%
+%    }
+%    \par
+%  }
+% % Need \protect to prevent breaking of commands during write process to the .aux file.
+%   \addtocontents{toc}{%
+%     \vskip 1cm
+%     \protect\centering\protect
+%     \hyperlink{partnum:\the\partnum}{\scshape Parte \expandafter\MakeUppercase{\romannumeral\the\partnum}\hskip .28cm \textbullet\hskip .28cm #1}
+%     \protect\par
+%   }
+%  \global\advance\partnum by 1%    
+%  \vfill\null%
+%  \newpage\thispagestyle{empty}
+%}
 
 \makeatletter
-\def\@makechapterhead#1{%
-  \def\ruleheight{1pt}
-  \def\spacing{5pt}
-  {\raggedleft%
-    \ifnum \c@secnumdepth >\m@ne
-      \hrule height \ruleheight          
-      \vskip \spacing
-      {
-        \bfseries\scriptsize
-        CAP\'ITULO
-      }\par
-      \vskip \spacing
-      \expandafter\MakeUppercase{
-        \fontsize{35}{35}\selectfont
-        \thechapter
-      }
-      \vskip .42pt
-      \bfseries\MakeUppercase{#1}
-    \fi
-    \interlinepenalty\@M
-    \vskip 200\p@
+  \def\@makechapterhead#1{%
+    \def\ruleheight{1pt}
+    \def\spacing{5pt}
+    {\raggedleft%
+      \ifnum \c@secnumdepth >\m@ne
+        \hrule height \ruleheight          
+        \vskip \spacing
+        {
+          \bfseries\scriptsize
+          CAP\'ITULO
+        }\par
+        \vskip \spacing
+        \expandafter\MakeUppercase{
+          \fontsize{35}{35}\selectfont
+          \thechapter
+        }
+        \vskip .42pt
+        \bfseries\MakeUppercase{#1}
+      \fi
+      \interlinepenalty\@M
+      \vskip 100\p@
+    }
   }
-}
 \makeatother
 
 \makeatletter
-\def\@makeschapterhead#1{%
-  \def\ruleheight{1pt}
-  \def\spacing{5pt}
-  {\raggedleft%
-    \ifnum \c@secnumdepth >\m@ne
-      \hrule height \ruleheight          
-      \vskip \spacing
-      \bfseries\MakeUppercase{#1}
-    \fi
-    \interlinepenalty\@M
-    \vskip 200\p@
+  \def\@makeschapterhead#1{%
+    \def\ruleheight{1pt}
+    \def\spacing{5pt}
+    {\raggedleft%
+      \ifnum \c@secnumdepth >\m@ne
+        \hrule height \ruleheight          
+        \vskip \spacing
+        \bfseries\MakeUppercase{#1}
+      \fi
+      \interlinepenalty\@M
+      \vskip 100\p@
+    }
   }
-}
 \makeatother
 
 % Formatação do título dos capítulos
@@ -122,9 +122,9 @@
 %[]
 
 % Formatação do título das se\c c\~oes e subseções
-\titleformat{\section}{\centering\scshape\lsstyle\MakeUppercase}{\thesection}{1em}{}[]
-\titleformat{\subsection}{\centering\scshape}{\thesubsection}{1em}{}[]
-\titleformat{\subsubsection}{\centering\scshape}{\thesubsubsection}{1em}{}[]
+\titleformat{\section}{\bfseries\MakeUppercase}{\thesection}{1em}{}[]
+\titleformat{\subsection}{\bfseries\footnotesize\MakeUppercase}{\thesubsection}{1em}{}[]
+\titleformat{\subsubsection}{\bfseries\footnotesize\MakeUppercase}{\thesubsubsection}{1em}{}[]
 
 % Controle dos níveis chapter (1), section, subscetion e subsubsection.
 \setcounter{secnumdepth}{4}
@@ -138,11 +138,10 @@
 \renewcommand{\sectionmark}[1]{\markright{\thesection\: #1}}
 \renewcommand{\headrulewidth}{0ex}
 \fancypagestyle{est}{%
-  \def\fontface{\bf}
+  \def\fontface{}
   \fancyhf{}
-  \fancyhead[CE]{\fontface\sc\leftmark}
-  \fancyhead[CO]{\fontface\sc\rightmark}
-  \fancyhead[LE,RO]{\fontface\thepage}
+  \fancyhead[RO]{\footnotesize\MakeUppercase{\rightmark}\quad\bfseries\thepage}
+  \fancyhead[LE]{\footnotesize{\bfseries\thepage}\quad\MakeUppercase{\leftmark}}
   \setlength{\headheight}{16pt}
   \addtolength{\topmargin}{-0.1pt}
 }
@@ -219,6 +218,18 @@
 
 \def\Qed{
   \hfill$\heartsuit$\bigskip
+}
+
+\newcommand{\blankpage}{
+  \begingroup
+    \pagestyle{empty}
+    \newpage
+    \hbox{}\vfill
+    \centering
+    {\slshape P\'agina deixada em branco intencionalmente.}
+    \vfill\hbox{}
+    \break
+  \endgroup
 }
 
 
@@ -318,8 +329,10 @@
   
   \chapter*{Prel\'udio}
     O texto que segue trata-se de um comp\^endio de assuntos que acho relevantes. Portanto, sem margem para d\'uvidas, o texto reflete minha subjetividade. Este texto estar\'a em constru\c c\~ao cont\'inua, de maneira que n\~ao haver\'a vers\~ao final enquanto as circunst\^ancias da vida sobrepujarem o meu \'impeto de colecionar tais informa\c c\~oes. Alguns resultados s\~ao de minha autoria, mas certamente est\~ao enviesados por alguma obra, de maneira que n\~ao descobri a roda, mas me sustentei sobre o trabalho de v\'arios indiv\'iduos perspicazes. Al\'em disso, \'e imposs\'ivel colecionar tudo o que nos interessa. Destarte, me ative aos que, ao menos, tive alguma ideia de demonstra\c c\~ao. 
+
+  \blankpage
   
-  \parte{Ci\^encias formais}
+  %\parte{Ci\^encias formais}
   
   \iftrue % IGNORAR?
 
@@ -333,6 +346,9 @@
   \begin{Def}[Sistema de axiomas mutualmente independentes]
     Um sistema de axiomas \'e dito {\rm\scshape mutualmente independentes} se nenhum axioma do sistema pode ser derivado dos outros por m\'etodos de infer\^encia l\'ogica, i.e., da l\'ogica proposicional e de disciplinas precedentes\footnote{Isto est\'a em conformidade segundo Tarski. Quais seriam estas disciplinas?}.
   \end{Def}
+
+  \blankpage
+
   \chapter{Teoria dos conjuntos}
   
   Decidi abordar a constru\c c\~ao dada no ap\^endice do livro {\it General Topology} de John L. Kelley ({\it vide} pp. 250--281). Conforme atestei, o sistema empregado por Kelley, \'e uma adapta\c c\~ao do sistema de A. P. Morse, como ele bem afirma em sua obra.
@@ -1133,6 +1149,8 @@
     \pi=3.141592\ldots
   $$
   A representa\c c\~ao do n\'umero corresponde \`a uma sequ\^encia finita de seus primeiros d\'\i gitos seguido de retic\^encias. Subentende-se que os outros d\'\i gitos sejam determinados indutivamente. 
+
+  \blankpage
   
   \chapter{Constru\c c\~ao dos n\'umeros reais}
   Doravante admitamos que letras gregas representem cortes e letras romanas representem n\'umeros racionais, salvo quando for explicitamente dito o contr\'ario. Dado um corte $\alpha$, por conveni\^encia definiremos que
@@ -1271,6 +1289,8 @@
   
   O teorema anterior nos diz que o conjunto $Q^*=\{q^*\in \R:q\in Q\}$ \'e isomorfo a $Q$, desta forma podemos dizer que precipuamente $Q\subset \R$.
   
+  \blankpage
+
   \chapter{Unicidade dos reais}
   Os cortes de Dedekind nos fornece um caminho para a constru\c c\~ao de um corpo ordenado $\R$ com a propriedade da menor cota superior. Existem certamente outros caminhos como usando as sequ\^encias de Cauchy, resultado devido a Cantor. Surgem as perguntas: O que individualiza o conjunto $\R$? Ser\'a que este conjunto assim constru\'\i do \'e de fato o conjunto n\'umerico conhecido desde a escola prim\'aria? As constru\c c\~oes mencionadas n\~ao resultam em dois objetos matem\'aticos aparentemente distintos? Em verdade, o conjunto dos n\'umeros reais conhecidos na escola s\~ao na realidade somas parciais de s\'eries num\'ericas, ao passo que aquele que constru\'\i mos \'e uma cole\c c\~ao de subconjuntos de n\'umeros racionais. Como bem observado em [Elon], intrinsecamente estes objetos s\~ao distintos, mas do ponto de vista de isomorfismos s\~ao id\^enticos. Para tratar bem do caso das s\'eries deve-se concluir o exerc\'\i cio 2 do cap\'\i tulo 29 de [Spivak].  A seguir empenhar-nos-emos a provar que $\R$ \'e \'unico a menos de isomorfismos, para tanto precisaremos de algumas constru\c c\~oes auxiliares. 
   
@@ -2364,6 +2384,8 @@
   $$
   Ent\~ao $f$ \'e uma fun\c c\~ao. De fato, suponhamos que $((m,n),a),((m,n),b)\in f$, ent\~ao da defini\c c\~ao $a=f_m(n)=b$. Assim, $f:\hbox{dom}\,f\rightarrow A$, \'e uma sobreje\c c\~ao. Em verdade, dado $a\in A$, existe $i\in I$, tal que $a\in A_i$, como $f_i$ \'e uma bije\c c\~ao existe $m\in B_i$, tal que $f_i(m)=a$, consequentemente $f(i,m)=a$. Usando o axioma da escolha podemos construir um conjunto $C\subseteq\omega\times\omega$ tal que $f|_C:C\rightarrow A$ \'e uma bije\c c\~ao. Como todo conjunto de $\omega\times\omega$ \'e no m\'aximo cont\'avel decorrer\'a por maior raz\~ao que $A=\Cup\mathscr A$ tamb\'em o ser\'a.
 
+  \blankpage
+
   \chapter{An\'alise matem\'atica}
   
   \theorem{}{\sl%
@@ -3016,6 +3038,8 @@
   $$
   observe que $\lim_ag|_{f^{-1}(\{0\})}=0$ mas $1\in g(X\cap(a-\delta,a+\delta))$, para todo $\delta>0$, consequentemente n\~ao existe $\lim_ag$. N\~ao obstante, $|fg(x)|\leq|x-a|$, para todo $x\in X$, logo $\lim_afg=0$. Estes argumentos resultantes da nega\c c\~ao da hip\'otese, possibilitaram a constru\c c\~ao de uma $g$ adequada para cada caso, negando, portanto, o quantificador universal. Isto por sua vez nos leva a nega\c c\~ao da consequente. Pela contrapositiva fica provada a outra condicional, concluindo, portanto, o teorema. \qed
   
+  \blankpage
+
   \chapter{Continuidade uniforme}
   
   A seguir, apresento um resultado sem recorrer a resultados muito sofisticados da an\'alise, em outros termos, uma prova usando conceitos elementares do c\'alculo.
@@ -3079,6 +3103,8 @@
     Seja $f:[0,\infty[\;\ra R$ cont\'inua e peri\'odica. Ent\~ao $f$ \'e uniformemente cont\'inua.
   \end{exe}
   
+  \blankpage
+
   \chapter{Derivadas e integrais}
   
   \begin{lem}
@@ -3342,6 +3368,8 @@
   \fi % IGNORAR
 
   
+  \blankpage 
+
   \chapter{Geometria anal\'itica}
   
   \iffalse % IGNORAR
@@ -3942,13 +3970,7 @@
      
   \end{obs}
 
-
-
-
-  
-  
-  
-
+  \blankpage
 
   \chapter{\'Algebra linear}
   
@@ -4030,7 +4052,9 @@
   \]
   o que por sua vez acarreta $v_i=w_i$, com $i\in\{1,2\}$.\qed
   
-  \parte{Ci\^encias naturais}
+  %\parte{Ci\^encias naturais}
+
+  \blankpage
   
   \chapter{Equa\c c\~ao de carga de um capacitor}
   \theorem{}{\sl%
