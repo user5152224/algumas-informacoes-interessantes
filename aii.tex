@@ -239,6 +239,7 @@
 
 
 
+\def\Sum{\mathop{\textstyle\sum}}
 \def\AEx{{\bf AEx}}
 \def\AEs{{\bf AEs}}
 \def\af{{\it a fortiori}}
@@ -254,8 +255,8 @@
 \def\]{\end{equation}}
 \def\meet{\curlywedge}
 \def\join{\curlyvee}
-\def\Meet{\mathop{\textstyle\bigcurlywedge}}
-\def\Join{\mathop{\textstyle\bigcurlyvee}}
+\def\Meet{\bigcurlywedge}
+\def\Join{\bigcurlyvee}
 \def\fr#1#2{\frac{#1}{#2}}
 \def\frak{\mathfrak}
 \def\K{\mathds{K}}
@@ -298,7 +299,7 @@
 {\bfseries}
 {}
 {0.5em}
-{\scshape\thmname{\scshape #1} \thmnumber{\scshape #2}\thmnote{ \scshape(#3)}\quad}
+{\scshape\thmname{\scshape #1} \thmnumber{\scshape #2}\thmnote{ \scshape(#3)}\ }
 
 \theoremstyle{slanted}
 
@@ -819,8 +820,9 @@
   \]
   o que \'e uma inconsist\^encia, i.e., uma contradi\c c\~ao. Logo, $\neg\varsigma(\mathcal{R})$. Ademais, da pr\'opria defini\c c\~ao de classificadores $\mathcal{R}\subset\U$, como $\mathcal{R}$ \'e uma classe pr\'opria, necessariamente $\U$ tamb\'em o ser\'a. Com efeito, suponha por {\it reductio ad absurdum} que $\varsigma(\U)$, pelo \rf{Teorema}{T33}, inferir\'iamos que $\varsigma(\mathcal{R})$, o que \'e uma contradi\c c\~ao com o argumento anterior.\qed
 
-  \begin{teo}[Defini\c c\~ao por indu\c c\~ao ou recurs\~ao]
+  \begin{teo}[Defini\c c\~ao por indu\c c\~ao ou recurs\~ao]%
     Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\Cup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.
+    \label{teo2101261957}
   \end{teo}
   \prova
   Primeiramente, para cada $p\in\omega$, definamos
@@ -903,6 +905,62 @@
     \end{cases}
   \]
   Ent\~ao sabemos naturalmente que $h$ \'e uma bije\c c\~ao entre $X$ e $Y$, o que prova o requerido.\qed
+
+  \begin{Def}[Opera\c c\~ao recursiva]%
+    Sejam $A$ um conjunto e $\meet:A\times A\ra A$ uma opera\c c\~ao bin\'aria. Estipularemos que 
+    \[
+      u\meet v=\meet(u,v),
+    \]
+    para todo $u,v\in A$.
+
+    Sejam $a\in A^\omega$ e $F:\Cup_{p\in\omega}A^{p+1}\ra A$ definida por
+    \[
+      F(g)=g(p)\meet a_{p+1}
+    \]
+    para toda $g\in A^{p+1}$ e $p\in\omega$. Do \rf{Teorema}{teo2101261957} fixado $k\in\omega$ existe uma \'unica $f\in A^\omega$, tal que $f(0)=a_k$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$. Convenientemente, definamos
+    \[
+      \Meet_{i=k}^{n+k} a_i=f(n)
+    \]
+    para todo $n\in\omega$. Em particular, se $k=1$, temos naturalmente
+    \[
+      \Meet_{i=1}^{n+1} a_i=f(n).
+    \]
+    \label{def2101262009}
+  \end{Def}
+
+  A \rf{Defini\c c\~ao}{def2101262009} nos da formalmente a defini\c c\~ao de uma opera\c c\~ao recursiva. Particularmente, se $A=\R$ e $\meet=+$ em $\R$, ent\~ao temos a somat\'oria
+  \[
+    \sum_{i=1}^{n+1}a_n.
+  \]
+  Se $\meet=\cdot$ e $A=\R$, ent\~ao temos a produt\'oria
+  \[
+    \prod_{i=1}^{n+1}a_n.
+  \]
+  Em verdade, intuitivamente temos que se $k=1$, ent\~ao
+  \[
+    \sum_{i=1}^2 a_i=\sum_{i=1}^1 a_i+a_2=a_1+a_2
+  \]
+  e
+  \[
+    \sum_{i=1}^3 a_i=\sum_{i=1}^2 a_i+a_3=(a_1+a_2)+a_3;
+  \]
+  e
+  \[
+    \sum_{i=1}^4 a_i=\sum_{i=1}^3 a_i+a_4=((a_1+a_2)+a_3)+a_4
+  \]
+  {\it ad infinitum}; {\it idem}, para qualquer opera\c c\~ao bin\'aria, {\it mutatis mutandis}.
+
+
+  % TODO: Mostrar um exemplo que motive o pr\'oximo teorema
+
+  \begin{teo}[Associatividade generalizada]%
+    Sejam $A$, $\meet$ e $a$ como na \rf{Defini\c c\~ao}{def2101262009}. Suponha que $\meet$ satisfa\c ca o seguinte axioma
+    \[
+      (u\meet v)\meet w=v\meet(v\meet w)
+    \]
+    para quaisquer $u,v,w\in A$. Ent\~ao a associa\c c\~ao dos termos num produto gen\'erico dos elementos do conjunto $\{a_{i+k}:i\in n+1\}$, com $n\in\omega$, \'e irrelevante. 
+  \end{teo}
+  \prova\qed
 
 
 
