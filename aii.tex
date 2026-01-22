@@ -917,7 +917,7 @@
     \[
       F(g)=g(p)\meet a_{p+1}
     \]
-    para toda $g\in A^{p+1}$ e $p\in\omega$. Do \rf{Teorema}{teo2101261957} fixado $k\in\omega$ existe uma \'unica $f\in A^\omega$, tal que $f(0)=a_k$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$. Convenientemente, definamos
+    para toda $g\in A^{p+1}$ e $p\in\omega$. Do \rf{Teorema}{teo2101261957}, fixado $k\in\omega$, existe uma \'unica $f\in A^\omega$, tal que $f(0)=a_k$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$. Convenientemente, definamos
     \[
       \Meet_{i=k}^{n+k} a_i=f(n)
     \]
@@ -949,6 +949,25 @@
     \sum_{i=1}^4 a_i=\sum_{i=1}^3 a_i+a_4=((a_1+a_2)+a_3)+a_4
   \]
   {\it ad infinitum}; {\it idem}, para qualquer opera\c c\~ao bin\'aria, {\it mutatis mutandis}.
+
+  \begin{Def}[Axioma da Associatividade]
+    Sejam $A$, $\meet$ e $a$ como na \rf{Defini\c c\~ao}{def2101262009}. Suponha que $\meet$ satisfa\c ca o seguinte axioma
+    \[
+      (u\meet v)\meet w=v\meet(v\meet w)
+    \]
+    Ent\~ao diremos que $\meet$ \'e {\bf associativa}.
+  \end{Def}
+  Neste ponto vale inquirir: Se $\meet$ for associativa o que dizer a respeito das seguintes opera\c c\~oes?
+  \[
+    \begin{aligned}
+      ((u\meet v)\meet w)\meet x \cr
+      (u\meet (v\meet w))\meet x \cr
+      u\meet ((v\meet w)\meet x) \cr
+      u\meet (v\meet (w\meet x)) \cr
+      (u\meet v)\meet (w\meet x) \cr
+    \end{aligned}
+  \]
+
 
 
   % TODO: Mostrar um exemplo que motive o pr\'oximo teorema
