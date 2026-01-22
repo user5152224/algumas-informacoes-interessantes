@@ -906,6 +906,10 @@
   \]
   Ent\~ao sabemos naturalmente que $h$ \'e uma bije\c c\~ao entre $X$ e $Y$, o que prova o requerido.\qed
 
+  \section{Outras teorias}
+
+  % TODO: Provar.
+
   \begin{Def}[Opera\c c\~ao recursiva]%
     Sejam $A$ um conjunto e $\meet:A\times A\ra A$ uma opera\c c\~ao bin\'aria. Estipularemos que 
     \[
@@ -919,11 +923,15 @@
     \]
     para toda $g\in A^{p+1}$ e $p\in\omega$. Do \rf{Teorema}{teo2101261957}, fixado $k\in\omega$, existe uma \'unica $f\in A^\omega$, tal que $f(0)=a_k$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$. Convenientemente, definamos
     \[
-      \Meet_{i=k}^{n+k} a_i=f(n)
+      \Meet_{i=k}^{k+n} a_i=f(n)
     \]
-    para todo $n\in\omega$. Em particular, se $k=1$, temos naturalmente
+    para todo $n\in\omega$. Em particular, se $n\in\omega$ e $k=1$, temos naturalmente
     \[
       \Meet_{i=1}^{n+1} a_i=f(n).
+    \]
+    Em conformidade, para $k,n\in\omega$ tamb\'em vale
+    \[
+      \Meet_{i=k}^{k+n+2} a_i=\Meet_{i=k}^{k+n+1} a_i\meet a_{k+n+2}.
     \]
     \label{def2101262009}
   \end{Def}
@@ -968,27 +976,44 @@
     \end{aligned}
   \]
 
-
-
-  % TODO: Mostrar um exemplo que motive o pr\'oximo teorema
+  O pr\'oximo teorema prova que se $\meet$ \'e associativa ent\~ao todas elas ser\~ao iguais. Ademais, o mesmo vale para qualquer associa\c c\~ao composta por $p$ elementos com $p\in\omega\cp2$.
 
   \begin{teo}[Associatividade generalizada]%
-    Sejam $A$, $\meet$ e $a$ como na \rf{Defini\c c\~ao}{def2101262009}. Suponha que $\meet$ satisfa\c ca o seguinte axioma
-    \[
-      (u\meet v)\meet w=v\meet(v\meet w)
-    \]
-    para quaisquer $u,v,w\in A$. Ent\~ao a associa\c c\~ao dos termos num produto gen\'erico dos elementos do conjunto $\{a_{i+k}:i\in n+1\}$, com $n\in\omega$, \'e irrelevante. 
+    Sejam $A$, $\meet$ \rf{Defini\c c\~ao}{def2101262009}. Suponha adicionamente que $\meet$ seja associativa. Ent\~ao para cada $p\in\omega$ o resultado de associa\c c\~oes dos elementos de uma sequ\^encia finita $a|_{p+2}$ \'e inexor\'avel, seja qual for $a\in A^\omega$.
   \end{teo}
-  \prova\qed
+  \prova Para $p=0$ temos $a_0\meet a_1$ \'e completamente n\~ao amb\'iguo. Agora, suponhamos que a propriedade seja v\'alida para todo $i\in p+1$. Estipularemos que fixado $k\in\omega$ o produto dos termos de uma sequ\^encia finita $a|_{k+2\cp k}$ seja denotado por
+  \[
+    \Meet_{j=k}^{k+1}a_j.
+  \]
+  Um produto gen\'erico de elementos da sequ\^encia $a|_{p+3}$ \'e da forma $u\meet v$, com $u$ composto de $i+1\in p+3\cp1$ operandos e $v$ composto de $p+2-i\in p+3\cp1$, operandos, temos portanto
+  \[
+    \begin{aligned}
+      u\meet v & =\Meet_{j=0}^{i}a_j\meet\Meet_{j=i+1}^{p+2}a_j                            & (\text{hip\'otese de indu\c c\~ao}) \cr
+               & =\Meet_{j=0}^{i}a_j\meet\biggl(\Meet_{j=i+1}^{p+1}a_j\meet a_{p+2}\biggr) & (\text{defini\c c\~ao})             \cr
+               & =\biggl(\Meet_{j=0}^{i}a_j\meet\Meet_{j=i+1}^{p+1}a_j\biggr)\meet a_{p+2} & (\text{associatividade})            \cr
+               & =\Meet_{j=0}^{p+1}a_j\meet a_{p+2}                                        & (\text{hip\'otese de indu\c c\~ao}) \cr
+               & =\Meet_{j=0}^{p+2}a_j                                                     & (\text{defini\c c\~ao})             \cr
+    \end{aligned}
+  \]
+  \qed
 
+  % TODO:
+  \begin{teo}%
+    Seja $n_{p+1}$ o n\'umero de maneiras de escrever associa\c c\~oes de $p+1$ operandos com $p\in\omega$. Estipulando convenientemente que um elemento isolado \'e uma associa\c c\~ao. Ent\~ao , segue-se que para todo $p\in\omega$ vale
+    \[
+      n_{p+2}=\sum_{i=1}^{p+1}n_in_{p+2-i}.
+    \]
+  \end{teo}
+  \prova Seja $p=0$, temos em conformidade
+  \[
+    n_2=n_1^2=\sum_{i=1}^1n_in_{2-i}
+  \]
+  pois cada operando de $\meet$ n\~ao se decomp\~oe em mais operandos, i.e., s\~ao isolados. Suponhamos por hip\'otese de indu\c c\~ao que a propriedade seja v\'alida para todo $k\in p+3$. Dados $p+3$ operandos a opera\c c\~ao mais externa \'e da forma $u\meet v$, em que $u$ \'e uma opera\c c\~ao de $i$ operandos e $v$ de $p+3-i$ operandos, com $i\in p+3\cp1$. Uma tal opera\c c\~ao tem $n_in_{p+3-i}$ associa\c c\~oes, $n_i$ do primeiro operando $u$ e $n_{p+3-i}$ do operando $v$, isto sucede da hip\'otese de indu\c c\~ao, porquanto $i,p+3-i\in p+3\cp1\subset p+3$. Como $i\in p+3\cp1$ 
 
-
-  \newpage
-  \section{Outras teorias}
+  \qed
 
   A seguir apresentarei um teorema devido a Tarski segundo o qual podemos inferir o \rf{Teorema}{teo0801261705} como corol\'ario. Em verdade, trata-se de uma generaliza\c c\~ao do teorema do ponto fixo de Knaster-Tarski. Vale salientar que a prova do teorema \rf{Teorema}{teo0801261705} \'e autocontida, de maneira que n\~ao \'e preciso transcender o escopo para reticulados. Sobre essa perspectiva mais geral deve-se reconhecer os objetos do teorema anterior como uma realiza\c c\~ao do sistema de axiomas abarcados pelo \rf{Teorema}{teo1001262040}, ou seja, h\'a mais verbaliza\c c\~ao.
 
-  % TODO: Provar.
   \begin{teo}[Teorema do ponto fixo para reticulados\footnote{Enunciarei o teorema sob uma perspectiva mais geral seguindo o artigo de Tarski, que generalizou o teorema aplicado ao conjunto das partes de um conjunto arbitr\'ario para reticulados completos.}]%
     Sejam 
     \begin{enumerate}[label = ({\rm\roman*})]
