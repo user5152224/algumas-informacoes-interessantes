@@ -982,14 +982,19 @@
   \begin{teo}[Associatividade generalizada]%
     Considermos o contexto do \rf{Axioma}{axi2201262100}. Ent\~ao para cada $p\in\omega$ o resultado de associa\c c\~oes dos elementos de uma sequ\^encia finita $a|_{p+2}$ \'e inexor\'avel, seja qual for $a\in A^\omega$.
   \end{teo}
-  \prova Para $p=0$ temos $a_0\meet a_1$ \'e completamente n\~ao amb\'iguo. Agora, suponhamos que a propriedade seja v\'alida para todo $i\in p+1$. Estipularemos que fixado $k\in\omega$ o produto dos termos de uma sequ\^encia finita $a|_{k+2\cp k}$ seja denotado por
+  \prova Para $p=0$ temos $a_0\meet a_1$ \'e completamente n\~ao amb\'iguo. Agora, suponhamos que a propriedade seja v\'alida para todo $q\in p+1$. Estipularemos que fixados $k,l\in\omega$, tais que $k\in l+1\in p+2$, o produto dos termos de uma sequ\^encia finita $a|_{l+1\cp k}$ seja denotado por
   \[
-    \Meet_{j=k}^{k+1}a_j.
+    \Meet_{j=k}^{l}a_j.
   \]
-  Um produto gen\'erico de elementos da sequ\^encia $a|_{p+3}$ \'e da forma $u\meet v$, com $u$ composto de $i+1\in p+3\cp1$ operandos e $v$ composto de $p+2-i\in p+3\cp1$, operandos, temos portanto
+  Um produto gen\'erico $\varpi$ de elementos da sequ\^encia $a|_{p+3}$, est\'a na imagem de $\meet$. Conformemente, existem $u,v\in A$, tais que $\varpi=u\meet v$. Nestas condições, $u$ \'e a opera\c c\~ao dos termos da sequ\^encia $a|_{i+1}$ e $v$ por sua vez, \'e a opera\c c\~ao dos termos da sequ\^encia, com $i+1\in p+2$. Esta \'utima estipul\c c\~ao a respeito de $i+1$, se deve ao fato de que $v$ deve ser composto de ao menos um operando. Seguidamente, conforme nossa hip\'otese de indu\c c\~ao a opera\c c\~ao dos termos da sequ\^encia $a|_{i+1}$ \'e
+  \[
+    \Meet_{j=0}^ia_j
+  \]
+  e a sequ\^encia $a|_{p+2\cp i+1}$ \'e precipuamente da forma $b|_{p+2-i}$, com $b_l=a_{i+1-l}$. Portanto,
   \[
     \begin{aligned}
-      u\meet v & =\Meet_{j=0}^{i}a_j\meet\Meet_{j=i+1}^{p+2}a_j                            & (\text{hip\'otese de indu\c c\~ao}) \cr
+      \varpi   & = u\meet v                                                                & (\text{estipula\c c\~ao})           \cr
+               & =\Meet_{j=0}^{i}a_j\meet\Meet_{j=i+1}^{p+2}a_j                            & (\text{hip\'otese de indu\c c\~ao}) \cr
                & =\Meet_{j=0}^{i}a_j\meet\biggl(\Meet_{j=i+1}^{p+1}a_j\meet a_{p+2}\biggr) & (\text{defini\c c\~ao})             \cr
                & =\biggl(\Meet_{j=0}^{i}a_j\meet\Meet_{j=i+1}^{p+1}a_j\biggr)\meet a_{p+2} & (\text{associatividade})            \cr
                & =\Meet_{j=0}^{p+1}a_j\meet a_{p+2}                                        & (\text{hip\'otese de indu\c c\~ao}) \cr
