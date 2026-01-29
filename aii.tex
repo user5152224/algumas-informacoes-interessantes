@@ -271,7 +271,7 @@
 \def\parallel{\mathbin{/\kern-3pt/}}
 \def\pma{{\bfseries PMA}}
 \def\prova{\noindent{\bfseries\scshape Prova}\quad}
-\def\qed{\nopagebreak\hbox{ }\hfill\rule{.42em}{1em}\bigskip}
+\def\qed{\nopagebreak\hbox{}\hfill\rule{.42em}{1em}\bigskip}
 \def\Q{\mathds{Q}}
 \def\ra{\rightarrow}
 \def\res{\noindent{\itshape\bfseries Resolu\c c\~ao.\/}\ }
@@ -355,11 +355,11 @@
 
   \chapter{Teoria dos conjuntos}
   
-  Decidi abordar a constru\c c\~ao dada no ap\^endice do livro {\it General Topology} de John L. Kelley ({\it vide} pp. 250--281). Conforme atestei, o sistema empregado por Kelley, \'e uma adapta\c c\~ao do sistema de A. P. Morse, como ele bem afirma em sua obra.
+  Decidi abordar a constru\c c\~ao dada no ap\^endice do livro {\it General Topology} de John L. Kelley ({\it vide} pp. 250--281). Conforme atestei, o sistema empregado por Kelley, \'e uma adapta\c c\~ao do sistema de A. P. Morse, confirma na referida obra.
   
   Nosso sistema axiom\'atico constituir\'a al\'em da l\'ogica proposicional, de objetos indefinidos chamados {\bf classes}, denotadas doravante por letras do alfabeto latino. Adicionalmente, com uma rela\c c\~ao $\in$, chamada pertin\^encia.
   
-  \begin{Def}[Conjuntos]
+  \begin{Def}[Conjunto]
     $$
       \forall x\bigr(\varsigma(x)\longleftrightarrow\exists y(x\in y)\bigr).
     $$
@@ -373,7 +373,7 @@
     $$
   \end{axi}
   
-  Enfatizo que os objetos da teoria de classes, resumem-se, como \'e esperado, \`a classes. Portanto, `$\{x:\phi(x)\}$' denota uma classe, da\'i o nome de {\it classifier} ou classificador.
+  Enfatizo que os objetos da teoria de classes, resumem-se, como \'e esperado, \`a classes. Portanto, `$\{x:\phi(x)\}$' denota uma classe, da\'i o nome de {\it classifier} ou {\bf classificador}.
   
   \begin{Def}
     $\lge\phi\rge=\{x:\phi(x)\}.$
@@ -542,6 +542,7 @@
     \[
       \forall x\bigl(x\in{\cal U}\llra\varsigma(x)\bigr).
     \]
+    \label{teo2901261524}
   \end{teo}
   
   \prova
@@ -552,6 +553,7 @@
   
   \begin{teo}
     Seja $\phi$ uma tautologia. Ent\~ao $\lge\phi\rge={\cal U}$.
+    \label{teo2901261640}
   \end{teo}
   
   \prova Notemos que 
@@ -583,25 +585,25 @@
   
   \begin{Def}
     \[
-      \Cap x=\bigl\{z:\forall y(y\in x\lra z\in y)\bigr\}.
+      \bigcap x=\bigl\{z:\forall y(y\in x\lra z\in y)\bigr\}.
     \]
   \end{Def}
   \begin{Def}
     \[
-      \Cup x=\bigl\{z:\exists y(y\in x\a z\in y)\bigr\}\subset.
+      \bigcup x=\bigl\{z:\exists y(y\in x\a z\in y)\bigr\}\subset.
     \]
   \end{Def}
   
-  A classe $\Cap x$ \'e a interse\c c\~ao dos membros de $x$ e, a classe $\Cup x$ \'e a uni\~ao dos membros de $x$.
+  A classe $\bigcap x$ \'e a interse\c c\~ao dos membros de $x$ e, a classe $\bigcup x$ \'e a uni\~ao dos membros de $x$.
   
   \begin{teo}
     \[
-      \Cap\emptyset=\U\a\Cup\emptyset=\emptyset.
+      \bigcap\emptyset=\U\a\bigcup\emptyset=\emptyset.
     \]
   \end{teo}
   \prova
   \[
-    \forall x\Bigl(x\in\Cap\emptyset\llra\varsigma(x)\a\forall y(y\in\emptyset\llra x\in y)\llra x\in\U\Bigr),
+    \forall x\Bigl(x\in\bigcap\emptyset\llra\varsigma(x)\a\forall y(y\in\emptyset\llra x\in y)\llra x\in\U\Bigr),
   \]
   pois $\phi$ definida por
   \[
@@ -611,7 +613,7 @@
   
   Em seguida,
   \[
-    \forall x\bigl(x\in\Cup\emptyset\llra\varsigma(x)\a\exists(y\in\emptyset\a x\in y)\llra x\in\emptyset\bigr),
+    \forall x\bigl(x\in\bigcup\emptyset\llra\varsigma(x)\a\exists(y\in\emptyset\a x\in y)\llra x\in\emptyset\bigr),
   \]
   porquanto, $\psi$ definida por
   \[
@@ -732,31 +734,31 @@
   
   \begin{teo}[\scshape 31 Theorem]
     \[
-      \forall x,y\Bigl(x\subset y\lra \Cup x\subset \Cup y\a\Cap y\subset\Cap x\Bigr).
+      \forall x,y\Bigl(x\subset y\lra \bigcup x\subset \bigcup y\a\bigcap y\subset\bigcap x\Bigr).
     \]
   \end{teo}
   \prova Sejam $x,y,z$ classes arbitr\'arias, tais que $x\subset y$. Primeiro temos
   \[
-    z\in\Cup x \lra\exists w(w\in x\a z\in w)\lra\exists w(w\in y\a z\in w)\lra z\in\Cup y.
+    z\in\bigcup x \lra\exists w(w\in x\a z\in w)\lra\exists w(w\in y\a z\in w)\lra z\in\bigcup y.
   \]
   Segundo,
   \[
-    z\in\Cap y \lra\forall w(w\in y\lra z\in w)\lra\exists w(w\in x\lra z\in w)\lra z\in\Cap x.
+    z\in\bigcap y \lra\forall w(w\in y\lra z\in w)\lra\exists w(w\in x\lra z\in w)\lra z\in\bigcap x.
   \]
   \qed
   \begin{teo}[\scshape 32 Theorem]
     \[
-      \forall x,y\Bigl(x\in y\lra x\subset\Cup y\a \Cap y\subset x\Bigr)
+      \forall x,y\Bigl(x\in y\lra x\subset\bigcup y\a \bigcap y\subset x\Bigr)
     \]
     \label{T32}
   \end{teo}
   \prova Sejam $x,y,z$, classes aleat\'orias tais que $x\in y$. Inicialmente, temos
   \[
-    z\in x\lra \exists w(w\in y\a z\in w)\lra z\in\Cup y.
+    z\in x\lra \exists w(w\in y\a z\in w)\lra z\in\bigcup y.
   \]
   Finalmente,
   \[
-    z\in\Cap y\lra\forall w(w\in y\lra z\in w)\lra z\in x.
+    z\in\bigcap y\lra\forall w(w\in y\lra z\in w)\lra z\in x.
   \]
   \qed
   
@@ -783,18 +785,19 @@
   
   \begin{teo}[34 Theorem]
     \[
-      \emptyset = \Cap\U\a\U=\Cup\U.
+      \emptyset = \bigcap\U\a\U=\bigcup\U.
     \]
+    \label{teo34}
   \end{teo}
-  \prova Primeiramente suponhamos por {\it reductio ad absurdum} que exista $x\in\Cap\U$, ent\~ao $\varsigma(x)$, pelo \rf{Teorema}{T26} segue-se $\emptyset\subset x$; assim necessariamente $\varsigma(\emptyset)$, ou equivalentemente $\emptyset\in\U$. Pelo \rf{Teorema}{T32} tem-se que $\Cup\U\subset\emptyset$, novamente pelo \rf{Teorema}{T26} temos $\emptyset\subset\Cap\U$, logo, pelo \rf{Teorema}{T27} e da suposi\c c\~ao inicial decorre que $x\in\Cap\U=\emptyset$, o que \'e uma contradi\c c\~ao. Consequentemente, n\~ao \'e o caso que exista $x\in\Cap\U$, i.e., $\Cap\U=\emptyset$[\footnote{Segui a mesma linha de racioc\'inio de Kelley, mas com a minhas adapta\c c\~oes.}.
+  \prova Primeiramente suponhamos por {\it reductio ad absurdum} que exista $x\in\bigcap\U$, ent\~ao $\varsigma(x)$, pelo \rf{Teorema}{T26} segue-se $\emptyset\subset x$; assim necessariamente $\varsigma(\emptyset)$, ou equivalentemente $\emptyset\in\U$. Pelo \rf{Teorema}{T32} tem-se que $\bigcup\U\subset\emptyset$, novamente pelo \rf{Teorema}{T26} temos $\emptyset\subset\bigcap\U$, logo, pelo \rf{Teorema}{T27} e da suposi\c c\~ao inicial decorre que $x\in\bigcap\U=\emptyset$, o que \'e uma contradi\c c\~ao. Consequentemente, n\~ao \'e o caso que exista $x\in\bigcap\U$, i.e., $\bigcap\U=\emptyset$[\footnote{Segui a mesma linha de racioc\'inio de Kelley, mas com a minhas adapta\c c\~oes.}.
   
-  Agora, seja $x\in\U$, pelo \AS existe $y\in\U$, tal que $x\in y$, pois $x\subset x$, pela defini\c c\~ao de $\Cup\U$, segues-se que $x\in \Cup\U$, consequentemente $\U\subset\Cup\U$. Por outro lado, pelo \rf{Teorema}{T26}, temos $\Cup\U\subset\U$, consequentemente pelo \rf{Teorema}{T27}, $\Cup\U=\U$.\qed
+  Agora, seja $x\in\U$, pelo \AS existe $y\in\U$, tal que $x\in y$, pois $x\subset x$, pela defini\c c\~ao de $\bigcup\U$, segues-se que $x\in \bigcup\U$, consequentemente $\U\subset\bigcup\U$. Por outro lado, pelo \rf{Teorema}{T26}, temos $\bigcup\U\subset\U$, consequentemente pelo \rf{Teorema}{T27}, $\bigcup\U=\U$.\qed
   
   \begin{teo}[35 Theorem]
-    Para toda classe $x$, se $x\neq\emptyset$, ent\~ao $\varsigma(\Cap x)$.
+    Para toda classe $x$, se $x\neq\emptyset$, ent\~ao $\varsigma(\bigcap x)$.
     \label{T35}
   \end{teo}
-  \prova Se $x\neq\emptyset$, ent\~ao existe $y\in x$, logo $\varsigma(y)$ e pelo \rf{Teorema}{T32} tem-se $\Cap x\subset y$, da\'i e do \rf{Teorema}{T32}, decorre que $\varsigma(\Cap x)$.\qed 
+  \prova Se $x\neq\emptyset$, ent\~ao existe $y\in x$, logo $\varsigma(y)$ e pelo \rf{Teorema}{T32} tem-se $\bigcap x\subset y$, da\'i e do \rf{Teorema}{T32}, decorre que $\varsigma(\bigcap x)$.\qed 
   
   \begin{Def}
     $2^x=\{y:y\subset x\}$.
@@ -808,11 +811,13 @@
   
   \begin{teo}[38 Theorem]
     Se $\varsigma(x)$, ent\~ao $\varsigma(2^x)$. 
+    \label{teo38}
   \end{teo}
-  \prova Se $\varsigma(x)$, pelo \AS existe $y\in\U$, tal que para todo $z$, se $z\subset y$, ent\~ao $z\in y$. Como consequ\^ecnia, $2^x\subset y$, pelo \rf{Teorema}{T33} segue-se que $\varsigma(2^x)$.\qed
+  \prova Se $\varsigma(x)$, pelo \AS existe $y\in\U$, tal que para todo $z$, se $z\subset y$, ent\~ao $z\in y$. Como consequ\^encia, $2^x\subset y$, pelo \rf{Teorema}{T33} segue-se que $\varsigma(2^x)$.\qed
   
   \begin{teo}[39 Theorem]
     $\neg\varsigma(\U)$.
+    \label{teo39}
   \end{teo}
   \prova Consideremos a classe $\mathcal{R}=\{x:x\notin x\}$[\footnote{O ${\cal R}$ \'e em homenagem a Bertrand Russel, um dos primeiros a descobrir paradoxos na teoria ing\^enia dos conjuntos, criada pelo matem\'atico eminente Georg Cantor.}. Provemos que $\neg\varsigma(\mathcal{R})$, i.e., $\mathcal{R}$. Para tanto, suponhamos por {\it reductio ad absurdum} que $\varsigma(\mathcal{R})$, temos ent\~ao a equival\^encia
   \[
@@ -820,8 +825,50 @@
   \]
   o que \'e uma inconsist\^encia, i.e., uma contradi\c c\~ao. Logo, $\neg\varsigma(\mathcal{R})$. Ademais, da pr\'opria defini\c c\~ao de classificadores $\mathcal{R}\subset\U$, como $\mathcal{R}$ \'e uma classe pr\'opria, necessariamente $\U$ tamb\'em o ser\'a. Com efeito, suponha por {\it reductio ad absurdum} que $\varsigma(\U)$, pelo \rf{Teorema}{T33}, inferir\'iamos que $\varsigma(\mathcal{R})$, o que \'e uma contradi\c c\~ao com o argumento anterior.\qed
 
+  \begin{Def}[40 Definition]%
+    $\{x\}=\{y:x\in\U\lra y=x\}$.
+  \end{Def}
+
+  \begin{teo}[41 Theorem]
+    Se $\varsigma(x)$, ent\~ao, para cada $y$, $y\in\{x\}$ se, e somente se, $y=x$.
+  \end{teo}
+  \prova Se $\varsigma(x)$, ent\~ao $x\in\U$. Logo, $y\in\{x\}$ se, e somente se, $y=x$.
+  
+  \begin{teo}[42 Theorem]
+    Se $\varsigma(x)$, ent\~ao $\varsigma(\{x\})$.
+    \label{teo42}
+  \end{teo}
+  \prova Pelo \rf{Teorema}{teo38} se $\varsigma(x)$, ent\~ao $\varsigma(2^x)$, como $\{x\}\subset 2^x$, segue-se pelo \rf{Teorema}{T33} que $\varsigma(\{x\})$.\qed
+
+  \begin{teo}[43]
+    $\neg\varsigma(x)$ se, e somente se, $\{x\}=\U$. 
+    \label{teo43}
+  \end{teo}
+  \prova Se $\neg\varsigma(x)$, ent\~ao 
+  \[
+    (x\in\U\lra y=x)\a\varsigma(y)
+  \]
+  \'e uma tautologia, pois o antecedente $x\in\U$ \'e sempre falso, pelo \rf{Teorema}{teo2901261640}, decorre $\{x\}=\U$. Se $\varsigma(x)$, ent\~ao do \rf{Teorema}{teo42} $\varsigma(\{x\})$, logo $\{x\}$ n\~ao pode ser igual a $\U$, disto a rec\'iproca segue por contrapositiva.\qed
+
+  \begin{teo}[44 Theorem]
+    Se $\neg\varsigma(x)$, ent\~ao $\bigcap \{x\}=\emptyset$ e $\bigcup \{x\}=\U$. Se $\varsigma(x)$, ent\~ao $x=\bigcap \{x\}=\bigcup \{x\}$.
+  \end{teo}
+  \prova A primeira condicional segue do \rf{Teorema}{teo34} e do \rf{Teorema}{teo43}.
+
+  Em seguida, da defini\c c\~ao $\bigcap\{x\}=\lge\varphi\rge$ e $\bigcup\{x\}=\lge\phi\rge$ em que
+  \[
+    \begin{split}
+      \varphi(y)&\equiv\forall z(y\in\{x\}\lra z\in y)\a\varsigma(y)\cr
+                &\equiv\forall z(y=x\lra z\in y)\a\varsigma(y)\cr
+                &\equiv\forall z(z\in x)\a\varsigma(x)\cr
+    \end{split}
+  \]
+  No entanto, nota-se que $x=\lge\varphi\rge$.
+
+  \newpage
+
   \begin{teo}[Defini\c c\~ao por indu\c c\~ao ou recurs\~ao]%
-    Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\Cup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.
+    Sejam $X$ um conjunto e $a\in X$. Suponha que exista uma fun\c c\~ao $F:\bigcup_{p\in\omega}X^{p+1}\lra X$. Ent\~ao existe uma \'unica fun\c c\~ao $f\in X^\omega$, tal que $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, para todo $p\in\omega$.\qed
     \label{teo2101261957}
   \end{teo}
   \prova
@@ -835,7 +882,7 @@
   \]
   Primeiro, considere $g\in X^{2}$, tal que $g(0)=a$ e $g(1)=F(g|_1)$. Naturalmente se $\gamma\in{\mathfrak F}_0$, ent\~ao $\gamma(0)=a=g(0)$, logo, $\gamma|_1=g|_1$ e consequentemente $\gamma(1)=F(\gamma|_1)=F(g|_1)=g(1)$, o que prova que $0\in C$. Em seguida, suponhamos que $p\in\omega$, segue que existe uma \'unica $h\in{\mathfrak F}_p$, defina $g\in X^{p+3}$, tal que $g|_{p+2}=h$ e $g(p+2)=F(g|_{p+2})$. Seja agora $\gamma\in{\frak F}_{p+1}$, pela unicidade de $h$ segue-se que $\gamma|_{p+2}=h=g|_{p+2}$, por conseguinte $\gamma(p+2)=F(h)=g(p+2)$, que por sua vez, acarreta $\gamma=g$, o que prova a unicidade de $g$. Destarte, $p+1\in C$. Como $\omega$ \'e o conjunto sucessor (indutivo) minimal segue-se que $C=\omega$. 
 
-  Em verdade, provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\Cup_{p\in\omega} f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Agora seja $p\in\omega$, notemos que $f|_{p+2}=f_p$, consequentemente $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, portanto $f$ satisfaz as hip\'oteses do teorema, i.e., provamos a exist\^encia. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema, temos que para todo $p\in\omega$, vale $f|_{p+2},\phi|_{p+2}\in{\frak F}_p$, por conseguinte $f|_{p+2}=f_p=\phi|_{p+2}$, que por sua vez implica que $f=\phi$, pois $p\in\omega$ \'e arbitr\'ario, provando portanto a unicidade de $f$.\qed
+  Em verdade, provamos que ${\frak F}_p$ \'e unit\'ario para todo $p\in\omega$. Digamos que $f_p\in{\frak F}_p$ e definamos $f=\bigcup_{p\in\omega} f_p$. Suponhamos que $(a,b),(a,c)\in f$. Naturalmente, existem $p,q\in\omega$ tais que $(a,b)\in f_p$ e $(a,c)\in f_q$, os quais sem perda de generalidade podemos supor $p\leq q$. Como $f_q|_{p+2}\in{\frak F}_p$, podemos inferir que $f_q|_{p+2}=f_p$; assim $b=f_p(a)=f_q(a)=c$, o que prova que $f\in X^\omega$. Agora seja $p\in\omega$, notemos que $f|_{p+2}=f_p$, consequentemente $f(0)=a$ e $f(p+1)=F(f|_{p+1})$, portanto $f$ satisfaz as hip\'oteses do teorema, i.e., provamos a exist\^encia. Ademais, seja $\phi\in X^\omega$ uma outra fun\c c\~ao que satisfaz as estipula\c c\~oes do teorema, temos que para todo $p\in\omega$, vale $f|_{p+2},\phi|_{p+2}\in{\frak F}_p$, por conseguinte $f|_{p+2}=f_p=\phi|_{p+2}$, que por sua vez implica que $f=\phi$, pois $p\in\omega$ \'e arbitr\'ario, provando portanto a unicidade de $f$.\qed
 
   O pr\'oximo teorema \'e um exerc\'icio que me apareceu quando lia \ct{HalmosNaive}, este teorema me fez estancar no texto. Eu voltei a atacar o problema v\'arios meses depois, com v\'arios fracassos em sequ\^encia. Em fim consegui, com adapta\c c\~oes posteriores.
    
@@ -865,17 +912,17 @@
   Em seguida, observemos que
   \[
     \begin{aligned}
-      \Cup_{E\in\Gamma}E&\subset\Cup_{E\in\Gamma} X\cp g(Y\cp f(E))\cr
-                        &= X\cp\Cap_{E\in\Gamma} g(Y\cp f(E))\cr
-                        &= X\cp g\Bigl(\Cap_{E\in\Gamma}Y\cp f(E)\Bigr)\cr
-                        &= X\cp g\Bigl(Y\cp\Cup_{E\in\Gamma}f(E)\Bigr)\cr
-                        &= X\cp g\Bigl[Y\cp f\Bigl(\Cup_{E\in\Gamma}E\Bigr)\Bigr].\cr
+      \bigcup_{E\in\Gamma}E&\subset\bigcup_{E\in\Gamma} X\cp g(Y\cp f(E))\cr
+                        &= X\cp\bigcap_{E\in\Gamma} g(Y\cp f(E))\cr
+                        &= X\cp g\Bigl(\bigcap_{E\in\Gamma}Y\cp f(E)\Bigr)\cr
+                        &= X\cp g\Bigl(Y\cp\bigcup_{E\in\Gamma}f(E)\Bigr)\cr
+                        &= X\cp g\Bigl[Y\cp f\Bigl(\bigcup_{E\in\Gamma}E\Bigr)\Bigr].\cr
     \end{aligned}
     \label{eq1001261141}
   \]
   Em outros termos, 
   \[
-    A=\Cup_{E\in\Gamma}E=\sup\Gamma\in\Gamma
+    A=\bigcup_{E\in\Gamma}E=\sup\Gamma\in\Gamma
   \]  
   Conforme vimos em (\ref{eq0901261959}), segue-se que
   \[
@@ -917,7 +964,7 @@
     \]
     para todo $u,v\in A$.
 
-    Sejam $a\in A^\omega$ e $F:\Cup_{p\in\omega}A^{p+1}\ra A$ definida por
+    Sejam $a\in A^\omega$ e $F:\bigcup_{p\in\omega}A^{p+1}\ra A$ definida por
     \[
       F(g)=g(p)\meet a_{p+1}
     \]
@@ -1631,7 +1678,7 @@
   \begin{Def}
     Seja $\K$ um corpo com unidade $1_\K$ e zero $0_\K$. Definimos a caracter\'istica de $\K$ por 
     \[
-      X(\K)=\Cap\{n:n\in\omega\cp\{0\}\a n^*=0_\K\}.
+      X(\K)=\bigcap\{n:n\in\omega\cp\{0\}\a n^*=0_\K\}.
       \label{corpo_carac}
     \]
     Observe que $X(\K)$ \'e sempre um n\'umero natural, podendo inclusive ser $0=\emptyset$.
@@ -2267,7 +2314,7 @@
      ent\~ao A1--A4 s\~ao satisfeitas, mas A5 falha.
   }
   
-  \proof Seja $S\subseteq R$ um conjunto n\~ao vazio limitado superiormente, fa\c ca\-mos $\varsigma=\Cup S$, provemos que $\varsigma$ \'e a menor das cotas superiores de $S$. Com efeito, primeiro provemos que $\varsigma$ satisfaz I e II. De fato, sabendo que $S\neq\emptyset$, existe $\alpha\subset\varsigma$ tal que $\alpha\neq\emptyset$, em consequ\^encia $\varsigma\neq\emptyset$. Seja $\beta$ uma cota superior de $S$ que \'e garantida das hip\'oteses. Dado $\alpha\in S$, inferimos que $\alpha\subseteq\beta$, desta maneira $\varsigma\subseteq\beta$. Assim, basta notar $Q\setminus\varsigma\supseteq Q\setminus\beta\neq\emptyset$, em outros termos $\varsigma\neq Q$, logo vale I. Seja agora, $p\in\varsigma$ e $q\in Q$ com $q<p$, segue que existe $\alpha\in S$, tal que $p\in\alpha$, como este \'ultimo \'e um corte $q\in\alpha$, como $\alpha\subseteq\varsigma$, segue que $q\in\varsigma$, fica portanto provada II. Como $\varsigma$ esta contida em toda cota superior de $S$, decorre que $\sup S=\varsigma$. Consequentemente $R$ tem a propriedade da menor cota superior.
+  \proof Seja $S\subseteq R$ um conjunto n\~ao vazio limitado superiormente, fa\c ca\-mos $\varsigma=\bigcup S$, provemos que $\varsigma$ \'e a menor das cotas superiores de $S$. Com efeito, primeiro provemos que $\varsigma$ satisfaz I e II. De fato, sabendo que $S\neq\emptyset$, existe $\alpha\subset\varsigma$ tal que $\alpha\neq\emptyset$, em consequ\^encia $\varsigma\neq\emptyset$. Seja $\beta$ uma cota superior de $S$ que \'e garantida das hip\'oteses. Dado $\alpha\in S$, inferimos que $\alpha\subseteq\beta$, desta maneira $\varsigma\subseteq\beta$. Assim, basta notar $Q\setminus\varsigma\supseteq Q\setminus\beta\neq\emptyset$, em outros termos $\varsigma\neq Q$, logo vale I. Seja agora, $p\in\varsigma$ e $q\in Q$ com $q<p$, segue que existe $\alpha\in S$, tal que $p\in\alpha$, como este \'ultimo \'e um corte $q\in\alpha$, como $\alpha\subseteq\varsigma$, segue que $q\in\varsigma$, fica portanto provada II. Como $\varsigma$ esta contida em toda cota superior de $S$, decorre que $\sup S=\varsigma$. Consequentemente $R$ tem a propriedade da menor cota superior.
   
   Dados $\alpha,\beta\neq\emptyset$, necessariamente $\alpha+\beta\neq\emptyset$. Agora se $r\notin\alpha$ e $s\notin\beta$, ent\~ao $r+s$ majora estritamente todo elemento de $\alpha+\beta$, consequentemente $r+s\notin\alpha+\beta$, e portanto $\alpha+\beta\neq Q$, fica provadado portanto que a soma satisfaz I. Sejam agora $r\in\alpha+\beta$ e $s\in Q$ com $s<r$, segue que existe $(p,q)\in\alpha\times\beta$, tal que $r=p+q$. Assim, $s<p+q$, logo $s-p<q$, isto \'e, $s-p\in\beta$, da\'\i\ vem que 
   $$ 
@@ -2486,17 +2533,17 @@
   
   \corollary{}{\sl Uma reuni\~ao de uma fam\'ilia cont\'avel com membros cont\'aveis \'e cont\'avel.}
   
-  \proof Podemos supor que nossa fam\'ilia \'e $\{E_n:n\in\omega\}$, para cada $n$ existe uma fun\c c\~ao $f_n:\omega\rightarrow E_n$. Agora basta definirmos $f:\omega\times\omega\rightarrow U$, por $f(m,n)=f_m(n)$, com $U=\Cup_{n\in\omega}E_n$. Como $f\circ\phi^{-1}:\omega\rightarrow U$ ($\phi$ dada no teorema anterior) \'e sobrejetiva e $U$ infinito, ent\~ao $U$ \'e cont\'avel.
+  \proof Podemos supor que nossa fam\'ilia \'e $\{E_n:n\in\omega\}$, para cada $n$ existe uma fun\c c\~ao $f_n:\omega\rightarrow E_n$. Agora basta definirmos $f:\omega\times\omega\rightarrow U$, por $f(m,n)=f_m(n)$, com $U=\bigcup_{n\in\omega}E_n$. Como $f\circ\phi^{-1}:\omega\rightarrow U$ ($\phi$ dada no teorema anterior) \'e sobrejetiva e $U$ infinito, ent\~ao $U$ \'e cont\'avel.
   
   \theorem{}{\sl%
-    Seja $\mathscr A$ uma cole\c c\~ao no m\'aximo cont\'avel de membros no m\'aximo cont\'aveis. Ent\~ao $\Cup\mathscr A$ \'e no m\'aximo cont\'avel.
+    Seja $\mathscr A$ uma cole\c c\~ao no m\'aximo cont\'avel de membros no m\'aximo cont\'aveis. Ent\~ao $\bigcup\mathscr A$ \'e no m\'aximo cont\'avel.
   }
   
-  \proof Das hip\'oteses existe $I\in\omega\cup\{\omega\}$ e uma bije\c c\~ao $\kappa:I\rightarrow\mathscr A$, digamos que $A_i=\kappa(i)$. Para cada $i\in I$, existe uma bije\c c\~ao $f_i:B_i\rightarrow A_i$, com $B_i\in\omega\cup\{\omega\}$. Definamos $f\subseteq(\omega\times\omega)\times A$, com $A=\Cup\mathscr A$ por
+  \proof Das hip\'oteses existe $I\in\omega\cup\{\omega\}$ e uma bije\c c\~ao $\kappa:I\rightarrow\mathscr A$, digamos que $A_i=\kappa(i)$. Para cada $i\in I$, existe uma bije\c c\~ao $f_i:B_i\rightarrow A_i$, com $B_i\in\omega\cup\{\omega\}$. Definamos $f\subseteq(\omega\times\omega)\times A$, com $A=\bigcup\mathscr A$ por
   $$
     ((m,n),a)\in f\leftrightarrow a=f_m(n)
   $$
-  Ent\~ao $f$ \'e uma fun\c c\~ao. De fato, suponhamos que $((m,n),a),((m,n),b)\in f$, ent\~ao da defini\c c\~ao $a=f_m(n)=b$. Assim, $f:\hbox{dom}\,f\rightarrow A$, \'e uma sobreje\c c\~ao. Em verdade, dado $a\in A$, existe $i\in I$, tal que $a\in A_i$, como $f_i$ \'e uma bije\c c\~ao existe $m\in B_i$, tal que $f_i(m)=a$, consequentemente $f(i,m)=a$. Usando o axioma da escolha podemos construir um conjunto $C\subseteq\omega\times\omega$ tal que $f|_C:C\rightarrow A$ \'e uma bije\c c\~ao. Como todo conjunto de $\omega\times\omega$ \'e no m\'aximo cont\'avel decorrer\'a por maior raz\~ao que $A=\Cup\mathscr A$ tamb\'em o ser\'a.
+  Ent\~ao $f$ \'e uma fun\c c\~ao. De fato, suponhamos que $((m,n),a),((m,n),b)\in f$, ent\~ao da defini\c c\~ao $a=f_m(n)=b$. Assim, $f:\hbox{dom}\,f\rightarrow A$, \'e uma sobreje\c c\~ao. Em verdade, dado $a\in A$, existe $i\in I$, tal que $a\in A_i$, como $f_i$ \'e uma bije\c c\~ao existe $m\in B_i$, tal que $f_i(m)=a$, consequentemente $f(i,m)=a$. Usando o axioma da escolha podemos construir um conjunto $C\subseteq\omega\times\omega$ tal que $f|_C:C\rightarrow A$ \'e uma bije\c c\~ao. Como todo conjunto de $\omega\times\omega$ \'e no m\'aximo cont\'avel decorrer\'a por maior raz\~ao que $A=\bigcup\mathscr A$ tamb\'em o ser\'a.
 
   \section{Topologia}
 
@@ -2730,7 +2777,7 @@
     Seja $f:X\rightarrow Y$, cont\'inua, $X$ compacto e $Y$ munido da topologia ordem. Ent\~ao existem $a,b$, tais que, se $x\in X$, ent\~ao $f(a)\leq f(x)\leq f(b)$.
   }
   
-  \proof O caminho para a prova deste teorema \'e {\it reductio ad absurdum}. Suponha por absurdo que n\~ao existam $a$ e $b$, com tais propriedades, construamos $\mathscr{C}=\{]f(x),f(y)[\;\in2^Y:x,y\in X\}$. Afirmamos que, $\mathscr{C}$ \'e uma cobertura aberta de $f(X)$. Com efeito, seja $f(z)\in Y$, como n\~ao existe um menor elemento em $f(X)$, segue que existe $x\in X$, tal que $f(x)<f(z)$. Analogamente como $f(z)$ n\~ao pode ser o maior elemento de $f(X)$, existe $y\in X$ tal que $f(z)<f(y)$. Portanto, $f(X)\subseteq\Cup\mathscr{C}$, como afirmamos. Da premisa que $X$ \'e compacto e $f$ cont\'inua, decorre que $f(X)$ \'e compacto, consequentemente existe uma subcobertura finita de $\mathscr{C}$, digamos, $\mathscr{D}=\{]f(x_i),f(y_i)[\;\in2^X:i\in n\}$  com $n\in\omega$. Em virtude, da ordem em $Y$ ser linear existem $i,j\in n$, tais que $f(X)=\Cup\mathscr{D}=\;]f(x_i),f(y_j)[$, mas isto acarretaria $f(x_i),f(y_j)\notin f(X)$, o que \'e uma contradi\c c\~ao. Esta contradi\c c\~ao foi obtida supondo-se que n\~ao existiam $a$ e $b$ com aquelas propriedades. Desta contradi\c c\~ao a condicional \'e necessariamente verdadeira, pois sua nega\c c\~ao acarreta num absurdo.\qed
+  \proof O caminho para a prova deste teorema \'e {\it reductio ad absurdum}. Suponha por absurdo que n\~ao existam $a$ e $b$, com tais propriedades, construamos $\mathscr{C}=\{]f(x),f(y)[\;\in2^Y:x,y\in X\}$. Afirmamos que, $\mathscr{C}$ \'e uma cobertura aberta de $f(X)$. Com efeito, seja $f(z)\in Y$, como n\~ao existe um menor elemento em $f(X)$, segue que existe $x\in X$, tal que $f(x)<f(z)$. Analogamente como $f(z)$ n\~ao pode ser o maior elemento de $f(X)$, existe $y\in X$ tal que $f(z)<f(y)$. Portanto, $f(X)\subseteq\bigcup\mathscr{C}$, como afirmamos. Da premisa que $X$ \'e compacto e $f$ cont\'inua, decorre que $f(X)$ \'e compacto, consequentemente existe uma subcobertura finita de $\mathscr{C}$, digamos, $\mathscr{D}=\{]f(x_i),f(y_i)[\;\in2^X:i\in n\}$  com $n\in\omega$. Em virtude, da ordem em $Y$ ser linear existem $i,j\in n$, tais que $f(X)=\bigcup\mathscr{D}=\;]f(x_i),f(y_j)[$, mas isto acarretaria $f(x_i),f(y_j)\notin f(X)$, o que \'e uma contradi\c c\~ao. Esta contradi\c c\~ao foi obtida supondo-se que n\~ao existiam $a$ e $b$ com aquelas propriedades. Desta contradi\c c\~ao a condicional \'e necessariamente verdadeira, pois sua nega\c c\~ao acarreta num absurdo.\qed
   
   \begin{exe}[Fun\c c\~ao que satisfaz o teorema do valor intermedi\'ario, mas n\~ao \'e cont\'inua]
     Considere $f:[0,1]\ra \R$, dada por $f=\iota\chi_{]0,1[}+(1-\iota)\chi_{\{0,1\}}$[\footnote{Aqui, $\chi$ \'e a fun\c c\~ao caracter\'istica e $\iota$ a identidade.}.
@@ -2764,7 +2811,7 @@
     
       Seja $\{r_n\}$ uma subsequ\^encia da sequ\^encia das somas parciais $\{s_n\}$ da s\'erie constru\'ida no teorema. Ent\~ao, para todo $n\in\omega$, $A_n=\{p\in\omega:y_p\le r_n\le x_p\}\neq\emptyset$. Com efeito, o \'ultimo termo de $r_n$ \'e da forma $-Q_k$ ou $P_m$, isto, \'e evidente da pr\'opria constru\c c\~ao da soma, pois seus termos s\~ao de tais formas. Evidentemente, como o n\'umero de termos de $r_n$ cresce, necessariamente $k$ e $m$ crescem. Observe que $\{k_n\}$ \'e uma sequ\^encia estritamente crescente, o mesmo ocorre com $\{m_n\}$, para facilitar meu argumento, suponha que $m_0=k_0=0$. Suponhamos, que o \'ultimo termo de $r_n$ seja $-Q_{k}$, certamente $k\in(k_{i_n-1},k_{i_n}]\cap\omega$ para algum $i_n\in\omega$, pois
     $$
-      \omega\setminus\{0\}=\omega\cap\Cup_{n\in\omega}(k_n,k_{n+1}],
+      \omega\setminus\{0\}=\omega\cap\bigcup_{n\in\omega}(k_n,k_{n+1}],
     $$
     Da\'i,vem $y_{i_n}\leq r_n\leq x_{i_n}$. Um argumento an\'alogo pode ser aplicado ao caso que o \'ultimo termo de $r_n$ \'e da forma $P_m$. Assim, conclu\'imos que $A_n\neq\emptyset$ para todo $n\in\omega$. 
     
@@ -3178,7 +3225,7 @@
   \[
     x\in K_n\a\Big|x-{a_n+b_n\over 2}\Big|<{\delta_{n+1}\over 2}\lra \Big|f(x)-f\Bigl({a_n+b_n\over 2}\Bigr)\Big|<{\varepsilon\over 2}.
   \]
-  Da mesma forma, seja $K_{n+1}$ uma das bisse\c c\~oes de $K_n$, tal que $X_{\delta_{n+1}}\subset K_{n+1}$. Destarte, constru\'imos por recurs\~ao matem\'atica uma fam\'ilia enumer\'avel $\{K_n:n\in\omega\}$, ou melhor, uma sequ\^encia $\{K_n\}$, tal que $K_{n+1}\subset K_n$ e $X_{\delta_n}\subset K_n$, para todo $n\in\omega$. Pelo teorema dos intervalos encaixados ({\it Nested Intevals Theorem}) existe $x\in\Cap_{n\in\omega}K_n$. Da constru\c c\~ao de $\{K_n\}$, temos que 
+  Da mesma forma, seja $K_{n+1}$ uma das bisse\c c\~oes de $K_n$, tal que $X_{\delta_{n+1}}\subset K_{n+1}$. Destarte, constru\'imos por recurs\~ao matem\'atica uma fam\'ilia enumer\'avel $\{K_n:n\in\omega\}$, ou melhor, uma sequ\^encia $\{K_n\}$, tal que $K_{n+1}\subset K_n$ e $X_{\delta_n}\subset K_n$, para todo $n\in\omega$. Pelo teorema dos intervalos encaixados ({\it Nested Intevals Theorem}) existe $x\in\bigcap_{n\in\omega}K_n$. Da constru\c c\~ao de $\{K_n\}$, temos que 
   \[
     x\in K_n=[a_n,b_n]\a b_n-a_n<2^{-(n+1)}(b-a)
   \]
@@ -3538,7 +3585,7 @@
       \item{%
         Seja ${\cal F}=\{S_i\in{\mathscr{P}(E)}:i\in n+1\}$ uma fam\'ilia de seguimentos disjuntos aos pares. Ent\~ao
         $$
-          \mu\biggl(\Cup_{i\in n+1}S_i\biggr)=\sum_{i=0}^n\mu(S_i);
+          \mu\biggl(\bigcup_{i\in n+1}S_i\biggr)=\sum_{i=0}^n\mu(S_i);
         $$
       }
       \item{%
@@ -3789,6 +3836,7 @@
     \end{split}
   \]
   Em outros termos $g$ \'e constante no conjunto de solu\c c\~oes do sistema (\ref{S2912252034}).\qed
+  
 
   % TODO: Demonstrar a rela\c c\~ao do sistema de coordenadas via geometria euclidiana.
 
