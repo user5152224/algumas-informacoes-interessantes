@@ -338,7 +338,7 @@
   
   %\parte{Ci\^encias formais}
   
-  \iftrue % IGNORAR?
+  \iffalse
 
   \chapter{L\'ogica}
   Para fins de nota parafraseio sem prova e duma maneira n\~ao formal o seguinte
@@ -352,6 +352,8 @@
   \end{Def}
 
   \blankpage
+
+  \fi
 
   \chapter{Teoria dos conjuntos}
   
@@ -855,15 +857,20 @@
   \end{teo}
   \prova A primeira condicional segue do \rf{Teorema}{teo34} e do \rf{Teorema}{teo43}.
 
-  Em seguida, da defini\c c\~ao $\bigcap\{x\}=\lge\varphi\rge$ e $\bigcup\{x\}=\lge\phi\rge$ em que
-  \[
-    \begin{split}
-      \varphi(y)&\equiv\forall z(y\in\{x\}\lra z\in y)\a\varsigma(y)\cr
-                &\equiv\forall z(y=x\lra z\in y)\a\varsigma(y)\cr
-                &\equiv\forall z(z\in x)\a\varsigma(x)\cr
-    \end{split}
-  \]
-  No entanto, nota-se que $x=\lge\varphi\rge$.
+
+
+
+
+
+
+
+
+
+
+
+% Final do apêndice do GT por Kelley
+
+  \enddoc % provisório
 
   \newpage
 
@@ -3520,7 +3527,6 @@
   Seja $x\in V_c$, suponhamos inicialmente $x<c$, segue que $f'(x)<f'(c)=0$, da\'i $f'(x)/(x-c)>0$. Agora, suponhamos que $c<x$, da\'i vem que $0=f'(c)<f'(x)$, logo, $f'(x)/(x-c)>0$. O que prova a quantifica\c c\~ao. Isto por sua vez, em decorr\^encia de resultados anteriores, acarreta que $c$ \'e um ponto de m\'inimo local. A prova \'e inteiramente an\'aloga para $f''(c)>0$, pois o argumento \'e dual.
   \qed
   
-  \fi % IGNORAR
 
   
   \blankpage 
