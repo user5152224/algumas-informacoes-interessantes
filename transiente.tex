@@ -21,19 +21,19 @@
 \font\xvsy   = cmsy10 scaled 500
 
 \def\xiiptrm{
-  \textfont0=\xiirm
-  \scriptfont0=\xviirm
-  \scriptscriptfont0=\xvrm
+  \textfont0         = \xiirm
+  \scriptfont0       = \xviirm
+  \scriptscriptfont0 = \xvrm
   \def\rm{\fam0\xiirm}
 
-  \textfont1=\xiimmi
-  \scriptfont1=\xviimmi
-  \scriptscriptfont1=\xvmmi
+  \textfont1         = \xiimmi
+  \scriptfont1       = \xviimmi
+  \scriptscriptfont1 = \xvmmi
   \def\it{\fam1\xiimmi}
 
-  \textfont2=\xiisy
-  \scriptfont2=\xviisy
-  \scriptscriptfont2=\xvsy
+  \textfont2         = \xiisy
+  \scriptfont2       = \xviisy
+  \scriptscriptfont2 = \xvsy
   \def\cal{\fam2\xiisy}
 
   %TODO: Itálico para modo matemático
@@ -44,19 +44,19 @@
 
 \xiiptrm
 
-Meu prop\'osito inicial era contruir uma imers\~ao isom\'etrica de $X={\cal L}((R^m)^{p+1}, R^n)$ em $Y={\cal L}(\ell^1(R^m),R^n)$, para $p\in\omega$ fixo.
+Meu prop\'osito inicial era construir uma imers\~ao isom\'etrica de $X={\cal L}((R^m)^{p+1}, R^n)$ em $Y={\cal L}(\ell^1(R^m),R^n)$, para $p\in\omega$ fixo.
 
-Para tal definamos a seguinte aplica\c c\~ao ${\Lambda}:X\ra Y$ por
+Para tal, definamos a seguinte aplica\c c\~ao ${\Lambda}:X\ra Y$ por:
 $$
   \Lambda(T)(v)=T(v|_{p+1})\leqno(1)
 $$
-Sem muita dificuldade, prova-se que $\Lambda$ \'e linear e $\ker\Lambda=\{0\}$, i.e., $\Lambda$ \'e um isomorfismo linear. Ademais,
+Sem muita dificuldade, prova-se que $\Lambda$ \'e linear e $\ker\Lambda=\{0\}$, {\it a fortiori}, $\Lambda$ \'e um isomorfismo linear. Ademais,
 $$
-  \|T\|=\sup\{\|T(u)\|:u\in(R^m)^{p+1}\,\d\,\|u\|\leq 1\}
+  \|T\|=\sup\Bigl\{\|T(u)\|:u\in(R^m)^{p+1}\,\d\,\|u\|\leq 1\Bigr\}
 $$
 \'e igual a
 $$
-\|\Lambda(T)\|_1=\sup\{\|\Lambda(T)(v):v\in\ell^1(R^m)\,\d\,\|v\|_1\leq 1\},
+\|\Lambda(T)\|_1=\sup\Bigl\{\|\Lambda(T)(v)\|:v\in\ell^1(R^m)\,\d\,\|v\|_1\leq 1\Bigr\},
 $$
 i.e., $\Lambda$ \'e uma isometria linear.
 
