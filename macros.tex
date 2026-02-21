@@ -20,8 +20,8 @@
 \def\ra{\rightarrow}
 \def\a{\wedge}
 \def\d{\wedge}
-\def\D{{\frak D}}
-\def\I{{\frak I}}
+\def\dom{{\rm dom}}
+\def\img{{\rm img}}
 \def\U{{\cal U}}
 \def\qed{%
   \ \hfill\vbox{\hrule width .42em height 1em}
@@ -33,9 +33,10 @@
 
 \newcount\proclaimcounter
 
-\def\proc#1#2{%
+\long\def\proc#1#2#3{%
   \advance\proclaimcounter by 1
   \noindent{\bf #1 \the\proclaimcounter\kern3pt #2\ }
+  {\sl #3}
 }
 
 \def\prova{%
