@@ -1,49 +1,48 @@
 %\hsize        = 15cm
 %\vsize        = 15cm
-\baselineskip = 15pt
-\parskip      = 20pt
+\magnification  = 1200
+\baselineskip   = 15truept
+\parskip        = 10truept
 
-% Roman
-\font\xiirm  = cmr10  scaled 1200
-\font\xviirm = cmr10  scaled 700
-\font\xvrm   = cmr10  scaled 500
+% Euler Fraktur
+\font\xeufm = eufm10
+\font\viieufm = eufm10 scaled 700
+\font\veufm   = eufm10 scaled 500
 
-% Itálico
-\font\xiimmi  = cmmi10 scaled 1200
-\font\xviimmi = cmmi10 scaled 700
-\font\xvmmi   = cmmi10 scaled 500
-
-% Negrito
-\font\xivbx = cmbx10 scaled 1400
-
-% Caligráfico
-\font\xiisy  = cmsy10 scaled 1200
-\font\xviisy = cmsy10 scaled 700
-\font\xvsy   = cmsy10 scaled 500
-
-\def\xiiptrm{
-  \textfont0         = \xiirm
-  \scriptfont0       = \xviirm
-  \scriptscriptfont0 = \xvrm
-  \def\rm{\fam0\xiirm}
-
-  \textfont1         = \xiimmi
-  \scriptfont1       = \xviimmi
-  \scriptscriptfont1 = \xvmmi
-  \def\it{\fam1\xiimmi}
-
-  \textfont2         = \xiisy
-  \scriptfont2       = \xviisy
-  \scriptscriptfont2 = \xvsy
-  \def\cal{\fam2\xiisy}
-
-  \rm
-}
+\newfam\frakfam
+\textfont\frakfam         = \xeufm
+\scriptfont\frakfam       = \viieufm
+\scriptscriptfont\frakfam = \veufm
+\def\frak{\fam\frakfam\xeufm}
 
 \chardef\i="10
 
 \def\ra{\rightarrow}
+\def\a{\wedge}
 \def\d{\wedge}
+\def\D{{\frak D}}
+\def\I{{\frak I}}
+\def\U{{\cal U}}
+\def\qed{%
+  \ \hfill\vbox{\hrule width .42em height 1em}
+  \bigskip
+}
+
+
+% barebone proclaim
+
+\newcount\proclaimcounter
+
+\def\proc#1#2{%
+  \advance\proclaimcounter by 1
+  \noindent{\bf #1 \the\proclaimcounter\kern3pt #2\ }
+}
+
+\def\prova{%
+  \noindent
+  {\it Prova}
+  \quad
+}
 
 \def\fig#1#2{
   \vskip .5cm
