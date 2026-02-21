@@ -2,11 +2,11 @@
 
 \input ../macros.tex
 
-\proc{Teorema}{(67 Theorem)} $\dom(\U)=\U$ e $\img(\U)=\U$. 
+\proc{Teorema}{(67 Theorem)}{$\dom(\U)=\U$ e $\img(\U)=\U$}. 
 
 \prova Note que para todo $x\in\U$, temos que $(x,x)\in\U$. \qed
 
-\proc{Defini\c c\~ao}{(68 Definition)} $f(x)=\bigcap\{y:(x,y)\in f\}$.
+\proc{Defini\c c\~ao}{(68 Definition)}{$f(x)=\bigcap\{y:(x,y)\in f\}$.}
 
 A classe $f(x)$ \'e o {\it valor} de $f$ em $x$ ou a {\it imagem} de $x$ sob $f$. \'E importante ser observado que $x$ pode ser entendido como elemento do $\dom(f)$, e como classe. Vale deixar expl\'{\i}cito que $f(x)$ \'e sempre interpretado na primeira acep\c c\~ao e n\~ao na segunda, ou seja
 
@@ -14,6 +14,36 @@ $$
   f(x)\neq\bigl\{y:\exists z(z\in x\,\a\, (z,y)\in f)\bigr\}.
 $$
 
-\proc{Teorema}{(69 Theorem)} Se $x\notin\dom(f)$, ent\~ao $f(x)=\U$; se $x\in\dom(f)$, ent\~ao $f(x)\in\U$.
+\proc{Teorema}{(69 Theorem)}{Se $x\notin\dom(f)$, ent\~ao $f(x)=\U$; se $x\in\dom(f)$, ent\~ao $f(x)\in\U$.}
+
+\prova Se $x\notin\dom(f)$, ent\~ao ${y:(x,y)\in f}=\emptyset$, consequentemente 
+$$
+  f(x)=\bigcap\{y:(x,y)\in f\}=\bigcap\emptyset=\U.
+$$
+Agora se $x\in\dom(f)$, ent\~ao $\{y:(x,y)\in f\}\neq\emptyset$, pelo {\bf 35 Theorem} conclu\'\i mos que 
+$$
+f(x)=\bigcap\{y:(x,y)\in f\}\in\U.
+$$
+\qed
+
+
+
+\proc{Teorema}{(70 Theorem)}{%
+  Se $f$ \'e uma fun\c c\~ao, ent\~ao $f=\{(x,y):y=f(x)\}$
+}
+
+\prova Se $f$ \'e uma fun\c c\~ao ent\~ao para todo $x\in\dom(f)$, existe um $y$ tal que $(x,y)\in f$. N\~ao obstante, $(x,z)\in f$ se, e somente se, $z=y$. Consequentemente, 
+$$
+\{z:(x,z)\in f\}=\{z:z=y\}=\{y\}
+$$
+da\'\i
+$$
+  f(x)=\bigcap\{z:(x,z)\in f\}=\bigcap\{y\}=y.
+$$
+Assim, para todo $x\in\dom(f)$, vale $(x,f(x))\in f$, particularmente 
+$$
+  f=\{(x,y):y=f(x)\}.
+$$
+\qed
 
 \bye
