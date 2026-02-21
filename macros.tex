@@ -1,8 +1,13 @@
 %\hsize        = 15cm
 %\vsize        = 15cm
-\magnification  = 1200
-\baselineskip   = 15truept
-\parskip        = 10truept
+\magnification = 1200
+\baselineskip  = 15truept
+\parskip       = 10truept
+%\spaceskip     = .3em plus .2em minus .1em % espaçamento entre palavras.
+%\xspaceskip    =.4em plas 1em minus 1em    % espaçamento extra depois de pontuações.
+
+
+\font\xiicmsl=cmsl10 at 12pt
 
 % Euler Fraktur
 \font\xeufm = eufm10
@@ -23,12 +28,19 @@
 \def\ra{\rightarrow}
 \def\a{\wedge}
 \def\d{\wedge}
-\def\dom{{\rm dom}}
-\def\img{{\rm img}}
+\def\dom{{\rm dom}\kern.2ex}
+\def\img{{\rm img}\kern.2ex}
 \def\U{{\cal U}}
 \def\qed{%
-  \ \hfill\vbox{\hrule width .42em height 1em}
+  %\ \hfill\vbox{\hrule width .42em height 1em}
+  \ \hfill{/\kern -2.5pt/\kern -2.5pt/} % um para cada slash q. e. d. (quod erat demonstrandum)
   \bigskip
+}
+
+\def\section#1{%
+  \vskip .5cm
+  \noindent\hfill{\xiicmsl #1}\hfill\null
+  \vskip .25cm
 }
 
 
@@ -36,7 +48,7 @@
 \newcount\proclaimcounter
 \long\def\proc#1#2#3{%
   \advance\proclaimcounter by 1
-  \noindent{\sc #1 \the\proclaimcounter\kern3pt #2\ }
+  \noindent{\sc #1 \the\proclaimcounter\kern3pt #2\quad}
   {\sl #3}
 }
 
