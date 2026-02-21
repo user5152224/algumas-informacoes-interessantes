@@ -15,6 +15,9 @@
 \scriptscriptfont\frakfam = \veufm
 \def\frak{\fam\frakfam\xeufm}
 
+% Small caps font
+\font\sc=cmcsc10 at 10pt
+
 \chardef\i="10
 
 \def\ra{\rightarrow}
@@ -30,12 +33,10 @@
 
 
 % barebone proclaim
-
 \newcount\proclaimcounter
-
 \long\def\proc#1#2#3{%
   \advance\proclaimcounter by 1
-  \noindent{\bf #1 \the\proclaimcounter\kern3pt #2\ }
+  \noindent{\sc #1 \the\proclaimcounter\kern3pt #2\ }
   {\sl #3}
 }
 
