@@ -28,8 +28,6 @@ f(x)=\bigcap\{y:(x,y)\in f\}\in\U.
 $$
 \qed
 
-
-
 \proc{Teorema}{(70 Theorem)}{%
   Se $f$ \'e uma fun\c c\~ao, ent\~ao $f=\{(x,y):y=f(x)\}$
 }
@@ -47,5 +45,62 @@ $$
   f=\{(x,y):y=f(x)\}.
 $$
 \qed
+
+Imediatamente temos o
+
+\proc{Teorema}{(71 Theorem\kern 1.5pt\raise 1pt\hbox{\vcmr *})}{%
+  Se $f$ e $g$ s\~ao fun\c c\~oes, ent\~ao $f(x)=g(x)$, para todo $x$.
+}
+
+\prova Imediata ao {\spft Theorem 70}.\qed
+
+\proc{Axioma}{(V Axiom of substitution)}{%
+  Se $f$ \'e uma fun\c c\~ao e $\dom(f)\in\U$, ent\~ao $\img(f)\in\U$.
+}
+
+\proc{Axioma}{(VI Axioma of amalgamation)}{%
+  Se $x\in U$, ent\~ao $\bigcup x\in\U$.
+}
+
+\proc{Defini\c c\~ao}{(72 Definition)}{%
+  $x\times y=\{(u,v):u\in x\,\a\,v\in y\}$.
+}
+
+A classe $x\times y$ \'e chamanda de produto cartesiano de $x$ e $y$.
+
+\proc{Teorema}{(73 Theorem)}{%
+  Se $u,y\in\U$, ent\~ao $\{u\}\times y\in\U$.
+}
+
+\prova Construamos a seguinte fun\c c\~ao
+$$
+  f=\{(x,(u,x)):x\in y\}.
+$$
+Como $\dom(f)=x\in\U$, pelo axioma {\spft V} conclu\'\i mos 
+$$
+  \{u\}\times y=\{(u,x):x\in y\}=\img(f)\in\U.
+$$
+\qed
+
+\proc{Axioma}{(V-VI Axiom)}{%
+  Se $\dom(f)\in\U$, ent\~ao $\bigcup\img(f)\in\U$.
+}
+
+Este \'ultimo axioma \'e a s\'{\i}ntese dos axiomas {\spft V} e {\spft VI}, isto \'e elucidado pelo seguinte
+
+\proc{Teorema}{}{%
+  Os axiomas {\spft V} e {\spft VI} s\~ao equivalentes ao axioma {\spft V-VI}.
+}
+
+\prova Adimitamos que $\dom(f)\in\U$, e os axiomas {\spft V} e {\spft VI}, segue naturalmente $\img(f)\in U$ por {\spft V} e $\bigcup\img(f)\in\U$ por {\spft VI}. 
+
+Reciprocamente, suponhamos que $\dom(f)\in\U$, pelo axioma {\spft V-VI}, segue-se que $x=\bigcup\img(f)\in\U$, logo $2^x\in\U$, como $\img(f)\subset 2^x$, pelo {\spft III Axiom of subsets}, incorremos que $\img(f)\in\U$ o que prova {\spft V}. Ademais, suponhamos que $x\in\U$, e considemos $i=\{(u,u):u\in x\}$, por {\spft V} segue-se que $\bigcup x=\bigcup\img(i)\in\U$, o que prova {\spft VI}.\qed
+
+\proc{Teorema}{(74 Theorem)}{%
+  Se $x,y\in\U$, ent\~ao $x\times y\in\U$.
+}
+
+\prova Provar.\qed
+
 
 \bye
