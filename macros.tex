@@ -1,13 +1,14 @@
 %\hsize        = 15cm
 %\vsize        = 15cm
 \magnification = 1200
-\baselineskip  = 15truept
-\parskip       = 10truept
+\baselineskip  = 16truept
+\parskip       = 4truept
 %\spaceskip     = .3em plus .2em minus .1em % espaçamento entre palavras.
 %\xspaceskip    =.4em plas 1em minus 1em    % espaçamento extra depois de pontuações.
 
 
-\font\xiicmsl=cmsl10 at 12pt
+
+\font\vcmr=cmbx10 scaled 800
 
 % Euler Fraktur
 \font\xeufm = eufm10
@@ -20,8 +21,11 @@
 \scriptscriptfont\frakfam = \veufm
 \def\frak{\fam\frakfam\xeufm}
 
-% Small caps font
-\font\sc=cmcsc10 at 10pt
+% A special font
+\font\spft=cmcsc10 at 10pt
+
+% Font for sections
+\font\secfont=cmsl10 at 10pt
 
 \chardef\i="10
 
@@ -33,13 +37,13 @@
 \def\U{{\cal U}}
 \def\qed{%
   %\ \hfill\vbox{\hrule width .42em height 1em}
-  \ \hfill{/\kern -2.5pt/\kern -2.5pt/} % um para cada slash q. e. d. (quod erat demonstrandum)
+  \ \hfill{/\kern -2.5pt/\kern -2.5pt/} % q. e. d. (quod erat demonstrandum) um slash para cada letra. 
   \bigskip
 }
 
 \def\section#1{%
   \vskip .5cm
-  \noindent\hfill{\xiicmsl #1}\hfill\null
+  \noindent\hfill{\secfont #1}\hfill\null
   \vskip .25cm
 }
 
@@ -48,7 +52,7 @@
 \newcount\proclaimcounter
 \long\def\proc#1#2#3{%
   \advance\proclaimcounter by 1
-  \noindent{\sc #1 \the\proclaimcounter\kern3pt #2\quad}
+  \noindent{\spft #1 \the\proclaimcounter\kern3pt #2\quad}
   {\sl #3}
 }
 
