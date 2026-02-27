@@ -4,6 +4,10 @@
 
 \section{FUN\c C\~OES}
 
+\proc{Defini\c c\~ao}{}{%
+  $\fnc(f)$ se, e somente se, $f$ \'e uma fun\c c\~ao.
+}
+
 \proc{Teorema}{(67 Theorem)}{$\dom(\U)=\U$ e $\img(\U)=\U$}. 
 
 \prova Note que para todo $x\in\U$, temos que $(x,x)\in\U$. \qed
@@ -58,7 +62,7 @@ Imediatamente temos o
   Se $f$ \'e uma fun\c c\~ao e $\dom(f)\in\U$, ent\~ao $\img(f)\in\U$.
 }
 
-\proc{Axioma}{(VI Axioma of amalgamation)}{%
+\proc{Axioma}{(VI Axiom of amalgamation)}{%
   Se $x\in U$, ent\~ao $\bigcup x\in\U$.
 }
 
@@ -98,6 +102,36 @@ Reciprocamente, suponhamos que $\dom(f)\in\U$, pelo axioma {\spft V-VI}, segue-s
 
 \proc{Teorema}{(74 Theorem)}{%
   Se $x,y\in\U$, ent\~ao $x\times y\in\U$.
+}
+
+\prova Para tanto, consideremos
+$$
+  f=\bigl\{\bigl(z,\{z\}\times y\bigr):z\in x\bigr\}
+$$
+Atesta-se imediatamente que $f$ \'e uma fun\c c\~ao. Ora $x\in\U$, pelo {\spft V-VI Axiom}, segue-se que $\bigcup\img(f)\in\U$, de sorte que se $w\in\bigcup\img(f)$, ent\~ao existe $v\in\img(f)$, tal que $w\in v$. Pelo fato de $v\in\img(f)$, existe $z\in x$, tal que $v=\{z\}\times y$, logo $w\in v=\{z\}\times y$, i.e., $w\in x\times y$; assim $\bigcup\img(f)\subset x\times y$. 
+
+Por outro lado, dado $(u,v)\in x\times y$, existe $\{u\}\times y\in\img(f)$, tal que $(u,v)\in\{u\}\times y$, i.e., $x\times y\subset\bigcup\img(f)$. 
+
+Destarte, pelo {\spft 27 Theorem}, incorremos que 
+$$
+  x\times y=\bigcup\img(f).
+$$
+\qed
+
+\proc{Teorema}{(75 Theorem)}{%
+  Se $f$ \'e uma fun\c c\~ao e $\dom f\in\U$, ent\~ao $f\in U$.
+}
+
+\prova \'E suficiente notar que pelo {\spft 38 Theorem} $2^{x\times y}\in U$, pois $x,y\in\U$. Da\'{\i} fazendo $x=\dom(f)$ e $y=\img(f)$ conclu\'\i mos do {\spft Axiom V-VI} que $y\in\U$. Como $f\subset 2^{x\times y}\in U$, do {\spft 33 Theorem}, segue-se que $f\in\U$.\qed
+
+\proc{Defini\c c\~ao}{(76 Definition)}{%
+$$
+  y^x=\bigl\{f:\fnc(f)\,\a\, x=\dom(f)\,\a\,\img(f)\subset y\bigr\}.
+$$
+}
+
+\proc{Teorema}{(77 Theorem)}{%
+  Se $x,y\in\U$, ent\~ao $y^x\in\U$.
 }
 
 \prova Provar.\qed
